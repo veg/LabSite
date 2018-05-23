@@ -41,18 +41,25 @@ export default {
     "date": "2012",
     "link": "http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002764"
   },
-  "": {
-    "title": "",
-    "authors": "",
-    "publication": "",
-    "date": "",
-    "link": ""
+  "Compartmentalization": {
+    "title": "Comparative Study of Methods for Detecting Sequence Compartmentalization in Human Immunodeficiency Virus Type 1",
+    "authors": "Selene Zárate, Sergei L. Kosakovsky Pond, Paul Shapshak, and Simon D. W. Frost",
+    "publication": "Journal of Virology",
+    "date": "2007",
+    "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1900087/"
   },
-  "": {
-    "title": "",
-    "authors": "",
-    "publication": "",
-    "date": "",
-    "link": ""
+  "FUBAR": {
+    "title": "FUBAR: A Fast, Unconstrained Bayesian AppRoximation for Inferring Selection",
+    "authors": "Ben Murrell, Sasha Moola, Amandla Mabona, Thomas Weighill, Daniel Sheward, Sergei L. Kosakovsky Pond, Konrad Scheffler",
+    "publication": "Molecular Biology and Evolution",
+    "date": "2013",
+    "link": "https://academic.oup.com/mbe/article/30/5/1196/998247"
   },
+  "Tissue Reservoir": {
+    "title": "Persistent HIV-1 replication maintains the tissue reservoir during therapy",
+    "authors": "Ramon Lorenzo-Redondo, Helen R. Fryer, Trevor Bedford, Eun-Young Kim, John Archer, Sergei L. Kosakovsky Pond, Yoon-Seok Chung, Sudhir Penugonda, Jeffrey G. Chipman, Courtney V. Fletcher, Timothy W. Schacker, Michael H. Malim, Andrew Rambaut, Ashley T. Haase, Angela R. McLean, Steven M. Wolinsky",
+    "publication": "Nature",
+    "date": "2016",
+    "link": "https://www.nature.com/articles/nature16933"
+  }
 }

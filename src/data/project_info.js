@@ -80,13 +80,24 @@ export default {
       "paper": "https://www.ncbi.nlm.nih.gov/pubmed/29401317"
     }
   },
-  "Imunology": {
-    "name": "Imunology",
-    "shortDescription": "Imunology",
-    "longDescription": "Imunology",
+  "Bcell-Phylo": {
+    "name": "Bcell-Phylo",
+    "shortDescription": "Build phylogenetic trees from anti-body data",
+    "longDescription": "Build phylogenetic trees from anti-body data",
     "tag": "minor",
     "links": {
-      "github": "https://github.com/jzehr/anti_JSON_FASTA"
+      "github": "https://github.com/veg/bcell-phylo"
+    }
+  },
+  "Flea": {
+    "name": "Flea",
+    "shortDescription": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
+    "longDescription": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
+    "tag": "minor",
+    "links": {
+      "website": "http://datamonkey.org/flea",
+      "github": "https://github.com/veg/flea-pipeline",
+      "paper": "https://www.biorxiv.org/content/early/2017/12/07/230474"
     }
   },
   "alignment.js": {
@@ -109,6 +120,24 @@ export default {
     "links": {
       "github": "https://github.com/veg/HIV-NGS",
       "website": "http://octamonkey.datamonkey.org/ngs/"
+    }
+  },
+  "mmvc": {
+    "name": "mmvc",
+    "shortDescription": "Multinomial mixture variant caller",
+    "longDescription": "Multinomial mixture variant caller",
+    "tag": "minor",
+    "links": {
+      "github": "https://github.com/veg/mmvc"
+    }
+  },
+  "TN93": {
+    "name": "TN93",
+    "shortDescription": "TN93 fast distance calculator",
+    "longDescription": "Simple program to compute pairwise distances between aligned nucleotide sequences using the Tamura Nei 93 distance",
+    "tag": "minor",
+    "links": {
+      "github": "https://github.com/veg/tn93"
     }
   },
 }
