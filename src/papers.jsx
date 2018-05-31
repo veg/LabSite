@@ -28,7 +28,7 @@ class Papers extends Component {
   render() {
     return (
       <div id="papers">
-        <h2 style={{backgroundColor: "#96b2e0"}}>Selected Papers</h2>
+        <h2 className="title">../Selected_Papers</h2>
         <div>{this.getPapers()}</div>
       </div>
     );

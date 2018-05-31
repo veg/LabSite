@@ -31,7 +31,7 @@ class Projects extends Component {
   render() {
     return (
       <div id="projects">
-        <h2 style={{backgroundColor: "#96b2e0"}}>Projects</h2>
+        <h2 className="title">&lt; Projects /&gt;</h2>
         <div>{this.getProjects('major')}</div>
         <div>{this.getProjects('minor')}</div>
       </div>

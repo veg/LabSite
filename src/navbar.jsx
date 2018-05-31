@@ -29,19 +29,19 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar className="fixed-top" style={{backgroundColor:"#d5dce8"}} expand="md">
+        <Navbar className="fixed-top" style={{backgroundColor:"#2b328e"}} expand="md">
           <NavbarBrand href="/">Logo</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/#members">Team</NavLink>
+                <NavLink href="/#members">Meet the Team_</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#projects">Projects</NavLink>
+                <NavLink href="/#projects">&lt; Projects /&gt;</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#papers">Papers</NavLink>
+                <NavLink href="/#papers">../Selected_Papers</NavLink>
                 </NavItem>
             </Nav>
           </Collapse>

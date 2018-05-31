@@ -6,7 +6,8 @@ class Paper extends Component {
   render() {
     return(
       <a href={this.props.link}>
-        <div className="card" style={{width: "100%"}}>
+      <center>
+        <div className="card" style={{width: "45%"}}>
           <div className="card-body">
             <h4 className="card-title">{this.props.title}</h4>
             <p className="card-text">{this.props.authors}</p>
@@ -14,6 +15,7 @@ class Paper extends Component {
             <p className="card-text">{this.props.date}</p>
           </div>
         </div>
+      </center>
       </a>
     );
   }
