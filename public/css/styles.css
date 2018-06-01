@@ -1,40 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 
-.card-body .btn-light {
+html, body {
+  margin: 0;
+  padding: 75px 2.5%;
   background-color: #e4e4e0;
-  color: #59523f;
-}
-
-.card-body .fa:hover,
-.card-body .btn-light:hover {
-  color: #e4e4e0;
-  background-color: #2b328e;
 }
 
 ::selection {
-  background-color: #2b328e);
+  background-color: #333;
   color: #e4e4e0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2b328e !important;
-}
-
-html, body {
+  color: #2b328e;
   margin: 0;
-  padding: 75px 2.5%;
-  background-color: #e4e4e0 !important;
+  line-height: 1.25;
 }
 
 /*/// Tools ///*/
-.animate-blink {
-  animation: blink 0.2s infinite;
+/* Blink Animation */
+.blink_me {
+  animation: blinker 1s infinite;
 }
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 /*/// Navbar ///*/
 .navbar {
-  padding: .5rem 5% !important;
+  padding: .5rem 5%;
 }
+
+.navbar-brand {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 18px;
+  color: #e4e4e0;
+  letter-spacing: 2px;
+}
+
+.navbar-brand img {
+  width: 60px;
+}
+
 .nav-item {
   padding: .5rem 1rem;
 }
@@ -54,30 +65,100 @@ html, body {
   background-image: ;
 }
 
-/*/// Cards ///*/
+/*/// Headings ///*/
 #members .title,
 #projects .title,
 #papers .title {
   display: inline-block;
   font-family: "Share Tech Mono", monospace;
   font-size: 24px;
-  margin: 75px 15px 15px 15px;
-  padding: 15px 95px;
+  margin: 85px 15px 25px 15px;
+  padding: 10px 2%;
   border: 4px solid #2b328e;
   background-color: #e4e4e0;
   box-shadow: 7px 7px #bbbaa0;
   color: #2b328e;
 }
 
+/*/// Cards ///*/
 .card {
-  padding: 15px;
+  padding: 5px;
+  border: 2px solid #e4e4e0;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.card-body {
+  padding: .35rem .025rem;
+}
+
+.credentials {
+  display: block;
+  font-family: "Oxygen Mono", monospace;
+  font-size: 14px;
+  color: #2b328e;
+  padding: 5px 0px 4px 7px;
+  text-align: left;
+}
+
+.card-title, .card-text {
+  font-family: "Oxygen Mono", monospace;
+  font-size: 14px;
+  color: #2b328e;
+  padding: 3px 7px;
+  text-align: left;
+}
+
+.card-body .btn-light {
+  background-color: #fff;
+  border: none;
+  margin: 0px 2px;
+  padding: 2px 6px;
+  color: #59523f;
   border-radius: 0;
 }
 
-.card-group {
-  background-color: ;
+.card-body .fa:hover,
+.card-body .btn-light:hover {
+  color: #2b328e;
+  background-color: #e4e4e0;
 }
-.card-title {
-  font-family: "Oxygen Mono", monospace;
-  font-size: 14px;
-  color: blue;
+
+/*/// Members ///*/
+.members .card-title, .members .card-text {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+/*/// Projects ///*/
+#projects .card {
+  padding: 15px;
+  margin: 3px;
+}
+
+#projects .card-title {
+  background-color: #2b328e;
+  color: #e4e4e0;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 15px;
+}
+
+/*/// Papers ///*/
+#papers .card:hover {
+  background-color: #eee;
+  text-decoration: none;
+  color: #fff;
+}
+
+#papers .card {
+  display: inline-flex;
+  max-width: 350px;
+  justify-content: center;
+  margin-top: 2px;
+  padding: 25px;
+}
+
+#papers .card-title {
+  font-size: 20px;
+}

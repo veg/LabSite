@@ -7762,7 +7762,7 @@ Trace:
   Exit code: 3221225786
   Command: C:\windows\system32\cmd.exe
   Arguments: /d /s /c react-scripts start
-  Directory: C:\Users\tud24970\desktop\LAB
+  Directory: C:\Users\tud24970\desktop\LabSite
   Output:
   
       at ProcessTermError.MessageError (C:\Users\tud24970\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)

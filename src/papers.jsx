@@ -29,7 +29,7 @@ class Papers extends Component {
     return (
       <div id="papers">
         <h2 className="title">../Selected_Papers</h2>
-        <div>{this.getPapers()}</div>
+        {this.getPapers()}
       </div>
     );
   }

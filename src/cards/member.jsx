@@ -33,13 +33,15 @@ class Member extends Component {
   render() {
     return(
       <div 
-        className="card" 
+        className="card members" 
         onMouseEnter={this.hover}
         onMouseLeave={this.hover}
       >
         <img className="card-img-top" src={this.props.image} alt="Card image cap" />
-        <div className="card-body" style={{minHeight:"18rem"}}>
-          <h5 className="card-title">{this.props.name}</h5>
+        <div className="card-body">
+          <span className="credentials">Username:</span>
+          <p className="card-title">{this.props.name}<span className="blink_me">|</span></p>
+          <span className="credentials">Password:</span>
           <p className="card-text">{this.props.title}</p>
           {this.getLinks()} 
         </div>

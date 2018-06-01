@@ -1,16 +1,16 @@
-import Sergeiimg from './images/members/Sergei.jpeg';
-import Stevenimg from './images/members/Steven.jpeg';
-import Stephanieimg from './images/members/Stephanie.jpeg';
-import Stephenimg from './images/members/Stephen.jpeg';
-import Brittanyimg from './images/members/Brittany.jpeg';
-import Ryanimg from './images/members/Ryan.jpeg';
-import Jordanimg from './images/members/Jordan.jpeg';
-import Michaelimg from './images/members/Michael.jpeg';
+import Sergeiimg from './images/members/Sergei.jpg';
+import Stevenimg from './images/members/Steven.jpg';
+import Stephanieimg from './images/members/Stephanie.jpg';
+import Stephenimg from './images/members/Stephen.jpg';
+import Brittanyimg from './images/members/Brittany.jpg';
+import Ryanimg from './images/members/Ryan.jpg';
+import Jordanimg from './images/members/Jordan.jpg';
+import Michaelimg from './images/members/Michael.jpg';
 
 
 export default {
   "Sergei": {
-    "name": "Sergei L Kosakovsky Pond, Ph.D.",
+    "name": "Sergei Pond",
     "title": "Full Professor",
     "image": Sergeiimg,
     "links": {
@@ -34,8 +34,8 @@ export default {
     }
   },
   "Stephanie": {
-    "name": "Stephanie Spielman, Ph.D.",
-    "title": "Research Assistant Professor",
+    "name": "Stephanie Spielman",
+    "title": "Assistant Professor",
     "image": Stephanieimg,
     "links": {
       "twitter": "https://twitter.com/stephspiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
@@ -46,7 +46,7 @@ export default {
     }
   },
   "Stephen": {
-    "name": "Stephen Shank, Ph.D.",
+    "name": "Stephen Shank",
     "title": "Software Developer",
     "image": Stephenimg,
     "links": {
@@ -58,7 +58,7 @@ export default {
     }
   },
   "Brittany": {
-    "name": "Brittany Rife Magalis, Ph.D.",
+    "name": "Brittany Magalis",
     "title": "Postdoctoral Researcher",
     "image": Brittanyimg,
     "links": {
