@@ -6,8 +6,8 @@
 ## Installation
 
 ```
-git clone https://github.com/veg/hyphy-vision
-cd hyphy-vision
+git clone https://github.com/veg/LabSite
+cd LabSite
 yarn
 ```
 

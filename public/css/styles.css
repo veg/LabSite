@@ -130,6 +130,36 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ddd;
 }
 
+.membersImage {
+  position: relative;
+}
+
+.membersImage img {
+  positoin: relative;
+}
+
+.top {
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 /*/// Projects ///*/
 #projects .card {
   padding: 15px;
@@ -154,6 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 #papers .card {
   display: inline-flex;
   max-width: 350px;
+  min-height: 350px;
   justify-content: center;
   margin-top: 2px;
   padding: 25px;
