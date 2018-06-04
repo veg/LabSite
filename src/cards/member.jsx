@@ -37,7 +37,7 @@ class Member extends Component {
         onMouseEnter={this.hover}
         onMouseLeave={this.hover}
       >
-        <div id="cf">
+        <div id="membersImage">
           {/*<img className="card-img-top pixelated" src={this.props.imagePixelated} alt="Card image cap" />*/}
           <img className="card-img-top unpixelated" src={this.props.image} alt="Card image cap" />
         </div>
