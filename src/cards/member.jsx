@@ -37,11 +37,12 @@ class Member extends Component {
         onMouseEnter={this.hover}
         onMouseLeave={this.hover}
       >
-        <img className="card-img-top" src={this.props.image} alt="Card image cap" />
+        <div id="cf">
+          {/*<img className="card-img-top pixelated" src={this.props.imagePixelated} alt="Card image cap" />*/}
+          <img className="card-img-top unpixelated" src={this.props.image} alt="Card image cap" />
+        </div>
         <div className="card-body">
-          <span className="credentials">Username:</span>
           <p className="card-title">{this.props.name}<span className="blink_me">|</span></p>
-          <span className="credentials">Password:</span>
           <p className="card-text">{this.props.title}</p>
           {this.getLinks()} 
         </div>

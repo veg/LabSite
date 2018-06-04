@@ -1,11 +1,23 @@
-import Sergeiimg from './images/members/Sergei.jpg';
-import Stevenimg from './images/members/Steven.jpg';
-import Stephanieimg from './images/members/Stephanie.jpg';
-import Stephenimg from './images/members/Stephen.jpg';
-import Brittanyimg from './images/members/Brittany.jpg';
-import Ryanimg from './images/members/Ryan.jpg';
-import Jordanimg from './images/members/Jordan.jpg';
-import Michaelimg from './images/members/Michael.jpg';
+// Unpixelated images.
+import Sergeiimg from './images/members/Sergei.jpeg';
+import Stevenimg from './images/members/Steven.jpeg';
+import Stephanieimg from './images/members/Stephanie.jpeg';
+import Stephenimg from './images/members/Stephen.jpeg';
+import Brittanyimg from './images/members/Brittany.jpeg';
+import Ryanimg from './images/members/Ryan.jpeg';
+import Jordanimg from './images/members/Jordan.jpeg';
+import Michaelimg from './images/members/Michael.jpeg';
+
+// pixelated images.
+import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
+import StevenimgPixelated from './images/members/pixelated/Steven.jpg';
+import StephanieimgPixelated from './images/members/pixelated/Stephanie.jpg';
+import StephenimgPixelated from './images/members/pixelated/Stephen.jpg';
+import BrittanyimgPixelated from './images/members/pixelated/Brittany.jpg';
+import RyanimgPixelated from './images/members/pixelated/Ryan.jpg';
+import JordanimgPixelated from './images/members/pixelated/Jordan.jpg';
+import MichaelimgPixelated from './images/members/pixelated/Michael.jpg';
+
 
 
 export default {
@@ -13,6 +25,7 @@ export default {
     "name": "Sergei Pond",
     "title": "Full Professor",
     "image": Sergeiimg,
+    "imagePixelated": SergeiimgPixelated,
     "links": {
       "twitter": "https://twitter.com/sergeilkp",
       "github": "https://github.com/spond",
@@ -25,6 +38,7 @@ export default {
     "name": "Steven Weaver",
     "title": "Senior Programming Analyst",
     "image": Stevenimg,
+    "imagePixelated": StevenimgPixelated,
     "links": {
       "twitter": "https://twitter.com/maximumsteve?lang=en",
       "github": "https://github.com/stevenweaver",
@@ -37,6 +51,7 @@ export default {
     "name": "Stephanie Spielman",
     "title": "Assistant Professor",
     "image": Stephanieimg,
+    "imagePixelated": StephanieimgPixelated,
     "links": {
       "twitter": "https://twitter.com/stephspiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
       "github": "https://github.com/sjspielman",
@@ -49,6 +64,7 @@ export default {
     "name": "Stephen Shank",
     "title": "Software Developer",
     "image": Stephenimg,
+    "imagePixelated": StephenimgPixelated,
     "links": {
       "twitter": "https://twitter.com/StephenShank",
       "github": "https://github.com/stephenshank",
@@ -61,6 +77,7 @@ export default {
     "name": "Brittany Magalis",
     "title": "Postdoctoral Researcher",
     "image": Brittanyimg,
+    "imagePixelated": BrittanyimgPixelated,
     "links": {
       "linkedin": "https://www.linkedin.com/in/brittany-rife-magalis-9b087551/",
       "googlescholar": "https://scholar.google.com/citations?user=0FrSeQgAAAAJ&hl=en"
@@ -70,6 +87,7 @@ export default {
     "name": "Ryan Velazquez",
     "title": "Software Developer",
     "image": Ryanimg,
+    "imagePixelated": RyanimgPixelated,
     "links": {
       "github": "https://github.com/rdvelazquez",
       "linkedin": "https://www.linkedin.com/in/ryan-velazquez/"
@@ -77,8 +95,9 @@ export default {
   },
   "Jordan": {
     "name": "Jordan Zehr",
-    "title": "Masters Student",
+    "title": "Graduate Student",
     "image": Jordanimg,
+    "imagePixelated": JordanimgPixelated,
     "links": {
       "github": "https://github.com/jzehr"
     }
@@ -87,6 +106,7 @@ export default {
     "name": "Michael Li",
     "title": "Graphic Designer",
     "image": Michaelimg,
+    "imagePixelated": MichaelimgPixelated,
     "links": {
       "github": "https://github.com/mli24970"
     }

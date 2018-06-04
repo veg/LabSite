@@ -4,7 +4,6 @@
 # Development
 
 ## Installation
-HyPhy Vision uses [yarn](https://yarnpkg.com/lang/en/docs/install/) for package management.
 
 ```
 git clone https://github.com/veg/hyphy-vision

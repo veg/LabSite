@@ -11,6 +11,7 @@ class Members extends Component {
       membersList.push(
         <Member
           image={membersInfo[key].image}
+          imagePixelated={membersInfo[key].imagePixelated}
           name={membersInfo[key].name}
           title={membersInfo[key].title} 
           links={membersInfo[key].links}

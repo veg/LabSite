@@ -42,7 +42,13 @@ export default class NavBar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="/#papers">../Selected_Papers</NavLink>
-                </NavItem>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/veg">
+                  <i className="fa fa-github fa-lg"></i>
+                </NavLink>
+              </NavItem>
+
             </Nav>
           </Collapse>
         </Navbar>
