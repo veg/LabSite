@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: ease-in 100ms;
 }
 
+.navbar-toggler {
+  background-color: #fff;
+}
+
 /*/// Lab ///*/
 .lab-container {
   background-image: ;
