@@ -23,5 +23,7 @@ yarn start
 
 ## Deployment
 
-`webpack`
-`supervisor server.js`
+```
+yarn run build
+supervisor server.js
+```
