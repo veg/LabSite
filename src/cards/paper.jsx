@@ -5,16 +5,13 @@ class Paper extends Component {
 
   render() {
     return(
-        <a href={this.props.link} target="_blank">
-          <div className="card">
-            <div className="card-body">
-              <h4 className="card-title">{this.props.title}</h4>
-              <p className="card-text">{this.props.authors}</p>
-              <p className="card-text">{this.props.publication}</p>
-              <p className="card-text">{this.props.date}</p>
+          <li className="media">
+            <div className="media-body">
+              <h5 className="mt-0">{this.props.title}</h5>
+                {this.props.authors}
+                <p>{this.props.publication}, {this.props.date}</p>
             </div>
-          </div>
-        </a>
+          </li>
     );
   }
 }

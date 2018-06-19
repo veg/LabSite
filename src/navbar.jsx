@@ -30,18 +30,21 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Navbar className="fixed-top" style={{backgroundColor:"#2b328e"}} expand="md">
-          <NavbarBrand href="/"><img src={'/logo.svg'} />LAB</NavbarBrand>
+          <NavbarBrand href="/"><img src={'/logo.svg'} />CAST</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/#members">Meet the Team_</NavLink>
+                <NavLink href="/#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#projects">&lt; Projects /&gt;</NavLink>
+                <NavLink href="/#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#papers">../Selected_Papers</NavLink>
+                <NavLink href="/#papers">Papers</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/#members">Team</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/veg">

@@ -28,7 +28,7 @@ class Members extends Component {
   render() {
     return (
       <div id="members">
-        <h2 className="title">Meet the Team<span className="animate-blink">_</span></h2>
+        <h2 className="title">Team</h2>
         <div>{this.getMembers()}</div>
       </div>
     );

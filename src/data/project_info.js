@@ -22,18 +22,6 @@ export default {
       "paper": "https://link.springer.com/chapter/10.1007%2F0-387-27733-1_6" 
     }
   },
-  "HIV-Trace": {
-    "name": "HIV-Trace",
-    "shortDescription": "Identify Transmision Clusters",
-    "longDescription": "Tool for large scale molecular epidemiology of HIV-1 and other rapidly evolving pathogens; currently in use by the Centers for Disease Control (CDC) for monitoring HIV transmission clusters throughout the US",
-    "image": Traceimg,
-    "tag": "major",
-    "links": {
-      "website": "https://veg.github.io/hivtrace-viz/",
-      "github": "https://github.com/veg/hivtrace",
-      "paper": "https://academic.oup.com/mbe/advance-article-abstract/doi/10.1093/molbev/msy016/4833215?redirectedFrom=fulltext"
-    }
-  },
   "Datamonkey": {
     "name": "Datamonkey.org",
     "shortDescription": "Run state-of-the-art statistical models through the comfort of your browser",
@@ -46,15 +34,16 @@ export default {
       "paper": "https://academic.oup.com/mbe/article-abstract/35/3/773/4782511?redirectedFrom=PDF"
     }
   },
-  "galaxy.hyphy.org": {
-    "name": "galaxy.hyphy.org",
-    "shortDescription": "High throughput genomic tools for galaxy",
-    "longDescription": "Galaxy Project server assembling HIV NGS tools into “data to answer” workflows and creating solutions for HIV/AIDS researchers needing to perform analyses of NGS data; server is hosted by the Pond Lab in collaboration with the Lab of Anton Nekrutenko at Penn State and the Lab of James Taylor at Johns Hopkins",
-    "image": Galaxyimg,
+  "HIV-TRACE": {
+    "name": "HIV-TRACE",
+    "shortDescription": "Identify Transmision Clusters",
+    "longDescription": "Tool for large scale molecular epidemiology of HIV-1 and other rapidly evolving pathogens; currently in use by the Centers for Disease Control (CDC) for monitoring HIV transmission clusters throughout the US",
+    "image": Traceimg,
     "tag": "major",
     "links": {
-      "website": "https://galaxy.hyphy.org",
-      "github": "https://github.com/veg/tools-iuc"
+      "website": "https://veg.github.io/hivtrace-viz/",
+      "github": "https://github.com/veg/hivtrace",
+      "paper": "https://academic.oup.com/mbe/advance-article-abstract/doi/10.1093/molbev/msy016/4833215?redirectedFrom=fulltext"
     }
   },
   "Phylotree.js": {
@@ -66,6 +55,17 @@ export default {
     "links": {
       "website": "http://phylotree.hyphy.org/",
       "github": "https://github.com/veg/phylotree.js",
+    }
+  },
+  "galaxy.hyphy.org": {
+    "name": "galaxy.hyphy.org",
+    "shortDescription": "High throughput genomic tools for galaxy",
+    "longDescription": "Galaxy Project server assembling HIV NGS tools into “data to answer” workflows and creating solutions for HIV/AIDS researchers needing to perform analyses of NGS data; server is hosted by the Pond Lab in collaboration with the Lab of Anton Nekrutenko at Penn State and the Lab of James Taylor at Johns Hopkins",
+    "image": Galaxyimg,
+    "tag": "major",
+    "links": {
+      "website": "https://galaxy.hyphy.org",
+      "github": "https://github.com/veg/tools-iuc"
     }
   },
   "HyPhy-Vision": {
@@ -89,8 +89,8 @@ export default {
       "github": "https://github.com/veg/bcell-phylo"
     }
   },
-  "Flea": {
-    "name": "Flea",
+  "FLEA": {
+    "name": "FLEA",
     "shortDescription": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
     "longDescription": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
     "tag": "minor",

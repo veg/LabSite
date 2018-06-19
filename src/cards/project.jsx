@@ -30,23 +30,13 @@ class Project extends Component {
 
   render() {
     return(
-      <div 
-        className="card" 
-        onMouseEnter={this.hover}
-        onMouseLeave={this.hover}
-      >
-        {this.props.tag == 'major' ? 
-          <div style={{minHeight:"14rem"}} >
-            <img className="card-img-top" src={this.props.image} alt="Card image cap" />
-          </div>
-            :
-            null}
-        <div className="card-body">
-          <h4 className="card-title">{this.props.name}</h4>
-          <p className="card-text">{this.props.longDescription}</p> 
-          <p>{this.getLinks()}</p> 
-        </div>
-      </div>
+			<li className="media project-media">
+				<img className="mr-3" style={{maxWidth:"65px"}} src={this.props.image} alt="Card image cap" />
+				<div className="media-body">
+					<h5 className="mt-0">{this.props.name}</h5>
+					{this.props.longDescription}
+				</div>
+			</li>
     );
   }
 }

@@ -19,16 +19,16 @@ class Papers extends Component {
       )
     }
     return(
-      <div>
+      <ul className="list-unstyled pull-left">
         {papersList}
-      </div>
+      </ul>
     )
   }
 
   render() {
     return (
       <div id="papers">
-        <h2 className="title">../Selected_Papers</h2>
+        <h2 className="title">Papers</h2>
         {this.getPapers()}
       </div>
     );
