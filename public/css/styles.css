@@ -69,14 +69,21 @@ h1, h2, h3, h4, h5, h6 {
   background-image: ;
 }
 
+.project-media {
+	margin-bottom: 10px;
+
+}
+
 /*/// Headings ///*/
+/* TODO : Just create a new class for this*/
+#about .title,
 #members .title,
 #projects .title,
 #papers .title {
   display: inline-block;
   font-family: "Share Tech Mono", monospace;
   font-size: 24px;
-  margin: 85px 15px 25px 15px;
+  margin: 85px 15px 25px 0px;
   padding: 10px 2%;
   border: 4px solid #2b328e;
   background-color: #e4e4e0;
@@ -85,17 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*/// Cards ///*/
-.card {
-  padding: 5px;
-  border: 2px solid #e4e4e0;
-  border-radius: 0;
-  box-sizing: border-box;
-}
-
-.card-body {
-  padding: 0px .025rem;
-}
-
 .credentials {
   display: block;
   font-family: "Oxygen Mono", monospace;
@@ -174,7 +170,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #2b328e;
   color: #e4e4e0;
   font-size: 16px;
-  text-align: center;
   padding: 12px 15px;
 }
 

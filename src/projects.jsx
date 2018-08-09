@@ -22,18 +22,18 @@ class Projects extends Component {
       }
     }
     return(
-      <div className="card-group">
+      <ul className="list-unstyled pull-left">
         {projectsList}
-      </div>
+      </ul>
     )
   }
 
   render() {
     return (
       <div id="projects">
-        <h2 className="title">&lt; Projects /&gt;</h2>
+        <h2 className="title">Projects</h2>
         <div>{this.getProjects('major')}</div>
-        <div>{this.getProjects('minor')}</div>
+				<p>To see more, please visit our <a href="https://github.com/veg">Github Page</a></p>
       </div>
     );
   }
