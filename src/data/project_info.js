@@ -13,7 +13,7 @@ export default {
   "HyPhy": {
     "name": "HyPhy",
     "shortDescription": "Hypothesis Testing with Phyloginies",
-    "longDescription": "Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning; features a rich scripting language for limitless customization of analyses; over 10,000 registered users and over 1,800 citations in peer-reviewed publications",
+    "longDescription": "Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning; features a rich scripting language for limitless customization of analyses; over 10,000 registered users and over 2,000 citations in peer-reviewed publications",
     "image": Hyphyimg,
     "tag": "major",
     "links": {
