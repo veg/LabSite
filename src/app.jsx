@@ -44,8 +44,8 @@ class App extends Component {
         </div>
 				<About />
         <Projects />
-        <Papers />
         <Members/>
+        <Papers />
       </div>
     );
   }

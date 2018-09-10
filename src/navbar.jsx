@@ -41,11 +41,12 @@ export default class NavBar extends React.Component {
                 <NavLink onClick={this.toggle} href="/#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink onClick={this.toggle} href="/#papers">Papers</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink onClick={this.toggle} href="/#members">Team</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink onClick={this.toggle} href="/#papers">Papers</NavLink>
+              </NavItem>
+
               <NavItem>
                 <NavLink onClick={this.toggle} href="https://github.com/veg">
                   <i className="fa fa-github fa-lg"></i>
