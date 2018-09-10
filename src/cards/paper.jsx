@@ -7,9 +7,11 @@ class Paper extends Component {
     return(
           <li className="media">
             <div className="media-body">
-              <h5 className="mt-0">{this.props.title}</h5>
-                {this.props.authors}
-                <p>{this.props.publication}, {this.props.date}</p>
+              <a href={this.props.link}>
+                <h5 className="mt-0">{this.props.title}</h5>
+              </a>
+              {this.props.authors}
+              <p>{this.props.publication}, {this.props.date}</p>
             </div>
           </li>
     );
