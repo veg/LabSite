@@ -14,8 +14,8 @@ class About extends Component {
           analysis of sequence data, especially large and rich data sets from
           measurably evolving pathogens. We relish scientific and engineering
           challenges involved in creating scalable and useable tools for our own
-          research and for the use by the broader community. We are omnivorous
-          in applied research problems and currently work on problems in include
+          research and for use by the broader community. We are omnivorous
+          in applied research problems and currently work on problems in
           molecular epidemiology of HIV, dynamics of immune repertoires,
           pathogenesis and within-host evolution of HIV and SIV, and optimal use
           of next generation sequencing data.</p>
