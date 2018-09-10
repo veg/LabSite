@@ -30,7 +30,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Navbar className="fixed-top" style={{backgroundColor:"#2b328e"}} expand="md">
-          <NavbarBrand href="/"><img src={'/logo.svg'} />CAST</NavbarBrand>
+          <NavbarBrand href="/"><img src={'/logo.svg'} /> ACME</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

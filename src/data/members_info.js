@@ -23,7 +23,7 @@ import MichaelimgPixelated from './images/members/pixelated/Michael.jpg';
 export default {
   "Sergei": {
     "name": "Sergei Pond",
-    "title": "Full Professor",
+    "title": "Principal Investigator",
     "image": Sergeiimg,
     "imagePixelated": SergeiimgPixelated,
     "links": {
@@ -45,19 +45,6 @@ export default {
       "linkedin": "https://www.linkedin.com/in/steven-weaver-6308a59/",
       "website": "http://www.stevenweaver.org/",
       "googlescholar": "https://scholar.google.com/citations?user=A2ImcaUAAAAJ&hl=en&authuser=1"
-    }
-  },
-  "Stephanie": {
-    "name": "Stephanie Spielman",
-    "title": "Assistant Professor",
-    "image": Stephanieimg,
-    "imagePixelated": StephanieimgPixelated,
-    "links": {
-      "twitter": "https://twitter.com/stephspiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-      "github": "https://github.com/sjspielman",
-      "linkedin": "https://www.linkedin.com/in/stephanie-spielman-40b4b1126/",
-      "website": "http://sjspielman.org/",
-      "googlescholar": "https://scholar.google.com/citations?user=6xAqQtIAAAAJ&hl=en"
     }
   },
   "Stephen": {
@@ -112,3 +99,20 @@ export default {
     }
   }
 }
+
+  /*
+   * Former
+  "Stephanie": {
+    "name": "Stephanie Spielman",
+    "title": "Assistant Professor",
+    "image": Stephanieimg,
+    "imagePixelated": StephanieimgPixelated,
+    "links": {
+      "twitter": "https://twitter.com/stephspiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      "github": "https://github.com/sjspielman",
+      "linkedin": "https://www.linkedin.com/in/stephanie-spielman-40b4b1126/",
+      "website": "http://sjspielman.org/",
+      "googlescholar": "https://scholar.google.com/citations?user=6xAqQtIAAAAJ&hl=en"
+    }
+  },
+  */

@@ -33,7 +33,7 @@ class Projects extends Component {
       <div id="projects">
         <h2 className="title">Projects</h2>
         <div>{this.getProjects('major')}</div>
-				<p>To see more, please visit our <a href="https://github.com/veg">Github Page</a></p>
+				<p>To see more, please visit our <a href="https://github.com/veg" style={{color:"#2b328e"}}>Github Page</a></p>
       </div>
     );
   }
