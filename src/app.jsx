@@ -10,7 +10,15 @@ class About extends Component {
     return(
 			<div id="about">
 				<h2 className="title">About</h2>
-        <p>We develop models and computational approaches for comparative analysis of sequence data, especially large and rich data set from measurably evolving pathogens. We also apply evolutionary algorithms and machine learning techniques to complex problems in sequence evolution, especially in the context of HIV population history, adaptation to new hosts, transmission, immune escape, and the development of drug resistance.</p>
+        <p>We develop statistical models and computational tools for comparative
+          analysis of sequence data, especially large and rich data sets from
+          measurably evolving pathogens. We relish scientific and engineering
+          challenges involved in creating scalable and useable tools for our own
+          research and for the use by the broader community. We are omnivorous
+          in applied research problems and currently work on problems in include
+          molecular epidemiology of HIV, dynamics of immune repertoires,
+          pathogenesis and within-host evolution of HIV and SIV, and optimal use
+          of next generation sequencing data.</p>
 			</div>
     );
   }
