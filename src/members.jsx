@@ -27,9 +27,20 @@ class Members extends Component {
 
   render() {
     return (
-      <div id="members">
-        <h2 className="title">Team</h2>
-        <div>{this.getMembers()}</div>
+      <div>
+
+        <div id="members">
+          <h2 className="title">Team</h2>
+          <div>{this.getMembers()}</div>
+        </div>
+          
+        <div style={{marginTop: "10px" }}>
+          <h4>Former Members</h4>
+          <a style={{ color: "black" }} href="http://sjspielman.org/">
+            <p>Stephanie Spielman - Assistant Professor (currently Assistant Professor at Rowan University)</p>
+          </a>
+        </div>
+
       </div>
     );
   }
