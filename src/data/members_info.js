@@ -97,3 +97,20 @@ export default {
     }
   }
 }
+
+  /*
+   * Former
+  "Stephanie": {
+    "name": "Stephanie Spielman",
+    "title": "Assistant Professor",
+    "image": Stephanieimg,
+    "imagePixelated": StephanieimgPixelated,
+    "links": {
+      "twitter": "https://twitter.com/stephspiel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      "github": "https://github.com/sjspielman",
+      "linkedin": "https://www.linkedin.com/in/stephanie-spielman-40b4b1126/",
+      "website": "http://sjspielman.org/",
+      "googlescholar": "https://scholar.google.com/citations?user=6xAqQtIAAAAJ&hl=en"
+    }
+  },
+  */
