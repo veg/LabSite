@@ -18,7 +18,7 @@ export default class NavBar extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
@@ -31,23 +31,24 @@ export default class NavBar extends React.Component {
       <div>
         <Navbar className="fixed-top" style={{backgroundColor:"#2b328e"}} expand="md">
           <NavbarBrand href="/"><img src={'/logo.svg'} /> ACME</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle} className="fas fa-bars" style={{padding: "0px", width: "25px", height: "25px" }} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/#about">About</NavLink>
+                <NavLink onClick={this.toggle} href="/#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#projects">Projects</NavLink>
+                <NavLink onClick={this.toggle} href="/#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#papers">Papers</NavLink>
+                <NavLink onClick={this.toggle} href="/#members">Team</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#members">Team</NavLink>
+                <NavLink onClick={this.toggle} href="/#papers">Papers</NavLink>
               </NavItem>
+
               <NavItem>
-                <NavLink href="https://github.com/veg">
+                <NavLink onClick={this.toggle} href="https://github.com/veg">
                   <i className="fa fa-github fa-lg"></i>
                 </NavLink>
               </NavItem>

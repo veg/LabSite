@@ -1,7 +1,6 @@
 // Unpixelated images.
 import Sergeiimg from './images/members/Sergei.jpeg';
 import Stevenimg from './images/members/Steven.jpeg';
-import Stephanieimg from './images/members/Stephanie.jpeg';
 import Stephenimg from './images/members/Stephen.jpeg';
 import Brittanyimg from './images/members/Brittany.jpeg';
 import Ryanimg from './images/members/Ryan.jpeg';
@@ -11,7 +10,6 @@ import Michaelimg from './images/members/Michael.jpeg';
 // pixelated images.
 import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
 import StevenimgPixelated from './images/members/pixelated/Steven.jpg';
-import StephanieimgPixelated from './images/members/pixelated/Stephanie.jpg';
 import StephenimgPixelated from './images/members/pixelated/Stephen.jpg';
 import BrittanyimgPixelated from './images/members/pixelated/Brittany.jpg';
 import RyanimgPixelated from './images/members/pixelated/Ryan.jpg';
