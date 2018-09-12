@@ -1,5 +1,4 @@
-import Sergeiimg from './images/members/Sergei.jpeg';
-import Hyphyimg from './images/projects/Hyphy.svg';
+import Hyphyimg from './images/projects/Hyphy.jpeg';
 import Visionimg from './images/projects/Vision.jpeg';
 import Galaxyimg from './images/projects/Galaxy.jpeg';
 import Traceimg from './images/projects/Trace.jpeg';
@@ -17,7 +16,7 @@ export default {
     "image": Hyphyimg,
     "tag": "major",
     "links": {
-      "website": "https://hyphy.org",
+      "website": "http://hyphy.org",
       "github": "https://github.com/veg/hyphy",
       "paper": "https://link.springer.com/chapter/10.1007%2F0-387-27733-1_6" 
     }
