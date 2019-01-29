@@ -6,6 +6,20 @@ html, body {
   background-color: #e4e4e0;
 }
 
+@media (min-width: 1600px) {
+  body {
+    width: 80%; 
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    width: 60%; 
+    margin: 0 auto;
+  }
+}
+
 ::selection {
   background-color: #333;
   color: #e4e4e0;
@@ -65,9 +79,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*/// Lab ///*/
-.lab-container {
-  background-image: ;
-}
 
 .project-media {
 	margin-bottom: 10px;
@@ -130,6 +141,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*/// Members ///*/
+
+
+@media (max-width: 750px) and (min-width: 550px) {
+  .card-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 65%; 
+    margin: 0 auto;
+  }
+}
+
 .members .card-title, .members .card-text {
   background-color: #f0f0f0;
   border: 1px solid #ddd;
