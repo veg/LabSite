@@ -105,8 +105,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Oxygen Mono", monospace;
   font-size: 14px;
   color: #2b328e;
-  padding: 3px 7px;
+  padding: 1px 7px;
   text-align: left;
+}
+
+.card-body {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .card-body .btn-light {
@@ -135,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .membersImage img {
-  positoin: relative;
+  position: relative;
 }
 
 .top {

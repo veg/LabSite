@@ -6,6 +6,9 @@ import Brittanyimg from './images/members/Brittany.jpeg';
 import Ryanimg from './images/members/Ryan.jpeg';
 import Jordanimg from './images/members/Jordan.jpeg';
 import Michaelimg from './images/members/Michael.jpeg';
+import Stellaimg from './images/members/Stella.jpeg';
+import Sadieimg from './images/members/Sadie.jpeg';
+import Aleximg from './images/members/Alex.jpeg';
 
 // pixelated images.
 import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
@@ -80,20 +83,37 @@ export default {
   },
   "Jordan": {
     "name": "Jordan Zehr",
-    "title": "Graduate Student",
+    "title": "Doctoral Student",
     "image": Jordanimg,
     "imagePixelated": JordanimgPixelated,
     "links": {
       "github": "https://github.com/jzehr"
     }
   },
-  "Michael": {
-    "name": "Michael Li",
-    "title": "Graphic Designer",
-    "image": Michaelimg,
-    "imagePixelated": MichaelimgPixelated,
+  "Stella": {
+    "name": "Stella Park",
+    "title": "Doctoral Student",
+    "image": Stellaimg,
     "links": {
-      "github": "https://github.com/mli24970"
+    }
+  },
+  "Sadie": {
+    "name": "Sadie Wisotsky",
+    "title": "Postdoctoral Researcher",
+    "image": Sadieimg,
+    "links": {
+      "linkedin": "https://linkedin.com/in/sadie-wisotsky",
+      "twitter": "https://twitter.com/srwisotsky",
+      "github": "https://github.com/srwis"
+    }
+  },
+  "Alex": {
+    "name": "Alexander Lucaci",
+    "title": "Doctoral Student",
+    "image": Aleximg,
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/",
+      "github": "https://github.com/aglucaci"
     }
   }
 }
@@ -113,4 +133,13 @@ export default {
       "googlescholar": "https://scholar.google.com/citations?user=6xAqQtIAAAAJ&hl=en"
     }
   },
+  "Michael": {
+    "name": "Michael Li",
+    "title": "Graphic Designer",
+    "image": Michaelimg,
+    "imagePixelated": MichaelimgPixelated,
+    "links": {
+      "github": "https://github.com/mli24970"
+    }
+  }
   */
