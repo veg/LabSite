@@ -4,7 +4,7 @@ export default {
     "authors": "Kemal Eren, Steven Weaver, Robert Ketteringham, Morné Valentyn, Melissa Laird Smith, Venkatesh Kumar, Sanjay Mohan, Sergei L Kosakovsky Pond, Ben Murrell",
     "publication": "PLoS computational biology",
     "date": "2018",
-    "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006498&rev=1"
+    "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006498"
   },
   "Phyotree.js": {
     "title": "phylotree. js - a JavaScript library for application development and interactive data visualization in phylogenetics",
