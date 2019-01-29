@@ -1,10 +1,24 @@
 export default {
+  "Reservoir Established near Therapy Initiation": {
+    "title": "The Replication-Competent HIV-1 Latent Reservoir is Primarily Established Near the Time of Therapy Initiation",
+    "authors": "Melissa-Rose Abrahams, Sarah B. Joseph, Nigel Garrett, Lynn Tyers, Matthew Moeser, Nancie Archin, Olivia D. Council, David Matten, Shuntai Zhou, Deelan Doolabh, Colin Anthony, Nilu Goonetilleke, Salim Abdool Karim, David M. Margolis, Sergei Kosakovsky Pond, Carolyn Williamson, Ronald Swanstrom",
+    "publication": "BioRxiv",
+    "date": "2019",
+    "link": "https://www.biorxiv.org/content/10.1101/512475v1"
+  },
   "Flea": {
     "title": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
     "authors": "Kemal Eren, Steven Weaver, Robert Ketteringham, Morné Valentyn, Melissa Laird Smith, Venkatesh Kumar, Sanjay Mohan, Sergei L Kosakovsky Pond, Ben Murrell",
     "publication": "PLoS computational biology",
     "date": "2018",
     "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006498"
+  },
+  "Hep B in East Asia": {
+    "title": "Origin and dissemination of hepatitis B virus genotype C in East Asia revealed by phylodynamic analysis and historical correlates",
+    "authors": "Serena Y. C. Lin, Brittany Rife Magalis, Marco Salemi, Hsin‐Fu Liu",
+    "publication": "Journal of Viral Hepatitis",
+    "date": "2018",
+    "link": "https://onlinelibrary.wiley.com/doi/full/10.1111/jvh.13006"
   },
   "Phyotree.js": {
     "title": "phylotree. js - a JavaScript library for application development and interactive data visualization in phylogenetics",
@@ -20,12 +34,12 @@ export default {
     "date": "2018",
     "link": "https://academic.oup.com/jid/advance-article-abstract/doi/10.1093/infdis/jiy431/5053881?redirectedFrom=PDF"
   },
-  "HIV-TRACE": {
-    "title": "Not so different after all: a comparison of methods for detecting amino acid sites under selection",
-    "authors": "SL Kosakovsky Pond, SDW Frost",
-    "publication": "Molecular biology and evolution",
+  "Motifs that Direct Fate": {
+    "title": "Identification of conserved, primary sequence motifs that direct retrovirus RNA fate",
+    "authors": "Gatikrushna Singh, Brittany D Rife, Bradley Seufzer, Marco Salemi, Aaron Rendahl, Kathleen Boris-Lawrie",
+    "publication": "Nucleic Acids Research",
     "date": "2018",
-    "link": "https://academic.oup.com/mbe/article-abstract/22/5/1208/1066893"
+    "link": "https://academic.oup.com/nar/article/46/14/7366/5006033"
   },
   "Neutral Note": {
     "title": "Neutral theory and rapidly evolving viral pathogens",
@@ -40,6 +54,13 @@ export default {
     "publication": "PeerJ",
     "date": "2018",
     "link": "https://peerj.com/articles/4339/?utm_source=TrendMD&utm_campaign=PeerJ_TrendMD_1&utm_medium=TrendMD"
+  },  
+  "Global Env within and among": {
+    "title": "Evaluation of global HIV/SIV envelope gp120 RNA structure and evolution within and among infected hosts",
+    "authors": "Brittany Rife Magalis, Sergei L Kosakovsky Pond, Michael F Summers, Marco Salemi",
+    "publication": "Virus Evolution",
+    "date": "2018",
+    "link": "https://academic.oup.com/ve/article/4/1/vey018/5042828"
   },
   "Tissue Reservoir": {
     "title": "Persistent HIV-1 replication maintains the tissue reservoir during therapy",
@@ -82,6 +103,13 @@ export default {
     "publication": "Molecular biology and evolution",
     "date": "2006",
     "link": "https://academic.oup.com/mbe/article-abstract/23/10/1891/1096946"
+  },
+  "Not so different": {
+    "title": "Not so different after all: a comparison of methods for detecting amino acid sites under selection",
+    "authors": "SL Kosakovsky Pond, SDW Frost",
+    "publication": "Molecular biology and evolution",
+    "date": "2005",
+    "link": "https://academic.oup.com/mbe/article-abstract/22/5/1208/1066893"
   },
     "HyPhy": {
     "title": "HyPhy: hypothesis testing using phylogenies",
