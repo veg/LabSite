@@ -2,9 +2,9 @@ export default {
   "Northern California Clinical Cohort": {
     "title": "National and International Dimensions of HIV-1 Sequence Clusters in a Northern California Clinical Cohort",
     "authors": "Soo-Yon Rhee, Brittany R Magalis, Leo Hurley, Michael J Silverberg, Julia L Marcus, Sally Slome, Sergei L Kosakovsky Pond and Robert W Shafer",
-    "publication": "BioRxiv",
+    "publication": "Open Forum Infectious Diseases",
     "date": "2019",
-    "link": "https://www.biorxiv.org/content/10.1101/512475v1"
+    "link": "https://academic.oup.com/ofid/advance-article/doi/10.1093/ofid/ofz135/5380637"
   },
   "Stable Intermediates and RNA Structrual Heterogeneity": {
     "title": "Compensatory Evolution within Viral RNA Structure: The Potential Role of Stable Intermediates in RNA Structural Heterogeneity",
@@ -19,6 +19,13 @@ export default {
     "publication": "BioRxiv",
     "date": "2019",
     "link": "https://www.biorxiv.org/content/10.1101/512475v1"
+  },
+  "HIV-Trace": {
+    "title": "HIV-TRACE (TRAnsmission Cluster Engine): a Tool for Large Scale Molecular Epidemiology of HIV-1 and Other Rapidly Evolving Pathogens",
+    "authors": "Sergei L. Kosakovsky Pond, Steven Weaver, Andrew J. Leigh Brown, and Joel O. Wertheim",
+    "publication": "Molecular biology and evolution",
+    "date": "2018",
+    "link": "https://academic.oup.com/mbe/article/35/7/1812/4833215"
   },
   "Flea": {
     "title": "Full-Length Envelope Analyzer (FLEA): A tool for longitudinal analysis of viral amplicons",
