@@ -1,4 +1,11 @@
 export default {
+  "A New Method for inferring timetrees": {
+    "title": "A new method for inferring timetrees from temporally sampled molecular sequences",
+    "authors": "Sayaka Miura, Koichiro Tamura, Sergei L. Kosakovsky Pond, Louise A. Huuki, Jessica Priest, Jiamin Deng, Sudhir Kumar",
+    "publication": "BioRxiv",
+    "date": "2019",
+    "link": "https://www.biorxiv.org/content/10.1101/620187v1.abstract"
+  },
   "Northern California Clinical Cohort": {
     "title": "National and International Dimensions of HIV-1 Sequence Clusters in a Northern California Clinical Cohort",
     "authors": "Soo-Yon Rhee, Brittany R Magalis, Leo Hurley, Michael J Silverberg, Julia L Marcus, Sally Slome, Sergei L Kosakovsky Pond and Robert W Shafer",

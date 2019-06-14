@@ -37,7 +37,8 @@ class Members extends Component {
         <div style={{marginTop: "10px" }}>
           <h4>Former Members</h4>
           <a style={{ color: "black" }} href="http://sjspielman.org/">
-            <p>Stephanie Spielman - Assistant Professor (currently Assistant Professor at Rowan University)</p>
+            <p style={{marginBottom: "0"}}>Stephanie Spielman - Assistant Professor (currently Assistant Professor at Rowan University)</p>
+            <p>Ryan Velazquez - Lead Software Developer (currently Data Scientist at Azimuth1)</p>
           </a>
         </div>
 

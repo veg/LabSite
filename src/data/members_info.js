@@ -3,9 +3,7 @@ import Sergeiimg from './images/members/Sergei.jpeg';
 import Stevenimg from './images/members/Steven.jpeg';
 import Stephenimg from './images/members/Stephen.jpeg';
 import Brittanyimg from './images/members/Brittany.jpeg';
-import Ryanimg from './images/members/Ryan.jpeg';
 import Jordanimg from './images/members/Jordan.jpeg';
-import Michaelimg from './images/members/Michael.jpeg';
 import Stellaimg from './images/members/Stella.jpeg';
 import Sadieimg from './images/members/Sadie.jpeg';
 import Aleximg from './images/members/Alex.jpeg';
@@ -15,10 +13,7 @@ import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
 import StevenimgPixelated from './images/members/pixelated/Steven.jpg';
 import StephenimgPixelated from './images/members/pixelated/Stephen.jpg';
 import BrittanyimgPixelated from './images/members/pixelated/Brittany.jpg';
-import RyanimgPixelated from './images/members/pixelated/Ryan.jpg';
 import JordanimgPixelated from './images/members/pixelated/Jordan.jpg';
-import MichaelimgPixelated from './images/members/pixelated/Michael.jpg';
-
 
 
 export default {
@@ -69,16 +64,6 @@ export default {
     "links": {
       "linkedin": "https://www.linkedin.com/in/brittany-rife-magalis-9b087551/",
       "googlescholar": "https://scholar.google.com/citations?user=0FrSeQgAAAAJ&hl=en"
-    }
-  },
-  "Ryan": {
-    "name": "Ryan Velazquez",
-    "title": "Software Developer",
-    "image": Ryanimg,
-    "imagePixelated": RyanimgPixelated,
-    "links": {
-      "github": "https://github.com/rdvelazquez",
-      "linkedin": "https://www.linkedin.com/in/ryan-velazquez/"
     }
   },
   "Jordan": {
@@ -140,6 +125,16 @@ export default {
     "imagePixelated": MichaelimgPixelated,
     "links": {
       "github": "https://github.com/mli24970"
+    }
+  }
+  "Ryan": {
+    "name": "Ryan Velazquez",
+    "title": "Software Developer",
+    "image": Ryanimg,
+    "imagePixelated": RyanimgPixelated,
+    "links": {
+      "github": "https://github.com/rdvelazquez",
+      "linkedin": "https://www.linkedin.com/in/ryan-velazquez/"
     }
   }
   */
