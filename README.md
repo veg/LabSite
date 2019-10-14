@@ -1,7 +1,7 @@
 # Lab Website
 
 ## Contributing
-To modify the content just edit one of the three JSON files in the `src/data` directory. Layout or styling modifications can be made via a pull request or by reaching out to Ryan or Michael.
+To modify the content just edit one of the three JSON files in the `src/data` directory. Layout or styling modifications can be made via a pull request or by reaching out to Michael.
 
 ## Development
 
