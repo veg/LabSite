@@ -40,6 +40,7 @@ class Members extends Component {
             <p style={{marginBottom: "0"}}>Stephanie Spielman - Assistant Professor (currently Assistant Professor at Rowan University)</p>
           </a>
           <p>Ryan Velazquez - Lead Software Developer (currently Data Scientist at Azimuth1)</p>
+          <p>Brittany Rife Magalis - Postdoctoral researcher, University of Florida</p>
         </div>
 
       </div>
