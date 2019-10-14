@@ -56,16 +56,6 @@ export default {
       "googlescholar": "https://scholar.google.com/citations?user=5uLYvV0AAAAJ&hl=en"
     }
   },
-  "Brittany": {
-    "name": "Brittany Magalis",
-    "title": "Postdoctoral Researcher",
-    "image": Brittanyimg,
-    "imagePixelated": BrittanyimgPixelated,
-    "links": {
-      "linkedin": "https://www.linkedin.com/in/brittany-rife-magalis-9b087551/",
-      "googlescholar": "https://scholar.google.com/citations?user=0FrSeQgAAAAJ&hl=en"
-    }
-  },
   "Jordan": {
     "name": "Jordan Zehr",
     "title": "Doctoral Student",
