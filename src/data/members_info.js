@@ -2,7 +2,6 @@
 import Sergeiimg from './images/members/Sergei.jpeg';
 import Stevenimg from './images/members/Steven.jpeg';
 import Stephenimg from './images/members/Stephen.jpeg';
-import Brittanyimg from './images/members/Brittany.jpeg';
 import Jordanimg from './images/members/Jordan.jpeg';
 import Stellaimg from './images/members/Stella.jpeg';
 import Sadieimg from './images/members/Sadie.jpeg';
