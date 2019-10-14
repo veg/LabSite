@@ -1,4 +1,11 @@
 export default {
+  "Reservoir Established near Therapy Initiation": {
+    "title": "The Replication-Competent HIV-1 Latent Reservoir is Primarily Established Near the Time of Therapy Initiation",
+    "authors": "Melissa-Rose Abrahams, Sarah B. Joseph, Nigel Garrett, Lynn Tyers, Matthew Moeser, Nancie Archin, Olivia D. Council, David Matten, Shuntai Zhou, Deelan Doolabh, Colin Anthony, Nilu Goonetilleke, Salim Abdool Karim, David M. Margolis, Sergei Kosakovsky Pond, Carolyn Williamson, Ronald Swanstrom",
+    "publication": "Science Trans Med",
+    "date": "2019",
+    "link": "https://stm.sciencemag.org/content/11/513/eaaw5589"
+  },
   "A New Method for inferring timetrees": {
     "title": "A new method for inferring timetrees from temporally sampled molecular sequences",
     "authors": "Sayaka Miura, Koichiro Tamura, Sergei L. Kosakovsky Pond, Louise A. Huuki, Jessica Priest, Jiamin Deng, Sudhir Kumar",
@@ -19,13 +26,6 @@ export default {
     "publication": "FASEB Journal",
     "date": "2019",
     "link": "https://www.fasebj.org/doi/abs/10.1096/fasebj.2019.33.1_supplement.lb191"
-  },
-  "Reservoir Established near Therapy Initiation": {
-    "title": "The Replication-Competent HIV-1 Latent Reservoir is Primarily Established Near the Time of Therapy Initiation",
-    "authors": "Melissa-Rose Abrahams, Sarah B. Joseph, Nigel Garrett, Lynn Tyers, Matthew Moeser, Nancie Archin, Olivia D. Council, David Matten, Shuntai Zhou, Deelan Doolabh, Colin Anthony, Nilu Goonetilleke, Salim Abdool Karim, David M. Margolis, Sergei Kosakovsky Pond, Carolyn Williamson, Ronald Swanstrom",
-    "publication": "BioRxiv",
-    "date": "2019",
-    "link": "https://www.biorxiv.org/content/10.1101/512475v1"
   },
   "HIV-Trace": {
     "title": "HIV-TRACE (TRAnsmission Cluster Engine): a Tool for Large Scale Molecular Epidemiology of HIV-1 and Other Rapidly Evolving Pathogens",
