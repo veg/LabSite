@@ -22,8 +22,13 @@ yarn start
 ```
 
 ## Deployment
+Make/pull appropriate changes, then:
 
 ```
 yarn run build
+```
+
+To serve (only necessary if `pm2` is not already provisioning this process):
+```
 supervisor server.js
 ```
