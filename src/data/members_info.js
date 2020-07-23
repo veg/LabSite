@@ -6,6 +6,7 @@ import Jordanimg from './images/members/Jordan.jpeg';
 import Stellaimg from './images/members/Stella.jpeg';
 import Sadieimg from './images/members/Sadie.jpeg';
 import Aleximg from './images/members/Alex.jpeg';
+import Hannahimg from './images/members/Hannah.jpeg';
 
 // pixelated images.
 import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
@@ -88,6 +89,18 @@ export default {
     "links": {
       "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/",
       "github": "https://github.com/aglucaci"
+    }
+  },
+  "Hannah": {
+    "name": "Hannah Kim",
+    "title": "Doctoral Student",
+    "image": Hannahimg,
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
+      "twitter": "https://twitter.com/hannahincompbio",
+      "github": "https://github.com/hannahkimincompbio",
+      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en",
+      "website": "https://hannahkimincompbio.github.io/"
     }
   }
 }
