@@ -3,7 +3,12 @@ import Sergeiimg from './images/members/Sergei.jpeg';
 import Stevenimg from './images/members/Steven.jpeg';
 import Stephenimg from './images/members/Stephen.jpeg';
 import Jordanimg from './images/members/Jordan.jpeg';
+<<<<<<< HEAD
 import Stellaimg from './images/members/Stella.jpeg';
+=======
+// import Stellaimg from './images/members/Stella.jpeg';
+// import Sadieimg from './images/members/Sadie.jpeg';
+>>>>>>> HK
 import Aleximg from './images/members/Alex.jpeg';
 import Hannahimg from './images/members/Hannah.jpeg';
 
@@ -138,4 +143,8 @@ export default {
       "github": "https://github.com/srwis"
     }
   },
+<<<<<<< HEAD
   */
+=======
+  */
+>>>>>>> HK
