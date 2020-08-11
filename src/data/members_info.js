@@ -3,8 +3,8 @@ import Sergeiimg from './images/members/Sergei.jpeg';
 import Stevenimg from './images/members/Steven.jpeg';
 import Stephenimg from './images/members/Stephen.jpeg';
 import Jordanimg from './images/members/Jordan.jpeg';
-import Stellaimg from './images/members/Stella.jpeg';
-import Sadieimg from './images/members/Sadie.jpeg';
+// import Stellaimg from './images/members/Stella.jpeg';
+// import Sadieimg from './images/members/Sadie.jpeg';
 import Aleximg from './images/members/Alex.jpeg';
 import Hannahimg from './images/members/Hannah.jpeg';
 
@@ -65,23 +65,6 @@ export default {
       "github": "https://github.com/jzehr"
     }
   },
-  "Stella": {
-    "name": "Stella Park",
-    "title": "Doctoral Student",
-    "image": Stellaimg,
-    "links": {
-    }
-  },
-  "Sadie": {
-    "name": "Sadie Wisotsky",
-    "title": "Postdoctoral Researcher",
-    "image": Sadieimg,
-    "links": {
-      "linkedin": "https://linkedin.com/in/sadie-wisotsky",
-      "twitter": "https://twitter.com/srwisotsky",
-      "github": "https://github.com/srwis"
-    }
-  },
   "Alex": {
     "name": "Alexander Lucaci",
     "title": "Doctoral Student",
@@ -139,4 +122,21 @@ export default {
       "linkedin": "https://www.linkedin.com/in/ryan-velazquez/"
     }
   }
+  "Stella": {
+    "name": "Stella Park",
+    "title": "Doctoral Student",
+    "image": Stellaimg,
+    "links": {
+    }
+  },
+  "Sadie": {
+    "name": "Sadie Wisotsky",
+    "title": "Postdoctoral Researcher",
+    "image": Sadieimg,
+    "links": {
+      "linkedin": "https://linkedin.com/in/sadie-wisotsky",
+      "twitter": "https://twitter.com/srwisotsky",
+      "github": "https://github.com/srwis"
+    }
+  },
   */
