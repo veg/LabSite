@@ -36,7 +36,7 @@ export default {
     "image": Stevenimg,
     "imagePixelated": StevenimgPixelated,
     "links": {
-      "twitter": "https://twitter.com/maximumsteve?lang=en",
+      "twitter": "https://twitter.com/stvnwvr?lang=en",
       "github": "https://github.com/stevenweaver",
       "linkedin": "https://www.linkedin.com/in/steven-weaver-6308a59/",
       "website": "http://www.stevenweaver.org/",
