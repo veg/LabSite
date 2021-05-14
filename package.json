@@ -14,7 +14,7 @@
     "express": "^4.16.3",
     "font-awesome": "4.x",
     "fsevents": "^2.3.2",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "react": "^16.3.1",
     "react-announcement": "^1.1.2",
     "react-dom": "^16.3.1",
