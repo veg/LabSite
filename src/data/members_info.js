@@ -36,7 +36,7 @@ export default {
     "image": Stevenimg,
     "imagePixelated": StevenimgPixelated,
     "links": {
-      "twitter": "https://twitter.com/maximumsteve?lang=en",
+      "twitter": "https://twitter.com/stvnwvr?lang=en",
       "github": "https://github.com/stevenweaver",
       "linkedin": "https://www.linkedin.com/in/steven-weaver-6308a59/",
       "website": "http://www.stevenweaver.org/",
@@ -70,8 +70,8 @@ export default {
     "title": "Doctoral Student",
     "image": Aleximg,
     "links": {
-      "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/",
-      "github": "https://github.com/aglucaci"
+      "github": "https://github.com/aglucaci",
+      "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/"
     }
   },
   "Hannah": {
@@ -79,11 +79,11 @@ export default {
     "title": "Doctoral Student",
     "image": Hannahimg,
     "links": {
-      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
       "twitter": "https://twitter.com/hannahincompbio",
       "github": "https://github.com/hannahkimincompbio",
-      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en",
-      "website": "https://hannahkimincompbio.github.io/"
+      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
+      "website": "https://hannahkimincompbio.github.io/",
+      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
     }
   }
 }

@@ -11,7 +11,7 @@ class Paper extends Component {
                 <h5 className="mt-0">{this.props.title}</h5>
               </a>
               {this.props.authors}
-              <p>{this.props.publication}, {this.props.date}</p>
+              <p><i>{this.props.publication}</i>, {this.props.date}</p>
             </div>
           </li>
     );

@@ -3,6 +3,13 @@ import NavBar from "./navbar.jsx";
 import Members from "./members.jsx";
 import Projects from "./projects.jsx";
 import Papers from "./papers.jsx";
+import Papers_covid19 from "./papers_covid19.jsx";
+import Papers_method from "./papers_method.jsx";
+import Papers_disease from "./papers_disease.jsx";
+
+
+
+
 import Announce from "./announcement.jsx";
 
 class About extends Component {
@@ -65,6 +72,9 @@ class App extends Component {
         <Projects />
         <Members />
         <Papers />
+        <Papers_covid19 />
+        <Papers_method />
+        <Papers_disease />
       </div>
     );
   }
