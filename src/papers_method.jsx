@@ -19,7 +19,7 @@ class Papers_method extends Component {
       )
     }
     return(
-      <ul className="list-unstyled pull-left">
+      <ul id="papers_method_list" className="papers-list list-unstyled pull-left">
         {papersList}
       </ul>
     )

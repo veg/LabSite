@@ -19,7 +19,7 @@ class Papers_covid19 extends Component {
       )
     }
     return(
-      <ul className="list-unstyled pull-left">
+      <ul id="papers_covid19_list" className="papers-list list-unstyled pull-left">
         {papersList}
       </ul>
     )
