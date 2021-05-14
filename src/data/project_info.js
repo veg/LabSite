@@ -6,6 +6,7 @@ import Datamonkeyimg from './images/projects/Datamonkey.jpeg';
 import Phylotreeimg from './images/projects/Phylotree.jpeg';
 import Alignmentimg from './images/projects/Alignment.jpeg';
 import Hivngsimg from './images/projects/HIVNGS.jpeg';
+import COVIDimg from './images/projects/CovidDash.jpeg';
 
 
 export default {
@@ -65,6 +66,17 @@ export default {
     "links": {
       "website": "https://galaxy.hyphy.org",
       "github": "https://github.com/veg/tools-iuc"
+    }
+  },
+  "COVID-19 Dashboard": {
+    "name": "COVID-19 Dashboard",
+    "shortDescription": "COVID-19 Dashboard",
+    "longDescription": "Natural selection analysis of global SARS-CoV-2/COVID-19 enabled by data from GISAID; provides daily analyses of SARS-CoV-2 genomic data on an interactive notebook; this project is a part of a larger effort with the Galaxy team",
+    "image": COVIDimg,
+    "tag": "major",
+    "links": {
+      "website": "https://observablehq.com/@spond/revised-sars-cov-2-analytics-page",
+      "github": "https://github.com/veg/SARS-CoV-2"
     }
   },
   "HyPhy-Vision": {

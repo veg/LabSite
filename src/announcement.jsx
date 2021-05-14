@@ -8,8 +8,8 @@ export default class Announce extends React.Component {
     return (
       <Announcement
         title="COVID-19"
-        subtitle="Check out our latest COVID-19 efforts by following this link!"
-        link="http://covid19.datamonkey.org/"
+        subtitle="Check out our latest COVID-19 efforts!"
+        link="https://observablehq.com/collection/@spond/sars-cov-2"
         imageSource={Covid}
         daysToLive={0}
         secondsBeforeBannerShows={0}

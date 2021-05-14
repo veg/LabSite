@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "ajv": "^6.12.6",
     "babel": "^6.23.0",
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
@@ -11,6 +13,7 @@
     "bootstrap": "^4.1.0",
     "express": "^4.16.3",
     "font-awesome": "4.x",
+    "fsevents": "^2.3.2",
     "jquery": "^1.9.1",
     "react": "^16.3.1",
     "react-announcement": "^1.1.2",
