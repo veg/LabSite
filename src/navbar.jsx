@@ -43,13 +43,30 @@ export default class NavBar extends React.Component {
               <NavItem>
                 <NavLink onClick={this.toggle} href="/#members">Team</NavLink>
               </NavItem>
+
+
               <NavItem>
-                <NavLink onClick={this.toggle} href="/#papers">Papers</NavLink>
+                <NavLink onClick={this.toggle} href="/#papers">Papers:</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={this.toggle} href="/#papers_covid19">
+                  <i className="fas fa-lungs-virus fa-lg" style={{color: "#CD1111"}}></i>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={this.toggle} href="/#papers_method">
+                  <i className="fas fa-tools fa-lg" style={{color: "#8FB3CD"}}></i>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink onClick={this.toggle} href="/#papers_disease">
+                  <i className="fas fa-disease fa-lg" style={{color: "#51A76D"}}></i>
+                </NavLink>
               </NavItem>
 
               <NavItem>
                 <NavLink onClick={this.toggle} href="https://github.com/veg">
-                  <i className="fa fa-github fa-lg"></i>
+                  <i className="fab fa-github-square fa-lg"></i>
                 </NavLink>
               </NavItem>
 
