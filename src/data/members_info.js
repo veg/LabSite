@@ -7,6 +7,7 @@ import Jordanimg from './images/members/Jordan.jpeg';
 // import Sadieimg from './images/members/Sadie.jpeg';
 import Aleximg from './images/members/Alex.jpeg';
 import Hannahimg from './images/members/Hannah.jpeg';
+import Averyimg from './images/members/Avery.jpeg';
 
 // pixelated images.
 import SergeiimgPixelated from './images/members/pixelated/Sergei.jpg';
@@ -84,6 +85,18 @@ export default {
       "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
       "website": "https://hannahkimincompbio.github.io/",
       "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
+    }
+  },
+  "Avery": {
+    "name": "Avery Selberg",
+    "title": "Doctoral Student",
+    "image": Averyimg,
+    "links": {
+      // "twitter": 
+      "github": "https://github.com/agselberg",
+      // "linkedin": 
+      // "website": 
+      "googlescholar": "https://scholar.google.com/citations?user=OhvxIl8AAAAJ&hl=en"
     }
   }
 }
