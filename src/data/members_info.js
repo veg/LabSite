@@ -72,7 +72,8 @@ export default {
     "image": Aleximg,
     "links": {
       "github": "https://github.com/aglucaci",
-      "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/"
+      "linkedin": "https://www.linkedin.com/in/alexander-lucaci-0b305743/",
+      "googlescholar": "https://scholar.google.com/citations?user=WH0vTrwAAAAJ&hl=en&oi=ao"
     }
   },
   "Hannah": {
