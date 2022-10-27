@@ -7,6 +7,7 @@ import Jordanimg from './images/members/Jordan.jpeg';
 // import Sadieimg from './images/members/Sadie.jpeg';
 import Aleximg from './images/members/Alex.jpeg';
 import Hannahimg from './images/members/Hannah.jpeg';
+import HVimg from './images/members/HV.jpg';
 import Averyimg from './images/members/Avery.jpeg';
 
 // pixelated images.
@@ -88,6 +89,18 @@ export default {
       "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
     }
   },
+  "HV": {
+    "name": "Hannah Verdonk",
+    "title": "Doctoral Student",
+    "image": HVimg,
+    "links": {
+      "twitter": "https://twitter.com/hannahverdonk",
+      "github": "https://github.com/hverdonk",
+      "linkedin": "https://www.linkedin.com/in/hannahverdonk/",
+      "googlescholar": "https://scholar.google.com/citations?user=Wob8Un8AAAAJ&hl=en&oi=ao"
+    }
+  },
+
   "Avery": {
     "name": "Avery Selberg",
     "title": "Doctoral Student",
