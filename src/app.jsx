@@ -7,11 +7,6 @@ import Papers_covid19 from "./papers_covid19.jsx";
 import Papers_method from "./papers_method.jsx";
 import Papers_disease from "./papers_disease.jsx";
 
-
-
-
-import Announce from "./announcement.jsx";
-
 class About extends Component {
   render() {
     return (
@@ -37,7 +32,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Announce />
         <NavBar />
         <div className="container lab-container">
           <div className="row">

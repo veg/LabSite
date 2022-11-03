@@ -13,7 +13,7 @@ export default {
   "HyPhy": {
     "name": "HyPhy",
     "shortDescription": "Hypothesis Testing with Phyloginies",
-    "longDescription": "Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning; features a rich scripting language for limitless customization of analyses; over 10,000 registered users and over 2,000 citations in peer-reviewed publications",
+    "longDescription": "Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning; features a rich scripting language for limitless customization of analyses; over 10,000 registered users and over 3,000 citations in peer-reviewed publications.",
     "image": Hyphyimg,
     "tag": "major",
     "links": {
@@ -25,7 +25,7 @@ export default {
   "Datamonkey": {
     "name": "Datamonkey.org",
     "shortDescription": "Run state-of-the-art statistical models through the comfort of your browser",
-    "longDescription": "High-performance computing web-server for analyzing evolutionary signatures in sequence data; receives an average of 10,000 page views per day; has conservatively contributed $500,000 of compute time to the global research community",
+    "longDescription": "High-performance computing web-server for analyzing evolutionary signatures in sequence data. The server has conservatively contributed well over $500,000 of compute time alone to the global research community according to AWS pricing structure. Collectively, the Datamonkey application has received over 3000 citations in peer-reviewed publications.",
     "image": Datamonkeyimg,
     "tag": "major",
     "links": {
@@ -37,7 +37,7 @@ export default {
   "HIV-TRACE": {
     "name": "HIV-TRACE",
     "shortDescription": "Identify Transmision Clusters",
-    "longDescription": "Tool for large scale molecular epidemiology of HIV-1 and other rapidly evolving pathogens; currently in use by the Centers for Disease Control (CDC) for monitoring HIV transmission clusters throughout the US",
+    "longDescription": "Tool for large scale molecular epidemiology of HIV-1 and other rapidly evolving pathogens. It is currently in use by the Centers for Disease Control (CDC) for monitoring HIV transmission clusters throughout the US. It is also utilized in other countries such as Mexico for country-wide molecular survelliance.",
     "image": Traceimg,
     "tag": "major",
     "links": {
@@ -49,7 +49,7 @@ export default {
   "Phylotree.js": {
     "name": "Phylotree.js",
     "shortDescription": "Javascript library for working with phylogenetic trees",
-    "longDescription": "Library suitable for use in any Javascript application whose users need to view and interact with phylogenetic trees; prioritizes abstractions over features, and comes with a documented application programming interface promoting flexibility and extensibility",
+    "longDescription": "Library suitable for use in any Javascript application whose users need to view and interact with phylogenetic trees; prioritizes abstractions over features, and comes with a documented application programming interface promoting flexibility and extensibility.",
     "image": Phylotreeimg,
     "tag": "major",
     "links": {
@@ -60,23 +60,12 @@ export default {
   "galaxy.hyphy.org": {
     "name": "galaxy.hyphy.org",
     "shortDescription": "High throughput genomic tools for galaxy",
-    "longDescription": "Galaxy Project server assembling HIV NGS tools into “data to answer” workflows and creating solutions for HIV/AIDS researchers needing to perform analyses of NGS data; server is hosted by the Pond Lab in collaboration with the Lab of Anton Nekrutenko at Penn State and the Lab of James Taylor at Johns Hopkins",
+    "longDescription": "Galaxy Project server assembling HIV NGS tools into “data to answer” workflows and creating solutions for HIV/AIDS researchers needing to perform analyses of NGS data.",
     "image": Galaxyimg,
     "tag": "major",
     "links": {
       "website": "https://galaxy.hyphy.org",
       "github": "https://github.com/veg/tools-iuc"
-    }
-  },
-  "COVID-19 Dashboard": {
-    "name": "COVID-19 Dashboard",
-    "shortDescription": "COVID-19 Dashboard",
-    "longDescription": "Natural selection analysis of global SARS-CoV-2/COVID-19 enabled by data from GISAID; provides daily analyses of SARS-CoV-2 genomic data on an interactive notebook; this project is a part of a larger effort with the Galaxy team",
-    "image": COVIDimg,
-    "tag": "major",
-    "links": {
-      "website": "https://observablehq.com/@spond/revised-sars-cov-2-analytics-page",
-      "github": "https://github.com/veg/SARS-CoV-2"
     }
   },
   "HyPhy-Vision": {
