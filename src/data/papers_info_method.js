@@ -1,4 +1,6 @@
 export default {
+	"Weak selection on synonymous codons substantially inflates dN/dS estimates in bacteria":{"title":"Weak selection on synonymous codons substantially inflates dN/dS estimates in bacteria","authors":"Shakibur Rahman, Sergei L. Kosakovsky Pond, Andrew Webb, Jody Hey","publication":"Proceedings of the National Academy of Sciences","date":"2021","link":"https://www.pnas.org/doi/abs/10.1073/pnas.2023575118"},
+	"TopHap: rapid inference of key phylogenetic structures from common haplotypes in large genome collections with limited diversity":{"title":"TopHap: rapid inference of key phylogenetic structures from common haplotypes in large genome collections with limited diversity","authors":"Marcos A Caraballo-Ortiz, Sayaka Miura, Maxwell Sanderford, Tenzin Dolker, Qiqing Tao, Steven Weaver, Sergei L K Pond, Sudhir Kumar","publication":"Bioinformatics","date":"2022","link":"https://doi.org/10.1093/bioinformatics/btac186"},
   "Extra base hits": {
       "title": "Extra base hits: widespread empirical support for instantaneous multiple-nucleotide changes",
       "authors": "Alexander G Lucaci, Sadie R Wisotsky, Stephen D Shank, Steven Weaver, Sergei L Kosakovsky Pond",
