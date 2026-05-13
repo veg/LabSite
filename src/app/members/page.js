@@ -1,6 +1,7 @@
 import members from '@/data/members.json';
 import PageContainer from '@/components/PageContainer';
 import Card from '@/components/Card';
+import Image from 'next/image';
 
 export default function MembersPage() {
   return (
@@ -10,10 +11,12 @@ export default function MembersPage() {
           <Card key={member.id} title={member.name.toUpperCase()} className="flex flex-col h-full">
             <div className="mb-4 relative h-48 w-full bg-retro-blue border-2 border-retro-green overflow-hidden rounded-lg">
               {member.image ? (
-                <img 
+                <Image 
                   src={member.image} 
                   alt={member.name}
-                  className="w-full h-full object-cover filter brightness-90 contrast-110"
+                  fill
+                  className="object-cover filter brightness-90 contrast-110"
+                  unoptimized
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-retro-green opacity-50 bg-black/20">

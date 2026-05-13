@@ -4,6 +4,7 @@ import projects from '@/data/projects.json';
 import PageContainer from '@/components/PageContainer';
 import { useTheme } from '@/components/ThemeContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProjectsPage() {
   const { theme } = useTheme();
@@ -23,15 +24,16 @@ export default function ProjectsPage() {
                 'pixel-border border-4'
               }`}>
                 {project.image ? (
-                  <img 
+                  <Image 
                     src={project.image} 
                     alt={project.name}
-                    className={`w-full h-full object-cover transition-all ${
+                    fill
+                    className={`object-cover transition-all ${
                       theme === '90s' ? 'filter brightness-90 sepia-[.3] hover:sepia-0' : 
                       theme === '2010s' ? 'filter contrast-125' : 
                       theme === '2020s' ? 'hover:scale-105' : ''
                     }`}
-                    style={theme !== '2020s' ? { imageRendering: 'pixelated' } : {}}
+                    unoptimized
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-retro-green opacity-50 bg-black/20">
