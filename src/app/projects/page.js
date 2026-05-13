@@ -55,18 +55,25 @@ export default function ProjectsPage() {
               {/* Visual Stat Bars */}
               <div className={`mt-4 space-y-3 p-4 border-2 rounded-xl ${
                 theme === '2020s' ? 'bg-ai-sidebar border-white/5' : 
+                theme === '2010s' ? 'bg-white border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]' :
                 'bg-black border-retro-green/30'
               }`}>
                 {Object.entries(project.stats).slice(0, 3).map(([key, val]) => (
                   <div key={key} className="space-y-1">
-                    <div className="flex justify-between text-[10px] font-bold opacity-70 uppercase tracking-tighter">
+                    <div className={`flex justify-between text-[10px] font-bold opacity-70 uppercase tracking-tighter ${
+                      theme === '2010s' ? 'text-black opacity-100' : ''
+                    }`}>
                       <span>{key}</span>
                       <span>{val}</span>
                     </div>
-                    <div className="h-1.5 bg-black/40 rounded-full w-full overflow-hidden border border-white/5">
+                    <div className={`h-1.5 rounded-full w-full overflow-hidden border ${
+                      theme === '2010s' ? 'bg-black/10 border-black/20' : 'bg-black/40 border-white/5'
+                    }`}>
                       <div 
                         className={`h-full transition-all duration-1000 ${
-                          theme === '2020s' ? 'bg-ai-accent' : 'bg-retro-green'
+                          theme === '2020s' ? 'bg-ai-accent' : 
+                          theme === '2010s' ? 'bg-hero-yellow' :
+                          'bg-retro-green'
                         }`}
                         style={{ width: `${typeof val === 'number' ? val : 100}%` }}
                       />
@@ -82,7 +89,9 @@ export default function ProjectsPage() {
                 <div className="space-y-6">
                   {/* Attributes */}
                   <div className={`grid grid-cols-2 sm:grid-cols-3 gap-4 border-b pb-4 ${
-                    theme === '2020s' ? 'border-white/5' : 'border-retro-bg'
+                    theme === '2020s' ? 'border-white/5' : 
+                    theme === '2010s' ? 'border-black/20' :
+                    'border-retro-bg'
                   }`}>
                     {Object.entries(project.stats).map(([key, val]) => (
                       <div key={key}>
@@ -106,6 +115,7 @@ export default function ProjectsPage() {
                   <div className="space-y-4">
                     <h4 className={`font-bold text-xs border-l-4 pl-2 ${
                       theme === '2020s' ? 'text-ai-accent border-ai-accent' : 
+                      theme === '2010s' ? 'text-black border-hero-yellow' :
                       'text-retro-blue border-retro-blue'
                     }`}>
                       SPECIAL_ABILITIES
@@ -114,14 +124,19 @@ export default function ProjectsPage() {
                       {project.powers.map(power => (
                         <div key={power.name} className={`p-3 border rounded-xl ${
                           theme === '2020s' ? 'bg-white/5 border-white/5' : 
+                          theme === '2010s' ? 'bg-hero-yellow/10 border-black/20' :
                           'bg-retro-bg/50 border-retro-blue/30'
                         }`}>
                           <span className={`block font-bold text-[10px] mb-1 tracking-widest ${
-                            theme === '2020s' ? 'text-ai-accent' : 'text-retro-blue'
+                            theme === '2020s' ? 'text-ai-accent' : 
+                            theme === '2010s' ? 'text-black' :
+                            'text-retro-blue'
                           }`}>
                             {power.name}
                           </span>
-                          <span className="text-sm opacity-80 leading-tight block">
+                          <span className={`text-sm opacity-80 leading-tight block ${
+                            theme === '2010s' ? 'text-black/70' : ''
+                          }`}>
                             {power.desc}
                           </span>
                         </div>
