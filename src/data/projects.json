@@ -1,0 +1,110 @@
+[
+  {
+    "id": "hyphy",
+    "name": "HyPhy",
+    "class": "The Engine",
+    "description": "Hypothesis Testing using Phylogenies. A high-performance framework for building and testing stochastic evolutionary models.",
+    "stats": {
+      "power": 99,
+      "speed": 85,
+      "complexity": 90,
+      "citations": "3,000+",
+      "users": "10,000+"
+    },
+    "powers": [
+      { "name": "LIMITLESS_CUSTOMIZATION", "desc": "Allows researchers to define any evolutionary model via its rich scripting language." },
+      { "name": "PARALLEL_PROCESSING", "desc": "Optimized for clusters, tearing through massive sequence alignments with MPI support." }
+    ],
+    "image": "/images/projects/Hyphy.jpeg",
+    "links": {
+      "website": "http://hyphy.org",
+      "github": "https://github.com/veg/hyphy"
+    }
+  },
+  {
+    "id": "datamonkey",
+    "name": "Datamonkey.org",
+    "class": "The Oracle",
+    "description": "The public web-interface for the world's most advanced evolutionary models.",
+    "stats": {
+      "accessibility": 100,
+      "wisdom": 95,
+      "analyses": "500,000+",
+      "citations": "1,000+",
+      "uptime": "99.9%"
+    },
+    "powers": [
+      { "name": "ZERO_INSTALL", "desc": "Run state-of-the-art HyPhy models directly in your browser without touching a terminal." },
+      { "name": "GRID_INVOCATION", "desc": "Offloads complex computations to high-performance clusters automatically." }
+    ],
+    "image": "/images/projects/Datamonkey.jpeg",
+    "links": {
+      "website": "https://datamonkey.org",
+      "github": "https://github.com/veg/datamonkey-js"
+    }
+  },
+  {
+    "id": "hivtrace",
+    "name": "HIV-TRACE",
+    "class": "The Scout",
+    "description": "Transmission Cluster Engine. Maps the hidden connections in molecular epidemiology.",
+    "stats": {
+      "detection": 98,
+      "accuracy": 92,
+      "stealth": 80,
+      "user_base": "CDC / Global PH",
+      "latency": "Real-time"
+    },
+    "powers": [
+      { "name": "CLUSTER_MAPPING", "desc": "Identifies transmission chains from viral sequence data in minutes." },
+      { "name": "SECURE_SURVEILLANCE", "desc": "Built for public health departments to monitor outbreaks while protecting data privacy." }
+    ],
+    "image": "/images/projects/Trace.jpeg",
+    "links": {
+      "website": "https://veg.github.io/hivtrace-viz/",
+      "github": "https://github.com/veg/hivtrace"
+    }
+  },
+  {
+    "id": "phylotree",
+    "name": "phylotree.js",
+    "class": "The Architect",
+    "description": "A modular JavaScript library for interactive phylogenetic tree visualization.",
+    "stats": {
+      "flexibility": 95,
+      "render_speed": 90,
+      "extensibility": 99,
+      "framework": "d3.js",
+      "license": "MIT"
+    },
+    "powers": [
+      { "name": "INTERACTIVE_MORPHING", "desc": "Allows users to manipulate, prune, and annotate trees dynamically in real-time." },
+      { "name": "MIDDLEWARE_INTEGRATION", "desc": "Seamlessly plugs into larger web applications as a modular visualization core." }
+    ],
+    "image": "/images/projects/Phylotree.jpeg",
+    "links": {
+      "website": "http://phylotree.hyphy.org/",
+      "github": "https://github.com/veg/phylotree.js"
+    }
+  },
+  {
+    "id": "tn93",
+    "name": "tn93",
+    "class": "The Blade",
+    "description": "High-speed C++ implementation for calculating Tamura-Nei 93 genetic distances.",
+    "stats": {
+      "velocity": 100,
+      "sharpness": 95,
+      "weight": "0.1 MB",
+      "language": "C++",
+      "usage": "Core Utility"
+    },
+    "powers": [
+      { "name": "INSTANT_METRIC", "desc": "Calculates pairwise distances between thousands of sequences in the blink of an eye." },
+      { "name": "STREAMING_COMPUTE", "desc": "Designed to handle massive data streams with minimal memory overhead." }
+    ],
+    "links": {
+      "github": "https://github.com/veg/tn93"
+    }
+  }
+]
