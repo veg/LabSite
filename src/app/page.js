@@ -10,32 +10,62 @@ export default function Home() {
   if (!mounted) return <div className="min-h-screen bg-[#282828]" />;
 
   return (
-    <main className="min-h-screen relative flex flex-col">
+    <main className={`min-h-screen relative flex flex-col ${
+      theme === '2000s' ? 'bg-me-bg' : 
+      theme === '2010s' ? 'bg-hero-bg' : ''
+    }`}>
       <Navbar />
       
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
         <section className="mb-16 text-center">
-          <div className={`inline-block border-4 p-4 mb-6 max-w-full ${theme === '80s' ? 'border-retro-green' : 'mgs-panel'}`}>
-            {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 text-left">ESTABLISHING_UPLINK...</div>}
-            <h1 className={`text-xl md:text-4xl lg:text-5xl leading-tight ${theme === '80s' ? 'text-retro-fg' : 'text-mgs-green font-bold tracking-tighter'}`}>
+          <div className={`inline-block p-4 mb-6 max-w-full ${
+            theme === '80s' ? 'border-4 border-retro-green' : 
+            theme === '90s' ? 'mgs-panel border-4' :
+            theme === '2000s' ? 'me-panel border-2' :
+            'bg-black p-8 shadow-hero skew-x-[-5deg]'
+          }`}>
+            {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 text-left uppercase">ESTABLISHING_UPLINK...</div>}
+            {theme === '2000s' && <div className="text-[10px] text-me-blue font-bold tracking-[0.3em] mb-1 text-left uppercase opacity-60 italic">LOCATING_STRIKE_TEAM...</div>}
+            {theme === '2010s' && <div className="text-hero-yellow font-black text-left mb-2 text-sm italic tracking-tighter">NEW QUEST DISCOVERED:</div>}
+            
+            <h1 className={`text-xl md:text-4xl lg:text-5xl leading-tight ${
+              theme === '80s' ? 'text-retro-fg' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
+              theme === '2000s' ? 'text-me-orange font-black italic drop-shadow-me' :
+              'text-white font-black italic uppercase'
+            }`}>
               ACME_LAB:<br/>
-              <span className="text-lg md:text-3xl lg:text-4xl">COMPUTATIONAL_MOLECULAR_EVOLUTION</span>
+              <span className="text-lg md:text-3xl lg:text-4xl uppercase">COMPUTATIONAL_MOLECULAR_EVOLUTION</span>
             </h1>
           </div>
           
           <div className="max-w-4xl mx-auto px-2">
-            <h2 className={`text-base md:text-xl lg:text-2xl mb-8 font-heading leading-relaxed ${theme === '80s' ? 'text-retro-amber' : 'text-mgs-blue'}`}>
+            <h2 className={`text-base md:text-xl lg:text-2xl mb-8 font-heading leading-relaxed ${
+              theme === '80s' ? 'text-retro-amber' : 
+              theme === '90s' ? 'text-mgs-blue' :
+              theme === '2000s' ? 'text-me-blue drop-shadow-sm italic' :
+              'text-black font-black uppercase tracking-tighter border-l-8 border-hero-yellow pl-4 text-left'
+            }`}>
               STATISTICAL_MODELS & SOFTWARE_TOOLS<br className="md:hidden" /> FOR COMPARATIVE_SEQUENCE_ANALYSIS
             </h2>
             
             <Card title="MISSION_OVERVIEW">
-              <p className={`mb-4 text-left ${theme === '90s' ? 'text-mgs-green/80' : ''}`}>
+              <p className={`mb-4 text-left ${
+                theme === '90s' ? 'text-mgs-green/80 font-mono' : 
+                theme === '2000s' ? 'text-me-orange/80 font-mono' :
+                theme === '2010s' ? 'text-hero-dark font-black' : ''
+              }`}>
                 We <strong>develop and apply</strong> high-performance computational tools for the comparative analysis of sequence data. 
                 Our methods are universally applicable across all domains of life. 
                 While measurably evolving pathogens are our primary focus and "top customers," 
                 our framework is used to interrogate evolutionary questions anywhere on the tree of life.
               </p>
-              <div className={`text-sm md:text-base border-t pt-4 mt-4 flex justify-between items-center ${theme === '80s' ? 'text-retro-green border-retro-bg' : 'text-mgs-green/40 border-mgs-border'}`}>
+              <div className={`text-sm md:text-base border-t pt-4 mt-4 flex justify-between items-center ${
+                theme === '80s' ? 'text-retro-green border-retro-bg font-body' : 
+                theme === '90s' ? 'text-mgs-green/40 border-mgs-border font-mono' :
+                theme === '2000s' ? 'text-me-blue/40 border-me-border font-mono italic' :
+                'text-hero-dark opacity-40 font-black border-black/10 italic'
+              }`}>
                 <span>[SCOPE]: UNIVERSAL</span>
                 <span>[PRIMARY_FOCUS]: PATHOGENS</span>
                 <span>[STATUS]: ACTIVE</span>
@@ -46,41 +76,73 @@ export default function Home() {
 
         <section className="grid md:grid-cols-2 gap-8 mb-16">
           <Card title="CORE_COMPETENCIES">
-            <ul className="list-none space-y-2">
-              <li className={theme === '90s' ? 'text-mgs-green/80' : ''}>{">"} MOLECULAR_EPIDEMIOLOGY</li>
-              <li className={theme === '90s' ? 'text-mgs-green/80' : ''}>{">"} VIRAL_DYNAMICS</li>
-              <li className={theme === '90s' ? 'text-mgs-green/80' : ''}>{">"} PHYLOGENETIC_METHODS</li>
-              <li className={theme === '90s' ? 'text-mgs-green/80' : ''}>{">"} HIGH_PERFORMANCE_COMPUTING</li>
-              <li className={theme === '90s' ? 'text-mgs-green/80' : ''}>{">"} DATA_VISUALIZATION</li>
+            <ul className={`list-none space-y-2 ${theme === '2010s' ? 'font-black' : ''}`}>
+              <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} MOLECULAR_EPIDEMIOLOGY</li>
+              <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} VIRAL_DYNAMICS</li>
+              <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} PHYLOGENETIC_METHODS</li>
+              <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} HIGH_PERFORMANCE_COMPUTING</li>
+              <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} DATA_VISUALIZATION</li>
             </ul>
           </Card>
 
           <Card title="EQUIPMENT_LIST">
-            <p className={`mb-4 ${theme === '90s' ? 'text-mgs-green/80' : ''}`}>Our lab maintains a suite of open-source tools utilized by researchers worldwide:</p>
+            <p className={`mb-4 ${theme === '2010s' ? 'font-black italic' : ''}`}>Our lab maintains a suite of open-source tools utilized by researchers worldwide:</p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/projects" className={theme === '80s' ? 'pixel-button text-sm' : 'mgs-button'}>HYPHY</Link>
-              <Link href="/projects" className={theme === '80s' ? 'pixel-button text-sm' : 'mgs-button'}>DATAMONKEY</Link>
-              <Link href="/projects" className={theme === '80s' ? 'pixel-button text-sm' : 'mgs-button'}>HIV-TRACE</Link>
+              {['HYPHY', 'DATAMONKEY', 'HIV-TRACE'].map(tool => (
+                <Link 
+                  key={tool}
+                  href="/projects" 
+                  className={
+                    theme === '80s' ? 'pixel-button text-sm' : 
+                    theme === '90s' ? 'mgs-button' :
+                    theme === '2000s' ? 'me-button text-[10px]' :
+                    'hero-button text-[10px]'
+                  }
+                >
+                  {tool}
+                </Link>
+              ))}
             </div>
           </Card>
         </section>
 
         <section className="text-center">
-          <div className={`inline-block p-8 ${theme === '80s' ? 'pixel-border bg-black' : 'mgs-panel'}`}>
-            <h2 className={`text-2xl mb-6 ${theme === '90s' ? 'text-mgs-green/60' : ''}`}>SELECT_DESTINATION</h2>
-            <div className="flex flex-col md:flex-row gap-6 justify-center font-heading">
-              <Link href="/members" className={`hover:text-white transition-colors ${theme === '80s' ? 'text-retro-amber' : 'text-mgs-blue hover:text-mgs-green'}`}>{">"} MEET_THE_TEAM</Link>
-              <Link href="/projects" className={`hover:text-white transition-colors ${theme === '80s' ? 'text-retro-blue' : 'text-mgs-blue hover:text-mgs-green'}`}>{">"} EXPLORE_PROJECTS</Link>
-              <Link href="/papers" className={`hover:text-white transition-colors ${theme === '80s' ? 'text-retro-purple' : 'text-mgs-blue hover:text-mgs-green'}`}>{">"} READ_RESEARCH</Link>
+          <div className={`inline-block p-8 ${
+            theme === '80s' ? 'pixel-border bg-black' : 
+            theme === '90s' ? 'mgs-panel' :
+            theme === '2000s' ? 'me-panel' :
+            'bg-white border-8 border-black shadow-hero'
+          }`}>
+            <h2 className={`text-2xl mb-6 ${
+              theme === '90s' ? 'text-mgs-green/60' : 
+              theme === '2000s' ? 'text-me-blue italic' :
+              'text-black font-black uppercase'
+            }`}>SELECT_DESTINATION</h2>
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
+              <Link href="/members" className={`hover:scale-105 transition-all font-heading text-xs ${
+                theme === '80s' ? 'text-retro-amber' : 
+                theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
+                theme === '2000s' ? 'text-me-orange italic' :
+                'bg-black text-hero-yellow px-4 py-2 skew-x-[-10deg]'
+              }`}>{theme === '2010s' ? 'THE_TEAM' : '> MEET_THE_TEAM'}</Link>
+              
+              <Link href="/projects" className={`hover:scale-105 transition-all font-heading text-xs ${
+                theme === '80s' ? 'text-retro-blue' : 
+                theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
+                theme === '2000s' ? 'text-me-orange italic' :
+                'bg-black text-hero-cyan px-4 py-2 skew-x-[-10deg]'
+              }`}>{theme === '2010s' ? 'PROJECTS' : '> EXPLORE_PROJECTS'}</Link>
+              
+              <Link href="/papers" className={`hover:scale-105 transition-all font-heading text-xs ${
+                theme === '80s' ? 'text-retro-purple' : 
+                theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
+                theme === '2000s' ? 'text-me-orange italic' :
+                'bg-black text-white px-4 py-2 skew-x-[-10deg]'
+              }`}>{theme === '2010s' ? 'RESEARCH' : '> READ_RESEARCH'}</Link>
             </div>
           </div>
         </section>
       </div>
-
-      <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${theme === '80s' ? 'border-retro-green bg-black' : 'border-mgs-border bg-mgs-bg text-mgs-green/60'}`}>
-        <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
-        <p className={theme === '80s' ? 'text-retro-blue' : 'text-mgs-blue'}>INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY</p>
-      </footer>
     </main>
   );
 }

@@ -5,7 +5,6 @@
   --font-body: var(--font-vt323);
   --font-mono: var(--font-share-tech-mono);
   --font-pixelify: var(--font-pixelify);
-  --font-orbitron: var(--font-share-tech-mono); /* We'll use mono as proxy for techy font */
 
   /* Muted 80s Palette */
   --color-retro-green: #689d6a;
@@ -23,16 +22,22 @@
   --color-mgs-red: #ff3e3e;
   --color-mgs-border: #2d4c2d;
 
-  /* 2000s Mass Effect (Omni-tool) Palette */
+  /* 2000s Mass Effect Palette */
   --color-me-bg: #050a0f;
   --color-me-orange: #ff9d00;
   --color-me-blue: #00f2ff;
-  --color-me-panel: rgba(255, 157, 0, 0.05);
-  --color-me-border: rgba(255, 157, 0, 0.3);
+
+  /* 2010s Borderlands / Flat Hero Palette */
+  --color-hero-bg: #f5f5f5;
+  --color-hero-yellow: #ffcc00; /* Iconic Borderlands Yellow */
+  --color-hero-cyan: #00ffff;
+  --color-hero-dark: #1a1a1a;
+  --color-hero-border: #000000;
 
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
   --shadow-mgs: 0 0 15px rgba(0, 255, 65, 0.2);
   --shadow-me: 0 0 20px rgba(255, 157, 0, 0.15);
+  --shadow-hero: 8px 8px 0px 0px rgba(0, 0, 0, 1);
 
   /* Animations */
   --animate-chew: chew 0.6s ease-in-out infinite;
@@ -49,6 +54,7 @@
 :root { --background: #282828; --foreground: #ebdbb2; }
 [data-theme='90s'] { --background: #0a0f0a; --foreground: #00ff41; }
 [data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
+[data-theme='2010s'] { --background: #f5f5f5; --foreground: #1a1a1a; }
 
 body {
   background-color: var(--background);
@@ -82,38 +88,64 @@ body {
 .theme-2000s { font-family: var(--font-share-tech-mono), sans-serif; }
 .theme-2000s h1, .theme-2000s h2, .theme-2000s h3, .theme-2000s h4 { font-weight: 800; letter-spacing: -0.02em; font-style: italic; }
 
-.me-panel {
-  background: rgba(255, 157, 0, 0.03);
-  border: 1px solid rgba(255, 157, 0, 0.2);
-  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
-  box-shadow: 0 0 20px rgba(255, 157, 0, 0.05);
+/* 2010s Hero Theme Specifics */
+.theme-2010s { font-family: var(--font-share-tech-mono), sans-serif; }
+.theme-2010s h1, .theme-2010s h2, .theme-2010s h3, .theme-2010s h4 { font-weight: 900; text-transform: uppercase; transform: skewX(-5deg); }
+
+.hero-panel {
+  background: white;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px 0px #ffcc00;
   position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.me-panel::before {
-  content: ""; position: absolute; top: 0; right: 0;
-  width: 40px; height: 1px; background: #ff9d00;
+.hero-panel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0px 0px #ffcc00;
 }
 
-.me-button {
-  background: rgba(255, 157, 0, 0.1);
-  border: 1px solid #ff9d00;
-  color: #ff9d00;
-  padding: 0.5rem 1.5rem;
-  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-  transition: all 0.2s;
+.hero-tag {
+  background: #000;
+  color: #ffcc00;
   font-weight: bold;
+  padding: 4px 8px;
+  display: inline-block;
+  transform: skewX(-15deg);
+}
+
+.hero-button {
+  background: #ffcc00;
+  border: 3px solid #000;
+  color: #000;
+  padding: 0.6rem 1.5rem;
+  font-weight: 900;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  box-shadow: 4px 4px 0px 0px #000;
+  transition: all 0.1s;
 }
 
-.me-button:hover {
-  background: rgba(255, 157, 0, 0.3);
-  box-shadow: 0 0 15px rgba(255, 157, 0, 0.4);
-  transform: translateY(-1px);
+.hero-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000;
 }
 
-/* Reusable pixel styles */
+.hero-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+/* Legacy Support */
+.me-panel {
+  background: rgba(255, 157, 0, 0.03); border: 1px solid rgba(255, 157, 0, 0.2);
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+  box-shadow: 0 0 20px rgba(255, 157, 0, 0.05); position: relative;
+}
+.me-button {
+  background: rgba(255, 157, 0, 0.1); border: 1px solid #ff9d00; color: #ff9d00;
+  padding: 0.5rem 1.5rem; clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+  transition: all 0.2s; font-weight: bold; text-transform: uppercase;
+}
 .mgs-panel {
   background: rgba(16, 24, 16, 0.9); border: 1px solid #2d4c2d;
   box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1), 0 0 5px rgba(0, 0, 0, 0.5);

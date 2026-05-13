@@ -17,7 +17,8 @@ export default function Navbar() {
   const eras = [
     { id: '80s', label: '1985 Terminal' },
     { id: '90s', label: '1998 Tactical' },
-    { id: '2000s', label: '2007 Omni-tool' }
+    { id: '2000s', label: '2007 Omni-tool' },
+    { id: '2010s', label: '2012 Vault Hunter' }
   ];
 
   const ThemeToggle = () => (
@@ -27,7 +28,8 @@ export default function Navbar() {
         className={`p-1 transition-all ${
           theme === '80s' ? 'text-retro-green hover:text-white' : 
           theme === '90s' ? 'text-mgs-green hover:text-white' : 
-          'text-me-orange hover:text-white'
+          theme === '2000s' ? 'text-me-orange hover:text-white' :
+          'text-hero-dark hover:text-hero-yellow'
         }`}
         title="Change Era"
       >
@@ -37,10 +39,11 @@ export default function Navbar() {
         </svg>
       </button>
       {showDropdown && (
-        <div className={`absolute left-0 mt-2 p-2 min-w-[160px] shadow-lg z-[100] ${
+        <div className={`absolute left-0 mt-2 p-2 min-w-[180px] shadow-lg z-[100] ${
           theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 
           theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' : 
-          'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker'
+          theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
+          'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]'
         }`}>
           {eras.map(era => (
             <button 
@@ -55,6 +58,32 @@ export default function Navbar() {
       )}
     </div>
   );
+
+  if (theme === '2010s') {
+    return (
+      <nav className="bg-hero-yellow border-b-4 border-black p-2 sticky top-0 z-50 flex items-center h-14 shadow-hero">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <div className="flex gap-4 items-center">
+            <ThemeToggle />
+            <Link href="/" className="font-black text-black italic text-xl tracking-tighter hover:skew-x-[-10deg] transition-transform">
+              ACME_LAB
+            </Link>
+          </div>
+          <div className="flex gap-4 md:gap-8 text-[10px] md:text-xs font-black">
+            {navItems.map(item => (
+              <Link 
+                key={item.label} 
+                href={item.href} 
+                className="text-black hover:bg-black hover:text-hero-yellow px-2 py-1 transition-colors skew-x-[-10deg]"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   if (theme === '2000s') {
     return (

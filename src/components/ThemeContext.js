@@ -20,7 +20,7 @@ export function ThemeProvider({ children }) {
       root.setAttribute('data-theme', theme);
       
       // Sync body classes
-      document.body.classList.remove('theme-80s', 'theme-90s', 'theme-2000s', 'crt');
+      document.body.classList.remove('theme-80s', 'theme-90s', 'theme-2000s', 'theme-2010s', 'crt');
       document.body.classList.add(`theme-${theme}`);
       if (theme === '80s') {
         document.body.classList.add('crt');
