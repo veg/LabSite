@@ -15,13 +15,33 @@
   --color-retro-fg: #ebdbb2;
 
   /* 90s System 8 Palette */
-  --color-sys8-bg: #808080; /* Desktop Grey */
+  --color-sys8-bg: #808080;
   --color-sys8-platinum: #d6d6d6;
   --color-sys8-border-light: #ffffff;
   --color-sys8-border-dark: #666666;
   --color-sys8-accent: #000066;
 
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-retro-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+
+  /* Animations */
+  --animate-chew: chew 0.6s ease-in-out infinite;
+  --animate-banana-shrink: shrink 5s ease-in forwards;
+  --animate-scene-fade: fadeOut 1s ease-out 6s forwards;
+
+  @keyframes chew {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.6); }
+  }
+  @keyframes shrink {
+    0% { transform: scale(1); opacity: 0.6; }
+    80% { transform: scale(0.2); opacity: 0.4; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+  }
 }
 
 :root {
@@ -35,30 +55,52 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-vt323), monospace;
-  image-rendering: pixelated;
   transition: background-color 0.3s, color 0.3s;
+  image-rendering: pixelated;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-/* 80s Specifics */
-.theme-80s h1, .theme-80s h2, .theme-80s h3 {
+/* 80s Theme Specifics */
+.theme-80s {
+  font-family: var(--font-vt323), monospace;
+}
+
+.theme-80s h1, .theme-80s h2, .theme-80s h3, .theme-80s h4 {
   font-family: var(--font-press-start), cursive;
   text-transform: uppercase;
 }
 
-/* 90s Specifics */
-.theme-90s body {
+.theme-80s.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  z-index: 9999;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.8;
+  position: fixed;
+}
+
+/* 90s Theme Specifics */
+.theme-90s {
   font-family: var(--font-share-tech-mono), sans-serif;
 }
 
-.theme-90s h1, .theme-90s h2, .theme-90s h3 {
-  font-family: var(--font-heading), sans-serif;
+.theme-90s h1, .theme-90s h2, .theme-90s h3, .theme-90s h4 {
+  font-family: var(--font-pixelify), sans-serif;
   text-transform: none;
 }
 
-/* System 8 Window Style */
+/* System 8 Elements */
 .sys8-window {
   background-color: #d6d6d6;
   border-top: 2px solid #fff;
@@ -66,16 +108,11 @@ body {
   border-right: 2px solid #666;
   border-bottom: 2px solid #666;
   box-shadow: 1px 1px 0px 0px #000;
+  color: black;
 }
 
 .sys8-titlebar {
-  background: repeating-linear-gradient(
-    0deg,
-    #999,
-    #999 2px,
-    #ccc 2px,
-    #ccc 4px
-  );
+  background: repeating-linear-gradient(0deg, #999, #999 2px, #ccc 2px, #ccc 4px);
   border-bottom: 2px solid #000;
   padding: 4px 8px;
   display: flex;
@@ -93,42 +130,26 @@ body {
   left: 6px;
 }
 
-/* CRT Scanline Effect (Only for 80s) */
-.theme-80s.crt::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-  z-index: 2;
-  background-size: 100% 3px, 3px 100%;
-  pointer-events: none;
-  opacity: 0.8;
-}
-
 .pixel-border {
   border: 4px solid var(--foreground);
   box-shadow: 4px 4px 0px 0px #1d2021;
 }
 
-/* Animations from previous step */
-@keyframes chew {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(0.6); }
-}
-@keyframes shrink {
-  0% { transform: scale(1); opacity: 0.6; }
-  80% { transform: scale(0.2); opacity: 0.4; }
-  100% { transform: scale(0); opacity: 0; }
-}
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; visibility: hidden; }
+.pixel-button {
+  background-color: #458588;
+  color: #ebdbb2;
+  padding: 0.5rem 1rem;
+  border: 4px solid #1d2021;
+  box-shadow: 4px 4px 0px 0px #ebdbb2;
+  transition: all 0.1s;
 }
 
-.animate-chew { animation: chew 0.6s ease-in-out infinite; }
-.animate-banana-shrink { animation: shrink 5s ease-in forwards; }
-.animate-scene-fade { animation: fadeOut 1s ease-out 6s forwards; }
+.pixel-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #ebdbb2;
+}
+
+.pixel-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #ebdbb2;
+}

@@ -6,14 +6,15 @@ import { useTheme } from '@/components/ThemeContext';
 import Link from 'next/link';
 
 export default function Home() {
-  const { theme } = useTheme();
+  const { theme, mounted } = useTheme();
+
+  if (!mounted) return <div className="min-h-screen bg-[#282828]" />;
 
   return (
-    <main className={`min-h-screen relative overflow-hidden ${theme === '80s' ? 'crt' : ''}`}>
+    <main className="min-h-screen relative flex flex-col">
       <Navbar />
-      <ThemeSwitcher />
       
-      <div className="container mx-auto px-4 py-12 relative z-10">
+      <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
         <section className="mb-16 text-center">
           <div className={`inline-block border-4 p-4 mb-6 max-w-full ${theme === '80s' ? 'border-retro-green' : 'sys8-window'}`}>
             <h1 className={`text-xl md:text-4xl lg:text-5xl leading-tight ${theme === '80s' ? 'text-retro-fg' : 'text-black font-bold'}`}>
@@ -28,7 +29,7 @@ export default function Home() {
             </h2>
             
             <Card title="MISSION_OVERVIEW">
-              <p className={`mb-4 text-left ${theme === '90s' ? 'text-black' : ''}`}>
+              <p className={`mb-4 text-left ${theme === '90s' ? 'text-black font-mono' : ''}`}>
                 We <strong>develop and apply</strong> high-performance computational tools for the comparative analysis of sequence data. 
                 Our methods are universally applicable across all domains of life. 
                 While measurably evolving pathogens are our primary focus and "top customers," 
@@ -45,7 +46,7 @@ export default function Home() {
 
         <section className="grid md:grid-cols-2 gap-8 mb-16">
           <Card title="CORE_COMPETENCIES">
-            <ul className={`list-none space-y-2 ${theme === '90s' ? 'text-black' : ''}`}>
+            <ul className={`list-none space-y-2 ${theme === '90s' ? 'text-black font-mono' : ''}`}>
               <li>{">"} MOLECULAR_EPIDEMIOLOGY</li>
               <li>{">"} VIRAL_DYNAMICS</li>
               <li>{">"} PHYLOGENETIC_METHODS</li>
@@ -55,7 +56,7 @@ export default function Home() {
           </Card>
 
           <Card title="EQUIPMENT_LIST">
-            <p className={`mb-4 ${theme === '90s' ? 'text-black' : ''}`}>Our lab maintains a suite of open-source tools utilized by researchers worldwide:</p>
+            <p className={`mb-4 ${theme === '90s' ? 'text-black font-mono' : ''}`}>Our lab maintains a suite of open-source tools utilized by researchers worldwide:</p>
             <div className="flex flex-wrap gap-4">
               <Link href="/projects" className="pixel-button text-sm">HYPHY</Link>
               <Link href="/projects" className="pixel-button text-sm">DATAMONKEY</Link>
@@ -65,8 +66,8 @@ export default function Home() {
         </section>
 
         <section className="text-center">
-          <div className={`inline-block p-8 bg-black ${theme === '80s' ? 'pixel-border' : 'sys8-window'}`}>
-            <h2 className={`text-2xl mb-6 ${theme === '90s' ? 'text-black' : ''}`}>SELECT_DESTINATION</h2>
+          <div className={`inline-block p-8 ${theme === '80s' ? 'pixel-border bg-black' : 'sys8-window'}`}>
+            <h2 className={`text-2xl mb-6 ${theme === '90s' ? 'text-black font-bold' : ''}`}>SELECT_DESTINATION</h2>
             <div className="flex flex-col md:flex-row gap-6 justify-center font-heading">
               <Link href="/members" className={`hover:text-white transition-colors ${theme === '80s' ? 'text-retro-amber' : 'text-blue-800'}`}>{">"} MEET_THE_TEAM</Link>
               <Link href="/projects" className={`hover:text-white transition-colors ${theme === '80s' ? 'text-retro-blue' : 'text-blue-800'}`}>{">"} EXPLORE_PROJECTS</Link>
@@ -76,9 +77,9 @@ export default function Home() {
         </section>
       </div>
 
-      <footer className={`mt-20 p-8 border-t-4 text-center font-body text-xl ${theme === '80s' ? 'border-retro-green bg-black' : 'border-black bg-sys8-platinum text-black'}`}>
+      <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${theme === '80s' ? 'border-retro-green bg-black' : 'border-black bg-[#d6d6d6] text-black'}`}>
         <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
-        <p className={theme === '80s' ? 'text-retro-blue' : 'text-sys8-accent'}>INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY</p>
+        <p className={theme === '80s' ? 'text-retro-blue' : 'text-[#000066]'}>INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY</p>
       </footer>
     </main>
   );
