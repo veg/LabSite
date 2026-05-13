@@ -6,15 +6,33 @@
   --font-mono: var(--font-share-tech-mono);
 
   /* Muted Retro Palette */
-  --color-retro-green: #689d6a; /* Sage/Muted Mint */
-  --color-retro-blue: #458588;  /* Muted Teal/Blue */
-  --color-retro-amber: #d79921; /* Muted Gold/Amber */
-  --color-retro-purple: #b16286; /* Dusty Rose/Purple */
-  --color-retro-bg: #282828;     /* Dark Charcoal (Gruvbox style) */
-  --color-retro-fg: #ebdbb2;     /* Off-white/Beige */
+  --color-retro-green: #689d6a;
+  --color-retro-blue: #458588;
+  --color-retro-amber: #d79921;
+  --color-retro-purple: #b16286;
+  --color-retro-bg: #282828;
+  --color-retro-fg: #ebdbb2;
 
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
   --shadow-retro-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+
+  /* Tailwind 4 Animations */
+  --animate-chase: chase 15s linear infinite;
+  --animate-monkey-bounce: bounce 0.4s ease-in-out infinite;
+  --animate-tail-wag: tail-wag 0.5s ease-in-out infinite;
+
+  @keyframes chase {
+    from { left: -150px; }
+    to { left: 100%; }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes tail-wag {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+  }
 }
 
 :root {
@@ -32,10 +50,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-press-start), cursive;
   text-transform: uppercase;
-  color: #ebdbb2; /* Default headings to foreground color */
+  color: #ebdbb2;
 }
 
-/* CRT Scanline Effect (Muted) */
+/* CRT Scanline Effect */
 .crt::before {
   content: " ";
   display: block;
@@ -57,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pixel-button {
-  background-color: #458588; /* Muted Blue */
+  background-color: #458588;
   color: #ebdbb2;
   padding: 0.5rem 1rem;
   border: 4px solid #1d2021;
@@ -68,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 .pixel-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0px 0px #ebdbb2;
-  background-color: #83a598; /* Lighter Muted Blue */
+  background-color: #83a598;
 }
 
 .pixel-button:active {
@@ -76,31 +94,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 0px 0px 0px #ebdbb2;
 }
 
-/* Monkey Animation Keyframes */
-@keyframes chase {
-  0% { transform: translateX(-100px); }
-  100% { transform: translateX(calc(100vw + 100px)); }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes tail-wag {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(15deg); }
-}
-
+/* Support for standard classes if theme fails to pick them up */
 .animate-chase {
-  animation: chase 10s linear infinite;
-}
-
-.animate-monkey-bounce {
-  animation: bounce 0.4s ease-in-out infinite;
-}
-
-.animate-tail {
-  transform-origin: left bottom;
-  animation: tail-wag 0.5s ease-in-out infinite;
+  animation: chase 15s linear infinite;
+  position: absolute;
 }
