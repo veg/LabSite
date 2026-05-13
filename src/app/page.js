@@ -19,6 +19,7 @@ export default function Home() {
     <main className={`min-h-screen relative flex flex-col ${
       theme === 'profdr' ? 'bg-white' :
       theme === 'geocities' ? '' :
+      theme === 'y2k' ? '' :
       theme === '2000s' ? 'bg-me-bg' :
       theme === '2010s' ? 'bg-hero-bg' :
       theme === '2020s' ? 'bg-ai-bg' : ''
@@ -26,8 +27,75 @@ export default function Home() {
       <Navbar />
 
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
-        <section className={(theme === 'profdr' || theme === 'geocities') ? 'mb-8' : 'mb-16 text-center'}>
-          {theme === 'geocities' ? (
+        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k') ? 'mb-8' : 'mb-16 text-center'}>
+          {theme === 'y2k' ? (
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-8">
+                <div className="y2k-logo" style={{fontSize: '4em'}}>
+                  acme<span style={{color: '#ff6600', WebkitTextFillColor: '#ff6600'}}>.</span>lab
+                </div>
+                <div style={{marginTop: '-8px'}}>
+                  <span className="y2k-beta">BETA</span>
+                </div>
+                <p style={{fontSize: '16px', color: '#666', marginTop: '12px'}}>
+                  Computational molecular evolution, <i>simplified</i>.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-4 mb-8">
+                <Link href="/projects" className="y2k-gel" style={{textAlign: 'center'}}>Try It Now</Link>
+                <Link href="/papers" className="y2k-gel y2k-gel-orange" style={{textAlign: 'center'}}>Read Papers</Link>
+                <Link href="/members" className="y2k-gel" style={{textAlign: 'center'}}>Meet The Team</Link>
+              </div>
+
+              <div className="y2k-panel">
+                <div className="y2k-panel-header">welcome <span className="y2k-beta">NEW</span></div>
+                <div className="y2k-panel-body">
+                  <p style={{marginBottom: '12px'}}>
+                    The <b>ACME Laboratory</b> develops and applies high-performance computational
+                    tools for the comparative analysis of sequence data. Our methods are universally
+                    applicable across all domains of life. While measurably evolving pathogens are
+                    our primary focus and &quot;top customers,&quot; our framework is used to
+                    interrogate evolutionary questions anywhere on the tree of life.
+                  </p>
+                  <p style={{fontSize: '12px', color: '#666'}}>
+                    <b>tags:</b>{' '}
+                    <a className="y2k-tag" href="#">phylogenetics</a>
+                    <a className="y2k-tag" href="#">molecular evolution</a>
+                    <a className="y2k-tag" href="#">pathogens</a>
+                    <a className="y2k-tag" href="#">HyPhy</a>
+                    <a className="y2k-tag" href="#">Datamonkey</a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="y2k-panel">
+                  <div className="y2k-panel-header">what we do</div>
+                  <div className="y2k-panel-body">
+                    <ul>
+                      <li><b>Molecular epidemiology</b></li>
+                      <li><b>Viral dynamics</b></li>
+                      <li><b>Phylogenetic methods</b></li>
+                      <li><b>High-performance computing</b></li>
+                      <li><b>Data visualization</b></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="y2k-panel">
+                  <div className="y2k-panel-header">our tools</div>
+                  <div className="y2k-panel-body">
+                    <p style={{marginBottom: '10px'}}>Open-source software used by researchers worldwide:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Link href="/projects" className="y2k-gel" style={{fontSize: '12px', padding: '5px 14px'}}>HyPhy</Link>
+                      <Link href="/projects" className="y2k-gel" style={{fontSize: '12px', padding: '5px 14px'}}>Datamonkey</Link>
+                      <Link href="/projects" className="y2k-gel" style={{fontSize: '12px', padding: '5px 14px'}}>HIV-TRACE</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : theme === 'geocities' ? (
             <div>
               <h1>~* Welcome to the ACME Laboratory!! *~</h1>
               <p className="geo-blink" style={{color: '#ff00ff', fontWeight: 'bold'}}>★ NEW! NEW! NEW! ★</p>
@@ -193,7 +261,7 @@ export default function Home() {
           )}
         </section>
 
-        {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && (
+        {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && (
           <>
             <section className="grid md:grid-cols-2 gap-8 mb-16">
               <Card title="CORE_COMPETENCIES">
@@ -283,6 +351,21 @@ export default function Home() {
           <hr />
           <p style={{color: '#ff00ff'}}>© 1996 ACME Laboratory ~ Temple University</p>
           <p className="geo-blink" style={{color: '#00ff00'}}>★ Hosted on Geocities ~ CapitolHill/Congress/1154 ★</p>
+        </footer>
+      ) : theme === 'y2k' ? (
+        <footer className="mt-auto p-6" style={{
+          background: 'linear-gradient(to bottom, #e6f3ff 0%, #cae0f5 100%)',
+          borderTop: '1px solid #b3d4ff',
+          color: '#0066cc'
+        }}>
+          <div className="container mx-auto text-center">
+            <p style={{fontSize: '12px', marginBottom: '6px'}}>
+              <Link href="/">Home</Link> · <Link href="/projects">Projects</Link> · <Link href="/members">Team</Link> · <Link href="/papers">Papers</Link> · <a href="#">RSS</a> · <a href="#">Tags</a>
+            </p>
+            <p style={{fontSize: '11px', color: '#666'}}>
+              © 2003 ACME Laboratory · Powered by <a href="#">Web 2.0</a> · <span className="y2k-beta" style={{fontSize: '9px', marginLeft: 0}}>BETA</span>
+            </p>
+          </div>
         </footer>
       ) : (
         <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${

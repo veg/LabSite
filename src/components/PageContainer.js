@@ -11,6 +11,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
     <main className={`min-h-screen relative flex flex-col ${
       theme === 'profdr' ? 'bg-white text-black' :
       theme === 'geocities' ? '' :
+      theme === 'y2k' ? '' :
       theme === '2000s' ? 'bg-me-bg text-me-orange' :
       theme === '2010s' ? 'bg-hero-bg text-hero-dark' :
       theme === '2020s' ? 'bg-ai-bg text-slate-200' : ''
@@ -32,6 +33,14 @@ export default function PageContainer({ children, title, titleColorClass = "text
                 <p className="geo-blink" style={{color: '#ff00ff', fontWeight: 'bold'}}>★ NEW ★ NEW ★ NEW ★</p>
               </>
             )}
+            {theme === 'y2k' && (
+              <div className="max-w-5xl mx-auto">
+                <h1 style={{textAlign: 'left'}}>
+                  {title.replace(/_/g, ' ').toLowerCase()}<span className="y2k-beta">BETA</span>
+                </h1>
+                <hr />
+              </div>
+            )}
             {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 uppercase">FILE_TYPE: RESEARCH_LOG</div>}
             {theme === '2000s' && <div className="text-[10px] text-me-blue font-bold tracking-[0.3em] mb-1 uppercase opacity-60">CODEX_ENTRY // {title}</div>}
             {theme === '2010s' && <div className="hero-tag mb-4">ACTIVE_QUEST: {title}</div>}
@@ -44,7 +53,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             
-            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && (
+            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && (
               <h1 className={`text-4xl mb-12 text-center ${
                 theme === '80s' ? titleColorClass :
                 theme === '90s' ? 'text-mgs-green font-bold tracking-tighter border-b border-mgs-green/20 pb-4' :
@@ -89,6 +98,21 @@ export default function PageContainer({ children, title, titleColorClass = "text
           <p>★ Sign my <a href="#guestbook">Guestbook</a>! ★ <a href="mailto:webmaster@acme.example">E-mail me</a>! ★</p>
           <p style={{color: '#ff00ff'}}>© 1996 ACME Laboratory ~ Temple University</p>
           <p className="geo-blink" style={{color: '#00ff00'}}>★ This page best viewed in Netscape Navigator 3.0 ★</p>
+        </footer>
+      ) : theme === 'y2k' ? (
+        <footer className="mt-auto p-6" style={{
+          background: 'linear-gradient(to bottom, #e6f3ff 0%, #cae0f5 100%)',
+          borderTop: '1px solid #b3d4ff',
+          color: '#0066cc'
+        }}>
+          <div className="container mx-auto text-center">
+            <p style={{fontSize: '12px', marginBottom: '6px'}}>
+              <Link href="/">Home</Link> · <Link href="/projects">Projects</Link> · <Link href="/members">Team</Link> · <Link href="/papers">Papers</Link> · <a href="#">RSS</a> · <a href="#">Tags</a>
+            </p>
+            <p style={{fontSize: '11px', color: '#666'}}>
+              © 2003 ACME Laboratory · Powered by <a href="#">Web 2.0</a> · <span className="y2k-beta" style={{fontSize: '9px', marginLeft: 0}}>BETA</span>
+            </p>
+          </div>
         </footer>
       ) : (
         <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${

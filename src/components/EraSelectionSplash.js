@@ -29,9 +29,15 @@ export default function EraSelectionSplash() {
       desc: 'The Cambrian Explosion of data. High-tech bio-surveillance HUD for pathogen tracking.',
       previewClass: 'bg-[#0a0f0a] border-2 border-[#2d4c2d] text-[#00ff41] font-mono text-[10px] flex flex-col items-center justify-center p-4'
     },
-    { 
-      id: '2000s', 
-      label: '2007 Omni-tool', 
+    {
+      id: 'y2k',
+      label: '2003 Web 2.0',
+      desc: 'The Silurian gel-button bloom. Sky-blue gradients, glossy buttons, rounded boxes, BETA badges, Verdana.',
+      previewClass: 'y2k-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: '2000s',
+      label: '2007 Omni-tool',
       desc: 'The Genomic Mesozoic. Holographic interfaces for deep phylogenomic exploration.',
       previewClass: 'bg-[#050a0f] border-2 border-[#ff9d00]/30 text-[#ff9d00] font-mono text-[10px] flex items-center justify-center p-4 italic font-black shadow-[0_0_15px_rgba(255,157,0,0.2)]'
     },
@@ -71,7 +77,7 @@ export default function EraSelectionSplash() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-4 max-w-7xl w-full">
         {eras.map((era) => (
           <button
             key={era.id}
@@ -93,6 +99,13 @@ export default function EraSelectionSplash() {
                    <div style={{height: '4px', background: 'linear-gradient(to right,red,orange,yellow,green,cyan,blue,magenta)', margin: '3px 0'}} />
                    <div className="geo-blink" style={{color: '#ff00ff'}}>NEW!!!</div>
                    <div style={{color: '#00ffff'}}>Click <span style={{textDecoration: 'underline'}}>here</span></div>
+                 </div>
+               )}
+               {era.id === 'y2k' && (
+                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
+                   <div className="y2k-logo" style={{fontSize: '18px'}}>acme<span style={{color: '#ff6600', WebkitTextFillColor: '#ff6600'}}>.</span>lab</div>
+                   <span className="y2k-beta" style={{fontSize: '8px', padding: '1px 6px', marginLeft: 0}}>BETA</span>
+                   <span className="y2k-gel" style={{fontSize: '9px', padding: '3px 10px'}}>Sign Up</span>
                  </div>
                )}
                {era.id === '80s' && "> SYSTEM_READY"}

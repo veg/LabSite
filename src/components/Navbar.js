@@ -9,6 +9,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
     { id: 'geocities', label: '1996 Geocities' },
     { id: '80s', label: '1985 Terminal' },
     { id: '90s', label: '1998 Tactical' },
+    { id: 'y2k', label: '2003 Web 2.0' },
     { id: '2000s', label: '2007 Omni-tool' },
     { id: '2010s', label: '2012 Vault Hunter' },
     { id: '2020s', label: '2024 AI Assistant' }
@@ -21,6 +22,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
         className={`p-1 transition-all ${
           theme === 'profdr' ? 'text-black hover:text-blue-700' :
           theme === 'geocities' ? 'text-[#ff00ff] hover:text-[#00ffff]' :
+          theme === 'y2k' ? 'text-[#0066cc] hover:text-[#ff6600]' :
           theme === '80s' ? 'text-retro-green hover:text-white' :
           theme === '90s' ? 'text-mgs-green hover:text-white' :
           theme === '2000s' ? 'text-me-orange hover:text-white' :
@@ -38,6 +40,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
         <div className={`absolute left-0 mt-2 p-2 min-w-[180px] shadow-lg z-[100] ${
           theme === 'profdr' ? 'bg-white border border-gray-500 text-black' :
           theme === 'geocities' ? 'bg-[#000080] border-4 border-[#ff00ff] text-[#ffff00]' :
+          theme === 'y2k' ? 'bg-white border border-[#b3d4ff] text-[#0066cc] rounded-lg' :
           theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' :
           theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' :
           theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
@@ -69,6 +72,47 @@ export default function Navbar() {
     { label: 'ALUMNI', href: '/former' },
     { label: 'PAPERS', href: '/papers' },
   ];
+
+  if (theme === 'y2k') {
+    return (
+      <nav style={{
+        background: 'linear-gradient(to bottom, #5fb1ee 0%, #1a73c9 50%, #0e5dad 51%, #0d5099 100%)',
+        borderBottom: '1px solid #0a3d6e',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.4)',
+        fontFamily: 'Verdana, sans-serif'
+      }}>
+        <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-3">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#ffffff', fontWeight: 'bold', fontSize: '20px', textDecoration: 'none', textShadow: '0 -1px 0 rgba(0,0,0,0.3)', letterSpacing: '-0.5px'}}>
+              acme<span style={{color: '#ffcc66'}}>.</span>lab
+            </Link>
+            <span className="y2k-beta">BETA</span>
+          </div>
+          <div className="flex gap-1 items-center">
+            {navItems.map(item => (
+              <Link
+                key={item.label}
+                href={item.href}
+                style={{
+                  color: '#ffffff',
+                  fontWeight: 'bold',
+                  fontSize: '13px',
+                  textDecoration: 'none',
+                  textShadow: '0 -1px 0 rgba(0,0,0,0.3)',
+                  padding: '4px 12px',
+                  borderRadius: '4px'
+                }}
+                className="hover:bg-white/15 transition-colors"
+              >
+                {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   if (theme === 'geocities') {
     return (

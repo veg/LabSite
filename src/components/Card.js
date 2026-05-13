@@ -32,6 +32,19 @@ export default function Card({ title, children, className = "" }) {
     );
   }
 
+  if (theme === 'y2k') {
+    return (
+      <div className={`y2k-panel mb-6 ${className}`}>
+        {title && (
+          <div className="y2k-panel-header">
+            {title.replace(/_/g, ' ').toLowerCase()}
+          </div>
+        )}
+        <div className="y2k-panel-body">{children}</div>
+      </div>
+    );
+  }
+
   if (theme === '2010s') {
     return (
       <div className={`hero-panel mb-8 p-0 ${className}`}>
