@@ -20,16 +20,16 @@ export default function FormerMembersPage() {
                   {member.title}{separator}{member.years}
                 </p>
                 <p className="text-lg">
-                  <span className="text-retro-amber">[NEXT_STATION]:</span> {member.next}
+                  <span className="opacity-60">[NEXT_STATION]:</span> {member.next}
                 </p>
-                <div className="flex flex-wrap gap-3 mt-2 border-t border-retro-bg pt-2">
+                <div className="flex flex-wrap gap-3 mt-2 border-t border-white/10 pt-2">
                   {Object.entries(member.links).map(([type, url]) => (
                     <a 
                       key={type} 
                       href={url} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-retro-blue hover:text-white text-sm transition-colors"
+                      className="opacity-70 hover:opacity-100 hover:underline text-sm transition-all"
                     >
                       [{type.toUpperCase()}]
                     </a>

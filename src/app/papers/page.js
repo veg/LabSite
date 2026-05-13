@@ -93,7 +93,7 @@ export default function PapersPage() {
                 }`}>[ACTIVE_CONTRIBUTORS]</p>
                 <div className="max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-retro-blue">
                   {memberContributions.map(m => (
-                    <div key={m.name} className="flex justify-between text-lg mb-1 text-black">
+                    <div key={m.name} className="flex justify-between text-lg mb-1">
                       <span className="opacity-80 font-mono">{m.name.split(' ').pop().toUpperCase()}</span>
                       <span className={
                         theme === '80s' ? 'text-retro-blue' : 
@@ -179,7 +179,7 @@ export default function PapersPage() {
         </section>
 
         <div className="max-w-4xl mx-auto text-center pt-12">
-          <p className="font-body text-2xl mb-8 opacity-80 text-black">
+          <p className="font-body text-2xl mb-8 opacity-80">
             Our full bibliography spans decades of research in molecular evolution and bioinformatics.
           </p>
           <a 
@@ -293,7 +293,7 @@ function PaperCard({ paper, theme, isLegendarySection }) {
           {paper.journal.toUpperCase()}
         </p>
         
-        <div className="pt-4 border-t border-retro-bg flex justify-between items-center">
+        <div className="pt-4 border-t border-white/10 flex justify-between items-center">
           <a 
             href={`https://doi.org/${paper.doi}`} 
             target="_blank" 
