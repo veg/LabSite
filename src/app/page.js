@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen relative flex flex-col ${
+      theme === '80s' ? 'theme-80s crt' :
       theme === '2000s' ? 'bg-me-bg' : 
       theme === '2010s' ? 'bg-hero-bg' :
       theme === '2020s' ? 'bg-ai-bg' : ''
@@ -58,17 +59,18 @@ export default function Home() {
           ) : (
             <>
               <div className={`inline-block p-4 mb-6 max-w-full ${
-                theme === '80s' ? 'border-4 border-retro-green' : 
+                theme === '80s' ? 'pixel-border bg-black' : 
                 theme === '90s' ? 'mgs-panel border-4' :
                 theme === '2000s' ? 'me-panel border-2' :
                 'bg-black p-8 shadow-hero skew-x-[-5deg]'
               }`}>
+                {theme === '80s' && <div className="text-[10px] text-white font-mono tracking-widest mb-1 text-left uppercase">STATION: INDEPENDENCE, MISSOURI // 1848</div>}
                 {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 text-left uppercase">ESTABLISHING_UPLINK...</div>}
                 {theme === '2000s' && <div className="text-[10px] text-me-blue font-bold tracking-[0.3em] mb-1 text-left uppercase opacity-60 italic">LOCATING_STRIKE_TEAM...</div>}
                 {theme === '2010s' && <div className="text-hero-yellow font-black text-left mb-2 text-sm italic tracking-tighter">NEW QUEST DISCOVERED:</div>}
                 
                 <h1 className={`text-xl md:text-4xl lg:text-5xl leading-tight ${
-                  theme === '80s' ? 'text-retro-fg font-heading' : 
+                  theme === '80s' ? 'text-white font-heading' : 
                   theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
                   theme === '2000s' ? 'text-me-orange font-black italic drop-shadow-me' :
                   'text-white font-black italic uppercase'
@@ -80,34 +82,35 @@ export default function Home() {
               
               <div className="max-w-4xl mx-auto px-2">
                 <h2 className={`text-base md:text-xl lg:text-2xl mb-8 font-heading leading-relaxed ${
-                  theme === '80s' ? 'text-retro-amber' : 
+                  theme === '80s' ? 'text-white' : 
                   theme === '90s' ? 'text-mgs-blue' :
                   theme === '2000s' ? 'text-me-blue drop-shadow-sm italic' :
                   'text-black font-black uppercase tracking-tighter border-l-8 border-hero-yellow pl-4 text-left'
                 }`}>
-                  STATISTICAL_MODELS & SOFTWARE_TOOLS<br className="md:hidden" /> FOR COMPARATIVE_SEQUENCE_ANALYSIS
+                  {theme === '80s' ? 'THE ACME TRAIL: A COMPUTATIONAL ADVENTURE' : 'STATISTICAL_MODELS & SOFTWARE_TOOLS FOR COMPARATIVE_SEQUENCE_ANALYSIS'}
                 </h2>
                 
-                <Card title="MISSION_OVERVIEW">
+                <Card title={theme === '80s' ? 'TRAVEL_LOG: 1848' : 'MISSION_OVERVIEW'}>
                   <p className={`mb-4 text-left ${
+                    theme === '80s' ? 'text-white font-body' :
                     theme === '90s' ? 'text-mgs-green/80 font-mono' : 
                     theme === '2000s' ? 'text-me-orange/80 font-mono' :
                     theme === '2010s' ? 'text-hero-dark font-black' : ''
                   }`}>
-                    We <strong>develop and apply</strong> high-performance computational tools for the comparative analysis of sequence data. 
-                    Our methods are universally applicable across all domains of life. 
-                    While measurably evolving pathogens are our primary focus and &quot;top customers,&quot; 
-                    our framework is used to interrogate evolutionary questions anywhere on the tree of life.
+                    {theme === '80s' ? 
+                      "YOUR JOURNEY BEGINS. THE ACME LABORATORY DEVELOPS HIGH-PERFORMANCE TOOLS FOR THE COMPARATIVE ANALYSIS OF SEQUENCE DATA. THE TRAIL IS LONG, BUT THE DATA IS PLENTIFUL." :
+                      "We develop and apply high-performance computational tools for the comparative analysis of sequence data. Our methods are universally applicable across all domains of life. While measurably evolving pathogens are our primary focus and \"top customers,\" our framework is used to interrogate evolutionary questions anywhere on the tree of life."
+                    }
                   </p>
                   <div className={`text-sm md:text-base border-t pt-4 mt-4 flex justify-between items-center ${
-                    theme === '80s' ? 'text-retro-green border-retro-bg font-body' : 
+                    theme === '80s' ? 'text-white border-white font-body' : 
                     theme === '90s' ? 'text-mgs-green/40 border-mgs-border font-mono' :
                     theme === '2000s' ? 'text-me-blue/40 border-me-border font-mono italic' :
                     'text-hero-dark opacity-40 font-black border-black/10 italic'
                   }`}>
-                    <span>[SCOPE]: UNIVERSAL</span>
-                    <span>[PRIMARY_FOCUS]: PATHOGENS</span>
-                    <span>[STATUS]: ACTIVE</span>
+                    <span>{theme === '80s' ? 'OXEN: 4' : '[SCOPE]: UNIVERSAL'}</span>
+                    <span>{theme === '80s' ? 'FOOD: 200 LBS' : '[PRIMARY_FOCUS]: PATHOGENS'}</span>
+                    <span>{theme === '80s' ? 'HEALTH: GOOD' : '[STATUS]: ACTIVE'}</span>
                   </div>
                 </Card>
               </div>
@@ -118,18 +121,20 @@ export default function Home() {
         {theme !== '2020s' && (
           <>
             <section className="grid md:grid-cols-2 gap-8 mb-16">
-              <Card title="CORE_COMPETENCIES">
+              <Card title={theme === '80s' ? 'SUPPLY_INVENTORY' : 'CORE_COMPETENCIES'}>
                 <ul className={`list-none space-y-2 ${theme === '2010s' ? 'font-black' : ''}`}>
-                  <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} MOLECULAR_EPIDEMIOLOGY</li>
-                  <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} VIRAL_DYNAMICS</li>
-                  <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} PHYLOGENETIC_METHODS</li>
-                  <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} HIGH_PERFORMANCE_COMPUTING</li>
-                  <li className={theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{">"} DATA_VISUALIZATION</li>
+                  <li className={theme === '80s' ? 'text-white' : theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{theme === '80s' ? "1. MOLECULAR_EPIDEMIOLOGY" : "> MOLECULAR_EPIDEMIOLOGY"}</li>
+                  <li className={theme === '80s' ? 'text-white' : theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{theme === '80s' ? "2. VIRAL_DYNAMICS" : "> VIRAL_DYNAMICS"}</li>
+                  <li className={theme === '80s' ? 'text-white' : theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{theme === '80s' ? "3. PHYLOGENETIC_METHODS" : "> PHYLOGENETIC_METHODS"}</li>
+                  <li className={theme === '80s' ? 'text-white' : theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{theme === '80s' ? "4. HIGH_PERFORMANCE_COMPUTING" : "> HIGH_PERFORMANCE_COMPUTING"}</li>
+                  <li className={theme === '80s' ? 'text-white' : theme === '90s' ? 'text-mgs-green/80' : theme === '2000s' ? 'text-me-orange/80' : ''}>{theme === '80s' ? "5. DATA_VISUALIZATION" : "> DATA_VISUALIZATION"}</li>
                 </ul>
               </Card>
 
-              <Card title="EQUIPMENT_LIST">
-                <p className={`mb-4 ${theme === '2010s' ? 'font-black italic' : ''}`}>Our lab maintains a suite of open-source tools utilized by researchers worldwide:</p>
+              <Card title={theme === '80s' ? 'TOOLS_FOR_THE_TRAIL' : 'EQUIPMENT_LIST'}>
+                <p className={`mb-4 ${theme === '2010s' ? 'font-black italic' : ''}`}>
+                  {theme === '80s' ? "CHOOSE A TOOL TO HELP YOU ON YOUR JOURNEY:" : "Our lab maintains a suite of open-source tools utilized by researchers worldwide:"}
+                </p>
                 <div className="flex flex-wrap gap-4 font-heading text-xs">
                   {['HYPHY', 'DATAMONKEY', 'HIV-TRACE'].map(tool => (
                     <Link 
@@ -157,31 +162,34 @@ export default function Home() {
                 'bg-white border-8 border-black shadow-hero'
               }`}>
                 <h2 className={`text-2xl mb-6 font-heading ${
+                  theme === '80s' ? 'text-white' :
                   theme === '90s' ? 'text-mgs-green/60' : 
                   theme === '2000s' ? 'text-me-blue italic' :
                   'text-black font-black uppercase'
-                }`}>SELECT_DESTINATION</h2>
+                }`}>
+                  {theme === '80s' ? 'CHOOSE_YOUR_PATH' : 'SELECT_DESTINATION'}
+                </h2>
                 <div className="flex flex-col md:flex-row gap-6 justify-center font-heading text-xs">
                   <Link href="/members" className={`hover:scale-105 transition-all ${
-                    theme === '80s' ? 'text-retro-amber' : 
+                    theme === '80s' ? 'text-white border-2 border-white px-4 py-2 hover:bg-white hover:text-black' : 
                     theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
                     theme === '2000s' ? 'text-me-orange italic' :
                     'bg-black text-hero-yellow px-4 py-2 skew-x-[-10deg]'
-                  }`}>{theme === '2010s' ? 'THE_TEAM' : '> MEET_THE_TEAM'}</Link>
+                  }`}>{theme === '2010s' ? 'THE_TEAM' : theme === '80s' ? '1. MEET THE TEAM' : '> MEET_THE_TEAM'}</Link>
                   
                   <Link href="/projects" className={`hover:scale-105 transition-all ${
-                    theme === '80s' ? 'text-retro-blue' : 
+                    theme === '80s' ? 'text-white border-2 border-white px-4 py-2 hover:bg-white hover:text-black' : 
                     theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
                     theme === '2000s' ? 'text-me-orange italic' :
                     'bg-black text-hero-cyan px-4 py-2 skew-x-[-10deg]'
-                  }`}>{theme === '2010s' ? 'PROJECTS' : '> EXPLORE_PROJECTS'}</Link>
+                  }`}>{theme === '2010s' ? 'PROJECTS' : theme === '80s' ? '2. EXPLORE PROJECTS' : '> EXPLORE_PROJECTS'}</Link>
                   
                   <Link href="/papers" className={`hover:scale-105 transition-all ${
-                    theme === '80s' ? 'text-retro-purple' : 
+                    theme === '80s' ? 'text-white border-2 border-white px-4 py-2 hover:bg-white hover:text-black' : 
                     theme === '90s' ? 'text-mgs-blue hover:text-mgs-green' :
                     theme === '2000s' ? 'text-me-orange italic' :
                     'bg-black text-white px-4 py-2 skew-x-[-10deg]'
-                  }`}>{theme === '2010s' ? 'RESEARCH' : '> READ_RESEARCH'}</Link>
+                  }`}>{theme === '2010s' ? 'RESEARCH' : theme === '80s' ? '3. READ RESEARCH' : '> READ_RESEARCH'}</Link>
                 </div>
               </div>
             </section>
@@ -190,7 +198,7 @@ export default function Home() {
       </div>
 
       <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
-        theme === '80s' ? 'border-retro-green bg-black' : 
+        theme === '80s' ? 'border-white bg-black text-white' : 
         theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
         theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
         theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
@@ -198,7 +206,7 @@ export default function Home() {
       }`}>
         <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
         <p className={
-          theme === '80s' ? 'text-retro-blue font-body' : 
+          theme === '80s' ? 'text-white font-body opacity-60' : 
           theme === '90s' ? 'text-mgs-blue font-mono' : 
           theme === '2000s' ? 'text-me-blue font-mono' :
           theme === '2010s' ? 'text-white opacity-40 uppercase tracking-tighter mt-2' :

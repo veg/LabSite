@@ -7,13 +7,13 @@
   --font-pixelify: var(--font-pixelify);
   --font-inter: sans-serif;
 
-  /* 80s Palette */
-  --color-retro-green: #689d6a;
-  --color-retro-blue: #458588;
-  --color-retro-amber: #d79921;
-  --color-retro-purple: #b16286;
-  --color-retro-bg: #282828;
-  --color-retro-fg: #ebdbb2;
+  /* 80s Oregon Trail Palette */
+  --color-retro-green: #2ecc71;
+  --color-retro-blue: #4a9eff;
+  --color-retro-amber: #ffcc00;
+  --color-retro-purple: #a855f7;
+  --color-retro-bg: #000000;
+  --color-retro-fg: #ffffff;
 
   /* 90s Palette */
   --color-mgs-bg: #0a0f0a;
@@ -42,7 +42,7 @@
   --color-ai-accent: #4a9eff;
   --color-ai-gradient: linear-gradient(135deg, #4a9eff 0%, #a855f7 100%);
 
-  --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-retro: 4px 4px 0px 0px #ffffff;
   --shadow-mgs: 0 0 15px rgba(0, 255, 65, 0.2);
   --shadow-me: 0 0 20px rgba(255, 157, 0, 0.15);
   --shadow-hero: 8px 8px 0px 0px rgba(0, 0, 0, 1);
@@ -63,6 +63,7 @@
 }
 
 :root { --background: #282828; --foreground: #ebdbb2; }
+[data-theme='80s'] { --background: #000000; --foreground: #ffffff; }
 [data-theme='90s'] { --background: #0a0f0a; --foreground: #00ff41; }
 [data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
 [data-theme='2010s'] { --background: #f5f5f5; --foreground: #1a1a1a; }
@@ -77,12 +78,39 @@ body {
   overflow-x: hidden;
 }
 
-/* 80s Specifics */
-.theme-80s { font-family: var(--font-vt323), monospace; image-rendering: pixelated; }
-.theme-80s h1, .theme-80s h2, .theme-80s h3 { font-family: var(--font-press-start), cursive; text-transform: uppercase; }
+/* 80s Oregon Trail Specifics */
+.theme-80s { 
+  font-family: var(--font-vt323), monospace; 
+  image-rendering: pixelated; 
+  background-color: #000;
+  color: #fff;
+}
+.theme-80s h1, .theme-80s h2, .theme-80s h3 { 
+  font-family: var(--font-press-start), cursive; 
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.theme-80s .pixel-border {
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 0px #000, 6px 6px 0px #fff;
+}
+.theme-80s .pixel-button {
+  background-color: #000;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  box-shadow: 4px 4px 0px #fff;
+  transition: all 0.1s;
+}
+.theme-80s .pixel-button:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
 .theme-80s.crt::before {
   content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
   z-index: 9999; background-size: 100% 3px, 3px 100%; pointer-events: none; opacity: 0.8; position: fixed;
 }
 
