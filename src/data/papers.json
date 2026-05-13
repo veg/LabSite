@@ -1,19 +1,19 @@
 [
   {
     "id": "Selberg:2026aa",
-    "year": 2026,
-    "authors": "Selberg, Avery G and Clark, Nathan and Nekrutenko, Anton and Chikina, Maria and Kosakovsky Pond, Sergei L",
     "title": "MoleRate: comparing molecular relative evolutionary rates to detect convergent evolution",
+    "year": "2026",
+    "authors": "Selberg, Avery G and Clark, Nathan and Nekrutenko, Anton and Chikina, Maria and Kosakovsky Pond, Sergei L",
     "journal": "Evolution",
     "doi": "10.1093/evolut/qpaf240",
-    "category": "METHODS",
+    "category": "ADAPTATION",
     "isRecent": true
   },
   {
     "id": "Havens:2026aa",
-    "year": 2026,
-    "authors": "Havens, Jennifer L and Kosakovsky Pond, Sergei L and Zehr, Jordan D and Pekar, Jonathan E and Parker, Edyth and Worobey, Michael and Andersen, Kristian G and Wertheim, Joel O",
     "title": "Dynamics of natural selection preceding human viral epidemics and pandemics",
+    "year": "2026",
+    "authors": "Havens, Jennifer L and Kosakovsky Pond, Sergei L and Zehr, Jordan D and Pekar, Jonathan E and Parker, Edyth and Worobey, Michael and Andersen, Kristian G and Wertheim, Joel O",
     "journal": "Cell",
     "doi": "10.1016/j.cell.2026.02.006",
     "category": "SURVEILLANCE",
@@ -21,36 +21,36 @@
   },
   {
     "id": "Melendez-Vazquez:2025aa",
-    "year": 2025,
-    "authors": "Melendez-Vazquez, Fernando and Lucaci, Alexander G and Selberg, Avery and Clavel, Julien and Rincon-Sandoval, Melissa and Santaquiteria, Aintzane and White, William T and Drabeck, Danielle and Carnevale, Giorgio and Duarte-Ribeiro, Emanuell and Miya, Masaki and Westneat, Mark W and Baldwin, Carole C and Hughes, Lily C and Ortí, Guillermo and Kosakovsky Pond, Sergei L and Betancur-R, Ricardo and Arcila, Dahiana",
     "title": "Ecological interactions and genomic innovation fueled the evolution of ray-finned fish endothermy",
+    "year": "2025",
+    "authors": "Melendez-Vazquez, Fernando and Lucaci, Alexander G and Selberg, Avery and Clavel, Julien and Rincon-Sandoval, Melissa and Santaquiteria, Aintzane and White, William T and Drabeck, Danielle and Carnevale, Giorgio and Duarte-Ribeiro, Emanuell and Miya, Masaki and Westneat, Mark W and Baldwin, Carole C and Hughes, Lily C and Ortí, Guillermo and Kosakovsky Pond, Sergei L and Betancur-R, Ricardo and Arcila, Dahiana",
     "journal": "Sci Adv",
     "doi": "10.1126/sciadv.ads8488",
     "category": "ADAPTATION"
   },
   {
     "id": "Selberg:2025aa",
-    "year": 2025,
-    "authors": "Selberg, Avery and Clark, Nathan L and Sackton, Timothy B and Muse, Spencer V and Lucaci, Alexander G and Weaver, Steven and Nekrutenko, Anton and Chikina, Maria and Pond, Sergei L Kosakovsky",
     "title": "Minus the Error: Testing for Positive Selection in the Presence of Residual Alignment Errors",
+    "year": "2025",
+    "authors": "Selberg, Avery and Clark, Nathan L and Sackton, Timothy B and Muse, Spencer V and Lucaci, Alexander G and Weaver, Steven and Nekrutenko, Anton and Chikina, Maria and Pond, Sergei L Kosakovsky",
     "journal": "bioRxiv",
     "doi": "10.1101/2024.11.13.620707",
     "category": "METHODS"
   },
   {
     "id": "Makova:2024aa",
-    "year": 2024,
-    "authors": "Makova, Kateryna D and Pickett, Brandon D and Harris, Robert S and Hartley, Gabrielle A and Cechova, Monika and Pal, Karol and Nurk, Sergey and Yoo, DongAhn and Li, Qiuhui and Hebbar, Prajna and McGrath, Barbara C and Antonacci, Francesca and Aubel, Margaux and Biddanda, Arjun and Borchers, Matthew and Bornberg-Bauer, Erich and Bouffard, Gerard G and Brooks, Shelise Y and Carbone, Lucia and Carrel, Laura and Carroll, Andrew and Chang, Pi-Chuan and Chin, Chen-Shan and Cook, Daniel E and Craig, Sarah J C and de Gennaro, Luciana and Diekhans, Mark and Dutra, Amalia and Garcia, Gage H and Grady, Patrick G S and Green, Richard E and Haddad, Diana and Hallast, Pille and Harvey, William T and Hickey, Glenn and Hillis, David A and Hoyt, Savannah J and Jeong, Hyeonsoo and Kamali, Kaivan and Pond, Sergei L Kosakovsky and LaPolice, Troy M and Lee, Charles and Lewis, Alexandra P and Loh, Yong-Hwee E and Masterson, Patrick and McGarvey, Kelly M and McCoy, Rajiv C and Medvedev, Paul and Miga, Karen H and Munson, Katherine M and Pak, Evgenia and Paten, Benedict and Pinto, Brendan J and Potapova, Tamara and Rhie, Arang and Rocha, Joana L and Ryabov, Fedor and Ryder, Oliver A and Sacco, Samuel and Shafin, Kishwar and Shepelev, Valery A and Slon, Viviane and Solar, Steven J and Storer, Jessica M and Sudmant, Peter H and Sweetalana and Sweeten, Alex and Tassia, Michael G and Thibaud-Nissen, Françoise and Ventura, Mario and Wilson, Melissa A and Young, Alice C and Zeng, Huiqing and Zhang, Xinru and Szpiech, Zachary A and Huber, Christian D and Gerton, Jennifer L and Yi, Soojin V and Schatz, Michael C and Alexandrov, Ivan A and Koren, Sergey and O'Neill, Rachel J and Eichler, Evan E and Phillippy, Adam M",
     "title": "The complete sequence and comparative analysis of ape sex chromosomes",
+    "year": "2024",
+    "authors": "Makova, Kateryna D and Pickett, Brandon D and Harris, Robert S and Hartley, Gabrielle A and Cechova, Monika and Pal, Karol and Nurk, Sergey and Yoo, DongAhn and Li, Qiuhui and Hebbar, Prajna and McGrath, Barbara C and Antonacci, Francesca and Aubel, Margaux and Biddanda, Arjun and Borchers, Matthew and Bornberg-Bauer, Erich and Bouffard, Gerard G and Brooks, Shelise Y and Carbone, Lucia and Carrel, Laura and Carroll, Andrew and Chang, Pi-Chuan and Chin, Chen-Shan and Cook, Daniel E and Craig, Sarah J C and de Gennaro, Luciana and Diekhans, Mark and Dutra, Amalia and Garcia, Gage H and Grady, Patrick G S and Green, Richard E and Haddad, Diana and Hallast, Pille and Harvey, William T and Hickey, Glenn and Hillis, David A and Hoyt, Savannah J and Jeong, Hyeonsoo and Kamali, Kaivan and Pond, Sergei L Kosakovsky and LaPolice, Troy M and Lee, Charles and Lewis, Alexandra P and Loh, Yong-Hwee E and Masterson, Patrick and McGarvey, Kelly M and McCoy, Rajiv C and Medvedev, Paul and Miga, Karen H and Munson, Katherine M and Pak, Evgenia and Paten, Benedict and Pinto, Brendan J and Potapova, Tamara and Rhie, Arang and Rocha, Joana L and Ryabov, Fedor and Ryder, Oliver A and Sacco, Samuel and Shafin, Kishwar and Shepelev, Valery A and Slon, Viviane and Solar, Steven J and Storer, Jessica M and Sudmant, Peter H and Sweetalana and Sweeten, Alex and Tassia, Michael G and Thibaud-Nissen, Françoise and Ventura, Mario and Wilson, Melissa A and Young, Alice C and Zeng, Huiqing and Zhang, Xinru and Szpiech, Zachary A and Huber, Christian D and Gerton, Jennifer L and Yi, Soojin V and Schatz, Michael C and Alexandrov, Ivan A and Koren, Sergey and O'Neill, Rachel J and Eichler, Evan E and Phillippy, Adam M",
     "journal": "Nature",
     "doi": "10.1038/s41586-024-07473-2",
     "category": "ADAPTATION"
   },
   {
     "id": "Verdonk:2025aa",
-    "year": 2025,
-    "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
     "title": "A New Comparative Framework for Estimating Selection on Synonymous Substitutions",
+    "year": "2025",
+    "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
     "journal": "Mol Biol Evol",
     "doi": "10.1093/molbev/msaf068",
     "category": "METHODS",
@@ -68,66 +68,171 @@
     "stats": "2,500+ Citations"
   },
   {
-    "id": "HIVTRACE2018",
-    "year": 2018,
-    "authors": "Pond, Sergei L Kosakovsky and Weaver, Steven and Leigh Brown, Andrew J and Wertheim, Joel O",
-    "title": "HIV-TRACE (TRAnsmission Cluster Engine): a Tool for Large Scale Molecular Epidemiology of HIV-1 and Other Rapidly Evolving Pathogens",
-    "journal": "Molecular Biology and Evolution",
-    "doi": "10.1093/molbev/msy016",
-    "category": "SURVEILLANCE",
-    "isLegendary": true
-  },
-  {
-    "id": "Datamonkey2018",
-    "year": 2018,
-    "authors": "Weaver, Steven and Shank, Stephen D and Spielman, Stephanie J and Li, Michael and Muse, Spencer V and Pond, Sergei L Kosakovsky",
-    "title": "Datamonkey 2.0: a modern web application for characterizing selective and other evolutionary processes",
-    "journal": "Molecular Biology and Evolution",
-    "doi": "10.1093/molbev/msx335",
-    "category": "METHODS",
-    "isLegendary": true
-  },
-  {
     "id": "France:2025aa",
-    "year": 2025,
-    "authors": "France, Anne Marie and Hallmark, Camden J and Panneer, Nivedha and Billock, Rachael and Russell, Olivia O and Plaster, Mary and Alberti, Jessica and Nuthan, Fathima and Saduvala, Neeraja and Philpott, David and Ocfemia, M Cheryl Bañez and Cope, Scott and Hernandez, Angela L and Pond, Sergei L Kosakovsky and Wertheim, Joel O and Weaver, Steven and Khader, Saja and Johnson, Kevin and Oster, Alexandra M",
     "title": "Nationwide Implementation of HIV Molecular Cluster Detection by Centers for Disease Control and Prevention and State and Local Health Departments, United States",
+    "year": "2025",
+    "authors": "France, Anne Marie and Hallmark, Camden J and Panneer, Nivedha and Billock, Rachael and Russell, Olivia O and Plaster, Mary and Alberti, Jessica and Nuthan, Fathima and Saduvala, Neeraja and Philpott, David and Ocfemia, M Cheryl Bañez and Cope, Scott and Hernandez, Angela L and Pond, Sergei L Kosakovsky and Wertheim, Joel O and Weaver, Steven and Khader, Saja and Johnson, Kevin and Oster, Alexandra M",
     "journal": "Emerg Infect Dis",
     "doi": "10.3201/eid3113.241143",
     "category": "SURVEILLANCE"
   },
   {
     "id": "Council:2025aa",
-    "year": 2025,
-    "authors": "Council, Olivia D and Tyers, Lynn and Moeser, Matthew and Sondgeroth, Amy and Spielvogel, Ean and Richardson, Brian D and Doolabh, Deelan and Zhou, Shuntai and Emery, Ann and Archin, Nancie M and Shook-Sa, Bonnie and Margolis, David M and Abdool Karim, Salim S and Kosakovsky Pond, Sergei and Garrett, Nigel and Abrahams, Melissa-Rose and Joseph, Sarah B and Williamson, Carolyn and Swanstrom, Ronald",
     "title": "The persistent pool of HIV-1-infected cells is formed episodically during untreated infection",
+    "year": "2025",
+    "authors": "Council, Olivia D and Tyers, Lynn and Moeser, Matthew and Sondgeroth, Amy and Spielvogel, Ean and Richardson, Brian D and Doolabh, Deelan and Zhou, Shuntai and Emery, Ann and Archin, Nancie M and Shook-Sa, Bonnie and Margolis, David M and Abdool Karim, Salim S and Kosakovsky Pond, Sergei and Garrett, Nigel and Abrahams, Melissa-Rose and Joseph, Sarah B and Williamson, Carolyn and Swanstrom, Ronald",
     "journal": "J Virol",
     "doi": "10.1128/jvi.00979-24",
-    "category": "VIRAL_DYNAMICS",
-    "isRecent": true
+    "category": "VIRAL_DYNAMICS"
+  },
+  {
+    "id": "Tyers:2025aa",
+    "title": "HIV-1 Rebound Virus Consists of a Small Number of Lineages That Entered the Reservoir Close to ART Initiation",
+    "year": "2025",
+    "authors": "Tyers, Lynn and Moeser, Matthew and Ntuli, Jean and Council, Olivia and Zhou, Shuntai and Spielvogel, Ean and Sondgeroth, Amy and Adams, Craig and Thebus, Ruwayhida and Yssel, Anna and Karim, Salim Abdool and Garrett, Nigel and Pond, Sergei Kosakovsky and Williamson, Carolyn and Swanstrom, Ronald and Abrahams, Melissa-Rose and Joseph, Sarah B",
+    "journal": "bioRxiv",
+    "doi": "10.1101/2025.01.29.635391",
+    "category": "VIRAL_DYNAMICS"
+  },
+  {
+    "id": "Rincon-Sandoval:2024aa",
+    "title": "Ecological diversification of sea catfishes is accompanied by genome-wide signatures of positive selection",
+    "year": "2024",
+    "authors": "Rincon-Sandoval, Melissa and De-Kayne, Rishi and Shank, Stephen D and Pirro, Stacy and Ko'ou, Alfred and Abueg, Linelle and Tracey, Alan and Mountcastle, Jackie and O'Toole, Brian and Balacco, Jennifer and Formenti, Giulio and Jarvis, Erich D and Arcila, Dahiana and Kosakovsky Pond, Sergei L and Davis, Aaron and Bloom, Devin D and Betancur-R, Ricardo",
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-024-54184-3",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Zarate:2024aa",
+    "title": "Phylogenomic Signatures of a Lineage of Vesicular Stomatitis Indiana Virus Circulating During the 2019-2020 Epidemic in the United States",
+    "year": "2024",
+    "authors": "Zarate, Selene and Bertram, Miranda and Rodgers, Case and Reed, Kirsten and Pelzel-McCluskey, Angela and Gomez-Romero, Ninnet and Rodriguez, Luis L and Mayo, Christie and Mire, Chad and Pond, Sergei L Kosakovsky and Velazquez-Salinas, Lauro",
+    "journal": "Viruses",
+    "doi": "10.3390/v16111803",
+    "category": "SURVEILLANCE"
   },
   {
     "id": "Lucaci:2024aa",
-    "year": 2024,
-    "authors": "Lucaci, Alexander G and Brew, William E and Lamanna, Jason and Selberg, Avery and Carnevale, Vincenzo and Moore, Anna R and Kosakovsky Pond, Sergei L",
     "title": "The evolution of mammalian Rem2: unraveling the impact of purifying selection and coevolution on protein function, and implications for human disorders",
+    "year": "2024",
+    "authors": "Lucaci, Alexander G and Brew, William E and Lamanna, Jason and Selberg, Avery and Carnevale, Vincenzo and Moore, Anna R and Kosakovsky Pond, Sergei L",
     "journal": "Front Bioinform",
     "doi": "10.3389/fbinf.2024.1381540",
     "category": "ADAPTATION"
   },
   {
     "id": "Weaver:2024aa",
-    "year": 2024,
-    "authors": "Weaver, Steven and Davila Conn, Vanessa M and Ji, Daniel and Verdonk, Hannah and Ávila-Rios, Santiago and Leigh Brown, Andrew J and Wertheim, Joel O and Kosakovsky Pond, Sergei L",
     "title": "AUTO-TUNE: selecting the distance threshold for inferring HIV transmission clusters",
+    "year": "2024",
+    "authors": "Weaver, Steven and Dávila Conn, Vanessa M and Ji, Daniel and Verdonk, Hannah and Ávila-Rios, Santiago and Leigh Brown, Andrew J and Wertheim, Joel O and Kosakovsky Pond, Sergei L",
     "journal": "Front Bioinform",
     "doi": "10.3389/fbinf.2024.1400003",
     "category": "METHODS"
   },
   {
+    "id": "Zehr:2024aa",
+    "title": "Positive selection, genetic recombination, and intra-host evolution in novel equine coronavirus genomes and other members of the Embecovirus subgenus",
+    "year": "2024",
+    "authors": "Zehr, Jordan D and Kosakovsky Pond, Sergei L and Shank, Stephen D and McQueary, Holly and Grenier, Jennifer K and Whittaker, Gary R and Stanhope, Michael J and Goodman, Laura B",
+    "journal": "Microbiol Spectr",
+    "doi": "10.1128/spectrum.00867-24",
+    "category": "VIRAL_DYNAMICS"
+  },
+  {
+    "id": "Kosakovsky-Pond:2023aa",
+    "title": "Anti-COVID drug accelerates viral evolution",
+    "year": "2023",
+    "authors": "Pond, Sergei L Kosakovsky and Martin, Darren",
+    "journal": "Nature",
+    "doi": "10.1038/d41586-023-03248-3",
+    "category": "SURVEILLANCE"
+  },
+  {
+    "id": "Maurer-Alcala:2024aa",
+    "title": "Somatic genome architecture and molecular evolution are decoupled in \"young\" linage-specific gene families in ciliates",
+    "year": "2024",
+    "authors": "Maurer-Alcalá, Xyrus X and Cote-L'Heureux, Auden and Pond, Sergei L Kosakovsky and Katz, Laura A",
+    "journal": "PLoS One",
+    "doi": "10.1371/journal.pone.0291688",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Wirthlin:2024aa",
+    "title": "Vocal learning-associated convergent evolution in mammalian proteins and regulatory elements",
+    "year": "2024",
+    "authors": "Wirthlin, Morgan E and Schmid, Tobias A and Elie, Julie E and Zhang, Xiaomeng and Kowalczyk, Amanda and Redlich, Ruby and Shvareva, Varvara A and Rakuljic, Ashley and Ji, Maria B and Bhat, Ninad S and Kaplow, Irene M and Schäffer, Daniel E and Lawler, Alyssa J and Wang, Andrew Z and Phan, BaDoi N and Annaldasula, Siddharth and Brown, Ashley R and Lu, Tianyu and Lim, Byung Kook and Azim, Eiman and {Zoonomia Consortium} and Clark, Nathan L and Meyer, Wynn K and Pond, Sergei L Kosakovsky and Chikina, Maria and Yartsev, Michael M and Pfenning, Andreas R and Andrews, Gregory and Armstrong, Joel C and Bianchi, Matteo and Birren, Bruce W and Bredemeyer, Kevin R and Breit, Ana M and Christmas, Matthew J and Clawson, Hiram and Damas, Joana and Di Palma, Federica and Diekhans, Mark and Dong, Michael X and Eizirik, Eduardo and Fan, Kaili and Fanter, Cornelia and Foley, Nicole M and Forsberg-Nilsson, Karin and Garcia, Carlos J and Gatesy, John and Gazal, Steven and Genereux, Diane P and Goodman, Linda and Grimshaw, Jenna and Halsey, Michaela K and Harris, Andrew J and Hickey, Glenn and Hiller, Michael and Hindle, Allyson G and Hubley, Robert M and Hughes, Graham M and Johnson, Jeremy and Juan, David and Kaplow, Irene M and Karlsson, Elinor K and Keough, Kathleen C and Kirilenko, Bogdan and Koepfli, Klaus-Peter and Korstian, Jennifer M and Kowalczyk, Amanda and Kozyrev, Sergey V and Lawler, Alyssa J and Lawless, Colleen and Lehmann, Thomas and Levesque, Danielle L and Lewin, Harris A and Li, Xue and Lind, Abigail and Lindblad-Toh, Kerstin and Mackay-Smith, Ava and Marinescu, Voichita D and Marques-Bonet, Tomas and Mason, Victor C and Meadows, Jennifer R S and Meyer, Wynn K and Moore, Jill E and Moreira, Lucas R and Moreno-Santillan, Diana D and Morrill, Kathleen M and Muntané, Gerard and Murphy, William J and Navarro, Arcadi and Nweeia, Martin and Ortmann, Sylvia and Osmanski, Austin and Paten, Benedict and Paulat, Nicole S and Pfenning, Andreas R and Phan, Ba",
+    "journal": "Science",
+    "doi": "10.1126/science.abn3263",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Langedijk:2024aa",
+    "title": "The genomic evolutionary dynamics and global circulation patterns of respiratory syncytial virus",
+    "year": "2024",
+    "authors": "Langedijk, Annefleur C and Vrancken, Bram and Lebbink, Robert Jan and Wilkins, Deidre and Kelly, Elizabeth J and Baraldi, Eugenio and Mascareñas de Los Santos, Abiel Homero and Danilenko, Daria M and Choi, Eun Hwa and Palomino, María Angélica and Chi, Hsin and Keller, Christian and Cohen, Robert and Papenburg, Jesse and Pernica, Jeffrey and Greenough, Anne and Richmond, Peter and Martinón-Torres, Federico and Heikkinen, Terho and Stein, Renato T and Hosoya, Mitsuaki and Nunes, Marta C and Verwey, Charl and Evers, Anouk and Kragten-Tabatabaie, Leyla and Suchard, Marc A and Pond, Sergei L Kosakovsky and Poletto, Chiara and Colizza, Vittoria and Lemey, Philippe and Bont, Louis J and {INFORM-RSV Study Group}",
+    "journal": "Nat Commun",
+    "doi": "10.1038/s41467-024-47118-6",
+    "category": "SURVEILLANCE"
+  },
+  {
+    "id": "Amendola:2022aa",
+    "title": "Molecular evidence for SARS-CoV-2 in samples collected from patients with morbilliform eruptions since late 2019 in Lombardy, northern Italy",
+    "year": "2022",
+    "authors": "Amendola, Antonella and Canuti, Marta and Bianchi, Silvia and Kumar, Sudhir and Fappani, Clara and Gori, Maria and Colzani, Daniela and Kosakovsky Pond, Sergei L and Miura, Sayaka and Baggieri, Melissa and Marchi, Antonella and Borghi, Elisa and Zuccotti, Gianvincenzo and Raviglione, Mario C and Magurano, Fabio and Tanzi, Elisabetta",
+    "journal": "Environ Res",
+    "doi": "10.1016/j.envres.2022.113979",
+    "category": "SURVEILLANCE"
+  },
+  {
+    "id": "Lucaci:2022aa",
+    "title": "RASCL: Rapid Assessment of Selection in CLades through molecular sequence analysis",
+    "year": "2022",
+    "authors": "Lucaci, Alexander G and Zehr, Jordan D and Shank, Stephen D and Bouvier, Dave and Ostrovsky, Alexander and Mei, Han and Nekrutenko, Anton and Martin, Darren P and Kosakovsky Pond, Sergei L",
+    "journal": "PLoS One",
+    "doi": "10.1371/journal.pone.0275623",
+    "category": "METHODS"
+  },
+  {
+    "id": "Zehr:2023aa",
+    "title": "Natural selection differences detected in key protein domains between non-pathogenic and pathogenic feline coronavirus phenotypes",
+    "year": "2023",
+    "authors": "Zehr, Jordan D and Kosakovsky Pond, Sergei L and Millet, Jean K and Olarte-Castillo, Ximena A and Lucaci, Alexander G and Shank, Stephen D and Ceres, Kristina M and Choi, Annette and Whittaker, Gary R and Goodman, Laura B and Stanhope, Michael J",
+    "journal": "Virus Evol",
+    "doi": "10.1093/ve/vead019",
+    "category": "VIRAL_DYNAMICS"
+  },
+  {
+    "id": "Escalera-Zamudio:2023aa",
+    "title": "Identification of Evolutionary Trajectories Shared across Human Betacoronaviruses",
+    "year": "2023",
+    "authors": "Escalera-Zamudio, Marina and Kosakovsky Pond, Sergei L and Martínez de la Viña, Natalia and Gutiérrez, Bernardo and Inward, Rhys P D and Thézé, Julien and van Dorp, Lucy and Castelán-Sánchez, Hugo G and Bowden, Thomas A and Pybus, Oliver G and Hulswit, Ruben J G",
+    "journal": "Genome Biol Evol",
+    "doi": "10.1093/gbe/evad076",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Lucaci:2023aa",
+    "title": "Evolutionary Shortcuts via Multinucleotide Substitutions and Their Impact on Natural Selection Analyses",
+    "year": "2023",
+    "authors": "Lucaci, Alexander G and Zehr, Jordan D and Enard, David and Thornton, Joseph W and Kosakovsky Pond, Sergei L",
+    "journal": "Mol Biol Evol",
+    "doi": "10.1093/molbev/msad150",
+    "category": "METHODS"
+  },
+  {
+    "id": "Tegally:2022wf",
+    "title": "Emergence of SARS-CoV-2 Omicron lineages BA.4 and BA.5 in South Africa",
+    "year": "2022",
+    "authors": "Tegally, Houriiyah and Moir, Monika and Everatt, Josie and Giovanetti, Marta and Scheepers, Cathrine and Wilkinson, Eduan and Subramoney, Kathleen and Makatini, Zinhle and Moyo, Sikhulile and Amoako, Daniel G and Baxter, Cheryl and Althaus, Christian L and Anyaneji, Ugochukwu J and Kekana, Dikeledi and Viana, Raquel and Giandhari, Jennifer and Lessells, Richard J and Maponga, Tongai and Maruapula, Dorcas and Choga, Wonderful and Matshaba, Mogomotsi and Mbulawa, Mpaphi B and Msomi, Nokukhanya and {NGS-SA consortium} and Naidoo, Yeshnee and Pillay, Sureshnee and Sanko, Tomasz Janusz and San, James E and Scott, Lesley and Singh, Lavanya and Magini, Nonkululeko A and Smith-Lawrence, Pamela and Stevens, Wendy and Dor, Graeme and Tshiabuila, Derek and Wolter, Nicole and Preiser, Wolfgang and Treurnicht, Florette K and Venter, Marietjie and Chiloane, Georginah and McIntyre, Caitlyn and O'Toole, Aine and Ruis, Christopher and Peacock, Thomas P and Roemer, Cornelius and Pond, Sergei L Kosakovsky and Williamson, Carolyn and Pybus, Oliver G and Bhiman, Jinal N and Glass, Allison and Martin, Darren P and Jackson, Ben and Rambaut, Andrew and Laguda-Akingba, Oluwakemi and Gaseitsiwe, Simani and von Gottberg, Anne and de Oliveira, Tulio",
+    "journal": "Nat Med",
+    "doi": "10.1038/s41591-022-01911-2",
+    "category": "SURVEILLANCE"
+  },
+  {
     "id": "MEME2012",
     "year": 2012,
-    "authors": "Murrell, Ben and Wertheim, Joel O and Mullan, S and et al.",
+    "authors": "Murrell, Ben and Wertheim, Joel O and Moola, Sasha and Weighill, Thomas and Scheffler, Konrad and Pond, Sergei L Kosakovsky",
     "title": "Detecting individual sites subject to episodic diversifying selection",
     "journal": "PLoS Genetics",
     "doi": "10.1371/journal.pgen.1002764",
@@ -140,7 +245,7 @@
     "year": 2021,
     "authors": "Maier, Wolfgang and Bray, Simon and van den Beek, Marius and Bouvier, Dave and Coraor, Nathan and Miladi, Milad and Singh, Babita and De Argila, Jordi Rambla and Baker, Dannon and Roach, Nathan and Gladman, Simon and Coppens, Frederik and Martin, Darren P and Lonie, Andrew and Grüning, Björn and Pond, Sergei L Kosakovsky and Nekrutenko, Anton",
     "title": "Ready-to-use public infrastructure for global SARS-CoV-2 monitoring",
-    "journal": "Nat Biotechnol",
+    "journal": "Nature Biotechnology",
     "doi": "10.1038/s41587-021-01069-1",
     "category": "SURVEILLANCE",
     "isLegendary": true
