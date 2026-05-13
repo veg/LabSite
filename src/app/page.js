@@ -24,12 +24,13 @@ export default function Home() {
             <Card title="MISSION_OVERVIEW">
               <p className="mb-4 text-left">
                 We develop high-performance computational tools for the comparative analysis of sequence data. 
-                Our research focuses on <strong>measurably evolving pathogens</strong>, creating scalable 
-                solutions for molecular epidemiology, viral dynamics, and natural selection inference.
+                Our methods are <strong>universally applicable across all domains of life</strong>. 
+                While measurably evolving pathogens are our primary focus and "top customers," 
+                our framework is designed to interrogate evolutionary questions anywhere on the tree of life.
               </p>
               <div className="text-retro-green text-sm md:text-base border-t border-retro-bg pt-4 mt-4 flex justify-between items-center">
-                <span>[SECTOR]: BIOINFORMATICS</span>
-                <span>[LOCATION]: TEMPLE_UNIVERSITY</span>
+                <span>[SCOPE]: UNIVERSAL</span>
+                <span>[PRIMARY_FOCUS]: PATHOGENS</span>
                 <span>[STATUS]: ACTIVE</span>
               </div>
             </Card>
