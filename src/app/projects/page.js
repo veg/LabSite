@@ -104,6 +104,42 @@ export default function ProjectsPage() {
             </div>
           ))}
         </div>
+
+        {/* Collaborations & Other Projects */}
+        <div className="mt-24 max-w-6xl mx-auto">
+          <Card title="ALLIED_FORCES & MINOR_UTILITIES">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-heading text-xs text-retro-amber mb-4 border-l-4 border-retro-amber pl-2">
+                  STRATEGIC_COLLABORATIONS
+                </h4>
+                <div className="space-y-4 font-body text-xl">
+                  <p>
+                    We are close collaborators with the <a href="https://usegalaxy.org" target="_blank" rel="noopener noreferrer" className="text-retro-blue hover:text-white underline decoration-2 underline-offset-4 transition-colors">Galaxy Project</a>. 
+                    Many of our tools are integrated into Galaxy's high-performance infrastructure, providing scalable, reproducible analysis for the global research community.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-heading text-xs text-retro-green mb-4 border-l-4 border-retro-green pl-2">
+                  ADDITIONAL_PROJECTS
+                </h4>
+                <div className="space-y-4 font-body text-xl">
+                  <p>
+                    Our arsenal contains dozens of other utilities, libraries, and pipelines. From 
+                    <strong> Bcell-Phylo</strong> to <strong>FLEA</strong>, we maintain a vast network 
+                    of open-source repositories.
+                  </p>
+                  <div className="pt-2">
+                    <a href="https://github.com/veg" target="_blank" rel="noopener noreferrer" className="pixel-button text-xs">
+                      BROWSE_FULL_CATALOG_ON_GITHUB
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </main>
   );
