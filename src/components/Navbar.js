@@ -27,12 +27,12 @@ export default function Navbar() {
         </svg>
       </button>
       {showDropdown && (
-        <div className={`absolute left-0 mt-2 p-2 min-w-[120px] shadow-lg z-[100] ${theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 'bg-mgs-bg border-2 border-mgs-border text-mgs-green'}`}>
+        <div className={`absolute left-0 mt-2 p-2 min-w-[140px] shadow-lg z-[100] ${theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 'bg-mgs-bg border-2 border-mgs-border text-mgs-green'}`}>
           <button 
             onClick={() => { toggleTheme(); setShowDropdown(false); }}
             className="w-full text-left px-2 py-1 hover:bg-white/10 text-xs font-heading"
           >
-            {theme === '80s' ? 'SWITCH TO 1998' : 'SWITCH TO 1985'}
+            {theme === '80s' ? 'GO TO 1998' : 'GO TO 1985'}
           </button>
         </div>
       )}
@@ -71,9 +71,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-black border-b-4 border-retro-green p-4 sticky top-0 z-50 overflow-hidden min-h-[80px]">
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-0 animate-scene-fade">
-        <div className="flex items-center gap-2">
+    <nav className="bg-black border-b-4 border-retro-green p-4 sticky top-0 z-50 min-h-[80px]">
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-0 animate-scene-fade overflow-hidden h-full w-48">
+        <div className="flex items-center gap-2 h-full justify-end">
           <div className="flex flex-col items-center">
              <svg width="40" height="40" viewBox="0 0 32 32" className="text-retro-green opacity-50">
                 <rect x="6" y="8" width="4" height="4" fill="currentColor" />
