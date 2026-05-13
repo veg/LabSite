@@ -9,7 +9,8 @@ export default function Navbar() {
         </Link>
         <div className="flex gap-6 font-heading text-[10px] md:text-sm">
           <Link href="/projects" className="hover:text-white transition-colors">PROJECTS</Link>
-          <Link href="/members" className="hover:text-white transition-colors">MEMBERS</Link>
+          <Link href="/members" className="hover:text-white transition-colors">TEAM</Link>
+          <Link href="/former" className="hover:text-white transition-colors">ALUMNI</Link>
           <Link href="/papers" className="hover:text-white transition-colors">PAPERS</Link>
         </div>
       </div>

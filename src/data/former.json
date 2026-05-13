@@ -1,0 +1,83 @@
+[
+  {
+    "id": "avery",
+    "name": "Avery Selberg",
+    "title": "PhD Student",
+    "years": "2021-2025",
+    "next": "Postdoctoral Researcher, UPenn (Mathieson Lab)",
+    "links": {
+      "github": "https://github.com/agselberg",
+      "googlescholar": "https://scholar.google.com/citations?user=OhvxIl8AAAAJ&hl=en"
+    }
+  },
+  {
+    "id": "jordan",
+    "name": "Jordan Zehr",
+    "title": "PhD Student",
+    "years": "2018-2023",
+    "next": "Postdoctoral Associate, Cornell (Baker Institute)",
+    "links": {
+      "website": "http://phdbioinform.cst.temple.edu/people/students"
+    }
+  },
+  {
+    "id": "alex",
+    "name": "Alexander Lucaci",
+    "title": "PhD Student",
+    "years": "2019-2023",
+    "next": "Postdoctoral Associate, Weill Cornell (Mason Lab)",
+    "links": {
+      "website": "https://aglucaci.github.io"
+    }
+  },
+  {
+    "id": "sadie",
+    "name": "Sadie Wisotsky",
+    "title": "Postdoctoral Researcher",
+    "years": "2018-2020",
+    "next": "Scientist, INOVIO Pharmaceuticals",
+    "links": {
+      "github": "https://github.com/srwis",
+      "linkedin": "https://linkedin.com/in/sadie-wisotsky"
+    }
+  },
+  {
+    "id": "stella",
+    "name": "Stella Park",
+    "title": "PhD Student",
+    "years": "2018-2020",
+    "next": "Lab Manager, UPenn (Huang Lab)",
+    "links": {}
+  },
+  {
+    "id": "brittany",
+    "name": "Brittany Rife Magalis",
+    "title": "Postdoctoral Researcher",
+    "years": "2017-2019",
+    "next": "Assistant Professor, University of Louisville",
+    "links": {
+      "googlescholar": "https://scholar.google.com/citations?user=0FrSeQgAAAAJ&hl=en"
+    }
+  },
+  {
+    "id": "stephanie",
+    "name": "Stephanie Spielman",
+    "title": "Postdoctoral Researcher",
+    "years": "2016-2018",
+    "next": "Data Scientist, Childhood Cancer Data Lab",
+    "links": {
+      "website": "http://sjspielman.org",
+      "github": "https://github.com/sjspielman"
+    }
+  },
+  {
+    "id": "kemal",
+    "name": "Kemal Eren",
+    "title": "Graduate Student",
+    "years": "2013-2017",
+    "next": "Computer Vision Research Engineer, Ancera",
+    "links": {
+      "website": "http://www.kemaleren.com"
+    }
+  }
+]
