@@ -18,15 +18,15 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto px-2">
             <h2 className="text-base md:text-xl lg:text-2xl mb-8 text-retro-amber font-heading leading-relaxed">
-              STATISTICAL_MODELS & SOFTWARE_TOOLS<br className="md:hidden" /> FOR PATHOGEN_ANALYSIS
+              STATISTICAL_MODELS & SOFTWARE_TOOLS<br className="md:hidden" /> FOR COMPARATIVE_SEQUENCE_ANALYSIS
             </h2>
             
             <Card title="MISSION_OVERVIEW">
               <p className="mb-4 text-left">
-                We develop high-performance computational tools for the comparative analysis of sequence data. 
-                Our methods are <strong>universally applicable across all domains of life</strong>. 
+                We <strong>develop and apply</strong> high-performance computational tools for the comparative analysis of sequence data. 
+                Our methods are universally applicable across all domains of life. 
                 While measurably evolving pathogens are our primary focus and "top customers," 
-                our framework is designed to interrogate evolutionary questions anywhere on the tree of life.
+                our framework is used to interrogate evolutionary questions anywhere on the tree of life.
               </p>
               <div className="text-retro-green text-sm md:text-base border-t border-retro-bg pt-4 mt-4 flex justify-between items-center">
                 <span>[SCOPE]: UNIVERSAL</span>
