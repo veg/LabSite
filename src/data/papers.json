@@ -1,0 +1,44 @@
+[
+  {
+    "id": "Selberg:2026aa",
+    "year": 2026,
+    "authors": "Selberg, Avery G and Clark, Nathan and Nekrutenko, Anton and Chikina, Maria and Kosakovsky Pond, Sergei L",
+    "title": "MoleRate: comparing molecular relative evolutionary rates to detect convergent evolution",
+    "journal": "Evolution",
+    "doi": "10.1093/evolut/qpaf240",
+    "abstract": "In comparative evolutionary genomics, faster or slower evolution of a particular gene, site, or branch in a phylogenetic tree, when compared to the appropriate average, has been interpreted as evidence of conservation, functional importance, or adaptation..."
+  },
+  {
+    "id": "Havens:2026aa",
+    "year": 2026,
+    "authors": "Havens, Jennifer L and Kosakovsky Pond, Sergei L and Zehr, Jordan D and Pekar, Jonathan E and Parker, Edyth and Worobey, Michael and Andersen, Kristian G and Wertheim, Joel O",
+    "title": "Dynamics of natural selection preceding human viral epidemics and pandemics",
+    "journal": "Cell",
+    "doi": "10.1016/j.cell.2026.02.006",
+    "abstract": "Using a phylogenetic framework to characterize natural selection, we investigate the hypothesis that zoonotic viruses require adaptation prior to zoonosis to sustain human-to-human transmission..."
+  },
+  {
+    "id": "Melendez-Vazquez:2025aa",
+    "year": 2025,
+    "authors": "Melendez-Vazquez, Fernando and Lucaci, Alexander G and Selberg, Avery and Clavel, Julien and Rincon-Sandoval, Melissa and Santaquiteria, Aintzane and White, William T and Drabeck, Danielle and Carnevale, Giorgio and Duarte-Ribeiro, Emanuell and Miya, Masaki and Westneat, Mark W and Baldwin, Carole C and Hughes, Lily C and Ortí, Guillermo and Kosakovsky Pond, Sergei L and Betancur-R, Ricardo and Arcila, Dahiana",
+    "title": "Ecological interactions and genomic innovation fueled the evolution of ray-finned fish endothermy",
+    "journal": "Sci Adv",
+    "doi": "10.1126/sciadv.ads8488"
+  },
+  {
+    "id": "Verdonk:2025aa",
+    "year": 2025,
+    "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
+    "title": "A New Comparative Framework for Estimating Selection on Synonymous Substitutions",
+    "journal": "Mol Biol Evol",
+    "doi": "10.1093/molbev/msaf068"
+  },
+  {
+    "id": "Lucaci:2024aa",
+    "year": 2024,
+    "authors": "Lucaci, Alexander G and Brew, William E and Lamanna, Jason and Selberg, Avery and Carnevale, Vincenzo and Moore, Anna R and Kosakovsky Pond, Sergei L",
+    "title": "The evolution of mammalian Rem2: unraveling the impact of purifying selection and coevolution on protein function, and implications for human disorders",
+    "journal": "Front Bioinform",
+    "doi": "10.3389/fbinf.2024.1381540"
+  }
+]

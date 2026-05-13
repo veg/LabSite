@@ -1,0 +1,60 @@
+[
+  {
+    "id": "hyphy",
+    "name": "HyPhy",
+    "type": "Major Software",
+    "description": "Hypothesis Testing using Phylogenies. Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning.",
+    "longDescription": "HyPhy is our flagship software package. It features a rich scripting language for limitless customization of analyses, with over 10,000 registered users and over 3,000 citations in peer-reviewed publications. It's the engine behind many of our web-based tools.",
+    "image": "/images/projects/Hyphy.jpeg",
+    "links": {
+      "website": "http://hyphy.org",
+      "github": "https://github.com/veg/hyphy",
+      "paper": "https://link.springer.com/chapter/10.1007%2F0-387-27733-1_6"
+    }
+  },
+  {
+    "id": "datamonkey",
+    "name": "Datamonkey",
+    "type": "Major Web Platform",
+    "description": "Run state-of-the-art statistical models through the comfort of your browser.",
+    "longDescription": "High-performance computing web-server for analyzing evolutionary signatures in sequence data. Datamonkey has processed over 500,000 analyses and received over 1,000 citations. We are currently transitioning to datamonkey3 for even better performance.",
+    "image": "/images/projects/Datamonkey.jpeg",
+    "links": {
+      "website": "https://datamonkey.org",
+      "github": "https://github.com/veg/datamonkey-js"
+    }
+  },
+  {
+    "id": "hivtrace",
+    "name": "HIV-TRACE",
+    "type": "Epidemiology Tool",
+    "description": "Identify Transmission Clusters for molecular epidemiology of HIV-1 and other pathogens.",
+    "longDescription": "Currently in use by the CDC and many other public health and research entities for monitoring HIV transmission clusters. It's a critical tool for real-time molecular surveillance.",
+    "image": "/images/projects/Trace.jpeg",
+    "links": {
+      "website": "https://veg.github.io/hivtrace-viz/",
+      "github": "https://github.com/veg/hivtrace"
+    }
+  },
+  {
+    "id": "phylotree",
+    "name": "phylotree.js",
+    "type": "Library",
+    "description": "JavaScript library for application development and interactive data visualization in phylogenetics.",
+    "longDescription": "A tool suitable for building JavaScript applications where users can view and interact with phylogenetic trees. It extends d3.js and is designed to be highly modular and extensible.",
+    "image": "/images/projects/Phylotree.jpeg",
+    "links": {
+      "website": "http://phylotree.hyphy.org/",
+      "github": "https://github.com/veg/phylotree.js"
+    }
+  },
+  {
+    "id": "tn93",
+    "name": "tn93",
+    "type": "Tool",
+    "description": "High-speed C++ implementation for calculating TN93 genetic distances.",
+    "links": {
+      "github": "https://github.com/veg/tn93"
+    }
+  }
+]

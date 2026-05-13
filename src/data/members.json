@@ -1,0 +1,75 @@
+[
+  {
+    "id": "sergei",
+    "name": "Sergei Pond",
+    "title": "Principal Investigator",
+    "image": "/images/members/pixelated/Sergei.jpg",
+    "bio": "Professor of Biology at Temple University, Associate Dean for Research and Innovation.",
+    "links": {
+      "twitter": "https://twitter.com/sergeilkp",
+      "github": "https://github.com/spond",
+      "linkedin": "https://www.linkedin.com/in/sergei-kosakovsky-pond-8a429/",
+      "googlescholar": "https://scholar.google.com/citations?user=SP6nj-QAAAAJ&hl=en"
+    }
+  },
+  {
+    "id": "steven",
+    "name": "Steven Weaver",
+    "title": "Senior Programming Analyst",
+    "image": "/images/members/pixelated/Steven.jpg",
+    "bio": "Expert in bioinformatics software development and high-performance computing.",
+    "links": {
+      "twitter": "https://twitter.com/stvnwvr?lang=en",
+      "github": "https://github.com/stevenweaver",
+      "linkedin": "https://www.linkedin.com/in/steven-weaver-6308a59/",
+      "googlescholar": "https://scholar.google.com/citations?user=A2ImcaUAAAAJ&hl=en&authuser=1"
+    }
+  },
+  {
+    "id": "hanna-k",
+    "name": "Hannah Kim",
+    "title": "PhD Candidate",
+    "image": "/images/members/Hannah.jpeg",
+    "bio": "Working on viral evolution and bioinformatics methods at iGEM.",
+    "links": {
+      "twitter": "https://twitter.com/hannahincompbio",
+      "github": "https://github.com/hannahkimincompbio",
+      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
+      "website": "https://hannahkimincompbio.github.io/",
+      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
+    }
+  },
+  {
+    "id": "hanna-v",
+    "name": "Hanna Verdonk",
+    "title": "PhD Candidate",
+    "image": "/images/members/HV.jpg",
+    "bio": "Specializing in molecular evolution and codon substitution models.",
+    "links": {
+      "twitter": "https://twitter.com/hannahverdonk",
+      "github": "https://github.com/hverdonk",
+      "linkedin": "https://www.linkedin.com/in/hannahverdonk/",
+      "googlescholar": "https://scholar.google.com/citations?user=Wob8Un8AAAAJ&hl=en&oi=ao"
+    }
+  },
+  {
+    "id": "gigi",
+    "name": "Gigi Brown",
+    "title": "PhD Student",
+    "image": null,
+    "bio": "Bioinformatics PhD student at Temple University.",
+    "links": {
+      "website": "https://igem.temple.edu/people/students"
+    }
+  },
+  {
+    "id": "daria",
+    "name": "Daria Chalkova",
+    "title": "PhD Student",
+    "image": null,
+    "bio": "Bioinformatics PhD student at Temple University.",
+    "links": {
+      "website": "https://igem.temple.edu/people/students"
+    }
+  }
+]
