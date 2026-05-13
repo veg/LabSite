@@ -1,7 +1,6 @@
 'use client';
 import Navbar from '@/components/Navbar';
 import Card from '@/components/Card';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
 import { useTheme } from '@/components/ThemeContext';
 import Link from 'next/link';
 

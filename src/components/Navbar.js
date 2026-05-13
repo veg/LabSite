@@ -1,30 +1,65 @@
 'use client';
 import Link from 'next/link';
 import { useTheme } from './ThemeContext';
+import { useState } from 'react';
 
 export default function Navbar() {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const navItems = [
+    { label: 'PROJECTS', href: '/projects' },
+    { label: 'TEAM', href: '/members' },
+    { label: 'ALUMNI', href: '/former' },
+    { label: 'PAPERS', href: '/papers' },
+  ];
+
+  const ThemeToggle = () => (
+    <div className="relative">
+      <button 
+        onClick={() => setShowDropdown(!showDropdown)}
+        className={`p-1 transition-all ${theme === '80s' ? 'text-retro-green hover:text-white' : 'text-mgs-green hover:text-white'}`}
+        title="Change Era"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+      {showDropdown && (
+        <div className={`absolute left-0 mt-2 p-2 min-w-[120px] shadow-lg z-[100] ${theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 'bg-mgs-bg border-2 border-mgs-border text-mgs-green'}`}>
+          <button 
+            onClick={() => { toggleTheme(); setShowDropdown(false); }}
+            className="w-full text-left px-2 py-1 hover:bg-white/10 text-xs font-heading"
+          >
+            {theme === '80s' ? 'SWITCH TO 1998' : 'SWITCH TO 1985'}
+          </button>
+        </div>
+      )}
+    </div>
+  );
 
   if (theme === '90s') {
     return (
       <nav className="bg-mgs-bg border-b-2 border-mgs-border p-3 sticky top-0 z-50 flex items-center h-14 font-mono shadow-mgs">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <div className="flex gap-8 items-center">
+          <div className="flex gap-4 items-center">
+            <ThemeToggle />
             <Link href="/" className="font-bold text-mgs-green tracking-tighter flex flex-col leading-none hover:text-white transition-colors">
               <span className="text-xs opacity-60">TACTICAL_INFO</span>
               <span className="text-lg">ACME_LAB</span>
             </Link>
-            <div className="flex gap-6 text-sm">
-              {['PROJECTS', 'TEAM', 'ALUMNI', 'PAPERS'].map(item => (
-                <Link 
-                  key={item} 
-                  href={`/${item === 'TEAM' ? 'members' : item.toLowerCase()}`} 
-                  className="text-mgs-green/70 hover:text-mgs-green transition-all hover:translate-x-1"
-                >
-                  <span className="mr-1 opacity-40">{'>'}</span>{item}
-                </Link>
-              ))}
-            </div>
+          </div>
+          <div className="flex gap-6 text-sm">
+            {navItems.map(item => (
+              <Link 
+                key={item.label} 
+                href={item.href} 
+                className="text-mgs-green/70 hover:text-mgs-green transition-all hover:translate-x-1"
+              >
+                <span className="mr-1 opacity-40">{'>'}</span>{item.label}
+              </Link>
+            ))}
           </div>
           <div className="hidden md:flex flex-col items-end leading-none">
             <span className="text-mgs-red text-[10px] animate-pulse">● SOLITON_RADAR_ACTIVE</span>
@@ -37,10 +72,8 @@ export default function Navbar() {
 
   return (
     <nav className="bg-black border-b-4 border-retro-green p-4 sticky top-0 z-50 overflow-hidden min-h-[80px]">
-      {/* Monkey Eating Animation Layer */}
       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none z-0 animate-scene-fade">
         <div className="flex items-center gap-2">
-          {/* DataMonkey */}
           <div className="flex flex-col items-center">
              <svg width="40" height="40" viewBox="0 0 32 32" className="text-retro-green opacity-50">
                 <rect x="6" y="8" width="4" height="4" fill="currentColor" />
@@ -62,14 +95,16 @@ export default function Navbar() {
       </div>
 
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 relative z-10 h-full">
-        <Link href="/" className="font-heading text-lg md:text-2xl text-retro-green hover:text-white transition-colors">
-          ACME_LAB
-        </Link>
+        <div className="flex gap-4 items-center">
+          <ThemeToggle />
+          <Link href="/" className="font-heading text-lg md:text-2xl text-retro-green hover:text-white transition-colors">
+            ACME_LAB
+          </Link>
+        </div>
         <div className="flex gap-6 font-heading text-[10px] md:text-sm bg-black/40 px-2 py-1">
-          <Link href="/projects" className="hover:text-white transition-colors">PROJECTS</Link>
-          <Link href="/members" className="hover:text-white transition-colors">TEAM</Link>
-          <Link href="/former" className="hover:text-white transition-colors">ALUMNI</Link>
-          <Link href="/papers" className="hover:text-white transition-colors">PAPERS</Link>
+          {navItems.map(item => (
+             <Link key={item.label} href={item.href} className="hover:text-white transition-colors">{item.label}</Link>
+          ))}
         </div>
       </div>
     </nav>
