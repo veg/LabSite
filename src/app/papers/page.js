@@ -47,9 +47,19 @@ export default function PapersPage() {
         {/* STATISTICS_HUD */}
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-blue' : 'bg-mgs-green'}`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${theme === '80s' ? 'text-retro-blue' : 'text-mgs-green font-bold tracking-tighter'}`}>DASHBOARD_STATS</h2>
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-blue' : 'bg-mgs-green'}`}></div>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-blue' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
+            <h2 className={`text-2xl font-heading flex-shrink-0 ${
+              theme === '80s' ? 'text-retro-blue' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
+              'text-me-orange italic font-black'
+            }`}>DASHBOARD_STATS</h2>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-blue' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -57,9 +67,18 @@ export default function PapersPage() {
             <Card title="SUBJECT_MATRIX">
               <div className="space-y-4">
                 {categoryCounts.map(cat => (
-                  <div key={cat.name} className={`flex justify-between items-center border-b pb-2 ${theme === '80s' ? 'border-retro-bg' : 'border-mgs-border'}`}>
-                    <span className={`${theme === '80s' ? 'text-retro-amber' : 'text-mgs-blue'} text-sm font-heading`}>[{cat.name}]</span>
-                    <span className={`text-2xl ${theme === '80s' ? 'text-retro-fg' : 'text-mgs-green'}`}>{cat.count}</span>
+                  <div key={cat.name} className={`flex justify-between items-center border-b pb-2 ${
+                    theme === '80s' ? 'border-retro-bg' : 
+                    theme === '90s' ? 'border-mgs-border' : 'border-me-orange/10'
+                  }`}>
+                    <span className={`${
+                      theme === '80s' ? 'text-retro-amber' : 
+                      theme === '90s' ? 'text-mgs-blue' : 'text-me-blue font-bold italic'
+                    } text-sm font-heading`}>[{cat.name}]</span>
+                    <span className={`text-2xl ${
+                      theme === '80s' ? 'text-retro-fg' : 
+                      theme === '90s' ? 'text-mgs-green' : 'text-me-orange'
+                    }`}>{cat.count}</span>
                   </div>
                 ))}
               </div>
@@ -68,12 +87,18 @@ export default function PapersPage() {
             {/* Group Contribution Level */}
             <Card title="STRIKE_FORCE_ACTIVITY">
               <div className="space-y-3">
-                <p className={`text-xs font-heading mb-4 ${theme === '80s' ? 'text-retro-green' : 'text-mgs-green'}`}>[ACTIVE_CONTRIBUTORS]</p>
+                <p className={`text-xs font-heading mb-4 ${
+                  theme === '80s' ? 'text-retro-green' : 
+                  theme === '90s' ? 'text-mgs-green' : 'text-me-blue opacity-70 italic font-bold'
+                }`}>[ACTIVE_CONTRIBUTORS]</p>
                 <div className="max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-retro-blue">
                   {memberContributions.map(m => (
                     <div key={m.name} className="flex justify-between text-lg mb-1">
-                      <span className="opacity-80">{m.name.split(' ').pop().toUpperCase()}</span>
-                      <span className={theme === '80s' ? 'text-retro-blue' : 'text-mgs-blue'}>{m.count} logs</span>
+                      <span className="opacity-80 font-mono">{m.name.split(' ').pop().toUpperCase()}</span>
+                      <span className={
+                        theme === '80s' ? 'text-retro-blue' : 
+                        theme === '90s' ? 'text-mgs-blue' : 'text-me-orange font-bold'
+                      }>{m.count} logs</span>
                     </div>
                   ))}
                 </div>
@@ -83,11 +108,20 @@ export default function PapersPage() {
             {/* Collaborative Network */}
             <Card title="ALLIANCE_NETWORK">
               <div className="flex flex-col items-center justify-center h-full py-4 text-center">
-                <div className={`text-5xl mb-4 animate-pulse ${theme === '80s' ? 'text-retro-purple' : 'text-mgs-blue'}`}>
+                <div className={`text-5xl mb-4 animate-pulse ${
+                  theme === '80s' ? 'text-retro-purple' : 
+                  theme === '90s' ? 'text-mgs-blue' : 'text-me-orange drop-shadow-me'
+                }`}>
                   {uniqueAuthors.size}+
                 </div>
-                <p className={`text-xs font-heading mb-4 ${theme === '80s' ? 'text-retro-fg' : 'text-mgs-green'}`}>UNIQUE_CO-AUTHORS</p>
-                <p className={`text-sm opacity-60 leading-tight ${theme === '90s' ? 'text-mgs-green/60' : ''}`}>
+                <p className={`text-xs font-heading mb-4 ${
+                  theme === '80s' ? 'text-retro-fg' : 
+                  theme === '90s' ? 'text-mgs-green' : 'text-me-blue font-black italic'
+                }`}>UNIQUE_CO-AUTHORS</p>
+                <p className={`text-sm opacity-60 leading-tight ${
+                  theme === '90s' ? 'text-mgs-green/60' : 
+                  theme === '2000s' ? 'text-me-orange/70 italic' : ''
+                }`}>
                   Our collaborative network spans global institutions, merging expertise across biology, 
                   math, and computer science.
                 </p>
@@ -99,13 +133,23 @@ export default function PapersPage() {
         {/* Hall of Fame */}
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-amber' : 'bg-mgs-green'}`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${theme === '80s' ? 'text-retro-amber' : 'text-mgs-green font-bold tracking-tighter'}`}>HALL_OF_FAME</h2>
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-amber' : 'bg-mgs-green'}`}></div>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-amber' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
+            <h2 className={`text-2xl font-heading flex-shrink-0 ${
+              theme === '80s' ? 'text-retro-amber' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
+              'text-me-orange font-black italic'
+            }`}>HALL_OF_FAME</h2>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-amber' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {legendaryPapers.map(paper => (
-              <PaperCard key={paper.id} paper={paper} theme={theme === '80s' ? 'legendary' : '90s'} />
+              <PaperCard key={paper.id} paper={paper} theme={theme} isLegendarySection />
             ))}
           </div>
         </section>
@@ -113,13 +157,23 @@ export default function PapersPage() {
         {/* Recent Quests */}
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-green' : 'bg-mgs-green'}`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${theme === '80s' ? 'text-retro-green' : 'text-mgs-green font-bold tracking-tighter'}`}>LATEST_QUESTS</h2>
-            <div className={`h-1 flex-grow opacity-30 ${theme === '80s' ? 'bg-retro-green' : 'bg-mgs-green'}`}></div>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-green' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
+            <h2 className={`text-2xl font-heading flex-shrink-0 ${
+              theme === '80s' ? 'text-retro-green' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
+              'text-me-orange font-black italic'
+            }`}>LATEST_QUESTS</h2>
+            <div className={`h-1 flex-grow opacity-30 ${
+              theme === '80s' ? 'bg-retro-green' : 
+              theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
+            }`}></div>
           </div>
           <div className="space-y-6 max-w-5xl mx-auto">
             {recentPapers.map(paper => (
-              <PaperCard key={paper.id} paper={paper} theme={theme === '80s' ? 'recent' : '90s'} />
+              <PaperCard key={paper.id} paper={paper} theme={theme} />
             ))}
           </div>
         </section>
@@ -132,7 +186,10 @@ export default function PapersPage() {
             href="https://scholar.google.com/citations?user=SP6nj-QAAAAJ&hl=en" 
             target="_blank" 
             rel="noopener noreferrer"
-            className={theme === '80s' ? 'pixel-button' : 'mgs-button'}
+            className={
+              theme === '80s' ? 'pixel-button' : 
+              theme === '90s' ? 'mgs-button' : 'me-button'
+            }
           >
             ACCESS_FULL_MASTER_LOG
           </a>
@@ -141,11 +198,31 @@ export default function PapersPage() {
   );
 }
 
-function PaperCard({ paper, theme }) {
-  const isLegendary = theme === 'legendary';
-  const isMGS = theme === '90s';
+function PaperCard({ paper, theme, isLegendarySection }) {
+  const isLegendary = paper.isLegendary;
   
-  if (isMGS) {
+  if (theme === '2000s') {
+    return (
+      <div className="me-panel flex flex-col mb-4 p-0 animate-hologram-flicker">
+        <div className="border-b border-me-orange/30 p-2 flex justify-between items-center bg-me-orange/5">
+          <h3 className="font-mono text-[10px] text-me-blue font-black italic tracking-widest uppercase">
+            {paper.year} // {paper.category}
+          </h3>
+          {isLegendary && <div className="text-[8px] text-me-orange font-bold uppercase animate-pulse">LEGENDARY_STATUS</div>}
+        </div>
+        <div className="p-4 flex flex-col h-full">
+          <h4 className="text-xl font-black italic leading-tight mb-2 text-me-orange drop-shadow-me">{paper.title}</h4>
+          <p className="text-sm opacity-70 mb-4 text-me-orange font-mono">{paper.authors}</p>
+          <div className="mt-auto flex justify-between items-center border-t border-me-orange/10 pt-2 text-[10px]">
+            <span className="font-bold text-me-blue italic tracking-tighter uppercase">{paper.journal}</span>
+            <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="me-button py-1 px-3 text-[9px]">UPLINK_DOI</a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === '90s') {
     return (
       <div className="mgs-panel flex flex-col mb-4 p-0">
         <div className="border-b border-mgs-border p-2 flex justify-between items-center bg-mgs-green/10">
@@ -156,7 +233,7 @@ function PaperCard({ paper, theme }) {
         </div>
         <div className="p-4 flex flex-col h-full">
           <h4 className="text-xl font-bold leading-tight mb-2 text-mgs-green">{paper.title}</h4>
-          <p className="text-sm opacity-60 mb-4 text-mgs-green/80">{paper.authors}</p>
+          <p className="text-sm opacity-60 mb-4 text-mgs-green/80 font-mono">{paper.authors}</p>
           <div className="mt-auto flex justify-between items-center border-t border-mgs-green/10 pt-2 text-[10px]">
             <span className="font-bold text-mgs-blue tracking-tighter">{paper.journal}</span>
             <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="mgs-button py-1 px-2 text-[8px]">VIEW_DOI</a>
@@ -166,12 +243,12 @@ function PaperCard({ paper, theme }) {
     );
   }
 
-  const borderColor = isLegendary ? 'border-retro-amber' : 'border-retro-green';
-  const titleColor = isLegendary ? 'text-retro-amber' : 'text-retro-fg';
+  const borderColor = isLegendarySection ? 'border-retro-amber' : 'border-retro-green';
+  const titleColor = isLegendarySection ? 'text-retro-amber' : 'text-retro-fg';
 
   return (
     <div className={`pixel-border bg-black p-6 relative overflow-hidden flex flex-col h-full border-l-8 ${borderColor}`}>
-      {isLegendary && (
+      {isLegendarySection && (
         <div className="absolute -right-12 -top-12 w-24 h-24 bg-retro-amber opacity-10 rotate-45"></div>
       )}
       
@@ -185,7 +262,6 @@ function PaperCard({ paper, theme }) {
           </span>
         )}
       </div>
-
 
       <h3 className={`text-xl md:text-2xl font-body leading-tight mb-4 flex-grow ${titleColor}`}>
         {paper.title}

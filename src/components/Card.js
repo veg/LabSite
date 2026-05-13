@@ -4,6 +4,27 @@ import { useTheme } from './ThemeContext';
 export default function Card({ title, children, className = "" }) {
   const { theme } = useTheme();
   
+  if (theme === '2000s') {
+    return (
+      <div className={`me-panel mb-6 ${className}`}>
+        {title && (
+          <div className="border-b border-me-orange/30 p-3 bg-me-orange/10 flex justify-between items-center">
+            <h3 className="text-sm font-bold text-me-orange tracking-widest italic uppercase">
+              {title}
+            </h3>
+            <div className="w-12 h-[1px] bg-me-orange/50"></div>
+          </div>
+        )}
+        <div className="p-6 font-mono text-lg leading-relaxed text-me-orange/90">
+          {children}
+        </div>
+        {/* Holographic Accents */}
+        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-me-orange/50"></div>
+        <div className="absolute bottom-0 right-0 w-8 h-[2px] bg-me-orange/30"></div>
+      </div>
+    );
+  }
+
   if (theme === '90s') {
     return (
       <div className={`mgs-panel mb-6 ${className}`}>
@@ -21,7 +42,6 @@ export default function Card({ title, children, className = "" }) {
         <div className="p-4 md:p-6 font-mono text-lg md:text-xl leading-snug text-mgs-green/90">
           {children}
         </div>
-        {/* Decorative Corner Bracket */}
         <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-mgs-green opacity-40"></div>
       </div>
     );

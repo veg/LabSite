@@ -14,11 +14,21 @@ export default function Navbar() {
     { label: 'PAPERS', href: '/papers' },
   ];
 
+  const eras = [
+    { id: '80s', label: '1985 Terminal' },
+    { id: '90s', label: '1998 Tactical' },
+    { id: '2000s', label: '2007 Omni-tool' }
+  ];
+
   const ThemeToggle = () => (
     <div className="relative">
       <button 
         onClick={() => setShowDropdown(!showDropdown)}
-        className={`p-1 transition-all ${theme === '80s' ? 'text-retro-green hover:text-white' : 'text-mgs-green hover:text-white'}`}
+        className={`p-1 transition-all ${
+          theme === '80s' ? 'text-retro-green hover:text-white' : 
+          theme === '90s' ? 'text-mgs-green hover:text-white' : 
+          'text-me-orange hover:text-white'
+        }`}
         title="Change Era"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,17 +37,55 @@ export default function Navbar() {
         </svg>
       </button>
       {showDropdown && (
-        <div className={`absolute left-0 mt-2 p-2 min-w-[140px] shadow-lg z-[100] ${theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 'bg-mgs-bg border-2 border-mgs-border text-mgs-green'}`}>
-          <button 
-            onClick={() => { toggleTheme(); setShowDropdown(false); }}
-            className="w-full text-left px-2 py-1 hover:bg-white/10 text-xs font-heading"
-          >
-            {theme === '80s' ? 'GO TO 1998' : 'GO TO 1985'}
-          </button>
+        <div className={`absolute left-0 mt-2 p-2 min-w-[160px] shadow-lg z-[100] ${
+          theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 
+          theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' : 
+          'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker'
+        }`}>
+          {eras.map(era => (
+            <button 
+              key={era.id}
+              onClick={() => { toggleTheme(era.id); setShowDropdown(false); }}
+              className={`w-full text-left px-2 py-1 hover:bg-white/10 text-[10px] font-heading mb-1 last:mb-0 ${theme === era.id ? 'opacity-100 bg-white/5' : 'opacity-60'}`}
+            >
+              {era.label.toUpperCase()}
+            </button>
+          ))}
         </div>
       )}
     </div>
   );
+
+  if (theme === '2000s') {
+    return (
+      <nav className="bg-me-bg/80 border-b border-me-orange/30 p-4 sticky top-0 z-50 flex items-center h-16 backdrop-blur-md shadow-me">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <div className="flex gap-6 items-center">
+            <ThemeToggle />
+            <Link href="/" className="font-bold text-me-orange tracking-widest flex flex-col leading-none hover:text-white transition-all group">
+              <span className="text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">N7_COMMAND_DECK</span>
+              <span className="text-xl italic">ACME_LAB</span>
+            </Link>
+          </div>
+          <div className="flex gap-8 text-xs font-bold tracking-widest">
+            {navItems.map(item => (
+              <Link 
+                key={item.label} 
+                href={item.href} 
+                className="text-me-orange/60 hover:text-me-orange transition-all relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-me-orange hover:after:w-full after:transition-all"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div className="hidden lg:flex gap-4 text-[10px] text-me-blue opacity-50 font-mono">
+            <span>UPLINK: STABLE</span>
+            <span>CITADEL_CORE_SECURED</span>
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   if (theme === '90s') {
     return (

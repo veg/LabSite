@@ -5,6 +5,7 @@
   --font-body: var(--font-vt323);
   --font-mono: var(--font-share-tech-mono);
   --font-pixelify: var(--font-pixelify);
+  --font-orbitron: var(--font-share-tech-mono); /* We'll use mono as proxy for techy font */
 
   /* Muted 80s Palette */
   --color-retro-green: #689d6a;
@@ -15,50 +16,39 @@
   --color-retro-fg: #ebdbb2;
 
   /* 90s MGS Tactical HUD Palette */
-  --color-mgs-bg: #0a0f0a;     /* Deep Shadow Green */
+  --color-mgs-bg: #0a0f0a;
   --color-mgs-panel: rgba(16, 24, 16, 0.85);
-  --color-mgs-green: #00ff41;   /* Tactical HUD Green */
-  --color-mgs-blue: #00a8ff;    /* Codec Blue */
-  --color-mgs-red: #ff3e3e;     /* Alert Red */
-  --color-mgs-border: #2d4c2d;  /* Industrial Green Border */
+  --color-mgs-green: #00ff41;
+  --color-mgs-blue: #00a8ff;
+  --color-mgs-red: #ff3e3e;
+  --color-mgs-border: #2d4c2d;
+
+  /* 2000s Mass Effect (Omni-tool) Palette */
+  --color-me-bg: #050a0f;
+  --color-me-orange: #ff9d00;
+  --color-me-blue: #00f2ff;
+  --color-me-panel: rgba(255, 157, 0, 0.05);
+  --color-me-border: rgba(255, 157, 0, 0.3);
 
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
   --shadow-mgs: 0 0 15px rgba(0, 255, 65, 0.2);
+  --shadow-me: 0 0 20px rgba(255, 157, 0, 0.15);
 
   /* Animations */
   --animate-chew: chew 0.6s ease-in-out infinite;
   --animate-banana-shrink: shrink 5s ease-in forwards;
   --animate-scene-fade: fadeOut 1s ease-out 6s forwards;
-  --animate-codec-scan: codecScan 2s linear infinite;
+  --animate-hologram-flicker: hologramFade 3s ease-in-out infinite;
 
-  @keyframes chew {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(0.6); }
-  }
-  @keyframes shrink {
-    0% { transform: scale(1); opacity: 0.6; }
-    80% { transform: scale(0.2); opacity: 0.4; }
-    100% { transform: scale(0); opacity: 0; }
-  }
-  @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; visibility: hidden; }
-  }
-  @keyframes codecScan {
-    from { top: 0%; }
-    to { top: 100%; }
-  }
+  @keyframes chew { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.6); } }
+  @keyframes shrink { 0% { transform: scale(1); opacity: 0.6; } 80% { transform: scale(0.2); opacity: 0.4; } 100% { transform: scale(0); opacity: 0; } }
+  @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+  @keyframes hologramFade { 0%, 100% { opacity: 1; } 50% { opacity: 0.85; } }
 }
 
-:root {
-  --background: #282828;
-  --foreground: #ebdbb2;
-}
-
-[data-theme='90s'] {
-  --background: #0a0f0a;
-  --foreground: #00ff41;
-}
+:root { --background: #282828; --foreground: #ebdbb2; }
+[data-theme='90s'] { --background: #0a0f0a; --foreground: #00ff41; }
+[data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
 
 body {
   background-color: var(--background);
@@ -71,108 +61,67 @@ body {
 }
 
 /* 80s Theme Specifics */
-.theme-80s {
-  font-family: var(--font-vt323), monospace;
-}
-
-.theme-80s h1, .theme-80s h2, .theme-80s h3, .theme-80s h4 {
-  font-family: var(--font-press-start), cursive;
-  text-transform: uppercase;
-}
-
+.theme-80s { font-family: var(--font-vt323), monospace; }
+.theme-80s h1, .theme-80s h2, .theme-80s h3, .theme-80s h4 { font-family: var(--font-press-start), cursive; text-transform: uppercase; }
 .theme-80s.crt::before {
-  content: " ";
-  display: block;
-  position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
+  content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-  z-index: 9999;
-  background-size: 100% 3px, 3px 100%;
-  pointer-events: none;
-  opacity: 0.8;
+  z-index: 9999; background-size: 100% 3px, 3px 100%; pointer-events: none; opacity: 0.8; position: fixed;
 }
 
 /* 90s MGS Theme Specifics */
-.theme-90s {
-  font-family: var(--font-share-tech-mono), monospace;
-}
-
-.theme-90s h1, .theme-90s h2, .theme-90s h3, .theme-90s h4 {
-  font-family: var(--font-share-tech-mono), sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* Tactical HUD Scanline (Subtler, more digital) */
+.theme-90s { font-family: var(--font-share-tech-mono), monospace; }
+.theme-90s h1, .theme-90s h2, .theme-90s h3, .theme-90s h4 { font-family: var(--font-share-tech-mono), sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
 .theme-90s::after {
-  content: " ";
-  display: block;
-  position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
+  content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
   background: linear-gradient(rgba(0, 255, 65, 0.03) 50%, transparent 50%);
-  background-size: 100% 2px;
-  z-index: 9998;
-  pointer-events: none;
+  background-size: 100% 2px; z-index: 9998; pointer-events: none;
 }
 
-/* MGS UI Elements */
-.mgs-panel {
-  background: rgba(16, 24, 16, 0.9);
-  border: 1px solid #2d4c2d;
-  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1), 0 0 5px rgba(0, 0, 0, 0.5);
+/* 2000s ME Theme Specifics */
+.theme-2000s { font-family: var(--font-share-tech-mono), sans-serif; }
+.theme-2000s h1, .theme-2000s h2, .theme-2000s h3, .theme-2000s h4 { font-weight: 800; letter-spacing: -0.02em; font-style: italic; }
+
+.me-panel {
+  background: rgba(255, 157, 0, 0.03);
+  border: 1px solid rgba(255, 157, 0, 0.2);
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+  box-shadow: 0 0 20px rgba(255, 157, 0, 0.05);
   position: relative;
-  overflow: hidden;
 }
 
-.mgs-panel::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px; height: 100%;
-  background: #00ff41;
-  opacity: 0.3;
+.me-panel::before {
+  content: ""; position: absolute; top: 0; right: 0;
+  width: 40px; height: 1px; background: #ff9d00;
 }
 
-.mgs-tag {
-  background: #00ff41;
-  color: #000;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 1px 4px;
-  text-transform: uppercase;
-}
-
-.mgs-button {
-  background: transparent;
-  border: 1px solid #00ff41;
-  color: #00ff41;
-  padding: 0.5rem 1rem;
+.me-button {
+  background: rgba(255, 157, 0, 0.1);
+  border: 1px solid #ff9d00;
+  color: #ff9d00;
+  padding: 0.5rem 1.5rem;
+  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
   transition: all 0.2s;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  position: relative;
+  font-size: 0.7rem;
 }
 
-.mgs-button:hover {
-  background: rgba(0, 255, 65, 0.2);
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+.me-button:hover {
+  background: rgba(255, 157, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 157, 0, 0.4);
+  transform: translateY(-1px);
 }
 
-.mgs-button:active {
-  background: #00ff41;
-  color: #000;
+/* Reusable pixel styles */
+.mgs-panel {
+  background: rgba(16, 24, 16, 0.9); border: 1px solid #2d4c2d;
+  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1), 0 0 5px rgba(0, 0, 0, 0.5);
+  position: relative; overflow: hidden;
 }
-
-.pixel-border {
-  border: 4px solid var(--foreground);
-  box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5);
+.mgs-button {
+  background: transparent; border: 1px solid #00ff41; color: #00ff41;
+  padding: 0.5rem 1rem; transition: all 0.2s; text-transform: uppercase; font-size: 0.75rem;
 }
-
-.pixel-button {
-  background-color: #458588;
-  color: #ebdbb2;
-  padding: 0.5rem 1rem;
-  border: 4px solid #1d2021;
-  box-shadow: 4px 4px 0px 0px #ebdbb2;
-  transition: all 0.1s;
-}
+.pixel-border { border: 4px solid var(--foreground); box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.5); }
+.pixel-button { background-color: #458588; color: #ebdbb2; padding: 0.5rem 1rem; border: 4px solid #1d2021; box-shadow: 4px 4px 0px 0px #ebdbb2; transition: all 0.1s; }

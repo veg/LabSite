@@ -9,24 +9,27 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     setMounted(true);
+    const savedTheme = localStorage.getItem('labsite-theme');
+    if (savedTheme) setTheme(savedTheme);
   }, []);
 
   useEffect(() => {
     if (mounted) {
+      localStorage.setItem('labsite-theme', theme);
       const root = document.documentElement;
       root.setAttribute('data-theme', theme);
       
       // Sync body classes
-      document.body.classList.remove('theme-80s', 'theme-90s', 'crt');
-      document.body.classList.add(theme === '80s' ? 'theme-80s' : 'theme-90s');
+      document.body.classList.remove('theme-80s', 'theme-90s', 'theme-2000s', 'crt');
+      document.body.classList.add(`theme-${theme}`);
       if (theme === '80s') {
         document.body.classList.add('crt');
       }
     }
   }, [theme, mounted]);
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === '80s' ? '90s' : '80s'));
+  const toggleTheme = (newTheme) => {
+    setTheme(newTheme);
   };
 
   return (
