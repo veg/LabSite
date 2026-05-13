@@ -3,7 +3,7 @@
     "id": "sergei",
     "name": "Sergei Pond",
     "title": "Principal Investigator",
-    "image": "/images/members/pixelated/Sergei.jpg",
+    "image": "/LabSite/images/members/pixelated/Sergei.jpg",
     "bio": "Professor of Biology at Temple University, Associate Dean for Research and Innovation.",
     "links": {
       "twitter": "https://twitter.com/sergeilkp",
@@ -16,7 +16,7 @@
     "id": "steven",
     "name": "Steven Weaver",
     "title": "Senior Programming Analyst",
-    "image": "/images/members/pixelated/Steven.jpg",
+    "image": "/LabSite/images/members/pixelated/Steven.jpg",
     "bio": "Expert in bioinformatics software development and high-performance computing.",
     "links": {
       "twitter": "https://twitter.com/stvnwvr?lang=en",
@@ -39,7 +39,7 @@
     "id": "hanna-v",
     "name": "Hanna Verdonk",
     "title": "Postdoctoral Researcher",
-    "image": "/images/members/HV.jpg",
+    "image": "/LabSite/images/members/HV.jpg",
     "bio": "Specializing in molecular evolution and codon substitution models.",
     "links": {
       "twitter": "https://twitter.com/hannahverdonk",
@@ -52,7 +52,7 @@
     "id": "hanna-k",
     "name": "Hannah Kim",
     "title": "PhD Candidate",
-    "image": "/images/members/Hannah.jpeg",
+    "image": "/LabSite/images/members/Hannah.jpeg",
     "bio": "Working on viral evolution and bioinformatics methods at iGEM.",
     "links": {
       "twitter": "https://twitter.com/hannahincompbio",

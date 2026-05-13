@@ -39,27 +39,27 @@ export default function EraSelectionSplash() {
 
   return (
     <div className="fixed inset-0 z-[1000] bg-[#0a0a0a] flex flex-col items-center justify-center p-4 overflow-y-auto">
-      <div className="max-w-6xl w-full text-center mb-12 relative">
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 text-white/5 font-black text-9xl select-none pointer-events-none uppercase">
+      <div className="max-w-6xl w-full text-center mb-6 relative">
+        <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-white/5 font-black text-6xl md:text-8xl select-none pointer-events-none uppercase">
           ACME_LAB
         </div>
         
-        <h1 className="text-white text-3xl md:text-6xl font-black italic tracking-tighter mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+        <h1 className="text-white text-2xl md:text-5xl font-black italic tracking-tighter mb-2 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
           EVOLUTIONARY_EPOCH_STABILIZED
         </h1>
         
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-retro-amber font-mono text-sm tracking-[0.2em] uppercase border-y border-retro-amber/20 py-2 inline-block px-8">
+        <div className="flex flex-col items-center gap-1">
+          <p className="text-retro-amber font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase border-y border-retro-amber/20 py-1 inline-block px-4">
             ACME LAB // Computational Molecular Evolution
           </p>
-          <p className="text-slate-400 font-mono text-xs tracking-widest uppercase mt-4 max-w-2xl mx-auto leading-relaxed">
-            [INITIATING_VISUAL_ONTOLOGY_SELECT] // THE DATA REMAINS CONSTANT, BUT THE INTERFACE EVOLVES. 
-            PLEASE CHOOSE YOUR PREFERRED RESEARCH_EPOCH.
+          <p className="text-slate-400 font-mono text-[9px] md:text-[10px] tracking-widest uppercase mt-2 max-w-xl mx-auto leading-relaxed opacity-70">
+            [INITIATING_VISUAL_ONTOLOGY_SELECT] // THE INTERFACE EVOLVES. 
+            CHOOSE YOUR RESEARCH_EPOCH.
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl w-full">
         {eras.map((era) => (
           <button
             key={era.id}

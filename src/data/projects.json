@@ -15,7 +15,7 @@
       { "name": "LIMITLESS_CUSTOMIZATION", "desc": "Allows researchers to define any evolutionary model via its rich scripting language." },
       { "name": "PARALLEL_PROCESSING", "desc": "Optimized for clusters, tearing through massive sequence alignments with MPI support." }
     ],
-    "image": "/images/projects/Hyphy.jpeg",
+    "image": "/LabSite/images/projects/Hyphy.jpeg",
     "links": {
       "website": "http://hyphy.org",
       "github": "https://github.com/veg/hyphy"
@@ -37,7 +37,7 @@
       { "name": "ZERO_INSTALL", "desc": "Run state-of-the-art HyPhy models directly in your browser without touching a terminal." },
       { "name": "GRID_INVOCATION", "desc": "Offloads complex computations to high-performance clusters automatically." }
     ],
-    "image": "/images/projects/Datamonkey.jpeg",
+    "image": "/LabSite/images/projects/Datamonkey.jpeg",
     "links": {
       "website": "https://datamonkey.org",
       "github": "https://github.com/veg/datamonkey-js"
@@ -59,7 +59,7 @@
       { "name": "CLUSTER_MAPPING", "desc": "Identifies transmission chains from viral sequence data in minutes." },
       { "name": "SECURE_SURVEILLANCE", "desc": "Built for public health departments to monitor outbreaks while protecting data privacy." }
     ],
-    "image": "/images/projects/Trace.jpeg",
+    "image": "/LabSite/images/projects/Trace.jpeg",
     "links": {
       "website": "https://veg.github.io/hivtrace-viz/",
       "github": "https://github.com/veg/hivtrace"
@@ -81,7 +81,7 @@
       { "name": "INTERACTIVE_MORPHING", "desc": "Allows users to manipulate, prune, and annotate trees dynamically in real-time." },
       { "name": "MIDDLEWARE_INTEGRATION", "desc": "Seamlessly plugs into larger web applications as a modular visualization core." }
     ],
-    "image": "/images/projects/Phylotree.jpeg",
+    "image": "/LabSite/images/projects/Phylotree.jpeg",
     "links": {
       "website": "http://phylotree.hyphy.org/",
       "github": "https://github.com/veg/phylotree.js"
