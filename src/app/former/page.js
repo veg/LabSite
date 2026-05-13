@@ -13,9 +13,9 @@ export default function FormerMembersPage() {
         <div className="grid md:grid-cols-2 gap-6">
           {formerMembers.map(member => (
             <Card key={member.id} title={member.name.toUpperCase()}>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-black">
                 <p className="font-heading text-[10px] opacity-80">
-                  {member.title} // {member.years}
+                  {member.title} {"//"} {member.years}
                 </p>
                 <p className="text-lg">
                   <span className="text-retro-amber">[NEXT_STATION]:</span> {member.next}

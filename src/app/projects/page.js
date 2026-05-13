@@ -3,6 +3,7 @@ import Card from '@/components/Card';
 import projects from '@/data/projects.json';
 import PageContainer from '@/components/PageContainer';
 import { useTheme } from '@/components/ThemeContext';
+import Link from 'next/link';
 
 export default function ProjectsPage() {
   const { theme } = useTheme();
@@ -159,7 +160,7 @@ export default function ProjectsPage() {
               <div className="space-y-4 font-medium text-xl opacity-90">
                 <p>
                   We are close collaborators with the <a href="https://usegalaxy.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline decoration-2 underline-offset-4 transition-colors font-bold">Galaxy Project</a>. 
-                  Many of our tools are integrated into Galaxy's high-performance infrastructure, providing scalable, reproducible analysis for the global research community.
+                  Many of our tools are integrated into Galaxy&apos;s high-performance infrastructure, providing scalable, reproducible analysis for the global research community.
                 </p>
               </div>
             </div>

@@ -96,7 +96,7 @@ export default function Home() {
                   }`}>
                     We <strong>develop and apply</strong> high-performance computational tools for the comparative analysis of sequence data. 
                     Our methods are universally applicable across all domains of life. 
-                    While measurably evolving pathogens are our primary focus and "top customers," 
+                    While measurably evolving pathogens are our primary focus and &quot;top customers,&quot; 
                     our framework is used to interrogate evolutionary questions anywhere on the tree of life.
                   </p>
                   <div className={`text-sm md:text-base border-t pt-4 mt-4 flex justify-between items-center ${
@@ -191,7 +191,7 @@ export default function Home() {
 
       <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
         theme === '80s' ? 'border-retro-green bg-black' : 
-        theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60' :
+        theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
         theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
         theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
         'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'

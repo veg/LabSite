@@ -93,7 +93,7 @@ export default function PapersPage() {
                 }`}>[ACTIVE_CONTRIBUTORS]</p>
                 <div className="max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-retro-blue">
                   {memberContributions.map(m => (
-                    <div key={m.name} className="flex justify-between text-lg mb-1">
+                    <div key={m.name} className="flex justify-between text-lg mb-1 text-black">
                       <span className="opacity-80 font-mono">{m.name.split(' ').pop().toUpperCase()}</span>
                       <span className={
                         theme === '80s' ? 'text-retro-blue' : 
@@ -201,12 +201,29 @@ export default function PapersPage() {
 function PaperCard({ paper, theme, isLegendarySection }) {
   const isLegendary = paper.isLegendary;
   
+  if (theme === '2020s') {
+    return (
+      <div className="bg-ai-bubble-ai border border-white/5 p-6 rounded-2xl mb-4 shadow-lg flex flex-col h-full">
+          <div className="flex justify-between items-start mb-4">
+             <span className="text-[10px] font-bold text-ai-accent uppercase tracking-widest">{paper.year} {"//"} {paper.category}</span>
+             {isLegendary && <span className="text-[8px] bg-ai-gradient text-white px-2 py-0.5 rounded uppercase font-bold">Featured</span>}
+          </div>
+          <h4 className="text-xl font-bold mb-2 text-white">{paper.title}</h4>
+          <p className="text-sm text-slate-400 mb-6 flex-grow">{paper.authors}</p>
+          <div className="flex justify-between items-center pt-4 border-t border-white/5">
+             <span className="text-[10px] text-slate-500 font-medium italic">{paper.journal}</span>
+             <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="text-ai-accent text-xs font-bold hover:underline">View DOI</a>
+          </div>
+      </div>
+    );
+  }
+
   if (theme === '2000s') {
     return (
       <div className="me-panel flex flex-col mb-4 p-0 animate-hologram-flicker">
         <div className="border-b border-me-orange/30 p-2 flex justify-between items-center bg-me-orange/5">
           <h3 className="font-mono text-[10px] text-me-blue font-black italic tracking-widest uppercase">
-            {paper.year} // {paper.category}
+            {paper.year} {"//"} {paper.category}
           </h3>
           {isLegendary && <div className="text-[8px] text-me-orange font-bold uppercase animate-pulse">LEGENDARY_STATUS</div>}
         </div>
@@ -227,7 +244,7 @@ function PaperCard({ paper, theme, isLegendarySection }) {
       <div className="mgs-panel flex flex-col mb-4 p-0">
         <div className="border-b border-mgs-border p-2 flex justify-between items-center bg-mgs-green/10">
           <h3 className="font-mono text-[10px] text-mgs-green font-bold tracking-widest">
-            {paper.year} // {paper.category}
+            {paper.year} {"//"} {paper.category}
           </h3>
           <div className="text-[8px] text-mgs-blue opacity-60">FILE_REF: {paper.id.slice(0,8)}</div>
         </div>
@@ -253,8 +270,8 @@ function PaperCard({ paper, theme, isLegendarySection }) {
       )}
       
       <div className="flex justify-between items-start mb-4">
-        <span className="font-heading text-[10px] text-retro-blue">
-          [{paper.category}] // {paper.year}
+        <span className="font-heading text-[10px] text-retro-blue text-black bg-retro-blue px-1">
+          [{paper.category}] {"//"} {paper.year}
         </span>
         {paper.stats && (
           <span className="font-heading text-[10px] text-retro-amber animate-pulse">

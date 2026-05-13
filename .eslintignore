@@ -1,0 +1,4 @@
+backup/
+.next/
+node_modules/
+out/

@@ -3,17 +3,7 @@ import Link from 'next/link';
 import { useTheme } from './ThemeContext';
 import { useState } from 'react';
 
-export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const navItems = [
-    { label: 'PROJECTS', href: '/projects' },
-    { label: 'TEAM', href: '/members' },
-    { label: 'ALUMNI', href: '/former' },
-    { label: 'PAPERS', href: '/papers' },
-  ];
-
+function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   const eras = [
     { id: '80s', label: '1985 Terminal' },
     { id: '90s', label: '1998 Tactical' },
@@ -22,7 +12,7 @@ export default function Navbar() {
     { id: '2020s', label: '2024 AI Assistant' }
   ];
 
-  const ThemeToggle = () => (
+  return (
     <div className="relative">
       <button 
         onClick={() => setShowDropdown(!showDropdown)}
@@ -61,13 +51,25 @@ export default function Navbar() {
       )}
     </div>
   );
+}
+
+export default function Navbar() {
+  const { theme, toggleTheme } = useTheme();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const navItems = [
+    { label: 'PROJECTS', href: '/projects' },
+    { label: 'TEAM', href: '/members' },
+    { label: 'ALUMNI', href: '/former' },
+    { label: 'PAPERS', href: '/papers' },
+  ];
 
   if (theme === '2020s') {
     return (
       <nav className="bg-ai-bg/95 border-b border-white/5 p-3 sticky top-0 z-50 flex items-center h-14 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-white flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-ai-accent to-purple-500 flex items-center justify-center text-white text-xs">AC</span>
               <span className="text-sm tracking-tight">ACME_LAB</span>
@@ -99,7 +101,7 @@ export default function Navbar() {
       <nav className="bg-hero-yellow border-b-4 border-black p-2 sticky top-0 z-50 flex items-center h-14 shadow-hero">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-black text-black italic text-xl tracking-tighter hover:skew-x-[-10deg] transition-transform">
               ACME_LAB
             </Link>
@@ -125,7 +127,7 @@ export default function Navbar() {
       <nav className="bg-me-bg/80 border-b border-me-orange/30 p-4 sticky top-0 z-50 flex items-center h-16 backdrop-blur-md shadow-me">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-6 items-center">
-            <ThemeToggle />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-me-orange tracking-widest flex flex-col leading-none hover:text-white transition-all group">
               <span className="text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">N7_COMMAND_DECK</span>
               <span className="text-xl italic">ACME_LAB</span>
@@ -156,7 +158,7 @@ export default function Navbar() {
       <nav className="bg-mgs-bg border-b-2 border-mgs-border p-3 sticky top-0 z-50 flex items-center h-14 font-mono shadow-mgs">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-mgs-green tracking-tighter flex flex-col leading-none hover:text-white transition-colors text-mgs-green">
               <span className="text-xs opacity-60">TACTICAL_INFO</span>
               <span className="text-lg">ACME_LAB</span>
@@ -208,7 +210,7 @@ export default function Navbar() {
 
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 relative z-10 h-full">
         <div className="flex gap-4 items-center">
-          <ThemeToggle />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
           <Link href="/" className="font-heading text-lg md:text-2xl text-retro-green hover:text-white transition-colors text-retro-green">
             ACME_LAB
           </Link>
