@@ -9,18 +9,28 @@ export default function Home() {
       
       <div className="container mx-auto px-4 py-12 relative z-10">
         <section className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl mb-6 text-retro-fg animate-pulse">
-            SYSTEM_STARTUP
-          </h1>
-          <div className="max-w-3xl mx-auto">
-            <Card title="MISSION_BRIEFING">
-              <p className="mb-4">
-                We develop statistical models and computational tools for comparative analysis of sequence data, 
-                especially large and rich data sets from measurably evolving pathogens.
+          <div className="inline-block border-4 border-retro-green p-2 mb-6">
+            <h1 className="text-3xl md:text-5xl text-retro-fg">
+              ACME_COMPUTATIONAL_MOLECULAR_EVOLUTION
+            </h1>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl md:text-2xl mb-8 text-retro-amber font-heading">
+              STATISTICAL_MODELS & SOFTWARE_TOOLS FOR PATHOGEN_ANALYSIS
+            </h2>
+            
+            <Card title="MISSION_OVERVIEW">
+              <p className="mb-4 text-left">
+                We develop high-performance computational tools for the comparative analysis of sequence data. 
+                Our research focuses on <strong>measurably evolving pathogens</strong>, creating scalable 
+                solutions for molecular epidemiology, viral dynamics, and natural selection inference.
               </p>
-              <p className="text-retro-green">
-                STATUS: [RELIANCE_ON_EVOLUTIONARY_THEORY] = 100%
-              </p>
+              <div className="text-retro-green text-sm md:text-base border-t border-retro-bg pt-4 mt-4 flex justify-between items-center">
+                <span>[SECTOR]: BIOINFORMATICS</span>
+                <span>[LOCATION]: TEMPLE_UNIVERSITY</span>
+                <span>[STATUS]: ACTIVE</span>
+              </div>
             </Card>
           </div>
         </section>
