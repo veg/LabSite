@@ -9,15 +9,16 @@ export default function Home() {
       
       <div className="container mx-auto px-4 py-12 relative z-10">
         <section className="mb-16 text-center">
-          <div className="inline-block border-4 border-retro-green p-2 mb-6">
-            <h1 className="text-3xl md:text-5xl text-retro-fg">
-              ACME_COMPUTATIONAL_MOLECULAR_EVOLUTION
+          <div className="inline-block border-4 border-retro-green p-4 mb-6 max-w-full">
+            <h1 className="text-xl md:text-4xl lg:text-5xl text-retro-fg leading-tight">
+              ACME_LAB:<br/>
+              <span className="text-lg md:text-3xl lg:text-4xl">COMPUTATIONAL_MOLECULAR_EVOLUTION</span>
             </h1>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-xl md:text-2xl mb-8 text-retro-amber font-heading">
-              STATISTICAL_MODELS & SOFTWARE_TOOLS FOR PATHOGEN_ANALYSIS
+          <div className="max-w-4xl mx-auto px-2">
+            <h2 className="text-base md:text-xl lg:text-2xl mb-8 text-retro-amber font-heading leading-relaxed">
+              STATISTICAL_MODELS & SOFTWARE_TOOLS<br className="md:hidden" /> FOR PATHOGEN_ANALYSIS
             </h2>
             
             <Card title="MISSION_OVERVIEW">
