@@ -1,7 +1,6 @@
 import members from '@/data/members.json';
 import PageContainer from '@/components/PageContainer';
 import Card from '@/components/Card';
-import { useTheme } from '@/components/ThemeContext';
 
 export default function MembersPage() {
   return (

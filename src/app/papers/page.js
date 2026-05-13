@@ -179,7 +179,7 @@ export default function PapersPage() {
         </section>
 
         <div className="max-w-4xl mx-auto text-center pt-12">
-          <p className="font-body text-2xl mb-8 opacity-80">
+          <p className="font-body text-2xl mb-8 opacity-80 text-black">
             Our full bibliography spans decades of research in molecular evolution and bioinformatics.
           </p>
           <a 
@@ -200,12 +200,13 @@ export default function PapersPage() {
 
 function PaperCard({ paper, theme, isLegendarySection }) {
   const isLegendary = paper.isLegendary;
+  const separator = " // ";
   
   if (theme === '2020s') {
     return (
-      <div className="bg-ai-bubble-ai border border-white/5 p-6 rounded-2xl mb-4 shadow-lg flex flex-col h-full">
+      <div className="bg-ai-bubble-ai border border-white/5 p-6 rounded-2xl mb-4 shadow-lg flex flex-col h-full text-slate-200">
           <div className="flex justify-between items-start mb-4">
-             <span className="text-[10px] font-bold text-ai-accent uppercase tracking-widest">{paper.year} {"//"} {paper.category}</span>
+             <span className="text-[10px] font-bold text-ai-accent uppercase tracking-widest">{paper.year}{separator}{paper.category}</span>
              {isLegendary && <span className="text-[8px] bg-ai-gradient text-white px-2 py-0.5 rounded uppercase font-bold">Featured</span>}
           </div>
           <h4 className="text-xl font-bold mb-2 text-white">{paper.title}</h4>
@@ -222,8 +223,8 @@ function PaperCard({ paper, theme, isLegendarySection }) {
     return (
       <div className="me-panel flex flex-col mb-4 p-0 animate-hologram-flicker">
         <div className="border-b border-me-orange/30 p-2 flex justify-between items-center bg-me-orange/5">
-          <h3 className="font-mono text-[10px] text-me-blue font-black italic tracking-widest uppercase">
-            {paper.year} {"//"} {paper.category}
+          <h3 className="font-mono text-[10px] text-me-blue font-black italic tracking-widest uppercase text-me-blue">
+            {paper.year}{separator}{paper.category}
           </h3>
           {isLegendary && <div className="text-[8px] text-me-orange font-bold uppercase animate-pulse">LEGENDARY_STATUS</div>}
         </div>
@@ -243,14 +244,14 @@ function PaperCard({ paper, theme, isLegendarySection }) {
     return (
       <div className="mgs-panel flex flex-col mb-4 p-0">
         <div className="border-b border-mgs-border p-2 flex justify-between items-center bg-mgs-green/10">
-          <h3 className="font-mono text-[10px] text-mgs-green font-bold tracking-widest">
-            {paper.year} {"//"} {paper.category}
+          <h3 className="font-mono text-[10px] text-mgs-green font-bold tracking-widest text-mgs-green">
+            {paper.year}{separator}{paper.category}
           </h3>
           <div className="text-[8px] text-mgs-blue opacity-60">FILE_REF: {paper.id.slice(0,8)}</div>
         </div>
-        <div className="p-4 flex flex-col h-full">
-          <h4 className="text-xl font-bold leading-tight mb-2 text-mgs-green">{paper.title}</h4>
-          <p className="text-sm opacity-60 mb-4 text-mgs-green/80 font-mono">{paper.authors}</p>
+        <div className="p-4 flex flex-col h-full text-mgs-green">
+          <h4 className="text-xl font-bold leading-tight mb-2">{paper.title}</h4>
+          <p className="text-sm opacity-60 mb-4 font-mono">{paper.authors}</p>
           <div className="mt-auto flex justify-between items-center border-t border-mgs-green/10 pt-2 text-[10px]">
             <span className="font-bold text-mgs-blue tracking-tighter">{paper.journal}</span>
             <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="mgs-button py-1 px-2 text-[8px]">VIEW_DOI</a>
@@ -270,8 +271,8 @@ function PaperCard({ paper, theme, isLegendarySection }) {
       )}
       
       <div className="flex justify-between items-start mb-4">
-        <span className="font-heading text-[10px] text-retro-blue text-black bg-retro-blue px-1">
-          [{paper.category}] {"//"} {paper.year}
+        <span className="font-heading text-[10px] text-retro-blue bg-retro-blue px-1 text-black">
+          [{paper.category}]{separator}{paper.year}
         </span>
         {paper.stats && (
           <span className="font-heading text-[10px] text-retro-amber animate-pulse">
