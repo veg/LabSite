@@ -107,7 +107,7 @@ export default function EraSelectionSplash() {
         <div className="text-slate-600 font-mono text-[10px] tracking-[0.3em] uppercase">
           ACME_LAB // MULTI-ERA_INTERFACE_SYSTEM // v4.0.0_STABLE
         </div>
-        <div className="text-slate-800 font-mono text-[8px] tracking-[0.1em] uppercase max-w-xl text-center leading-relaxed">
+        <div className="text-white/30 font-mono text-[8px] tracking-[0.1em] uppercase max-w-xl text-center leading-relaxed">
           The ACME Laboratory for Computational Molecular Evolution develops and applies high-performance 
           statistical models to measure the evolutionary dynamics of measurable pathogens. 
           Universal methodology across all domains of life.

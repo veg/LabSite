@@ -271,7 +271,7 @@ function PaperCard({ paper, theme, isLegendarySection }) {
       )}
       
       <div className="flex justify-between items-start mb-4">
-        <span className="font-heading text-[10px] text-retro-blue bg-retro-blue px-1 text-black">
+        <span className="font-heading text-[10px] text-retro-blue bg-retro-blue px-1 bg-opacity-20">
           [{paper.category}]{separator}{paper.year}
         </span>
         {paper.stats && (
