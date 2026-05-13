@@ -15,16 +15,27 @@ export default function PapersPage() {
   }));
 
   // 2. Member Contributions & Network Extent
-  // Simple heuristic: count occurrences of member names in author strings
   const memberContributions = allLabMembers.map(member => {
-    const lastName = member.name.split(' ').pop();
-    const count = papers.filter(p => p.authors.includes(lastName)).length;
+    const lastName = member.name.split(' ').pop().toLowerCase();
+    const count = papers.filter(p => {
+      const authors = p.authors.toLowerCase();
+      return authors.includes(lastName);
+    }).length;
     return { name: member.name, count };
   }).filter(m => m.count > 0).sort((a, b) => b.count - a.count);
 
-  // Collaboration Network: Total unique co-authors mentioned in the provided subset
-  const allAuthors = papers.flatMap(p => p.authors.split(/ and |, /));
-  const uniqueAuthors = new Set(allAuthors.map(a => a.trim()));
+  // Collaboration Network: Total unique co-authors
+  const uniqueAuthors = new Set();
+  papers.forEach(p => {
+    // Split by common BibTeX author separators
+    const authors = p.authors.split(/ and |; |, /);
+    authors.forEach(a => {
+      const trimmed = a.trim();
+      if (trimmed && trimmed.length > 2) {
+        uniqueAuthors.add(trimmed.toLowerCase());
+      }
+    });
+  });
   
   const legendaryPapers = papers.filter(p => p.isLegendary);
   const recentPapers = papers.filter(p => p.isRecent);
