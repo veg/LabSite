@@ -1,12 +1,24 @@
 [
   {
+    "id": "HyPhy2020",
+    "year": 2020,
+    "authors": "Pond, Sergei LK and Wisotsky, Sadie R and Escalante, Ananias and Magalis, Brittany Rife and Weaver, Steven",
+    "title": "HyPhy 2.5 - a customizable platform for evolutionary hypothesis testing using phylogenies",
+    "journal": "Molecular Biology and Evolution",
+    "doi": "10.1093/molbev/msz197",
+    "category": "METHODS",
+    "isLegendary": true,
+    "stats": "Citations: ~2,500"
+  },
+  {
     "id": "Selberg:2026aa",
     "year": 2026,
     "authors": "Selberg, Avery G and Clark, Nathan and Nekrutenko, Anton and Chikina, Maria and Kosakovsky Pond, Sergei L",
     "title": "MoleRate: comparing molecular relative evolutionary rates to detect convergent evolution",
     "journal": "Evolution",
     "doi": "10.1093/evolut/qpaf240",
-    "abstract": "In comparative evolutionary genomics, faster or slower evolution of a particular gene, site, or branch in a phylogenetic tree, when compared to the appropriate average, has been interpreted as evidence of conservation, functional importance, or adaptation..."
+    "category": "ADAPTATION",
+    "isRecent": true
   },
   {
     "id": "Havens:2026aa",
@@ -15,15 +27,49 @@
     "title": "Dynamics of natural selection preceding human viral epidemics and pandemics",
     "journal": "Cell",
     "doi": "10.1016/j.cell.2026.02.006",
-    "abstract": "Using a phylogenetic framework to characterize natural selection, we investigate the hypothesis that zoonotic viruses require adaptation prior to zoonosis to sustain human-to-human transmission..."
+    "category": "SURVEILLANCE",
+    "isRecent": true
   },
   {
-    "id": "Melendez-Vazquez:2025aa",
+    "id": "HIVTRACE2018",
+    "year": 2018,
+    "authors": "Pond, Sergei L Kosakovsky and Weaver, Steven and Leigh Brown, Andrew J and Wertheim, Joel O",
+    "title": "HIV-TRACE (TRAnsmission Cluster Engine): a Tool for Large Scale Molecular Epidemiology of HIV-1 and Other Rapidly Evolving Pathogens",
+    "journal": "Molecular Biology and Evolution",
+    "doi": "10.1093/molbev/msy016",
+    "category": "SURVEILLANCE",
+    "isLegendary": true
+  },
+  {
+    "id": "Datamonkey2018",
+    "year": 2018,
+    "authors": "Weaver, Steven and Shank, Stephen D and Spielman, Stephanie J and Li, Michael and Muse, Spencer V and Pond, Sergei L Kosakovsky",
+    "title": "Datamonkey 2.0: a modern web application for characterizing selective and other evolutionary processes",
+    "journal": "Molecular Biology and Evolution",
+    "doi": "10.1093/molbev/msx335",
+    "category": "METHODS",
+    "isLegendary": true
+  },
+  {
+    "id": "Council:2025aa",
     "year": 2025,
-    "authors": "Melendez-Vazquez, Fernando and Lucaci, Alexander G and Selberg, Avery and Clavel, Julien and Rincon-Sandoval, Melissa and Santaquiteria, Aintzane and White, William T and Drabeck, Danielle and Carnevale, Giorgio and Duarte-Ribeiro, Emanuell and Miya, Masaki and Westneat, Mark W and Baldwin, Carole C and Hughes, Lily C and Ortí, Guillermo and Kosakovsky Pond, Sergei L and Betancur-R, Ricardo and Arcila, Dahiana",
-    "title": "Ecological interactions and genomic innovation fueled the evolution of ray-finned fish endothermy",
-    "journal": "Sci Adv",
-    "doi": "10.1126/sciadv.ads8488"
+    "authors": "Council, Olivia D and Tyers, Lynn and Moeser, Matthew and Sondgeroth, Amy and et al.",
+    "title": "The persistent pool of HIV-1-infected cells is formed episodically during untreated infection",
+    "journal": "Journal of Virology",
+    "doi": "10.1128/jvi.00979-24",
+    "category": "VIRAL_DYNAMICS",
+    "isRecent": true
+  },
+  {
+    "id": "MEME2012",
+    "year": 2012,
+    "authors": "Murrell, Ben and Wertheim, Joel O and Mullan, S and et al.",
+    "title": "Detecting individual sites subject to episodic diversifying selection",
+    "journal": "PLoS Genetics",
+    "doi": "10.1371/journal.pgen.1002764",
+    "category": "METHODS",
+    "isLegendary": true,
+    "stats": "Highly Cited"
   },
   {
     "id": "Verdonk:2025aa",
@@ -31,14 +77,18 @@
     "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
     "title": "A New Comparative Framework for Estimating Selection on Synonymous Substitutions",
     "journal": "Mol Biol Evol",
-    "doi": "10.1093/molbev/msaf068"
+    "doi": "10.1093/molbev/msaf068",
+    "category": "METHODS",
+    "isRecent": true
   },
   {
-    "id": "Lucaci:2024aa",
-    "year": 2024,
-    "authors": "Lucaci, Alexander G and Brew, William E and Lamanna, Jason and Selberg, Avery and Carnevale, Vincenzo and Moore, Anna R and Kosakovsky Pond, Sergei L",
-    "title": "The evolution of mammalian Rem2: unraveling the impact of purifying selection and coevolution on protein function, and implications for human disorders",
-    "journal": "Front Bioinform",
-    "doi": "10.3389/fbinf.2024.1381540"
+    "id": "GalaxyCOVID2021",
+    "year": 2021,
+    "authors": "Maier, Wolfgang and Bray, Simon and van den Beek, Marius and et al.",
+    "title": "Ready-to-use public infrastructure for global SARS-CoV-2 monitoring",
+    "journal": "Nature Biotechnology",
+    "doi": "10.1038/s41587-021-01069-1",
+    "category": "SURVEILLANCE",
+    "isLegendary": true
   }
 ]
