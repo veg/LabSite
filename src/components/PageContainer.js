@@ -9,14 +9,29 @@ export default function PageContainer({ children, title, titleColorClass = "text
 
   return (
     <main className={`min-h-screen relative flex flex-col ${
-      theme === '2000s' ? 'bg-me-bg text-me-orange' : 
-      theme === '2010s' ? 'bg-hero-bg text-hero-dark' : 
+      theme === 'profdr' ? 'bg-white text-black' :
+      theme === 'geocities' ? '' :
+      theme === '2000s' ? 'bg-me-bg text-me-orange' :
+      theme === '2010s' ? 'bg-hero-bg text-hero-dark' :
       theme === '2020s' ? 'bg-ai-bg text-slate-200' : ''
     }`}>
       <Navbar />
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
         {title && (
-          <div className={theme !== '80s' ? 'mb-12 text-center' : ''}>
+          <div className={(theme !== '80s' && theme !== 'profdr') ? 'mb-12 text-center' : ''}>
+            {theme === 'profdr' && (
+              <>
+                <h1>{title.replace(/_/g, ' ')}</h1>
+                <hr />
+              </>
+            )}
+            {theme === 'geocities' && (
+              <>
+                <h1>~* {title.replace(/_/g, ' ')} *~</h1>
+                <hr />
+                <p className="geo-blink" style={{color: '#ff00ff', fontWeight: 'bold'}}>★ NEW ★ NEW ★ NEW ★</p>
+              </>
+            )}
             {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 uppercase">FILE_TYPE: RESEARCH_LOG</div>}
             {theme === '2000s' && <div className="text-[10px] text-me-blue font-bold tracking-[0.3em] mb-1 uppercase opacity-60">CODEX_ENTRY // {title}</div>}
             {theme === '2010s' && <div className="hero-tag mb-4">ACTIVE_QUEST: {title}</div>}
@@ -29,9 +44,9 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             
-            {theme !== '2020s' && (
+            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && (
               <h1 className={`text-4xl mb-12 text-center ${
-                theme === '80s' ? titleColorClass : 
+                theme === '80s' ? titleColorClass :
                 theme === '90s' ? 'text-mgs-green font-bold tracking-tighter border-b border-mgs-green/20 pb-4' :
                 theme === '2000s' ? 'text-me-orange font-black italic tracking-wider border-b-2 border-me-orange/40 pb-2 drop-shadow-me' :
                 'text-black font-black italic uppercase skew-x-[-5deg] border-b-8 border-hero-yellow inline-block px-4'
@@ -56,24 +71,45 @@ export default function PageContainer({ children, title, titleColorClass = "text
         ) : children}
       </div>
       
-      <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
-        theme === '80s' ? 'border-retro-green bg-black text-retro-fg' : 
-        theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
-        theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
-        theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
-        'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'
-      }`}>
-        <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
-        <p className={
-          theme === '80s' ? 'text-retro-blue' : 
-          theme === '90s' ? 'text-mgs-blue' : 
-          theme === '2000s' ? 'text-me-blue' :
-          theme === '2010s' ? 'text-white opacity-40 uppercase tracking-tighter mt-2' :
-          'text-ai-accent opacity-50 mt-1'
-        }>
-          INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY
-        </p>
-      </footer>
+      {theme === 'profdr' ? (
+        <footer className="mt-auto p-4 text-left">
+          <hr />
+          <address>
+            ACME Laboratory<br />
+            Institute for Genomics and Evolutionary Medicine<br />
+            Temple University<br />
+            E-mail: <a href="mailto:webmaster@acme.example">webmaster@acme.example</a>
+          </address>
+          <p>Last modified: 14 March 1995. <span className="profdr-blink">[NEW!]</span></p>
+        </footer>
+      ) : theme === 'geocities' ? (
+        <footer className="mt-auto p-4 text-center">
+          <hr />
+          <p>You are visitor # <span className="geo-counter">00042</span></p>
+          <p>★ Sign my <a href="#guestbook">Guestbook</a>! ★ <a href="mailto:webmaster@acme.example">E-mail me</a>! ★</p>
+          <p style={{color: '#ff00ff'}}>© 1996 ACME Laboratory ~ Temple University</p>
+          <p className="geo-blink" style={{color: '#00ff00'}}>★ This page best viewed in Netscape Navigator 3.0 ★</p>
+        </footer>
+      ) : (
+        <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
+          theme === '80s' ? 'border-retro-green bg-black text-retro-fg' :
+          theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
+          theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
+          theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
+          'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'
+        }`}>
+          <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
+          <p className={
+            theme === '80s' ? 'text-retro-blue' :
+            theme === '90s' ? 'text-mgs-blue' :
+            theme === '2000s' ? 'text-me-blue' :
+            theme === '2010s' ? 'text-white opacity-40 uppercase tracking-tighter mt-2' :
+            'text-ai-accent opacity-50 mt-1'
+          }>
+            INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY
+          </p>
+        </footer>
+      )}
     </main>
   );
 }

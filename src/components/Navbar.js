@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   const eras = [
+    { id: 'profdr', label: '1993 Prof. Dr.' },
+    { id: 'geocities', label: '1996 Geocities' },
     { id: '80s', label: '1985 Terminal' },
     { id: '90s', label: '1998 Tactical' },
     { id: '2000s', label: '2007 Omni-tool' },
@@ -17,8 +19,10 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
       <button 
         onClick={() => setShowDropdown(!showDropdown)}
         className={`p-1 transition-all ${
-          theme === '80s' ? 'text-retro-green hover:text-white' : 
-          theme === '90s' ? 'text-mgs-green hover:text-white' : 
+          theme === 'profdr' ? 'text-black hover:text-blue-700' :
+          theme === 'geocities' ? 'text-[#ff00ff] hover:text-[#00ffff]' :
+          theme === '80s' ? 'text-retro-green hover:text-white' :
+          theme === '90s' ? 'text-mgs-green hover:text-white' :
           theme === '2000s' ? 'text-me-orange hover:text-white' :
           theme === '2010s' ? 'text-hero-dark hover:text-hero-yellow' :
           'text-ai-accent hover:opacity-80'
@@ -32,8 +36,10 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
       </button>
       {showDropdown && (
         <div className={`absolute left-0 mt-2 p-2 min-w-[180px] shadow-lg z-[100] ${
-          theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' : 
-          theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' : 
+          theme === 'profdr' ? 'bg-white border border-gray-500 text-black' :
+          theme === 'geocities' ? 'bg-[#000080] border-4 border-[#ff00ff] text-[#ffff00]' :
+          theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' :
+          theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' :
           theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
           theme === '2010s' ? 'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]' :
           'bg-ai-sidebar border border-white/10 rounded-xl text-white backdrop-blur-xl'
@@ -63,6 +69,51 @@ export default function Navbar() {
     { label: 'ALUMNI', href: '/former' },
     { label: 'PAPERS', href: '/papers' },
   ];
+
+  if (theme === 'geocities') {
+    return (
+      <nav style={{background: '#000080', borderBottom: '4px ridge #ff00ff', padding: '8px', textAlign: 'center', fontFamily: '"Comic Sans MS", cursive'}}>
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" className="geo-rainbow" style={{fontWeight: 'bold', fontSize: '20px', textDecoration: 'none'}}>~* ACME Lab *~</Link>
+          </div>
+          <div className="flex gap-3 flex-wrap justify-center" style={{fontWeight: 'bold'}}>
+            {navItems.map((item, i) => (
+              <span key={item.label}>
+                <Link href={item.href} style={{color: '#00ffff', textDecoration: 'underline'}}>
+                  {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+                </Link>
+                {i < navItems.length - 1 && <span style={{color: '#ff00ff', marginLeft: '0.75rem'}}>★</span>}
+              </span>
+            ))}
+          </div>
+          <div className="geo-marquee" style={{maxWidth: '900px'}}>
+            <span>★ WELCOME TO ACME LAB!!! ★ BEST VIEWED IN NETSCAPE NAVIGATOR 4.0 @ 800x600 ★ SIGN MY GUESTBOOK!!! ★ THIS PAGE IS UNDER CONSTRUCTION ★ </span>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'profdr') {
+    return (
+      <nav className="bg-white text-black p-2 border-b border-gray-500" style={{fontFamily: '"Times New Roman", Times, serif'}}>
+        <div className="container mx-auto px-4 flex items-center gap-4 flex-wrap">
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+          <Link href="/" style={{color: '#0000ee', textDecoration: 'underline'}}>ACME Lab Home</Link>
+          <span>|</span>
+          {navItems.map((item, i) => (
+            <span key={item.label}>
+              <Link href={item.href} style={{color: '#0000ee', textDecoration: 'underline'}}>{item.label.charAt(0) + item.label.slice(1).toLowerCase()}</Link>
+              {i < navItems.length - 1 && <span> | </span>}
+            </span>
+          ))}
+        </div>
+        <hr style={{border: 0, borderTop: '1px solid #808080', margin: '0.5em 0 0'}} />
+      </nav>
+    );
+  }
 
   if (theme === '2020s') {
     return (

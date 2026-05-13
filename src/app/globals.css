@@ -7,6 +7,24 @@
   --font-pixelify: var(--font-pixelify);
   --font-inter: sans-serif;
 
+  /* Geocities Palette (1996 amateur web maximalism) */
+  --color-geo-bg: #1a0033;
+  --color-geo-fg: #ffff00;
+  --color-geo-link: #00ffff;
+  --color-geo-visited: #ff00ff;
+  --color-geo-active: #ff0000;
+  --color-geo-panel: #000080;
+  --color-geo-accent-1: #ff00ff;
+  --color-geo-accent-2: #00ff00;
+
+  /* Prof. Dr. Palette (1993 academic web) */
+  --color-profdr-bg: #ffffff;
+  --color-profdr-fg: #000000;
+  --color-profdr-link: #0000ee;
+  --color-profdr-visited: #551a8b;
+  --color-profdr-active: #ff0000;
+  --color-profdr-rule: #808080;
+
   /* 80s Palette */
   --color-retro-green: #689d6a;
   --color-retro-blue: #458588;
@@ -63,6 +81,8 @@
 }
 
 :root { --background: #282828; --foreground: #ebdbb2; }
+[data-theme='profdr'] { --background: #ffffff; --foreground: #000000; }
+[data-theme='geocities'] { --background: #1a0033; --foreground: #ffff00; }
 [data-theme='90s'] { --background: #0a0f0a; --foreground: #00ff41; }
 [data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
 [data-theme='2010s'] { --background: #f5f5f5; --foreground: #1a1a1a; }
@@ -128,3 +148,298 @@ body {
 .me-panel { background: rgba(255, 157, 0, 0.03); border: 1px solid rgba(255, 157, 0, 0.2); clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%); }
 .pixel-border { border: 4px solid var(--foreground); }
 .pixel-button { background-color: #458588; border: 4px solid #1d2021; box-shadow: 4px 4px 0px 0px #ebdbb2; }
+
+/* Prof. Dr. Specifics — 1993 academic web style.
+   Override Tailwind utility classes used elsewhere so the page renders
+   with browser-default-like appearance: serif, white bg, blue underline links. */
+.theme-profdr {
+  font-family: "Times New Roman", Times, serif !important;
+  image-rendering: auto;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+.theme-profdr * {
+  font-family: "Times New Roman", Times, serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-style: normal !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  clip-path: none !important;
+}
+.theme-profdr h1, .theme-profdr h2, .theme-profdr h3,
+.theme-profdr h4, .theme-profdr h5, .theme-profdr h6 {
+  font-weight: bold;
+  color: #000;
+  margin: 0.83em 0 0.5em;
+}
+.theme-profdr h1 { font-size: 2em; }
+.theme-profdr h2 { font-size: 1.5em; }
+.theme-profdr h3 { font-size: 1.17em; }
+.theme-profdr p { margin: 0.5em 0; line-height: 1.4; }
+.theme-profdr a,
+.theme-profdr a:link {
+  color: #0000ee !important;
+  text-decoration: underline !important;
+  background: transparent !important;
+}
+.theme-profdr a:visited { color: #551a8b !important; }
+.theme-profdr a:active { color: #ff0000 !important; }
+.theme-profdr a:hover { text-decoration: underline !important; }
+.theme-profdr ul {
+  list-style: disc;
+  padding-left: 40px;
+  margin: 0.5em 0;
+}
+.theme-profdr ul li { display: list-item; }
+.theme-profdr hr {
+  border: 0;
+  border-top: 1px solid #808080;
+  margin: 1em 0;
+}
+.theme-profdr address {
+  font-style: italic !important;
+  margin: 1em 0;
+}
+.theme-profdr img { image-rendering: auto; }
+
+/* Neutralize the era's decorative panels and buttons. */
+.theme-profdr .pixel-border,
+.theme-profdr .mgs-panel,
+.theme-profdr .me-panel,
+.theme-profdr .hero-panel,
+.theme-profdr .ai-bubble {
+  background: #ffffff !important;
+  border: 1px solid #808080 !important;
+  color: #000 !important;
+}
+.theme-profdr .pixel-button,
+.theme-profdr .mgs-button,
+.theme-profdr .me-button,
+.theme-profdr .hero-button {
+  background: #c0c0c0 !important;
+  border: 2px outset #c0c0c0 !important;
+  color: #000 !important;
+  padding: 2px 6px !important;
+  font-weight: normal !important;
+}
+
+/* Override common Tailwind utilities used by other themes' classNames. */
+.theme-profdr [class*="bg-"] { background-color: #ffffff !important; background-image: none !important; }
+.theme-profdr [class*="text-"]:not(a) { color: #000000 !important; }
+.theme-profdr [class*="border-"] { border-color: #808080 !important; }
+.theme-profdr [class*="shadow"] { box-shadow: none !important; }
+.theme-profdr [class*="skew"], .theme-profdr [class*="rotate"] { transform: none !important; }
+
+/* Blinking text — an authentic 90s touch. */
+.theme-profdr .profdr-blink { animation: profdrBlink 1s steps(2, start) infinite; }
+@keyframes profdrBlink { to { visibility: hidden; } }
+
+/* Geocities Specifics — 1996 amateur web style.
+   Tiled starfield bg, Comic Sans, rainbow headings, blink, marquee, hit counter. */
+.theme-geocities {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive !important;
+  background-color: #1a0033 !important;
+  color: #ffff00 !important;
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1.5px),
+    radial-gradient(circle, #ffccff 1px, transparent 1.5px),
+    radial-gradient(circle, #ccffff 0.8px, transparent 1.2px);
+  background-size: 60px 60px, 90px 90px, 40px 40px;
+  background-position: 0 0, 30px 30px, 10px 25px;
+  background-attachment: fixed;
+}
+.theme-geocities * {
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-style: normal !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  clip-path: none !important;
+}
+.theme-geocities h1, .theme-geocities h2, .theme-geocities h3 {
+  font-weight: bold !important;
+  text-align: center !important;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  text-shadow: none !important;
+}
+.theme-geocities h1 { font-size: 2.5em !important; }
+.theme-geocities h2 { font-size: 1.8em !important; }
+.theme-geocities h3 { font-size: 1.3em !important; }
+.theme-geocities p { color: #ffff00 !important; line-height: 1.5 !important; text-align: center !important; }
+.theme-geocities a,
+.theme-geocities a:link {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+  background: transparent !important;
+}
+.theme-geocities a:visited { color: #ff00ff !important; }
+.theme-geocities a:active { color: #ff0000 !important; }
+.theme-geocities a:hover { color: #00ff00 !important; text-decoration: underline overline !important; }
+.theme-geocities ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  text-align: center !important;
+}
+.theme-geocities ul li {
+  display: list-item;
+  padding: 4px 0;
+}
+.theme-geocities ul li::before {
+  content: "★ ";
+  color: #ff00ff;
+}
+.theme-geocities hr {
+  border: 0 !important;
+  height: 6px !important;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff) !important;
+  margin: 1em 0 !important;
+}
+.theme-geocities img { image-rendering: auto; }
+.theme-geocities strong, .theme-geocities b { color: #ff00ff !important; }
+.theme-geocities em, .theme-geocities i { color: #00ff00 !important; font-style: italic !important; }
+
+/* Neutralize the era's decorative panels and bring everything into the geocities palette. */
+.theme-geocities .pixel-border,
+.theme-geocities .mgs-panel,
+.theme-geocities .me-panel,
+.theme-geocities .hero-panel,
+.theme-geocities .ai-bubble {
+  background: #000080 !important;
+  border: 4px ridge #ff00ff !important;
+  color: #ffff00 !important;
+}
+.theme-geocities .pixel-button,
+.theme-geocities .mgs-button,
+.theme-geocities .me-button,
+.theme-geocities .hero-button {
+  background: #ff00ff !important;
+  border: 3px outset #ffff00 !important;
+  color: #ffffff !important;
+  padding: 4px 10px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+/* Override Tailwind utilities used by other themes. */
+.theme-geocities [class*="bg-"] { background-color: transparent !important; background-image: none !important; }
+.theme-geocities [class*="text-"]:not(a) { color: #ffff00 !important; }
+.theme-geocities [class*="border-"] { border-color: #ff00ff !important; border-style: ridge !important; }
+.theme-geocities [class*="shadow"] { box-shadow: none !important; }
+.theme-geocities [class*="skew"], .theme-geocities [class*="rotate"] { transform: none !important; }
+
+/* Blink — quintessentially geocities. */
+.theme-geocities .geo-blink { animation: geoBlink 0.8s steps(2, start) infinite; }
+@keyframes geoBlink { to { visibility: hidden; } }
+
+/* Marquee simulation via CSS. */
+.geo-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-top: 2px ridge #00ffff;
+  border-bottom: 2px ridge #00ffff;
+  background: #000080;
+  padding: 4px 0;
+}
+.geo-marquee > span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: geoMarquee 18s linear infinite;
+  color: #ffff00;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+}
+@keyframes geoMarquee {
+  to { transform: translateX(-100%); }
+}
+
+/* Geocities panel for sections. */
+.geo-panel {
+  background: #000080;
+  border: 4px ridge #ff00ff;
+  padding: 12px;
+  margin: 1em 0;
+  color: #ffff00;
+  text-align: center;
+}
+
+/* "Under Construction" striped barber-pole. */
+.geo-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffff00 0 10px,
+    #000000 10px 20px
+  );
+  color: #ff0000;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border: 3px ridge #ff0000;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+  animation: geoStripe 2s linear infinite;
+}
+@keyframes geoStripe { from { background-position: 0 0; } to { background-position: 40px 0; } }
+
+/* Hit counter — fake 7-seg-ish look. */
+.geo-counter {
+  display: inline-block;
+  background: #000;
+  color: #00ff00;
+  font-family: "Courier New", monospace !important;
+  font-weight: bold;
+  letter-spacing: 4px;
+  padding: 4px 10px;
+  border: 2px inset #888;
+}
+
+/* Sparkle gradient text helper. */
+.geo-rainbow {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Splash preview uses this explicit class. */
+.geo-preview {
+  background-color: #1a0033;
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1.5px),
+    radial-gradient(circle, #ffccff 1px, transparent 1.5px);
+  background-size: 30px 30px, 50px 50px;
+  background-position: 0 0, 15px 15px;
+  color: #ffff00;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  border: 4px ridge #ff00ff;
+  padding: 6px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 1.3;
+}
+.geo-preview a { color: #00ffff; text-decoration: underline; }
+
+/* Splash preview tile uses these explicit classes — keep them visible. */
+.profdr-preview {
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #808080;
+  padding: 8px;
+  text-align: left;
+  font-size: 11px;
+  line-height: 1.3;
+}
+.profdr-preview a { color: #0000ee; text-decoration: underline; }

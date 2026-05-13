@@ -17,15 +17,93 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen relative flex flex-col ${
-      theme === '2000s' ? 'bg-me-bg' : 
+      theme === 'profdr' ? 'bg-white' :
+      theme === 'geocities' ? '' :
+      theme === '2000s' ? 'bg-me-bg' :
       theme === '2010s' ? 'bg-hero-bg' :
       theme === '2020s' ? 'bg-ai-bg' : ''
     }`}>
       <Navbar />
-      
+
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
-        <section className="mb-16 text-center">
-          {theme === '2020s' ? (
+        <section className={(theme === 'profdr' || theme === 'geocities') ? 'mb-8' : 'mb-16 text-center'}>
+          {theme === 'geocities' ? (
+            <div>
+              <h1>~* Welcome to the ACME Laboratory!! *~</h1>
+              <p className="geo-blink" style={{color: '#ff00ff', fontWeight: 'bold'}}>★ NEW! NEW! NEW! ★</p>
+              <hr />
+              <div className="geo-construction">
+                ⚠ THIS PAGE IS UNDER CONSTRUCTION ⚠
+              </div>
+              <hr />
+              <p>
+                <b>HI!!!</b> Welcome to my homepage on the World Wide Web! <i>I&apos;m so glad you found me!!</i>
+                We develop and apply <b>HIGH-PERFORMANCE</b> computational tools for the comparative analysis of sequence data.
+                Our methods work across all domains of life. <i>Measurably evolving pathogens</i> are our top customers,
+                but our framework is used for evolutionary questions <b>anywhere</b> on the tree of life.
+              </p>
+              <hr />
+              <h2>~* Cool Links *~</h2>
+              <ul>
+                <li><Link href="/projects">★ Projects &amp; Software (HyPhy, Datamonkey, HIV-TRACE)</Link></li>
+                <li><Link href="/members">★ Meet The Team</Link></li>
+                <li><Link href="/former">★ Former Members</Link></li>
+                <li><Link href="/papers">★ Publications</Link></li>
+              </ul>
+              <hr />
+              <h2>~* What We Do *~</h2>
+              <ul>
+                <li><b>Molecular Epidemiology</b></li>
+                <li><b>Viral Dynamics</b></li>
+                <li><b>Phylogenetic Methods</b></li>
+                <li><b>High-Performance Computing</b></li>
+                <li><b>Data Visualization</b></li>
+              </ul>
+              <hr />
+              <div className="geo-panel">
+                <h3>~* Web Ring *~</h3>
+                <p style={{fontSize: '14px'}}>
+                  <a href="#">[Prev]</a> &nbsp;|&nbsp; <a href="#">[List]</a> &nbsp;|&nbsp;
+                  <a href="#">[Random]</a> &nbsp;|&nbsp; <a href="#">[Next]</a>
+                </p>
+                <p className="geo-blink" style={{fontSize: '12px', color: '#00ff00'}}>★ Member of the Computational Biology WebRing ★</p>
+              </div>
+              <hr />
+              <p>You are visitor # <span className="geo-counter">00042</span> since 14 March 1996</p>
+              <p style={{color: '#00ff00'}}><i>Best viewed in Netscape Navigator 3.0 @ 800x600</i></p>
+            </div>
+          ) : theme === 'profdr' ? (
+            <div>
+              <h1>ACME Laboratory for Computational Molecular Evolution</h1>
+              <hr />
+              <p>
+                <b>Welcome to the homepage of the ACME Laboratory.</b>
+                We develop and apply high-performance computational tools for the comparative analysis of sequence data.
+                Our methods are universally applicable across all domains of life.
+                While measurably evolving pathogens are our primary focus and &quot;top customers,&quot;
+                our framework is used to interrogate evolutionary questions anywhere on the tree of life.
+              </p>
+              <h2>Contents</h2>
+              <ul>
+                <li><Link href="/projects">Projects and Software</Link> &mdash; HyPhy, Datamonkey, HIV-TRACE</li>
+                <li><Link href="/members">Lab Members</Link></li>
+                <li><Link href="/former">Former Members</Link></li>
+                <li><Link href="/papers">Publications</Link></li>
+              </ul>
+              <h2>Core Competencies</h2>
+              <ul>
+                <li>Molecular epidemiology</li>
+                <li>Viral dynamics</li>
+                <li>Phylogenetic methods</li>
+                <li>High-performance computing</li>
+                <li>Data visualization</li>
+              </ul>
+              <p>
+                <i>This page is best viewed with any browser.</i>
+                <span className="profdr-blink"> [NEW!]</span>
+              </p>
+            </div>
+          ) : theme === '2020s' ? (
             <div className="max-w-4xl mx-auto flex flex-col items-center">
               <div className="mb-12">
                  <h1 className="text-5xl font-black mb-4 ai-glow">How can I help you today?</h1>
@@ -115,7 +193,7 @@ export default function Home() {
           )}
         </section>
 
-        {theme !== '2020s' && (
+        {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && (
           <>
             <section className="grid md:grid-cols-2 gap-8 mb-16">
               <Card title="CORE_COMPETENCIES">
@@ -189,24 +267,43 @@ export default function Home() {
         )}
       </div>
 
-      <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
-        theme === '80s' ? 'border-retro-green bg-black' : 
-        theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
-        theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
-        theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
-        'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'
-      }`}>
-        <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
-        <p className={
-          theme === '80s' ? 'text-retro-blue font-body' : 
-          theme === '90s' ? 'text-mgs-blue font-mono' : 
-          theme === '2000s' ? 'text-me-blue font-mono' :
-          theme === '2010s' ? 'text-white opacity-40 uppercase tracking-tighter mt-2' :
-          'text-ai-accent opacity-50 mt-1 font-sans'
-        }>
-          INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY
-        </p>
-      </footer>
+      {theme === 'profdr' ? (
+        <footer className="mt-auto p-4 text-left">
+          <hr />
+          <address>
+            ACME Laboratory<br />
+            Institute for Genomics and Evolutionary Medicine<br />
+            Temple University<br />
+            E-mail: <a href="mailto:webmaster@acme.example">webmaster@acme.example</a>
+          </address>
+          <p>Last modified: 14 March 1995.</p>
+        </footer>
+      ) : theme === 'geocities' ? (
+        <footer className="mt-auto p-4 text-center">
+          <hr />
+          <p style={{color: '#ff00ff'}}>© 1996 ACME Laboratory ~ Temple University</p>
+          <p className="geo-blink" style={{color: '#00ff00'}}>★ Hosted on Geocities ~ CapitolHill/Congress/1154 ★</p>
+        </footer>
+      ) : (
+        <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${
+          theme === '80s' ? 'border-retro-green bg-black' :
+          theme === '90s' ? 'border-mgs-border bg-mgs-bg text-mgs-green/60 font-mono' :
+          theme === '2000s' ? 'border-me-orange/20 bg-me-bg/90 text-me-orange/40 font-mono text-sm tracking-widest italic' :
+          theme === '2010s' ? 'border-black bg-hero-dark text-hero-yellow font-black skew-x-[-2deg] py-12' :
+          'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'
+        }`}>
+          <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
+          <p className={
+            theme === '80s' ? 'text-retro-blue font-body' :
+            theme === '90s' ? 'text-mgs-blue font-mono' :
+            theme === '2000s' ? 'text-me-blue font-mono' :
+            theme === '2010s' ? 'text-white opacity-40 uppercase tracking-tighter mt-2' :
+            'text-ai-accent opacity-50 mt-1 font-sans'
+          }>
+            INSTITUTE_FOR_GENOMICS_AND_EVOLUTIONARY_MEDICINE // TEMPLE_UNIVERSITY
+          </p>
+        </footer>
+      )}
     </main>
   );
 }
