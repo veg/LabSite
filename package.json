@@ -18,5 +18,11 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4"
+  },
+  "optionalDependencies": {
+    "lightningcss-linux-arm64-gnu": "^1.32.0",
+    "lightningcss-linux-arm64-musl": "^1.32.0",
+    "lightningcss-linux-x64-gnu": "^1.32.0",
+    "lightningcss-linux-x64-musl": "^1.32.0"
   }
 }
