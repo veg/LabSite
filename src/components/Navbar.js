@@ -1,6 +1,31 @@
+'use client';
 import Link from 'next/link';
+import { useTheme } from './ThemeContext';
 
 export default function Navbar() {
+  const { theme } = useTheme();
+
+  if (theme === '90s') {
+    return (
+      <nav className="bg-[#d6d6d6] border-b-2 border-black p-1 sticky top-0 z-50 flex items-center h-8 font-mono text-sm shadow-sm">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <div className="flex gap-4 items-center">
+            <Link href="/" className="font-bold hover:bg-[#000066] hover:text-white px-2 rounded-sm transition-colors text-black">
+               ACME_LAB
+            </Link>
+            <div className="flex gap-4 text-xs">
+              <Link href="/projects" className="hover:bg-[#000066] hover:text-white px-2 rounded-sm transition-colors text-black">Projects</Link>
+              <Link href="/members" className="hover:bg-[#000066] hover:text-white px-2 rounded-sm transition-colors text-black">Team</Link>
+              <Link href="/former" className="hover:bg-[#000066] hover:text-white px-2 rounded-sm transition-colors text-black">Alumni</Link>
+              <Link href="/papers" className="hover:bg-[#000066] hover:text-white px-2 rounded-sm transition-colors text-black">Papers</Link>
+            </div>
+          </div>
+          <div className="text-[10px] opacity-60 text-black">System 8.1</div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <nav className="bg-black border-b-4 border-retro-green p-4 sticky top-0 z-50 overflow-hidden min-h-[80px]">
       {/* Monkey Eating Animation Layer */}

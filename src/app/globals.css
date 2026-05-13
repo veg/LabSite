@@ -4,8 +4,9 @@
   --font-heading: var(--font-press-start);
   --font-body: var(--font-vt323);
   --font-mono: var(--font-share-tech-mono);
+  --font-chicago: var(--font-pixelify);
 
-  /* Muted Retro Palette */
+  /* Muted 80s Palette */
   --color-retro-green: #689d6a;
   --color-retro-blue: #458588;
   --color-retro-amber: #d79921;
@@ -13,27 +14,14 @@
   --color-retro-bg: #282828;
   --color-retro-fg: #ebdbb2;
 
+  /* 90s System 8 Palette */
+  --color-sys8-bg: #808080; /* Desktop Grey */
+  --color-sys8-platinum: #d6d6d6;
+  --color-sys8-border-light: #ffffff;
+  --color-sys8-border-dark: #666666;
+  --color-sys8-accent: #000066;
+
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-retro-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
-
-  /* Tailwind 4 Animations */
-  --animate-chew: chew 0.6s ease-in-out infinite;
-  --animate-banana-shrink: shrink 5s ease-in forwards;
-  --animate-scene-fade: fadeOut 1s ease-out 6s forwards;
-
-  @keyframes chew {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(0.6); }
-  }
-  @keyframes shrink {
-    0% { transform: scale(1); opacity: 0.6; }
-    80% { transform: scale(0.2); opacity: 0.4; }
-    100% { transform: scale(0); opacity: 0; }
-  }
-  @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; visibility: hidden; }
-  }
 }
 
 :root {
@@ -41,21 +29,72 @@
   --foreground: #ebdbb2;
 }
 
+[data-theme='90s'] {
+  --background: #808080;
+  --foreground: #000000;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-vt323), monospace;
   image-rendering: pixelated;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* 80s Specifics */
+.theme-80s h1, .theme-80s h2, .theme-80s h3 {
   font-family: var(--font-press-start), cursive;
   text-transform: uppercase;
-  color: #ebdbb2;
 }
 
-/* CRT Scanline Effect */
-.crt::before {
+/* 90s Specifics */
+.theme-90s body {
+  font-family: var(--font-share-tech-mono), sans-serif;
+}
+
+.theme-90s h1, .theme-90s h2, .theme-90s h3 {
+  font-family: var(--font-heading), sans-serif;
+  text-transform: none;
+}
+
+/* System 8 Window Style */
+.sys8-window {
+  background-color: #d6d6d6;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  box-shadow: 1px 1px 0px 0px #000;
+}
+
+.sys8-titlebar {
+  background: repeating-linear-gradient(
+    0deg,
+    #999,
+    #999 2px,
+    #ccc 2px,
+    #ccc 4px
+  );
+  border-bottom: 2px solid #000;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sys8-close-box {
+  width: 14px;
+  height: 14px;
+  background: #d6d6d6;
+  border: 1px solid #000;
+  position: absolute;
+  left: 6px;
+}
+
+/* CRT Scanline Effect (Only for 80s) */
+.theme-80s.crt::before {
   content: " ";
   display: block;
   position: absolute;
@@ -71,26 +110,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pixel-border {
-  border: 4px solid #ebdbb2;
+  border: 4px solid var(--foreground);
   box-shadow: 4px 4px 0px 0px #1d2021;
 }
 
-.pixel-button {
-  background-color: #458588;
-  color: #ebdbb2;
-  padding: 0.5rem 1rem;
-  border: 4px solid #1d2021;
-  box-shadow: 4px 4px 0px 0px #ebdbb2;
-  transition: all 0.1s;
+/* Animations from previous step */
+@keyframes chew {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.6); }
+}
+@keyframes shrink {
+  0% { transform: scale(1); opacity: 0.6; }
+  80% { transform: scale(0.2); opacity: 0.4; }
+  100% { transform: scale(0); opacity: 0; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
 }
 
-.pixel-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px 0px #ebdbb2;
-  background-color: #83a598;
-}
-
-.pixel-button:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px 0px #ebdbb2;
-}
+.animate-chew { animation: chew 0.6s ease-in-out infinite; }
+.animate-banana-shrink { animation: shrink 5s ease-in forwards; }
+.animate-scene-fade { animation: fadeOut 1s ease-out 6s forwards; }
