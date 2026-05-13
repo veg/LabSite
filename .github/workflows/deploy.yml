@@ -27,19 +27,27 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
-
       - name: Install dependencies
         run: npm ci
 
       - name: Build with Next.js
-        run: npm run build
+        run: npx next build
 
       - name: Debug Output
-        run: ls -R out/
+        run: |
+          echo "Current directory:"
+          pwd
+          ls -la
+          if [ -d "out" ]; then
+            echo "'out' directory found. Contents:"
+            ls -la out
+          else
+            echo "'out' directory NOT found."
+            if [ -d ".next" ]; then
+              echo "'.next' directory found. Contents:"
+              ls -la .next
+            fi
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
