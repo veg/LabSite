@@ -2,22 +2,41 @@
   {
     "id": "hyphy",
     "name": "HyPhy",
-    "type": "Major Software",
-    "description": "Hypothesis Testing using Phylogenies. Open-source software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning.",
-    "longDescription": "HyPhy is our flagship software package. It features a rich scripting language for limitless customization of analyses, with over 10,000 registered users and over 3,000 citations in peer-reviewed publications. It's the engine behind many of our web-based tools.",
+    "class": "The Engine",
+    "description": "Hypothesis Testing using Phylogenies. A high-performance framework for building and testing stochastic evolutionary models.",
+    "stats": {
+      "power": 99,
+      "speed": 85,
+      "complexity": 90,
+      "citations": "3,000+",
+      "users": "10,000+"
+    },
+    "powers": [
+      { "name": "LIMITLESS_CUSTOMIZATION", "desc": "Allows researchers to define any evolutionary model via its rich scripting language." },
+      { "name": "PARALLEL_PROCESSING", "desc": "Optimized for clusters, tearing through massive sequence alignments with MPI support." }
+    ],
     "image": "/images/projects/Hyphy.jpeg",
     "links": {
       "website": "http://hyphy.org",
-      "github": "https://github.com/veg/hyphy",
-      "paper": "https://link.springer.com/chapter/10.1007%2F0-387-27733-1_6"
+      "github": "https://github.com/veg/hyphy"
     }
   },
   {
     "id": "datamonkey",
-    "name": "Datamonkey",
-    "type": "Major Web Platform",
-    "description": "Run state-of-the-art statistical models through the comfort of your browser.",
-    "longDescription": "High-performance computing web-server for analyzing evolutionary signatures in sequence data. Datamonkey has processed over 500,000 analyses and received over 1,000 citations. We are currently transitioning to datamonkey3 for even better performance.",
+    "name": "Datamonkey.org",
+    "class": "The Oracle",
+    "description": "The public web-interface for the world's most advanced evolutionary models.",
+    "stats": {
+      "accessibility": 100,
+      "wisdom": 95,
+      "analyses": "500,000+",
+      "citations": "1,000+",
+      "uptime": "99.9%"
+    },
+    "powers": [
+      { "name": "ZERO_INSTALL", "desc": "Run state-of-the-art HyPhy models directly in your browser without touching a terminal." },
+      { "name": "GRID_INVOCATION", "desc": "Offloads complex computations to high-performance clusters automatically." }
+    ],
     "image": "/images/projects/Datamonkey.jpeg",
     "links": {
       "website": "https://datamonkey.org",
@@ -27,9 +46,19 @@
   {
     "id": "hivtrace",
     "name": "HIV-TRACE",
-    "type": "Epidemiology Tool",
-    "description": "Identify Transmission Clusters for molecular epidemiology of HIV-1 and other pathogens.",
-    "longDescription": "Currently in use by the CDC and many other public health and research entities for monitoring HIV transmission clusters. It's a critical tool for real-time molecular surveillance.",
+    "class": "The Scout",
+    "description": "Transmission Cluster Engine. Maps the hidden connections in molecular epidemiology.",
+    "stats": {
+      "detection": 98,
+      "accuracy": 92,
+      "stealth": 80,
+      "user_base": "CDC / Global PH",
+      "latency": "Real-time"
+    },
+    "powers": [
+      { "name": "CLUSTER_MAPPING", "desc": "Identifies transmission chains from viral sequence data in minutes." },
+      { "name": "SECURE_SURVEILLANCE", "desc": "Built for public health departments to monitor outbreaks while protecting data privacy." }
+    ],
     "image": "/images/projects/Trace.jpeg",
     "links": {
       "website": "https://veg.github.io/hivtrace-viz/",
@@ -39,9 +68,19 @@
   {
     "id": "phylotree",
     "name": "phylotree.js",
-    "type": "Library",
-    "description": "JavaScript library for application development and interactive data visualization in phylogenetics.",
-    "longDescription": "A tool suitable for building JavaScript applications where users can view and interact with phylogenetic trees. It extends d3.js and is designed to be highly modular and extensible.",
+    "class": "The Architect",
+    "description": "A modular JavaScript library for interactive phylogenetic tree visualization.",
+    "stats": {
+      "flexibility": 95,
+      "render_speed": 90,
+      "extensibility": 99,
+      "framework": "d3.js",
+      "license": "MIT"
+    },
+    "powers": [
+      { "name": "INTERACTIVE_MORPHING", "desc": "Allows users to manipulate, prune, and annotate trees dynamically in real-time." },
+      { "name": "MIDDLEWARE_INTEGRATION", "desc": "Seamlessly plugs into larger web applications as a modular visualization core." }
+    ],
     "image": "/images/projects/Phylotree.jpeg",
     "links": {
       "website": "http://phylotree.hyphy.org/",
@@ -51,8 +90,19 @@
   {
     "id": "tn93",
     "name": "tn93",
-    "type": "Tool",
-    "description": "High-speed C++ implementation for calculating TN93 genetic distances.",
+    "class": "The Blade",
+    "description": "High-speed C++ implementation for calculating Tamura-Nei 93 genetic distances.",
+    "stats": {
+      "velocity": 100,
+      "sharpness": 95,
+      "weight": "0.1 MB",
+      "language": "C++",
+      "usage": "Core Utility"
+    },
+    "powers": [
+      { "name": "INSTANT_METRIC", "desc": "Calculates pairwise distances between thousands of sequences in the blink of an eye." },
+      { "name": "STREAMING_COMPUTE", "desc": "Designed to handle massive data streams with minimal memory overhead." }
+    ],
     "links": {
       "github": "https://github.com/veg/tn93"
     }
