@@ -1,23 +1,12 @@
 [
   {
-    "id": "HyPhy2020",
-    "year": 2020,
-    "authors": "Pond, Sergei LK and Wisotsky, Sadie R and Escalante, Ananias and Magalis, Brittany Rife and Weaver, Steven",
-    "title": "HyPhy 2.5 - a customizable platform for evolutionary hypothesis testing using phylogenies",
-    "journal": "Molecular Biology and Evolution",
-    "doi": "10.1093/molbev/msz197",
-    "category": "METHODS",
-    "isLegendary": true,
-    "stats": "Citations: ~2,500"
-  },
-  {
     "id": "Selberg:2026aa",
     "year": 2026,
     "authors": "Selberg, Avery G and Clark, Nathan and Nekrutenko, Anton and Chikina, Maria and Kosakovsky Pond, Sergei L",
     "title": "MoleRate: comparing molecular relative evolutionary rates to detect convergent evolution",
     "journal": "Evolution",
     "doi": "10.1093/evolut/qpaf240",
-    "category": "ADAPTATION",
+    "category": "METHODS",
     "isRecent": true
   },
   {
@@ -29,6 +18,54 @@
     "doi": "10.1016/j.cell.2026.02.006",
     "category": "SURVEILLANCE",
     "isRecent": true
+  },
+  {
+    "id": "Melendez-Vazquez:2025aa",
+    "year": 2025,
+    "authors": "Melendez-Vazquez, Fernando and Lucaci, Alexander G and Selberg, Avery and Clavel, Julien and Rincon-Sandoval, Melissa and Santaquiteria, Aintzane and White, William T and Drabeck, Danielle and Carnevale, Giorgio and Duarte-Ribeiro, Emanuell and Miya, Masaki and Westneat, Mark W and Baldwin, Carole C and Hughes, Lily C and Ortí, Guillermo and Kosakovsky Pond, Sergei L and Betancur-R, Ricardo and Arcila, Dahiana",
+    "title": "Ecological interactions and genomic innovation fueled the evolution of ray-finned fish endothermy",
+    "journal": "Sci Adv",
+    "doi": "10.1126/sciadv.ads8488",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Selberg:2025aa",
+    "year": 2025,
+    "authors": "Selberg, Avery and Clark, Nathan L and Sackton, Timothy B and Muse, Spencer V and Lucaci, Alexander G and Weaver, Steven and Nekrutenko, Anton and Chikina, Maria and Pond, Sergei L Kosakovsky",
+    "title": "Minus the Error: Testing for Positive Selection in the Presence of Residual Alignment Errors",
+    "journal": "bioRxiv",
+    "doi": "10.1101/2024.11.13.620707",
+    "category": "METHODS"
+  },
+  {
+    "id": "Makova:2024aa",
+    "year": 2024,
+    "authors": "Makova, Kateryna D and Pickett, Brandon D and Harris, Robert S and Hartley, Gabrielle A and Cechova, Monika and Pal, Karol and Nurk, Sergey and Yoo, DongAhn and Li, Qiuhui and Hebbar, Prajna and McGrath, Barbara C and Antonacci, Francesca and Aubel, Margaux and Biddanda, Arjun and Borchers, Matthew and Bornberg-Bauer, Erich and Bouffard, Gerard G and Brooks, Shelise Y and Carbone, Lucia and Carrel, Laura and Carroll, Andrew and Chang, Pi-Chuan and Chin, Chen-Shan and Cook, Daniel E and Craig, Sarah J C and de Gennaro, Luciana and Diekhans, Mark and Dutra, Amalia and Garcia, Gage H and Grady, Patrick G S and Green, Richard E and Haddad, Diana and Hallast, Pille and Harvey, William T and Hickey, Glenn and Hillis, David A and Hoyt, Savannah J and Jeong, Hyeonsoo and Kamali, Kaivan and Pond, Sergei L Kosakovsky and LaPolice, Troy M and Lee, Charles and Lewis, Alexandra P and Loh, Yong-Hwee E and Masterson, Patrick and McGarvey, Kelly M and McCoy, Rajiv C and Medvedev, Paul and Miga, Karen H and Munson, Katherine M and Pak, Evgenia and Paten, Benedict and Pinto, Brendan J and Potapova, Tamara and Rhie, Arang and Rocha, Joana L and Ryabov, Fedor and Ryder, Oliver A and Sacco, Samuel and Shafin, Kishwar and Shepelev, Valery A and Slon, Viviane and Solar, Steven J and Storer, Jessica M and Sudmant, Peter H and Sweetalana and Sweeten, Alex and Tassia, Michael G and Thibaud-Nissen, Françoise and Ventura, Mario and Wilson, Melissa A and Young, Alice C and Zeng, Huiqing and Zhang, Xinru and Szpiech, Zachary A and Huber, Christian D and Gerton, Jennifer L and Yi, Soojin V and Schatz, Michael C and Alexandrov, Ivan A and Koren, Sergey and O'Neill, Rachel J and Eichler, Evan E and Phillippy, Adam M",
+    "title": "The complete sequence and comparative analysis of ape sex chromosomes",
+    "journal": "Nature",
+    "doi": "10.1038/s41586-024-07473-2",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Verdonk:2025aa",
+    "year": 2025,
+    "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
+    "title": "A New Comparative Framework for Estimating Selection on Synonymous Substitutions",
+    "journal": "Mol Biol Evol",
+    "doi": "10.1093/molbev/msaf068",
+    "category": "METHODS",
+    "isRecent": true
+  },
+  {
+    "id": "HyPhy2020",
+    "year": 2020,
+    "authors": "Pond, Sergei LK and Wisotsky, Sadie R and Escalante, Ananias and Magalis, Brittany Rife and Weaver, Steven",
+    "title": "HyPhy 2.5 - a customizable platform for evolutionary hypothesis testing using phylogenies",
+    "journal": "Molecular Biology and Evolution",
+    "doi": "10.1093/molbev/msz197",
+    "category": "METHODS",
+    "isLegendary": true,
+    "stats": "2,500+ Citations"
   },
   {
     "id": "HIVTRACE2018",
@@ -51,14 +88,41 @@
     "isLegendary": true
   },
   {
+    "id": "France:2025aa",
+    "year": 2025,
+    "authors": "France, Anne Marie and Hallmark, Camden J and Panneer, Nivedha and Billock, Rachael and Russell, Olivia O and Plaster, Mary and Alberti, Jessica and Nuthan, Fathima and Saduvala, Neeraja and Philpott, David and Ocfemia, M Cheryl Bañez and Cope, Scott and Hernandez, Angela L and Pond, Sergei L Kosakovsky and Wertheim, Joel O and Weaver, Steven and Khader, Saja and Johnson, Kevin and Oster, Alexandra M",
+    "title": "Nationwide Implementation of HIV Molecular Cluster Detection by Centers for Disease Control and Prevention and State and Local Health Departments, United States",
+    "journal": "Emerg Infect Dis",
+    "doi": "10.3201/eid3113.241143",
+    "category": "SURVEILLANCE"
+  },
+  {
     "id": "Council:2025aa",
     "year": 2025,
-    "authors": "Council, Olivia D and Tyers, Lynn and Moeser, Matthew and Sondgeroth, Amy and et al.",
+    "authors": "Council, Olivia D and Tyers, Lynn and Moeser, Matthew and Sondgeroth, Amy and Spielvogel, Ean and Richardson, Brian D and Doolabh, Deelan and Zhou, Shuntai and Emery, Ann and Archin, Nancie M and Shook-Sa, Bonnie and Margolis, David M and Abdool Karim, Salim S and Kosakovsky Pond, Sergei and Garrett, Nigel and Abrahams, Melissa-Rose and Joseph, Sarah B and Williamson, Carolyn and Swanstrom, Ronald",
     "title": "The persistent pool of HIV-1-infected cells is formed episodically during untreated infection",
-    "journal": "Journal of Virology",
+    "journal": "J Virol",
     "doi": "10.1128/jvi.00979-24",
     "category": "VIRAL_DYNAMICS",
     "isRecent": true
+  },
+  {
+    "id": "Lucaci:2024aa",
+    "year": 2024,
+    "authors": "Lucaci, Alexander G and Brew, William E and Lamanna, Jason and Selberg, Avery and Carnevale, Vincenzo and Moore, Anna R and Kosakovsky Pond, Sergei L",
+    "title": "The evolution of mammalian Rem2: unraveling the impact of purifying selection and coevolution on protein function, and implications for human disorders",
+    "journal": "Front Bioinform",
+    "doi": "10.3389/fbinf.2024.1381540",
+    "category": "ADAPTATION"
+  },
+  {
+    "id": "Weaver:2024aa",
+    "year": 2024,
+    "authors": "Weaver, Steven and Davila Conn, Vanessa M and Ji, Daniel and Verdonk, Hannah and Ávila-Rios, Santiago and Leigh Brown, Andrew J and Wertheim, Joel O and Kosakovsky Pond, Sergei L",
+    "title": "AUTO-TUNE: selecting the distance threshold for inferring HIV transmission clusters",
+    "journal": "Front Bioinform",
+    "doi": "10.3389/fbinf.2024.1400003",
+    "category": "METHODS"
   },
   {
     "id": "MEME2012",
@@ -72,21 +136,11 @@
     "stats": "Highly Cited"
   },
   {
-    "id": "Verdonk:2025aa",
-    "year": 2025,
-    "authors": "Verdonk, Hannah and Pivirotto, Alyssa and Pavinato, Vitor and Hey, Jody and Pond, Sergei L K",
-    "title": "A New Comparative Framework for Estimating Selection on Synonymous Substitutions",
-    "journal": "Mol Biol Evol",
-    "doi": "10.1093/molbev/msaf068",
-    "category": "METHODS",
-    "isRecent": true
-  },
-  {
     "id": "GalaxyCOVID2021",
     "year": 2021,
-    "authors": "Maier, Wolfgang and Bray, Simon and van den Beek, Marius and et al.",
+    "authors": "Maier, Wolfgang and Bray, Simon and van den Beek, Marius and Bouvier, Dave and Coraor, Nathan and Miladi, Milad and Singh, Babita and De Argila, Jordi Rambla and Baker, Dannon and Roach, Nathan and Gladman, Simon and Coppens, Frederik and Martin, Darren P and Lonie, Andrew and Grüning, Björn and Pond, Sergei L Kosakovsky and Nekrutenko, Anton",
     "title": "Ready-to-use public infrastructure for global SARS-CoV-2 monitoring",
-    "journal": "Nature Biotechnology",
+    "journal": "Nat Biotechnol",
     "doi": "10.1038/s41587-021-01069-1",
     "category": "SURVEILLANCE",
     "isLegendary": true
