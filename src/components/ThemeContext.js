@@ -27,7 +27,7 @@ export function ThemeProvider({ children }) {
     root.setAttribute('data-theme', state.theme);
     localStorage.setItem('labsite-theme', state.theme);
 
-    document.body.classList.remove('theme-profdr', 'theme-geocities', 'theme-y2k', 'theme-80s', 'theme-90s', 'theme-2000s', 'theme-2010s', 'theme-2020s', 'crt');
+    document.body.classList.remove('theme-profdr', 'theme-geocities', 'theme-y2k', 'theme-80s', 'theme-90s', 'theme-2000s', 'theme-2010s', 'theme-2020s', 'theme-enterprise', 'theme-vax', 'crt');
     document.body.classList.add(`theme-${state.theme}`);
     
     if (state.theme === '80s' && state.hasSelectedTheme) {

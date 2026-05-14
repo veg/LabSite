@@ -6,51 +6,63 @@ export default function EraSelectionSplash() {
 
   const eras = [
     {
-      id: 'profdr',
-      label: '1993 Prof. Dr.',
-      desc: 'The Hadean dawn of the WWW. Browser defaults — serif text, blue underlined links, the user defines the look.',
-      previewClass: 'profdr-preview'
-    },
-    {
-      id: 'geocities',
-      label: '1996 Geocities',
-      desc: 'The Cambrian-pre-explosion of amateur web life. Comic Sans, rainbow text, blinking marquees, under-construction GIFs.',
-      previewClass: 'geo-preview flex flex-col items-center justify-center'
+      id: 'vax',
+      label: '1978 VAX/VMS',
+      desc: 'The Pre-Cambrian mainframe. Monochrome green phosphor, ASCII art, and the raw power of VAX-11/780 terminal systems.',
+      previewClass: 'bg-black border border-[#33ff33] text-[#33ff33] font-mono text-[8px] flex flex-col items-center justify-center p-4'
     },
     {
       id: '80s',
       label: '1985 Terminal',
-      desc: 'The Archean Era of computing. Muted 8-bit terminal for early molecular modeling.',
+      desc: 'The Archean Era of computing. Muted 8-bit terminal with the classic Oregon Trail "Dead Oxen" aesthetic.',
       previewClass: 'bg-black border-2 border-retro-green text-retro-green font-heading text-[8px] flex items-center justify-center p-4 text-center'
+    },
+    {
+      id: 'profdr',
+      label: '1994 Yahoo',
+      desc: 'The Dawn of Web Directories. Hierarchical links, red serif logos, and the simple search bar that categorized the new world.',
+      previewClass: 'profdr-preview flex flex-col items-center justify-center p-4'
+    },
+    {
+      id: 'geocities',
+      label: '1996 Geocities',
+      desc: 'Amateur Web Maximalism. The pre-explosion of personal homepages: Comic Sans, rainbows, and blinking marquees.',
+      previewClass: 'geo-preview flex flex-col items-center justify-center'
     },
     { 
       id: '90s', 
       label: '1998 Tactical', 
-      desc: 'The Cambrian Explosion of data. High-tech bio-surveillance HUD for pathogen tracking.',
+      desc: 'The Information Age. High-tech bio-surveillance HUD inspired by stealth/military interfaces for pathogen tracking.',
       previewClass: 'bg-[#0a0f0a] border-2 border-[#2d4c2d] text-[#00ff41] font-mono text-[10px] flex flex-col items-center justify-center p-4'
     },
     {
       id: 'y2k',
       label: '2003 Web 2.0',
-      desc: 'The Silurian gel-button bloom. Sky-blue gradients, glossy buttons, rounded boxes, BETA badges, Verdana.',
+      desc: 'The Glossy Gel Era. Sky-blue gradients, rounded boxes, and the optimistic "BETA" badge bloom of early social platforms.',
       previewClass: 'y2k-preview flex flex-col items-center justify-center'
     },
     {
       id: '2000s',
       label: '2007 Omni-tool',
-      desc: 'The Genomic Mesozoic. Holographic interfaces for deep phylogenomic exploration.',
+      desc: 'The Genomic Mesozoic. Holographic futuristic HUD interfaces for deep phylogenomic exploration across the stars.',
       previewClass: 'bg-[#050a0f] border-2 border-[#ff9d00]/30 text-[#ff9d00] font-mono text-[10px] flex items-center justify-center p-4 italic font-black shadow-[0_0_15px_rgba(255,157,0,0.2)]'
     },
     { 
       id: '2010s', 
       label: '2012 Vault Hunter', 
-      desc: 'The Cenozoic of Cloud Computing. Cel-shaded action UI for high-throughput research.',
+      desc: 'The Cenozoic of High-Throughput. Bold, high-contrast gaming UI with cel-shaded elements for fast-paced research.',
       previewClass: 'bg-[#ffcc00] border-4 border-black text-black font-black uppercase text-[10px] flex items-center justify-center p-4 skew-x-[-5deg]'
+    },
+    { 
+      id: 'enterprise', 
+      label: '2018 Enterprise', 
+      desc: 'The Era of Standardization. Clean, corporate "solutions" oriented layout using standard Bootstrap-inspired components.',
+      previewClass: 'bg-white border border-[#dee2e6] text-[#212529] font-sans text-xs flex flex-col items-start p-4 rounded shadow-sm'
     },
     { 
       id: '2020s', 
       label: '2024 AI Assistant', 
-      desc: 'The Anthropocene of Artificial Intelligence. Modern conversational research environments.',
+      desc: 'The Conversational Anthropocene. Modern, dark-mode chatbot environment for natural-language driven research.',
       previewClass: 'bg-[#0f111a] border border-white/10 text-white font-sans text-xs flex items-center justify-start p-4 rounded-xl shadow-xl'
     }
   ];
@@ -86,11 +98,11 @@ export default function EraSelectionSplash() {
           >
             <div className={`h-44 w-full transition-all group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] relative ${era.previewClass}`}>
                {era.id === 'profdr' && (
-                 <div>
-                   <h3 style={{fontSize: '13px', fontWeight: 'bold', margin: '0 0 4px'}}>Welcome to my homepage!</h3>
-                   <hr style={{border: 0, borderTop: '1px solid #808080', margin: '4px 0'}} />
-                   <p style={{margin: '2px 0'}}>Click <a>here</a> for papers.</p>
-                   <p style={{margin: '2px 0'}}>Last updated: 14 Mar 1995</p>
+                 <div className="flex flex-col items-center">
+                   <div className="text-xl font-black mb-1" style={{color: '#ff0000', fontFamily: 'serif'}}>Yahoo<span style={{color: '#800080'}}>!</span></div>
+                   <div className="border border-gray-400 w-full h-4 bg-white mb-1"></div>
+                   <div className="text-[8px] underline text-blue-700">Software (12)</div>
+                   <div className="text-[8px] underline text-blue-700">Research (42)</div>
                  </div>
                )}
                {era.id === 'geocities' && (
@@ -109,6 +121,16 @@ export default function EraSelectionSplash() {
                  </div>
                )}
                {era.id === '80s' && "> SYSTEM_READY"}
+               {era.id === 'vax' && (
+                 <div className="flex flex-col items-center">
+                   <div className="text-[6px] mb-1">VAX/VMS V1.0</div>
+                   <div className="text-[5px] leading-tight">
+                     +-------+<br/>
+                     | LOGIN |<br/>
+                     +-------+
+                   </div>
+                 </div>
+               )}
                {era.id === '90s' && (
                  <>
                    <span className="animate-pulse">● SOLITON_RADAR</span>
@@ -117,6 +139,14 @@ export default function EraSelectionSplash() {
                )}
                {era.id === '2000s' && "CODEX_ENTRY_LOCKED"}
                {era.id === '2010s' && "NEW QUEST!"}
+               {era.id === 'enterprise' && (
+                 <div className="flex flex-col gap-2 w-full">
+                   <div className="h-2 w-1/2 bg-blue-600 rounded"></div>
+                   <div className="h-2 w-full bg-gray-200 rounded"></div>
+                   <div className="h-2 w-full bg-gray-200 rounded"></div>
+                   <div className="h-5 w-1/3 bg-blue-600 rounded mt-1"></div>
+                 </div>
+               )}
                {era.id === '2020s' && (
                  <div className="flex items-center gap-2">
                    <div className="w-4 h-4 rounded bg-gradient-to-br from-blue-400 to-purple-500"></div>

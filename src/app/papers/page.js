@@ -48,15 +48,18 @@ export default function PapersPage() {
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-blue' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${
-              theme === '80s' ? 'text-retro-blue' : 
-              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
-              'text-me-orange italic font-black'
+            <h2 className={`text-2xl flex-shrink-0 ${
+              theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === '80s' ? 'text-retro-blue font-heading' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
+              'text-me-orange italic font-black font-heading'
             }`}>DASHBOARD_STATS</h2>
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-blue' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
@@ -68,14 +71,17 @@ export default function PapersPage() {
               <div className="space-y-4">
                 {categoryCounts.map(cat => (
                   <div key={cat.name} className={`flex justify-between items-center border-b pb-2 ${
+                    theme === 'enterprise' ? 'border-gray-100' :
                     theme === '80s' ? 'border-retro-bg' : 
                     theme === '90s' ? 'border-mgs-border' : 'border-me-orange/10'
                   }`}>
                     <span className={`${
-                      theme === '80s' ? 'text-retro-amber' : 
-                      theme === '90s' ? 'text-mgs-blue' : 'text-me-blue font-bold italic'
-                    } text-sm font-heading`}>[{cat.name}]</span>
+                      theme === 'enterprise' ? 'text-[#007bff] font-bold text-xs' :
+                      theme === '80s' ? 'text-retro-amber font-heading text-sm' : 
+                      theme === '90s' ? 'text-mgs-blue font-heading text-sm' : 'text-me-blue font-bold italic font-heading text-sm'
+                    }`}>[{cat.name}]</span>
                     <span className={`text-2xl ${
+                      theme === 'enterprise' ? 'text-[#212529] font-bold' :
                       theme === '80s' ? 'text-retro-fg' : 
                       theme === '90s' ? 'text-mgs-green' : 'text-me-orange'
                     }`}>{cat.count}</span>
@@ -87,15 +93,17 @@ export default function PapersPage() {
             {/* Group Contribution Level */}
             <Card title="STRIKE_FORCE_ACTIVITY">
               <div className="space-y-3">
-                <p className={`text-xs font-heading mb-4 ${
-                  theme === '80s' ? 'text-retro-green' : 
-                  theme === '90s' ? 'text-mgs-green' : 'text-me-blue opacity-70 italic font-bold'
+                <p className={`text-xs mb-4 ${
+                  theme === 'enterprise' ? 'text-[#6c757d] font-bold' :
+                  theme === '80s' ? 'text-retro-green font-heading' : 
+                  theme === '90s' ? 'text-mgs-green font-heading' : 'text-me-blue opacity-70 italic font-bold font-heading'
                 }`}>[ACTIVE_CONTRIBUTORS]</p>
                 <div className="max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-retro-blue">
                   {memberContributions.map(m => (
                     <div key={m.name} className="flex justify-between text-lg mb-1">
-                      <span className="opacity-80 font-mono">{m.name.split(' ').pop().toUpperCase()}</span>
+                      <span className={`opacity-80 ${theme === 'enterprise' ? 'text-sm font-medium' : 'font-mono'}`}>{m.name.split(' ').pop().toUpperCase()}</span>
                       <span className={
+                        theme === 'enterprise' ? 'text-[#007bff] text-sm font-bold' :
                         theme === '80s' ? 'text-retro-blue' : 
                         theme === '90s' ? 'text-mgs-blue' : 'text-me-orange font-bold'
                       }>{m.count} logs</span>
@@ -108,19 +116,22 @@ export default function PapersPage() {
             {/* Collaborative Network */}
             <Card title="ALLIANCE_NETWORK">
               <div className="flex flex-col items-center justify-center h-full py-4 text-center">
-                <div className={`text-5xl mb-4 animate-pulse ${
-                  theme === '80s' ? 'text-retro-purple' : 
-                  theme === '90s' ? 'text-mgs-blue' : 'text-me-orange drop-shadow-me'
+                <div className={`text-5xl mb-4 ${
+                  theme === 'enterprise' ? 'text-[#007bff] font-black' :
+                  theme === '80s' ? 'text-retro-purple animate-pulse' : 
+                  theme === '90s' ? 'text-mgs-blue animate-pulse' : 'text-me-orange drop-shadow-me animate-pulse'
                 }`}>
                   {uniqueAuthors.size}+
                 </div>
-                <p className={`text-xs font-heading mb-4 ${
-                  theme === '80s' ? 'text-retro-fg' : 
-                  theme === '90s' ? 'text-mgs-green' : 'text-me-blue font-black italic'
+                <p className={`text-xs mb-4 ${
+                  theme === 'enterprise' ? 'text-[#6c757d] font-bold uppercase tracking-widest' :
+                  theme === '80s' ? 'text-retro-fg font-heading' : 
+                  theme === '90s' ? 'text-mgs-green font-heading' : 'text-me-blue font-black italic font-heading'
                 }`}>UNIQUE_CO-AUTHORS</p>
-                <p className={`text-sm opacity-60 leading-tight ${
+                <p className={`text-sm leading-tight ${
+                  theme === 'enterprise' ? 'text-[#6c757d]' :
                   theme === '90s' ? 'text-mgs-green/60' : 
-                  theme === '2000s' ? 'text-me-orange/70 italic' : ''
+                  theme === '2000s' ? 'text-me-orange/70 italic' : 'opacity-60'
                 }`}>
                   Our collaborative network spans global institutions, merging expertise across biology, 
                   math, and computer science.
@@ -134,15 +145,18 @@ export default function PapersPage() {
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-amber' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${
-              theme === '80s' ? 'text-retro-amber' : 
-              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
-              'text-me-orange font-black italic'
+            <h2 className={`text-2xl flex-shrink-0 ${
+              theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === '80s' ? 'text-retro-amber font-heading' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
+              'text-me-orange font-black italic font-heading'
             }`}>HALL_OF_FAME</h2>
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-amber' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
@@ -158,15 +172,18 @@ export default function PapersPage() {
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-green' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
-            <h2 className={`text-2xl font-heading flex-shrink-0 ${
-              theme === '80s' ? 'text-retro-green' : 
-              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter' :
-              'text-me-orange font-black italic'
+            <h2 className={`text-2xl flex-shrink-0 ${
+              theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === '80s' ? 'text-retro-green font-heading' : 
+              theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
+              'text-me-orange font-black italic font-heading'
             }`}>LATEST_QUESTS</h2>
             <div className={`h-1 flex-grow opacity-30 ${
+              theme === 'enterprise' ? 'bg-[#dee2e6]' :
               theme === '80s' ? 'bg-retro-green' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
@@ -179,7 +196,9 @@ export default function PapersPage() {
         </section>
 
         <div className="max-w-4xl mx-auto text-center pt-12">
-          <p className="font-body text-2xl mb-8 opacity-80">
+          <p className={`mb-8 opacity-80 ${
+            theme === 'enterprise' ? 'text-lg text-[#6c757d]' : 'font-body text-2xl'
+          }`}>
             Our full bibliography spans decades of research in molecular evolution and bioinformatics.
           </p>
           <a 
@@ -187,11 +206,15 @@ export default function PapersPage() {
             target="_blank" 
             rel="noopener noreferrer"
             className={
+              theme === 'enterprise' ? 'btn-primary enterprise-button px-10' :
+              theme === '2020s' ? 'bg-ai-accent text-white px-8 py-3 rounded-full font-bold shadow-lg inline-block transition-transform hover:scale-105' :
+              theme === 'vax' ? 'vax-button text-sm' :
               theme === '80s' ? 'pixel-button' : 
               theme === '90s' ? 'mgs-button' : 'me-button'
             }
           >
-            ACCESS_FULL_MASTER_LOG
+            {theme === 'enterprise' ? 'Access Complete Bibliography' : 
+             theme === 'vax' ? 'DIR BIBLIOGRAPHY.LOG' : 'ACCESS_FULL_MASTER_LOG'}
           </a>
         </div>
     </PageContainer>
@@ -202,6 +225,114 @@ function PaperCard({ paper, theme, isLegendarySection }) {
   const isLegendary = paper.isLegendary;
   const separator = " // ";
   
+  if (theme === 'vax') {
+    return (
+      <div className="vax-panel flex flex-col mb-4 p-4 border-[#33ff33] bg-black">
+        <div className="flex justify-between items-center mb-2 text-[10px] border-b border-[#33ff33]/30 pb-1">
+          <span className="font-bold">{paper.year} // {paper.category}</span>
+          {isLegendary && <span className="underline font-black italic">LEGENDARY_STATUS</span>}
+        </div>
+        <h4 className="text-xl font-bold mb-2 leading-tight">
+          <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="hover:bg-[#33ff33] hover:text-black">
+            {paper.title}
+          </a>
+        </h4>
+        <p className="text-sm opacity-80 mb-4">{paper.authors}</p>
+        <div className="mt-auto flex justify-between items-center pt-2 border-t border-[#33ff33]/30 text-[10px]">
+          <span className="italic">{paper.journal}</span>
+          <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="vax-button px-2 py-0 text-[9px]">UPLINK DOI</a>
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'enterprise') {
+    return (
+      <div className="enterprise-card p-6 flex flex-col h-full bg-white border border-[#dee2e6] rounded shadow-sm">
+        <div className="flex justify-between items-start mb-2">
+          <span className="text-[10px] font-bold text-[#007bff] uppercase tracking-wider">{paper.year} // {paper.category}</span>
+          {isLegendary && <span className="text-[10px] bg-[#28a745] text-white px-2 py-0.5 rounded uppercase font-bold">Highly Cited</span>}
+        </div>
+        <h4 className="text-xl font-bold mb-2 text-[#212529] leading-tight">
+          <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#0056b3] transition-colors">
+            {paper.title}
+          </a>
+        </h4>
+        <p className="text-sm text-[#6c757d] mb-4 flex-grow">{paper.authors}</p>
+        <div className="flex justify-between items-center pt-4 border-t border-[#dee2e6] mt-auto">
+          <span className="text-xs font-medium text-[#495057]">{paper.journal}</span>
+          <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="btn-primary enterprise-button text-xs py-1 px-3">View Full Text</a>
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'y2k') {
+    return (
+      <div className="y2k-panel mb-4">
+        <div className="y2k-panel-header flex justify-between">
+           <span>{paper.year} // {paper.category.toLowerCase()}</span>
+           {isLegendary && <span className="y2k-beta text-[9px]">LEGENDARY</span>}
+        </div>
+        <div className="y2k-panel-body flex flex-col h-full">
+           <h4 className="text-lg font-bold text-[#0066cc] mb-2 leading-tight">{paper.title}</h4>
+           <p className="text-sm text-[#333] mb-4 flex-grow">{paper.authors}</p>
+           <div className="flex justify-between items-center pt-2 border-t border-[#e6f3ff]">
+              <span className="text-[10px] font-bold text-[#ff6600] uppercase italic">{paper.journal}</span>
+              <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="y2k-gel text-[10px] py-1 px-3">View PDF</a>
+           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'geocities') {
+    return (
+      <div className="geo-panel mb-4 p-4 text-center">
+        <div className="text-[10px] mb-2">
+          <span className="geo-rainbow">*** {paper.year} ***</span>
+          <span className="text-[#00ff00]"> [{paper.category}] </span>
+          {isLegendary && <span className="geo-blink text-[#ff0000]"> !! LEGENDARY !! </span>}
+        </div>
+        <h4 className="text-xl font-bold mb-2">
+           <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="text-[#00ffff] hover:text-[#ff00ff]">
+             {paper.title}
+           </a>
+        </h4>
+        <p className="text-sm italic text-[#ffff00] mb-3">{paper.authors}</p>
+        <div className="border-t-2 border-dotted border-[#ff00ff] pt-2 mt-2">
+           <p className="text-xs mb-2">Published in: <span className="text-[#00ff00] font-bold">{paper.journal}</span></p>
+           <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="pixel-button bg-[#ff00ff] text-white text-[10px]">VISIT_DOI</a>
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'profdr') {
+    return (
+      <table className="yahoo-table mb-4" cellSpacing="2">
+        <tbody>
+          <tr>
+            <td className="yahoo-td">
+              <div className="flex justify-between items-start mb-1 text-[10px]">
+                <span className="font-bold text-gray-600">[{paper.category}] {paper.year}</span>
+                {isLegendary && <span className="font-bold text-red-600 uppercase">Legendary Paper</span>}
+              </div>
+              <h4 className="text-lg font-bold mb-1">
+                <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">{paper.title}</a>
+              </h4>
+              <p className="text-xs italic mb-2">{paper.authors}</p>
+              <div className="flex justify-between items-center text-[10px] pt-1 border-t border-gray-100">
+                <span className="font-bold text-blue-800">{paper.journal}</span>
+                <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" className="yahoo-button">DOI Link</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  }
+
   if (theme === '2020s') {
     return (
       <div className="bg-ai-bubble-ai border border-white/5 p-6 rounded-2xl mb-4 shadow-lg flex flex-col h-full text-slate-200">

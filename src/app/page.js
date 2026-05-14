@@ -23,13 +23,63 @@ export default function Home() {
       theme === '80s' ? 'theme-80s crt' :
       theme === '2000s' ? 'bg-me-bg' : 
       theme === '2010s' ? 'bg-hero-bg' :
-      theme === '2020s' ? 'bg-ai-bg' : ''
+      theme === '2020s' ? 'bg-ai-bg' :
+      theme === 'vax' ? 'bg-black text-[#33ff33]' : ''
     }`}>
       <Navbar />
       
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
-        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k') ? 'mb-8' : 'mb-16 text-center'}>
-          {theme === 'y2k' ? (
+        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k' || theme === 'vax') ? 'mb-8' : 'mb-16 text-center'}>
+          {theme === 'vax' ? (
+            <div className="max-w-5xl mx-auto font-mono">
+              <div className="mb-12 border border-[#33ff33] p-8 relative">
+                 <div className="absolute top-[-10px] left-4 bg-black px-2 text-xs">VAX/VMS V1.0 - AUTHORIZED ACCESS ONLY</div>
+                 <div className="text-xl mb-4 leading-tight">
+                    <p>WELCOME TO VAX/VMS VERSION V1.0</p>
+                    <p>LAST INTERACTIVE LOGIN ON THURSDAY, 14-MAY-1978 10:24:42.12</p>
+                 </div>
+                 <div className="text-3xl font-bold mb-6 tracking-tighter">
+                    $ RUN ACME_LAB.EXE
+                 </div>
+                 <div className="text-sm opacity-80 space-y-2">
+                    <p>[ LOADING SYMBOL TABLE... ]</p>
+                    <p>[ INITIALIZING PHYLOGENY_ENGINE... ]</p>
+                    <p>[ READY. ]</p>
+                 </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                 <Card title="MISSION_STATEMENT">
+                    <p className="mb-4">
+                       THE ACME LABORATORY DEVELOPS HIGH-PERFORMANCE COMPUTATIONAL TOOLS FOR THE 
+                       COMPARATIVE ANALYSIS OF SEQUENCE DATA. OUR METHODS ARE UNIVERSALLY 
+                       APPLICABLE ACROSS ALL DOMAINS OF LIFE.
+                    </p>
+                    <div className="text-xs opacity-60 border-t border-[#33ff33]/30 pt-4">
+                       PRIORITY: MEASURABLY EVOLVING PATHOGENS<br/>
+                       STATUS: ACTIVE_RESEARCH
+                    </div>
+                 </Card>
+
+                 <Card title="SYSTEM_CAPABILITIES">
+                    <ul className="space-y-1">
+                       <li>- MOLECULAR EPIDEMIOLOGY</li>
+                       <li>- VIRAL DYNAMICS</li>
+                       <li>- PHYLOGENETIC METHODS</li>
+                       <li>- HIGH-PERFORMANCE COMPUTING</li>
+                       <li>- DATA VISUALIZATION</li>
+                    </ul>
+                 </Card>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                 <Link href="/projects" className="vax-button text-center">DIR PROJECTS.DIR</Link>
+                 <Link href="/members" className="vax-button text-center">DIR MEMBERS.DIR</Link>
+                 <Link href="/papers" className="vax-button text-center">DIR PAPERS.DIR</Link>
+                 <Link href="/former" className="vax-button text-center">DIR ALUMNI.DIR</Link>
+              </div>
+            </div>
+          ) : theme === 'y2k' ? (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-8">
                 <div className="y2k-logo" style={{fontSize: '4em'}}>
@@ -142,35 +192,137 @@ export default function Home() {
               <p style={{color: '#00ff00'}}><i>Best viewed in Netscape Navigator 3.0 @ 800x600</i></p>
             </div>
           ) : theme === 'profdr' ? (
-            <div>
-              <h1>ACME Laboratory for Computational Molecular Evolution</h1>
-              <hr />
-              <p>
-                <b>Welcome to the homepage of the ACME Laboratory.</b>
-                We develop and apply high-performance computational tools for the comparative analysis of sequence data.
-                Our methods are universally applicable across all domains of life.
-                While measurably evolving pathogens are our primary focus and &quot;top customers,&quot;
-                our framework is used to interrogate evolutionary questions anywhere on the tree of life.
-              </p>
-              <h2>Contents</h2>
-              <ul>
-                <li><Link href="/projects">Projects and Software</Link> &mdash; HyPhy, Datamonkey, HIV-TRACE</li>
-                <li><Link href="/members">Lab Members</Link></li>
-                <li><Link href="/former">Former Members</Link></li>
-                <li><Link href="/papers">Publications</Link></li>
-              </ul>
-              <h2>Core Competencies</h2>
-              <ul>
-                <li>Molecular epidemiology</li>
-                <li>Viral dynamics</li>
-                <li>Phylogenetic methods</li>
-                <li>High-performance computing</li>
-                <li>Data visualization</li>
-              </ul>
-              <p>
-                <i>This page is best viewed with any browser.</i>
-                <span className="profdr-blink"> [NEW!]</span>
-              </p>
+            <div className="max-w-4xl mx-auto font-serif text-left">
+              <div className="flex flex-col items-center mb-6">
+                <div className="text-6xl font-black tracking-tighter mb-2" style={{color: '#ff0000', fontFamily: 'serif'}}>
+                  Yahoo<span style={{color: '#800080'}}>!</span>
+                </div>
+                <div className="w-full max-w-xl border-2 border-gray-400 p-1 flex bg-white">
+                  <input type="text" className="flex-grow px-2 py-1 outline-none text-black font-serif" defaultValue="computational molecular evolution" />
+                  <button className="bg-gray-200 px-4 py-1 border-l border-gray-400 font-bold hover:bg-gray-300">Search</button>
+                </div>
+                <div className="mt-2 text-sm">
+                  [ <a href="#" className="text-blue-700 underline">Options</a> | <a href="#" className="text-blue-700 underline">Add URL</a> | <a href="#" className="text-blue-700 underline">What's New</a> | <a href="#" className="text-blue-700 underline">What's Cool</a> ]
+                </div>
+              </div>
+
+              <hr className="my-4 border-gray-300" />
+
+              <table className="yahoo-table mt-8" cellSpacing="4">
+                <tbody>
+                  <tr>
+                    <td className="yahoo-td w-1/2">
+                      <h2 className="text-xl font-bold mb-1">
+                        <Link href="/projects" className="text-blue-700 underline">Software and Projects</Link>
+                      </h2>
+                      <p className="text-xs text-gray-600 mb-2 italic">HyPhy, Datamonkey, HIV-TRACE, and more tools for the arsenal.</p>
+                      <ul className="list-disc space-y-1 ml-8 text-sm">
+                        <li><Link href="/projects" className="underline">HyPhy</Link></li>
+                        <li><Link href="/projects" className="underline">Datamonkey</Link></li>
+                        <li><Link href="/projects" className="underline">HIV-TRACE</Link></li>
+                      </ul>
+                    </td>
+                    <td className="yahoo-td w-1/2">
+                      <h2 className="text-xl font-bold mb-1">
+                        <Link href="/members" className="text-blue-700 underline">People</Link>
+                      </h2>
+                      <p className="text-xs text-gray-600 mb-2 italic">Meet the team, alumni, and our network of collaborators.</p>
+                      <ul className="list-disc space-y-1 ml-8 text-sm">
+                        <li><Link href="/members" className="underline">Current Lab Members</Link></li>
+                        <li><Link href="/former" className="underline">Former Members</Link></li>
+                        <li><a href="#" className="underline">Collaborators</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="yahoo-td w-1/2">
+                      <h2 className="text-xl font-bold mb-1">
+                        <Link href="/papers" className="text-blue-700 underline">Research</Link>
+                      </h2>
+                      <p className="text-xs text-gray-600 mb-2 italic">Publications, preprints, and research focuses of the lab.</p>
+                      <ul className="list-disc space-y-1 ml-8 text-sm">
+                        <li><Link href="/papers" className="underline">Molecular Epidemiology</Link></li>
+                        <li><Link href="/papers" className="underline">Viral Dynamics</Link></li>
+                        <li><Link href="/papers" className="underline">Phylogenetic Methods</Link></li>
+                      </ul>
+                    </td>
+                    <td className="yahoo-td w-1/2">
+                      <h2 className="text-xl font-bold mb-1">
+                        <a href="#" className="text-blue-700 underline">Resources</a>
+                      </h2>
+                      <p className="text-xs text-gray-600 mb-2 italic">Institutional links, data archives, and external tools.</p>
+                      <ul className="list-disc space-y-1 ml-8 text-sm">
+                        <li><a href="#" className="underline">Institute for Genomics (iGEM)</a></li>
+                        <li><a href="#" className="underline">Temple University</a></li>
+                        <li><a href="#" className="underline">GitHub Repositories</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div className="mt-12 p-4 yahoo-bevel text-center text-sm italic">
+                <div className="yahoo-inset py-2">
+                  <b>Today's News:</b> ACME Lab launches new web portal for molecular evolution research.
+                </div>
+              </div>
+            </div>
+          ) : theme === 'enterprise' ? (
+            <div className="max-w-6xl mx-auto text-left font-sans">
+              <div className="flex flex-col md:flex-row items-center gap-12 mb-20 py-12">
+                <div className="md:w-1/2">
+                  <h1 className="text-5xl font-bold text-[#212529] mb-4 leading-tight">
+                    Scalable Solutions for <span className="text-[#007bff]">Molecular Evolution</span>.
+                  </h1>
+                  <p className="text-xl text-[#6c757d] mb-8">
+                    We deliver end-to-end computational frameworks for comparative sequence analysis, 
+                    powering the next generation of genomic research.
+                  </p>
+                  <div className="flex gap-4">
+                    <Link href="/projects" className="btn-primary enterprise-button">View Solutions</Link>
+                    <Link href="/papers" className="btn-secondary enterprise-button">Read Case Studies</Link>
+                  </div>
+                </div>
+                <div className="md:w-1/2 relative bg-white aspect-video rounded-xl flex flex-col items-center justify-center border border-gray-200 shadow-xl overflow-hidden group">
+                  <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#007bff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+                  <div className="flex gap-2 mb-4 relative z-10">
+                    <div className="w-12 h-24 bg-[#007bff] rounded animate-[bounce_2s_infinite]"></div>
+                    <div className="w-12 h-32 bg-[#007bff]/60 rounded animate-[bounce_2s_infinite_0.5s]"></div>
+                    <div className="w-12 h-20 bg-[#007bff]/40 rounded animate-[bounce_2s_infinite_1s]"></div>
+                  </div>
+                  <div className="text-[10px] font-bold text-[#6c757d] tracking-widest uppercase relative z-10">Real-time Analytics Dashboard</div>
+                  <div className="absolute bottom-4 right-4 flex gap-1">
+                    <div className="w-2 h-2 bg-gray-200 rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#007bff] rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8 mb-20">
+                {[
+                  { title: "High-Performance Computing", desc: "Optimized statistical models for large-scale phylogenetic inference.", icon: "⚡" },
+                  { title: "Data Visualization", desc: "Actionable insights through interactive, web-based genomic dashboards.", icon: "📊" },
+                  { title: "Global Collaboration", desc: "Integrated with industry-leading platforms like Galaxy and Datamonkey.", icon: "🌐" }
+                ].map((feature, i) => (
+                  <div key={i} className="enterprise-card p-6 flex flex-col gap-3">
+                    <div className="text-3xl">{feature.icon}</div>
+                    <h3 className="text-xl font-bold">{feature.title}</h3>
+                    <p className="text-[#6c757d] text-sm">{feature.desc}</p>
+                    <a href="#" className="text-[#007bff] text-sm font-bold mt-auto hover:underline">Learn more →</a>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-[#007bff] text-white p-12 rounded-xl text-center mb-20">
+                 <h2 className="text-3xl font-bold mb-4 text-white">Ready to accelerate your research?</h2>
+                 <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+                   Our suite of open-source tools is utilized by over 50,000 researchers globally. 
+                   Join the most advanced computational molecular evolution laboratory today.
+                 </p>
+                 <Link href="/members" className="bg-white text-[#007bff] px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors">
+                   Meet Our Specialists
+                 </Link>
+              </div>
             </div>
           ) : theme === '2020s' ? (
             <div className="max-w-4xl mx-auto flex flex-col items-center">
@@ -254,17 +406,24 @@ export default function Home() {
                     theme === '2000s' ? 'text-me-blue/40 border-me-border font-mono italic' :
                     'text-hero-dark opacity-40 font-black border-black/10 italic'
                   }`}>
-                    <span>{theme === '80s' ? 'OXEN: 4' : '[SCOPE]: UNIVERSAL'}</span>
-                    <span>{theme === '80s' ? 'FOOD: 200 LBS' : '[PRIMARY_FOCUS]: PATHOGENS'}</span>
-                    <span>{theme === '80s' ? 'HEALTH: GOOD' : '[STATUS]: ACTIVE'}</span>
+                    <span>{theme === '80s' ? 'OXEN: 0' : '[SCOPE]: UNIVERSAL'}</span>
+                    <span>{theme === '80s' ? 'FOOD: 0 LBS' : '[PRIMARY_FOCUS]: PATHOGENS'}</span>
+                    <span>{theme === '80s' ? 'HEALTH: DEAD' : '[STATUS]: ACTIVE'}</span>
                   </div>
+                  {theme === '80s' && (
+                    <div className="mt-6 pt-4 border-t-2 border-white border-dashed text-center">
+                       <p className="text-retro-amber font-heading text-sm animate-pulse tracking-tighter">
+                         YOU HAVE DIED OF DYSENTERY.
+                       </p>
+                    </div>
+                  )}
                 </Card>
               </div>
             </>
           )}
         </section>
 
-        {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && (
+        {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'vax' && (
           <>
             <section className="grid md:grid-cols-2 gap-8 mb-16">
               <Card title={theme === '80s' ? 'SUPPLY_INVENTORY' : 'CORE_COMPETENCIES'}>
@@ -344,15 +503,14 @@ export default function Home() {
       </div>
 
       {theme === 'profdr' ? (
-        <footer className="mt-auto p-4 text-left font-sans">
-          <hr style={{borderColor: '#808080', borderTopWidth: '1px'}} />
-          <address style={{fontStyle: 'italic', marginTop: '1rem', display: 'block'}}>
-            ACME Laboratory<br />
-            Institute for Genomics and Evolutionary Medicine<br />
-            Temple University<br />
-            E-mail: <a href="mailto:webmaster@acme.example" style={{color: '#0000ee', textDecoration: 'underline'}}>webmaster@acme.example</a>
-          </address>
-          <p style={{marginTop: '0.5rem'}}>Last modified: 14 March 1995.</p>
+        <footer className="mt-auto p-4 text-center font-serif text-sm">
+          <hr className="my-4 border-gray-300" />
+          <p className="mb-2">
+            [ <Link href="/" className="text-blue-700 underline">Home</Link> | <Link href="/projects" className="text-blue-700 underline">Projects</Link> | <Link href="/members" className="text-blue-700 underline">Team</Link> | <Link href="/papers" className="text-blue-700 underline">Papers</Link> ]
+          </p>
+          <p className="text-gray-600">
+            Copyright © 1994 ACME Laboratory. All rights reserved.
+          </p>
         </footer>
       ) : theme === 'geocities' ? (
         <footer className="mt-auto p-4 text-center">

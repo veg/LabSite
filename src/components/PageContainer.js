@@ -15,17 +15,40 @@ export default function PageContainer({ children, title, titleColorClass = "text
       theme === 'y2k' ? '' :
       theme === '2000s' ? 'bg-me-bg text-me-orange' :
       theme === '2010s' ? 'bg-hero-bg text-hero-dark' :
-      theme === '2020s' ? 'bg-ai-bg text-slate-200' : ''
+      theme === '2020s' ? 'bg-ai-bg text-slate-200' : 
+      theme === 'enterprise' ? 'bg-white text-[#212529]' :
+      theme === 'vax' ? 'bg-black text-[#33ff33]' : ''
     }`}>
       <Navbar />
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
         {title && (
-          <div className={(theme !== '80s' && theme !== 'profdr') ? 'mb-12 text-center' : ''}>
+          <div className={(theme !== '80s' && theme !== 'profdr' && theme !== 'enterprise' && theme !== 'vax') ? 'mb-12 text-center' : ''}>
+            {theme === 'vax' && (
+              <div className="mb-8 font-mono">
+                <div className="text-[10px] opacity-50 mb-1">SET TERMINAL/INQUIRE</div>
+                <h1 className="text-2xl font-bold border-y border-[#33ff33] py-2 inline-block">
+                  {`[ DIRECTORY: ${title.toUpperCase()} ]`}
+                </h1>
+              </div>
+            )}
+            {theme === 'enterprise' && (
+              <div className="mb-8 pb-4 border-b border-[#dee2e6]">
+                <h1 className="text-3xl font-medium text-[#212529]">{title}</h1>
+                <nav className="flex text-sm text-[#6c757d] mt-2">
+                   <Link href="/" className="hover:underline">Home</Link>
+                   <span className="mx-2">/</span>
+                   <span>{title.toLowerCase()}</span>
+                </nav>
+              </div>
+            )}
             {theme === 'profdr' && (
-              <>
-                <h1>{title.replace(/_/g, ' ')}</h1>
-                <hr />
-              </>
+              <div className="flex flex-col items-center mb-8 font-serif">
+                <Link href="/" className="text-4xl font-black tracking-tighter mb-2 hover:opacity-80 transition-opacity" style={{color: '#ff0000', fontFamily: 'serif', textDecoration: 'none'}}>
+                  Yahoo<span style={{color: '#800080'}}>!</span>
+                </Link>
+                <h1 className="text-2xl font-bold">{title.replace(/_/g, ' ')}</h1>
+                <hr className="w-full mt-4 border-gray-300" />
+              </div>
             )}
             {theme === 'geocities' && (
               <>
@@ -54,7 +77,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             
-            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && (
+            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'enterprise' && (
               <h1 className={`text-4xl mb-12 text-center ${
                 theme === '80s' ? titleColorClass :
                 theme === '90s' ? 'text-mgs-green font-bold tracking-tighter border-b border-mgs-green/20 pb-4' :
@@ -81,16 +104,51 @@ export default function PageContainer({ children, title, titleColorClass = "text
         ) : children}
       </div>
       
-      {theme === 'profdr' ? (
-        <footer className="mt-auto p-4 text-left">
-          <hr />
-          <address>
-            ACME Laboratory<br />
-            Institute for Genomics and Evolutionary Medicine<br />
-            Temple University<br />
-            E-mail: <a href="mailto:webmaster@acme.example">webmaster@acme.example</a>
-          </address>
-          <p>Last modified: 14 March 1995. <span className="profdr-blink">[NEW!]</span></p>
+      {theme === 'enterprise' ? (
+        <footer className="mt-auto bg-[#f8f9fa] border-t border-[#dee2e6] py-12">
+          <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+               <h3 className="text-xl font-bold mb-4">ACME<span className="text-[#007bff]">LAB</span></h3>
+               <p className="text-sm text-[#6c757d] max-w-sm">
+                 Statistical models and software tools for the comparative analysis of sequence data. 
+                 Universal methodology across all domains of life.
+               </p>
+            </div>
+            <div>
+               <h4 className="text-sm font-bold uppercase mb-4 tracking-wider">Solutions</h4>
+               <ul className="text-sm space-y-2 text-[#6c757d]">
+                  <li><Link href="/projects" className="hover:text-[#007bff]">Software Catalog</Link></li>
+                  <li><Link href="/papers" className="hover:text-[#007bff]">Case Studies</Link></li>
+                  <li><a href="#" className="hover:text-[#007bff]">API Documentation</a></li>
+               </ul>
+            </div>
+            <div>
+               <h4 className="text-sm font-bold uppercase mb-4 tracking-wider">Company</h4>
+               <ul className="text-sm space-y-2 text-[#6c757d]">
+                  <li><Link href="/members" className="hover:text-[#007bff]">Our Team</Link></li>
+                  <li><Link href="/former" className="hover:text-[#007bff]">Alumni Network</Link></li>
+                  <li><a href="#" className="hover:text-[#007bff]">Privacy Policy</a></li>
+               </ul>
+            </div>
+          </div>
+          <div className="container mx-auto px-4 mt-12 pt-8 border-t border-[#dee2e6] text-center text-xs text-[#6c757d]">
+             © 2026 ACME Laboratory Systems Inc. All rights reserved. Built with Enterprise Core™ v8.4
+          </div>
+        </footer>
+      ) : theme === 'vax' ? (
+        <footer className="mt-auto p-8 font-mono text-sm border-t border-[#33ff33]">
+           <p className="mb-2">================================================================================</p>
+           <p>SYSTEM: VAX-11/780 // OS: VMS V1.0 // UPTIME: 32768 SECONDS</p>
+           <p className="opacity-60 mt-1">© 1978 ACME LABORATORY // ALL RIGHTS RESERVED</p>
+        </footer>
+      ) : theme === 'profdr' ? (        <footer className="mt-auto p-4 text-center font-serif text-sm">
+          <hr className="my-4 border-gray-300" />
+          <p className="mb-2">
+            [ <Link href="/" className="text-blue-700 underline">Home</Link> | <Link href="/projects" className="text-blue-700 underline">Projects</Link> | <Link href="/members" className="text-blue-700 underline">Team</Link> | <Link href="/papers" className="text-blue-700 underline">Papers</Link> ]
+          </p>
+          <p className="text-gray-600">
+            Copyright © 1994 ACME Laboratory. All rights reserved.
+          </p>
         </footer>
       ) : theme === 'geocities' ? (
         <footer className="mt-auto p-4 text-center">
@@ -124,6 +182,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
           'bg-ai-sidebar border-white/5 text-slate-500 font-sans text-xs tracking-tight py-6'
         }`}>
           <p>© 2026 ACME_LAB // RE-DESIGNED FOR THE_NEXT_DECADE</p>
+          {theme === '80s' && <p className="text-retro-amber font-heading text-[10px] mt-2 animate-pulse uppercase tracking-tighter">You have died of dysentery.</p>}
           <p className={
             theme === '80s' ? 'text-retro-blue' :
             theme === '90s' ? 'text-mgs-blue' :

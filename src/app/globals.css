@@ -27,7 +27,7 @@
   --color-geo-accent-1: #ff00ff;
   --color-geo-accent-2: #00ff00;
 
-  /* Prof. Dr. Palette (1993 academic web) */
+  /* 1994 Yahoo Palette (Early Web Directory) */
   --color-profdr-bg: #ffffff;
   --color-profdr-fg: #000000;
   --color-profdr-link: #0000ee;
@@ -62,19 +62,21 @@
   --color-hero-cyan: #00ffff;
   --color-hero-dark: #1a1a1a;
 
-  /* 2020s AI Assistant Palette */
-  --color-ai-bg: #0f111a;
-  --color-ai-sidebar: #171923;
-  --color-ai-bubble-user: #2d3139;
-  --color-ai-bubble-ai: #1e212b;
-  --color-ai-accent: #4a9eff;
-  --color-ai-gradient: linear-gradient(135deg, #4a9eff 0%, #a855f7 100%);
+  /* 2018 Enterprise Palette (The Standardization Era) */
+  --color-enterprise-blue: #007bff;
+  --color-enterprise-blue-hover: #0069d9;
+  --color-enterprise-gray-bg: #f8f9fa;
+  --color-enterprise-gray-border: #dee2e6;
+  --color-enterprise-text: #212529;
+  --color-enterprise-text-muted: #6c757d;
 
-  --shadow-retro: 4px 4px 0px 0px #ffffff;
-  --shadow-mgs: 0 0 15px rgba(0, 255, 65, 0.2);
-  --shadow-me: 0 0 20px rgba(255, 157, 0, 0.15);
-  --shadow-hero: 8px 8px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-ai: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-enterprise: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  /* 1978 VAX/VMS Palette — Monochrome Phosphor */
+  --color-vax-bg: #000000;
+  --color-vax-fg: #33ff33;
+  --color-vax-dim: #1a881a;
+  --color-vax-bright: #66ff66;
 
   /* Animations */
   --animate-chew: chew 0.6s ease-in-out infinite;
@@ -99,6 +101,8 @@
 [data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
 [data-theme='2010s'] { --background: #f5f5f5; --foreground: #1a1a1a; }
 [data-theme='2020s'] { --background: #0f111a; --foreground: #e2e8f0; }
+[data-theme='enterprise'] { --background: #ffffff; --foreground: #212529; }
+[data-theme='vax'] { --background: #000000; --foreground: #33ff33; }
 
 body {
   background-color: var(--background);
@@ -186,13 +190,137 @@ body {
   background-clip: text;
 }
 
+/* 2018 Enterprise Specifics — The era of Bootstrap and standardization. */
+.theme-enterprise {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  background-color: #ffffff !important;
+  color: #212529 !important;
+}
+.theme-enterprise * {
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  transform: none !important;
+}
+.theme-enterprise h1, .theme-enterprise h2, .theme-enterprise h3 {
+  font-weight: 500;
+  line-height: 1.2;
+  color: #212529;
+}
+.theme-enterprise .enterprise-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.theme-enterprise .enterprise-button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.theme-enterprise .btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.theme-enterprise .btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+.theme-enterprise .btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.theme-enterprise .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+.theme-enterprise a {
+  color: #007bff;
+  text-decoration: none;
+}
+.theme-enterprise a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* 1978 VAX/VMS Specifics — Monochrome Terminal */
+.theme-vax {
+  font-family: var(--font-vt323), monospace !important;
+  background-color: #000000 !important;
+  color: #33ff33 !important;
+}
+.theme-vax * {
+  font-family: inherit !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 5px rgba(51, 255, 51, 0.5) !important;
+}
+.theme-vax h1, .theme-vax h2, .theme-vax h3 {
+  color: #33ff33 !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+.theme-vax a {
+  color: #33ff33 !important;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+}
+.theme-vax a:hover {
+  background-color: #33ff33 !important;
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+.theme-vax .vax-panel {
+  border: 1px solid #33ff33;
+  padding: 1rem;
+  position: relative;
+}
+.theme-vax .vax-panel::before {
+  content: "+------------------------------------------------------------------------------+";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  background: black;
+}
+.theme-vax .vax-button {
+  border: 1px solid #33ff33;
+  padding: 0.25rem 1rem;
+  background: transparent;
+  color: #33ff33;
+  cursor: pointer;
+}
+.theme-vax .vax-button:hover {
+  background: #33ff33;
+  color: #000000;
+}
+.theme-vax hr {
+  border: none;
+  border-top: 1px dashed #33ff33;
+  margin: 1rem 0;
+}
+
 /* Base Panel Styles */
 .mgs-panel { background: rgba(16, 24, 16, 0.9); border: 1px solid #2d4c2d; position: relative; overflow: hidden; }
 .me-panel { background: rgba(255, 157, 0, 0.03); border: 1px solid rgba(255, 157, 0, 0.2); clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%); }
 .pixel-border { border: 4px solid var(--foreground); }
 .pixel-button { background-color: #458588; border: 4px solid #1d2021; box-shadow: 4px 4px 0px 0px #ebdbb2; }
 
-/* Prof. Dr. Specifics — 1993 academic web style.
+/* Yahoo 1994 Specifics — Early web directory style.
    Override Tailwind utility classes used elsewhere so the page renders
    with browser-default-like appearance: serif, white bg, blue underline links. */
 .theme-profdr {
@@ -201,6 +329,57 @@ body {
   background-color: #ffffff !important;
   color: #000000 !important;
 }
+
+.theme-profdr .yahoo-table {
+  border-collapse: separate !important;
+  border-spacing: 2px !important;
+  border: 2px outset #ffffff !important;
+  background-color: #c0c0c0 !important;
+  width: 100%;
+}
+
+.theme-profdr .yahoo-td {
+  border: 2px inset #ffffff !important;
+  padding: 4px !important;
+  background-color: #ffffff !important;
+  vertical-align: top !important;
+}
+
+.theme-profdr .yahoo-header {
+  background-color: #000080 !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+  padding: 2px 6px !important;
+  text-align: left !important;
+}
+
+.theme-profdr .yahoo-bevel {
+  border: 2px outset #ffffff !important;
+  background-color: #c0c0c0 !important;
+  padding: 1px !important;
+}
+
+.theme-profdr .yahoo-inset {
+  border: 2px inset #ffffff !important;
+  background-color: #ffffff !important;
+  padding: 4px !important;
+}
+
+.theme-profdr .yahoo-button {
+  background-color: #c0c0c0 !important;
+  border: 2px outset #ffffff !important;
+  color: #000000 !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+}
+
+.theme-profdr .yahoo-button:active {
+  border-style: inset !important;
+}
+
 .theme-profdr * {
   font-family: "Times New Roman", Times, serif !important;
   letter-spacing: normal !important;

@@ -4,17 +4,61 @@ import { useTheme } from './ThemeContext';
 export default function Card({ title, children, className = "" }) {
   const { theme } = useTheme();
 
+  if (theme === 'enterprise') {
+    return (
+      <div className={`enterprise-card mb-6 flex flex-col h-full ${className}`}>
+        {title && (
+          <div className="border-b border-[#dee2e6] bg-[#f8f9fa] px-4 py-3">
+            <h3 className="text-base font-medium text-[#212529]">
+              {title}
+            </h3>
+          </div>
+        )}
+        <div className="p-4 flex-grow text-[#212529]">
+          {children}
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'vax') {
+    return (
+      <div className={`vax-panel mb-6 flex flex-col h-full bg-black ${className}`}>
+        {title && (
+          <div className="mb-4 text-[#33ff33] font-bold">
+            {`[ FILE: ${title.toUpperCase()} ]`}
+            <div className="text-[8px] leading-[2px] mt-1 tracking-tighter opacity-50">
+              ================================================================================
+            </div>
+          </div>
+        )}
+        <div className="text-[#33ff33] font-mono leading-relaxed">
+          {children}
+        </div>
+      </div>
+    );
+  }
+
   if (theme === 'profdr') {
     return (
-      <section className={`mb-6 ${className}`}>
+      <table className={`yahoo-table mb-6 ${className}`} cellPadding="0" cellSpacing="2">
         {title && (
-          <>
-            <h3>{title.replace(/_/g, ' ')}</h3>
-            <hr />
-          </>
+          <thead>
+            <tr>
+              <th className="yahoo-header">
+                {title.replace(/_/g, ' ')}
+              </th>
+            </tr>
+          </thead>
         )}
-        <div>{children}</div>
-      </section>
+        <tbody>
+          <tr>
+            <td className="yahoo-td">
+              <div className="text-black">{children}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 

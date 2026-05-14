@@ -5,13 +5,15 @@ import { useState } from 'react';
 
 function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   const eras = [
-    { id: 'profdr', label: '1993 Prof. Dr.' },
-    { id: 'geocities', label: '1996 Geocities' },
+    { id: 'vax', label: '1978 VAX/VMS' },
     { id: '80s', label: '1985 Terminal' },
+    { id: 'profdr', label: '1994 Yahoo' },
+    { id: 'geocities', label: '1996 Geocities' },
     { id: '90s', label: '1998 Tactical' },
     { id: 'y2k', label: '2003 Web 2.0' },
     { id: '2000s', label: '2007 Omni-tool' },
     { id: '2010s', label: '2012 Vault Hunter' },
+    { id: 'enterprise', label: '2018 Enterprise' },
     { id: '2020s', label: '2024 AI Assistant' }
   ];
 
@@ -22,11 +24,13 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
         className={`p-1 transition-all ${
           theme === 'profdr' ? 'text-black hover:text-blue-700' :
           theme === 'geocities' ? 'text-[#ff00ff] hover:text-[#00ffff]' :
+          theme === 'vax' ? 'text-[#33ff33] hover:text-white' :
           theme === 'y2k' ? 'text-[#0066cc] hover:text-[#ff6600]' :
           theme === '80s' ? 'text-retro-green hover:text-white' :
           theme === '90s' ? 'text-mgs-green hover:text-white' :
           theme === '2000s' ? 'text-me-orange hover:text-white' :
           theme === '2010s' ? 'text-hero-dark hover:text-hero-yellow' :
+          theme === 'enterprise' ? 'text-[#6c757d] hover:text-[#007bff]' :
           'text-ai-accent hover:opacity-80'
         }`}
         title="Change Era"
@@ -40,11 +44,13 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
         <div className={`absolute left-0 mt-2 p-2 min-w-[180px] shadow-lg z-[100] ${
           theme === 'profdr' ? 'bg-white border border-gray-500 text-black' :
           theme === 'geocities' ? 'bg-[#000080] border-4 border-[#ff00ff] text-[#ffff00]' :
+          theme === 'vax' ? 'bg-black border border-[#33ff33] text-[#33ff33]' :
           theme === 'y2k' ? 'bg-white border border-[#b3d4ff] text-[#0066cc] rounded-lg' :
           theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' :
           theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' :
           theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
           theme === '2010s' ? 'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]' :
+          theme === 'enterprise' ? 'bg-white border border-[#dee2e6] text-[#212529] rounded shadow-lg' :
           'bg-ai-sidebar border border-white/10 rounded-xl text-white backdrop-blur-xl'
         }`}>
           {eras.map(era => (
@@ -72,6 +78,60 @@ export default function Navbar() {
     { label: 'ALUMNI', href: '/former' },
     { label: 'PAPERS', href: '/papers' },
   ];
+
+  if (theme === 'vax') {
+    return (
+      <nav className="bg-black border-b border-[#33ff33] py-2 font-mono sticky top-0 z-50">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+           <div className="flex items-center gap-6">
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+              <Link href="/" className="text-xl font-bold hover:bg-[#33ff33] hover:text-black">
+                 [ ACME_LAB ]
+              </Link>
+           </div>
+           <div className="flex gap-4">
+              {navItems.map(item => (
+                <Link key={item.label} href={item.href} className="text-sm hover:bg-[#33ff33] hover:text-black px-2">
+                   {`[ ${item.label} ]`}
+                </Link>
+              ))}
+           </div>
+           <div className="hidden lg:block text-[10px] opacity-60">
+              VAX-11/780 :: ONLINE
+           </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'enterprise') {
+    return (
+      <nav className="bg-white border-b border-[#dee2e6] py-2 sticky top-0 z-50">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="flex items-center gap-6">
+            <Link href="/" className="text-xl font-bold text-[#212529] flex items-center gap-2">
+              <span className="text-[#007bff]">ACME</span><span>LAB</span>
+            </Link>
+            <div className="hidden md:flex gap-4">
+              {navItems.map(item => (
+                <Link 
+                  key={item.label} 
+                  href={item.href} 
+                  className={`${theme === 'enterprise' ? 'text-[#6c757d] hover:text-[#007bff]' : 'text-[#6c757d] hover:text-[#007bff]'} text-sm font-medium transition-colors`}
+                >
+                  {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+             <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+             <button className="hidden lg:block btn-primary enterprise-button text-sm">Contact Us</button>
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   if (theme === 'y2k') {
     return (
