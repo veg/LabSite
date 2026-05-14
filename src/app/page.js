@@ -24,13 +24,60 @@ export default function Home() {
       theme === '2000s' ? 'bg-me-bg' : 
       theme === '2010s' ? 'bg-hero-bg' :
       theme === '2020s' ? 'bg-ai-bg' :
-      theme === 'vax' ? 'bg-black text-[#33ff33]' : ''
+      theme === 'vax' ? 'bg-black text-[#33ff33]' : 
+      theme === 'knuth' ? 'bg-white text-black font-serif' : ''
     }`}>
       <Navbar />
       
-      <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
-        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k' || theme === 'vax') ? 'mb-8' : 'mb-16 text-center'}>
-          {theme === 'vax' ? (
+      <div className={`container mx-auto px-4 py-12 relative z-10 flex-grow ${theme === 'knuth' ? 'max-w-[800px]' : ''}`}>
+        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k' || theme === 'vax' || theme === 'knuth') ? 'mb-8' : 'mb-16 text-center'}>
+          {theme === 'knuth' ? (
+            <div className="font-serif">
+              <h1 style={{fontSize: '28pt', fontWeight: 'bold', marginBottom: '10pt'}}>ACME Laboratory</h1>
+              <p style={{fontSize: '14pt', fontStyle: 'italic', marginBottom: '20pt'}}>Computational Molecular Evolution Group</p>
+              
+              <hr style={{border: 'none', borderTop: '1px solid #000', marginBottom: '20pt'}} />
+
+              <p style={{fontSize: '12pt', marginBottom: '15pt'}}>
+                The <strong>ACME Laboratory</strong> develops and applies high-performance computational
+                tools for the comparative analysis of sequence data. Our methods are universally
+                applicable across all domains of life.
+              </p>
+
+              <h2 style={{fontSize: '18pt', fontWeight: 'bold', marginTop: '25pt', marginBottom: '10pt'}}>Core Research Areas</h2>
+              <ul style={{listStyleType: 'disc', marginLeft: '30pt', marginBottom: '20pt'}}>
+                <li>Molecular epidemiology</li>
+                <li>Viral dynamics</li>
+                <li>Phylogenetic methods</li>
+                <li>High-performance computing</li>
+                <li>Data visualization</li>
+              </ul>
+
+              <h2 style={{fontSize: '18pt', fontWeight: 'bold', marginTop: '25pt', marginBottom: '10pt'}}>Software Tools</h2>
+              <p style={{marginBottom: '10pt'}}>
+                We maintain several open-source software packages for evolutionary analysis:
+              </p>
+              <ul style={{listStyleType: 'disc', marginLeft: '30pt', marginBottom: '20pt'}}>
+                <li><Link href="/projects">HyPhy</Link>: Hypothesis testing using Phylogenies</li>
+                <li><Link href="/projects">Datamonkey</Link>: A web server for comparative analysis</li>
+                <li><Link href="/projects">HIV-TRACE</Link>: HIV TRAnsmission Cluster Engine</li>
+              </ul>
+
+              <h2 style={{fontSize: '18pt', fontWeight: 'bold', marginTop: '25pt', marginBottom: '10pt'}}>Navigation</h2>
+              <ul style={{listStyleType: 'square', marginLeft: '30pt', marginBottom: '20pt'}}>
+                <li><Link href="/projects">Projects and Software</Link></li>
+                <li><Link href="/members">Current Lab Members</Link></li>
+                <li><Link href="/former">Former Members</Link></li>
+                <li><Link href="/papers">Publications</Link></li>
+              </ul>
+
+              <hr style={{border: 'none', borderTop: '1px solid #000', marginTop: '40pt', marginBottom: '10pt'}} />
+              <address style={{fontSize: '10pt'}}>
+                ACME Lab, Institute for Genomics and Evolutionary Medicine<br />
+                Temple University, Philadelphia, PA
+              </address>
+            </div>
+          ) : theme === 'vax' ? (
             <div className="max-w-5xl mx-auto font-mono">
               <div className="mb-12 border border-[#33ff33] p-8 relative">
                  <div className="absolute top-[-10px] left-4 bg-black px-2 text-xs">VAX/VMS V1.0 - AUTHORIZED ACCESS ONLY</div>

@@ -68,6 +68,12 @@ export default function EraSelectionSplash() {
       label: '2024 AI Assistant', 
       desc: 'The Conversational Anthropocene. Modern, dark-mode chatbot environment.',
       previewClass: 'bg-[#0f111a] border border-white/10 text-white font-sans text-xs flex items-center justify-start p-4 rounded-xl shadow-xl'
+    },
+    {
+      id: 'knuth',
+      label: 'Donald Knuth',
+      desc: 'Aggressive Minimalism. White background, Times New Roman, and pure information.',
+      previewClass: 'knuth-preview flex flex-col items-center justify-center p-4'
     }
   ], []);
 
@@ -76,6 +82,7 @@ export default function EraSelectionSplash() {
       text: "How do you prefer to receive your research updates?",
       options: [
         { text: "Printed on continuous-form paper.", themes: ['vax', '80s'] },
+        { text: "A simple TeX-rendered preprint.", themes: ['knuth', 'vax'] },
         { text: "A personalized email from a web directory.", themes: ['profdr', 'geocities'] },
         { text: "An encrypted transmission directly to my HUD.", themes: ['90s', '2000s', '2010s'] },
         { text: "An AI-generated summary delivered via a minimalist dashboard.", themes: ['enterprise', '2020s', 'y2k'] }
@@ -84,7 +91,7 @@ export default function EraSelectionSplash() {
     {
       text: "The 'correct' amount of visual clutter is...",
       options: [
-        { text: "None. Just text.", themes: ['vax', '80s', '90s'] },
+        { text: "None. Just text.", themes: ['vax', '80s', '90s', 'knuth'] },
         { text: "Blinking 'NEW' tags and rotating 3D GIFs.", themes: ['geocities', 'profdr'] },
         { text: "Holographic panels for a starship pilot feel.", themes: ['2000s', '2010s', 'y2k'] },
         { text: "Clean and slightly corporate.", themes: ['enterprise', '2020s'] }
@@ -94,6 +101,7 @@ export default function EraSelectionSplash() {
       text: "Your favorite lab tool is...",
       options: [
         { text: "Punch cards.", themes: ['vax'] },
+        { text: "A pencil and a yellow legal pad.", themes: ['knuth', 'vax'] },
         { text: "Netscape Navigator.", themes: ['profdr', 'geocities', '80s'] },
         { text: "A neural-linked sequencer.", themes: ['2000s', '2010s', '90s'] },
         { text: "An LLM assistant.", themes: ['2020s', 'enterprise', 'y2k'] }

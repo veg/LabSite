@@ -14,7 +14,8 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
     { id: '2000s', label: '2007 Omni-tool' },
     { id: '2010s', label: '2012 Vault Hunter' },
     { id: 'enterprise', label: '2018 Enterprise' },
-    { id: '2020s', label: '2024 AI Assistant' }
+    { id: '2020s', label: '2024 AI Assistant' },
+    { id: 'knuth', label: 'Donald Knuth' }
   ];
 
   return (
@@ -31,6 +32,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
           theme === '2000s' ? 'text-me-orange hover:text-white' :
           theme === '2010s' ? 'text-hero-dark hover:text-hero-yellow' :
           theme === 'enterprise' ? 'text-[#6c757d] hover:text-[#007bff]' :
+          theme === 'knuth' ? 'text-black hover:text-blue-700' :
           'text-ai-accent hover:opacity-80'
         }`}
         title="Change Era"
@@ -51,6 +53,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
           theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
           theme === '2010s' ? 'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]' :
           theme === 'enterprise' ? 'bg-white border border-[#dee2e6] text-[#212529] rounded shadow-lg' :
+          theme === 'knuth' ? 'bg-white border border-black text-black' :
           'bg-ai-sidebar border border-white/10 rounded-xl text-white backdrop-blur-xl'
         }`}>
           {eras.map(era => (
@@ -78,6 +81,26 @@ export default function Navbar() {
     { label: 'ALUMNI', href: '/former' },
     { label: 'PAPERS', href: '/papers' },
   ];
+
+  if (theme === 'knuth') {
+    return (
+      <nav className="theme-knuth sticky top-0 z-50 bg-white" style={{maxWidth: '800px', margin: '0 auto', borderBottom: '1px solid #000', paddingBottom: '10px', marginBottom: '20px'}}>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{fontWeight: 'bold', fontSize: '18pt', textDecoration: 'none'}}>ACME Laboratory</Link>
+          </div>
+          <div className="flex gap-4" style={{fontSize: '12pt'}}>
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{textDecoration: 'underline'}}>
+                {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   if (theme === 'vax') {
     return (

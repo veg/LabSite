@@ -45,43 +45,49 @@ export default function PapersPage() {
   return (
     <PageContainer title="RESEARCH_ARCHIVE" titleColorClass="text-retro-purple">
         {/* STATISTICS_HUD */}
-        <section className="mb-20">
+        <section className={`mb-20 ${theme === 'knuth' ? 'font-serif' : ''}`}>
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-blue' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
             <h2 className={`text-2xl flex-shrink-0 ${
               theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === 'knuth' ? 'text-black font-bold' :
               theme === '80s' ? 'text-retro-blue font-heading' : 
               theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
               'text-me-orange italic font-black font-heading'
-            }`}>DASHBOARD_STATS</h2>
+            }`}>{theme === 'knuth' ? 'Research Statistics' : 'DASHBOARD_STATS'}</h2>
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-blue' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className={`grid gap-6 ${theme === 'knuth' ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
             {/* Category Breakdown */}
-            <Card title="SUBJECT_MATRIX">
+            <Card title={theme === 'knuth' ? 'Subject Areas' : 'SUBJECT_MATRIX'}>
               <div className="space-y-4">
                 {categoryCounts.map(cat => (
                   <div key={cat.name} className={`flex justify-between items-center border-b pb-2 ${
                     theme === 'enterprise' ? 'border-gray-100' :
+                    theme === 'knuth' ? 'border-black' :
                     theme === '80s' ? 'border-retro-bg' : 
                     theme === '90s' ? 'border-mgs-border' : 'border-me-orange/10'
                   }`}>
                     <span className={`${
                       theme === 'enterprise' ? 'text-[#007bff] font-bold text-xs' :
+                      theme === 'knuth' ? 'text-black' :
                       theme === '80s' ? 'text-retro-amber font-heading text-sm' : 
                       theme === '90s' ? 'text-mgs-blue font-heading text-sm' : 'text-me-blue font-bold italic font-heading text-sm'
-                    }`}>[{cat.name}]</span>
+                    }`}>{theme === 'knuth' ? cat.name : `[${cat.name}]`}</span>
                     <span className={`text-2xl ${
                       theme === 'enterprise' ? 'text-[#212529] font-bold' :
+                      theme === 'knuth' ? 'text-black' :
                       theme === '80s' ? 'text-retro-fg' : 
                       theme === '90s' ? 'text-mgs-green' : 'text-me-orange'
                     }`}>{cat.count}</span>
@@ -91,22 +97,25 @@ export default function PapersPage() {
             </Card>
 
             {/* Group Contribution Level */}
-            <Card title="STRIKE_FORCE_ACTIVITY">
+            <Card title={theme === 'knuth' ? 'Active Contributors' : 'STRIKE_FORCE_ACTIVITY'}>
               <div className="space-y-3">
-                <p className={`text-xs mb-4 ${
-                  theme === 'enterprise' ? 'text-[#6c757d] font-bold' :
-                  theme === '80s' ? 'text-retro-green font-heading' : 
-                  theme === '90s' ? 'text-mgs-green font-heading' : 'text-me-blue opacity-70 italic font-bold font-heading'
-                }`}>[ACTIVE_CONTRIBUTORS]</p>
+                {theme !== 'knuth' && (
+                  <p className={`text-xs mb-4 ${
+                    theme === 'enterprise' ? 'text-[#6c757d] font-bold' :
+                    theme === '80s' ? 'text-retro-green font-heading' : 
+                    theme === '90s' ? 'text-mgs-green font-heading' : 'text-me-blue opacity-70 italic font-bold font-heading'
+                  }`}>[ACTIVE_CONTRIBUTORS]</p>
+                )}
                 <div className="max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-retro-blue">
                   {memberContributions.map(m => (
                     <div key={m.name} className="flex justify-between text-lg mb-1">
-                      <span className={`opacity-80 ${theme === 'enterprise' ? 'text-sm font-medium' : 'font-mono'}`}>{m.name.split(' ').pop().toUpperCase()}</span>
+                      <span className={`opacity-80 ${theme === 'enterprise' || theme === 'knuth' ? 'text-sm font-medium' : 'font-mono'}`}>{theme === 'knuth' ? m.name : m.name.split(' ').pop().toUpperCase()}</span>
                       <span className={
                         theme === 'enterprise' ? 'text-[#007bff] text-sm font-bold' :
+                        theme === 'knuth' ? 'text-black text-sm' :
                         theme === '80s' ? 'text-retro-blue' : 
                         theme === '90s' ? 'text-mgs-blue' : 'text-me-orange font-bold'
-                      }>{m.count} logs</span>
+                      }>{m.count} {theme === 'knuth' ? 'papers' : 'logs'}</span>
                     </div>
                   ))}
                 </div>
@@ -114,10 +123,11 @@ export default function PapersPage() {
             </Card>
 
             {/* Collaborative Network */}
-            <Card title="ALLIANCE_NETWORK">
+            <Card title={theme === 'knuth' ? 'Collaborative Network' : 'ALLIANCE_NETWORK'}>
               <div className="flex flex-col items-center justify-center h-full py-4 text-center">
                 <div className={`text-5xl mb-4 ${
                   theme === 'enterprise' ? 'text-[#007bff] font-black' :
+                  theme === 'knuth' ? 'text-black' :
                   theme === '80s' ? 'text-retro-purple animate-pulse' : 
                   theme === '90s' ? 'text-mgs-blue animate-pulse' : 'text-me-orange drop-shadow-me animate-pulse'
                 }`}>
@@ -125,11 +135,13 @@ export default function PapersPage() {
                 </div>
                 <p className={`text-xs mb-4 ${
                   theme === 'enterprise' ? 'text-[#6c757d] font-bold uppercase tracking-widest' :
+                  theme === 'knuth' ? 'text-black' :
                   theme === '80s' ? 'text-retro-fg font-heading' : 
                   theme === '90s' ? 'text-mgs-green font-heading' : 'text-me-blue font-black italic font-heading'
-                }`}>UNIQUE_CO-AUTHORS</p>
+                }`}>{theme === 'knuth' ? 'UNIQUE CO-AUTHORS' : 'UNIQUE_CO-AUTHORS'}</p>
                 <p className={`text-sm leading-tight ${
                   theme === 'enterprise' ? 'text-[#6c757d]' :
+                  theme === 'knuth' ? 'text-black' :
                   theme === '90s' ? 'text-mgs-green/60' : 
                   theme === '2000s' ? 'text-me-orange/70 italic' : 'opacity-60'
                 }`}>
@@ -146,22 +158,25 @@ export default function PapersPage() {
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-amber' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
             <h2 className={`text-2xl flex-shrink-0 ${
               theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === 'knuth' ? 'text-black font-bold' :
               theme === '80s' ? 'text-retro-amber font-heading' : 
               theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
               'text-me-orange font-black italic font-heading'
-            }`}>HALL_OF_FAME</h2>
+            }`}>{theme === 'knuth' ? 'Highly Cited Works' : 'HALL_OF_FAME'}</h2>
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-amber' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className={`grid gap-8 ${theme === 'knuth' ? 'grid-cols-1' : 'lg:grid-cols-2'}`}>
             {legendaryPapers.map(paper => (
               <PaperCard key={paper.id} paper={paper} theme={theme} isLegendarySection />
             ))}
@@ -173,22 +188,25 @@ export default function PapersPage() {
           <div className="flex items-center gap-4 mb-8">
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-green' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
             <h2 className={`text-2xl flex-shrink-0 ${
               theme === 'enterprise' ? 'text-[#212529] font-medium uppercase tracking-wider' :
+              theme === 'knuth' ? 'text-black font-bold' :
               theme === '80s' ? 'text-retro-green font-heading' : 
               theme === '90s' ? 'text-mgs-green font-bold tracking-tighter font-heading' :
               'text-me-orange font-black italic font-heading'
-            }`}>LATEST_QUESTS</h2>
+            }`}>{theme === 'knuth' ? 'Recent Publications' : 'LATEST_QUESTS'}</h2>
             <div className={`h-1 flex-grow opacity-30 ${
               theme === 'enterprise' ? 'bg-[#dee2e6]' :
+              theme === 'knuth' ? 'bg-black' :
               theme === '80s' ? 'bg-retro-green' : 
               theme === '90s' ? 'bg-mgs-green' : 'bg-me-orange'
             }`}></div>
           </div>
-          <div className="space-y-6 max-w-5xl mx-auto">
+          <div className={`space-y-6 max-w-5xl mx-auto ${theme === 'knuth' ? 'font-serif' : ''}`}>
             {recentPapers.map(paper => (
               <PaperCard key={paper.id} paper={paper} theme={theme} />
             ))}
@@ -197,7 +215,7 @@ export default function PapersPage() {
 
         <div className="max-w-4xl mx-auto text-center pt-12">
           <p className={`mb-8 opacity-80 ${
-            theme === 'enterprise' ? 'text-lg text-[#6c757d]' : 'font-body text-2xl'
+            theme === 'enterprise' || theme === 'knuth' ? 'text-lg text-[#6c757d]' : 'font-body text-2xl'
           }`}>
             Our full bibliography spans decades of research in molecular evolution and bioinformatics.
           </p>
@@ -207,6 +225,7 @@ export default function PapersPage() {
             rel="noopener noreferrer"
             className={
               theme === 'enterprise' ? 'btn-primary enterprise-button px-10' :
+              theme === 'knuth' ? 'underline' :
               theme === '2020s' ? 'bg-ai-accent text-white px-8 py-3 rounded-full font-bold shadow-lg inline-block transition-transform hover:scale-105' :
               theme === 'vax' ? 'vax-button text-sm' :
               theme === '80s' ? 'pixel-button' : 
@@ -214,6 +233,7 @@ export default function PapersPage() {
             }
           >
             {theme === 'enterprise' ? 'Access Complete Bibliography' : 
+             theme === 'knuth' ? 'Access Complete Bibliography on Google Scholar' :
              theme === 'vax' ? 'DIR BIBLIOGRAPHY.LOG' : 'ACCESS_FULL_MASTER_LOG'}
           </a>
         </div>
@@ -225,6 +245,17 @@ function PaperCard({ paper, theme, isLegendarySection }) {
   const isLegendary = paper.isLegendary;
   const separator = " // ";
   
+  if (theme === 'knuth') {
+    return (
+      <div className="mb-6 py-4 border-b border-black">
+        <p style={{fontSize: '12pt', marginBottom: '4pt'}}>
+          {paper.authors}. <strong>{paper.title}</strong>. <em>{paper.journal}</em>, {paper.year}. 
+          {paper.doi && <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer" style={{marginLeft: '10pt'}}>DOI: {paper.doi}</a>}
+        </p>
+      </div>
+    );
+  }
+
   if (theme === 'vax') {
     return (
       <div className="vax-panel flex flex-col mb-4 p-4 border-[#33ff33] bg-black">

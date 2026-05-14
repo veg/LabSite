@@ -4,6 +4,21 @@ import { useTheme } from './ThemeContext';
 export default function Card({ title, children, className = "" }) {
   const { theme } = useTheme();
 
+  if (theme === 'knuth') {
+    return (
+      <div className={`mb-10 ${className}`} style={{display: 'block'}}>
+        {title && (
+          <h2 style={{fontSize: '18pt', fontWeight: 'bold', borderBottom: '1px solid #000', marginBottom: '10pt', marginTop: '20pt'}}>
+            {title.replace(/_/g, ' ')}
+          </h2>
+        )}
+        <div style={{fontSize: '12pt', lineHeight: '1.4'}}>
+          {children}
+        </div>
+      </div>
+    );
+  }
+
   if (theme === 'enterprise') {
     return (
       <div className={`enterprise-card mb-6 flex flex-col h-full ${className}`}>

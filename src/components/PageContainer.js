@@ -8,6 +8,27 @@ export default function PageContainer({ children, title, titleColorClass = "text
   
   if (!mounted) return <div className="min-h-screen bg-[#282828]" />;
 
+  if (theme === 'knuth') {
+    return (
+      <main className="theme-knuth min-h-screen flex flex-col bg-white text-black font-serif">
+        <Navbar />
+        <div className="flex-grow py-8">
+          {title && (
+            <div className="mb-6">
+              <h1 style={{fontSize: '24pt', fontWeight: 'bold', margin: '0 0 6pt 0'}}>{title}</h1>
+              <hr style={{border: 'none', borderTop: '1px solid #000', margin: '0'}} />
+            </div>
+          )}
+          {children}
+        </div>
+        <footer className="mt-12 py-6 border-t border-black text-sm">
+           <p>ACME Laboratory, Institute for Genomics and Evolutionary Medicine, Temple University.</p>
+           <p>© 2026. All rights reserved.</p>
+        </footer>
+      </main>
+    );
+  }
+
   return (
     <main className={`min-h-screen relative flex flex-col ${
       theme === 'profdr' ? 'bg-white text-black' :
