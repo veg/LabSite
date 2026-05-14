@@ -5,9 +5,21 @@ export default function EraSelectionSplash() {
   const { toggleTheme } = useTheme();
 
   const eras = [
-    { 
-      id: '80s', 
-      label: '1985 Terminal', 
+    {
+      id: 'profdr',
+      label: '1993 Prof. Dr.',
+      desc: 'The Hadean dawn of the WWW. Browser defaults — serif text, blue underlined links, the user defines the look.',
+      previewClass: 'profdr-preview'
+    },
+    {
+      id: 'geocities',
+      label: '1996 Geocities',
+      desc: 'The Cambrian-pre-explosion of amateur web life. Comic Sans, rainbow text, blinking marquees, under-construction GIFs.',
+      previewClass: 'geo-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: '80s',
+      label: '1985 Terminal',
       desc: 'The Archean Era of computing. Muted 8-bit terminal for early molecular modeling.',
       previewClass: 'bg-black border-2 border-retro-green text-retro-green font-heading text-[8px] flex items-center justify-center p-4 text-center'
     },
@@ -17,9 +29,15 @@ export default function EraSelectionSplash() {
       desc: 'The Cambrian Explosion of data. High-tech bio-surveillance HUD for pathogen tracking.',
       previewClass: 'bg-[#0a0f0a] border-2 border-[#2d4c2d] text-[#00ff41] font-mono text-[10px] flex flex-col items-center justify-center p-4'
     },
-    { 
-      id: '2000s', 
-      label: '2007 Omni-tool', 
+    {
+      id: 'y2k',
+      label: '2003 Web 2.0',
+      desc: 'The Silurian gel-button bloom. Sky-blue gradients, glossy buttons, rounded boxes, BETA badges, Verdana.',
+      previewClass: 'y2k-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: '2000s',
+      label: '2007 Omni-tool',
       desc: 'The Genomic Mesozoic. Holographic interfaces for deep phylogenomic exploration.',
       previewClass: 'bg-[#050a0f] border-2 border-[#ff9d00]/30 text-[#ff9d00] font-mono text-[10px] flex items-center justify-center p-4 italic font-black shadow-[0_0_15px_rgba(255,157,0,0.2)]'
     },
@@ -59,7 +77,7 @@ export default function EraSelectionSplash() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-4 max-w-7xl w-full">
         {eras.map((era) => (
           <button
             key={era.id}
@@ -67,6 +85,29 @@ export default function EraSelectionSplash() {
             className="group flex flex-col gap-4 text-left transition-all hover:scale-105"
           >
             <div className={`h-44 w-full transition-all group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] relative ${era.previewClass}`}>
+               {era.id === 'profdr' && (
+                 <div>
+                   <h3 style={{fontSize: '13px', fontWeight: 'bold', margin: '0 0 4px'}}>Welcome to my homepage!</h3>
+                   <hr style={{border: 0, borderTop: '1px solid #808080', margin: '4px 0'}} />
+                   <p style={{margin: '2px 0'}}>Click <a>here</a> for papers.</p>
+                   <p style={{margin: '2px 0'}}>Last updated: 14 Mar 1995</p>
+                 </div>
+               )}
+               {era.id === 'geocities' && (
+                 <div>
+                   <div className="geo-rainbow" style={{fontWeight: 'bold', fontSize: '13px'}}>~ My HomePage ~</div>
+                   <div style={{height: '4px', background: 'linear-gradient(to right,red,orange,yellow,green,cyan,blue,magenta)', margin: '3px 0'}} />
+                   <div className="geo-blink" style={{color: '#ff00ff'}}>NEW!!!</div>
+                   <div style={{color: '#00ffff'}}>Click <span style={{textDecoration: 'underline'}}>here</span></div>
+                 </div>
+               )}
+               {era.id === 'y2k' && (
+                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px'}}>
+                   <div className="y2k-logo" style={{fontSize: '18px'}}>acme<span style={{color: '#ff6600', WebkitTextFillColor: '#ff6600'}}>.</span>lab</div>
+                   <span className="y2k-beta" style={{fontSize: '8px', padding: '1px 6px', marginLeft: 0}}>BETA</span>
+                   <span className="y2k-gel" style={{fontSize: '9px', padding: '3px 10px'}}>Sign Up</span>
+                 </div>
+               )}
                {era.id === '80s' && "> SYSTEM_READY"}
                {era.id === '90s' && (
                  <>

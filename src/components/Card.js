@@ -3,7 +3,48 @@ import { useTheme } from './ThemeContext';
 
 export default function Card({ title, children, className = "" }) {
   const { theme } = useTheme();
-  
+
+  if (theme === 'profdr') {
+    return (
+      <section className={`mb-6 ${className}`}>
+        {title && (
+          <>
+            <h3>{title.replace(/_/g, ' ')}</h3>
+            <hr />
+          </>
+        )}
+        <div>{children}</div>
+      </section>
+    );
+  }
+
+  if (theme === 'geocities') {
+    return (
+      <div className={`geo-panel mb-6 ${className}`}>
+        {title && (
+          <>
+            <h3>~* {title.replace(/_/g, ' ')} *~</h3>
+            <hr />
+          </>
+        )}
+        <div>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'y2k') {
+    return (
+      <div className={`y2k-panel mb-6 ${className}`}>
+        {title && (
+          <div className="y2k-panel-header">
+            {title.replace(/_/g, ' ').toLowerCase()}
+          </div>
+        )}
+        <div className="y2k-panel-body">{children}</div>
+      </div>
+    );
+  }
+
   if (theme === '2010s') {
     return (
       <div className={`hero-panel mb-8 p-0 ${className}`}>
