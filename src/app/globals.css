@@ -70,6 +70,56 @@
   --color-ai-accent: #4a9eff;
   --color-ai-gradient: linear-gradient(135deg, #4a9eff 0%, #a855f7 100%);
 
+  /* MySpace Palette (2005 social chaos) */
+  --color-myspace-bg: #001a2a;
+  --color-myspace-fg: #ffffff;
+  --color-myspace-pink: #00cccc;
+  --color-myspace-purple: #7799ff;
+  --color-myspace-blue: #00eeff;
+  --color-myspace-panel: #001e3a;
+  --color-myspace-border: #00cccc;
+
+  /* Typewriter Palette (1920s pre-digital) */
+  --color-tw-bg: #f0e6d0;
+  --color-tw-fg: #2a1a0a;
+  --color-tw-ink: #1a0f00;
+  --color-tw-faded: #7a5c3a;
+  --color-tw-rule: #9a7a5a;
+  --color-tw-paper: #ede0c4;
+
+  /* BIOS Palette (1981 IBM PC amber) */
+  --color-bios-bg: #000000;
+  --color-bios-fg: #ffb000;
+  --color-bios-dim: #a07000;
+  --color-bios-bright: #ffd060;
+  --color-bios-border: #ffb000;
+
+  /* Zelda Palette (1986 NES Legend of Zelda) */
+  --color-zelda-bg: #0a1a04;
+  --color-zelda-fg: #a8d840;
+  --color-zelda-gold: #f0c040;
+  --color-zelda-dark: #1a2c0a;
+  --color-zelda-heart: #e83030;
+  --color-zelda-water: #4898c8;
+
+  /* Mario Palette (1985 NES Super Mario Bros) */
+  --color-mario-sky: #5c94fc;
+  --color-mario-fg: #ffffff;
+  --color-mario-coin: #fcbc3c;
+  --color-mario-red: #f84848;
+  --color-mario-green: #00a800;
+  --color-mario-pipe: #00a800;
+  --color-mario-block: #c07028;
+  --color-mario-ground: #c07028;
+
+  /* Mac OS Classic Palette (1984 System 1–7 platinum) */
+  --color-mac-bg: #c0c0c0;
+  --color-mac-fg: #000000;
+  --color-mac-window: #ffffff;
+  --color-mac-titlebar: #000000;
+  --color-mac-border: #000000;
+  --color-mac-shadow: #808080;
+
   --shadow-retro: 4px 4px 0px 0px #ffffff;
   --shadow-mgs: 0 0 15px rgba(0, 255, 65, 0.2);
   --shadow-me: 0 0 20px rgba(255, 157, 0, 0.15);
@@ -99,6 +149,12 @@
 [data-theme='2000s'] { --background: #050a0f; --foreground: #ff9d00; }
 [data-theme='2010s'] { --background: #f5f5f5; --foreground: #1a1a1a; }
 [data-theme='2020s'] { --background: #0f111a; --foreground: #e2e8f0; }
+[data-theme='myspace'] { --background: #001a2a; --foreground: #ffffff; }
+[data-theme='typewriter'] { --background: #f0e6d0; --foreground: #2a1a0a; }
+[data-theme='bios'] { --background: #000000; --foreground: #ffb000; }
+[data-theme='macos'] { --background: #c0c0c0; --foreground: #000000; }
+[data-theme='zelda'] { --background: #8b8000; --foreground: #f0c040; }
+[data-theme='mario'] { --background: #5c94fc; --foreground: #ffffff; }
 
 body {
   background-color: var(--background);
@@ -682,3 +738,799 @@ body {
   line-height: 1.3;
 }
 .profdr-preview a { color: #0000ee; text-decoration: underline; }
+
+/* =====================================================================
+   MYSPACE — 2005 social networking chaos
+   Dark purple-black bg, glitter-pink accents, Comic Sans + Impact mix,
+   top 8 panels, "About Me" boxes, blinking sparkles.
+   ===================================================================== */
+.theme-myspace {
+  font-family: "Trebuchet MS", "Arial", sans-serif !important;
+  background-color: #001a2a !important;
+  color: #ffffff !important;
+  background-image:
+    radial-gradient(circle, rgba(0,204,204,0.15) 1px, transparent 2px),
+    radial-gradient(circle, rgba(119,153,255,0.1) 1px, transparent 2px);
+  background-size: 40px 40px, 70px 70px;
+  background-attachment: fixed;
+}
+.theme-myspace * {
+  letter-spacing: normal !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+.theme-myspace h1, .theme-myspace h2, .theme-myspace h3 {
+  font-family: "Impact", "Arial Black", sans-serif !important;
+  color: #00cccc !important;
+  text-shadow: 0 0 10px #00cccc, 0 0 20px rgba(0,204,204,0.5) !important;
+  text-align: center !important;
+}
+.theme-myspace h1 { font-size: 2.2em !important; }
+.theme-myspace h2 { font-size: 1.6em !important; }
+.theme-myspace h3 { font-size: 1.2em !important; }
+.theme-myspace p { color: #aaddee !important; line-height: 1.6 !important; }
+.theme-myspace a, .theme-myspace a:link {
+  color: #00eeff !important;
+  text-decoration: underline !important;
+}
+.theme-myspace a:visited { color: #7799ff !important; }
+.theme-myspace a:hover { color: #00cccc !important; text-shadow: 0 0 6px #00cccc !important; }
+.theme-myspace ul { list-style: none !important; padding-left: 0 !important; }
+.theme-myspace ul li { padding: 4px 0; }
+.theme-myspace ul li::before { content: "★ "; color: #00cccc; }
+.theme-myspace hr {
+  border: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(to right, transparent, #00cccc, #7799ff, #00eeff, transparent) !important;
+  margin: 1em 0 !important;
+}
+.theme-myspace strong, .theme-myspace b { color: #00cccc !important; }
+.theme-myspace em, .theme-myspace i { color: #7799ff !important; }
+
+/* MySpace panel — the "About Me" table box */
+.myspace-panel {
+  background: #001e3a;
+  border: 2px solid #00cccc;
+  padding: 12px;
+  margin: 1em 0;
+  color: #aaddee;
+  box-shadow: 0 0 12px rgba(0, 204, 204, 0.3), inset 0 0 8px rgba(119,153,255,0.05);
+}
+.myspace-panel-header {
+  background: linear-gradient(to right, #00cccc, #7799ff);
+  color: #ffffff;
+  font-family: "Impact", sans-serif;
+  font-size: 1em;
+  padding: 4px 10px;
+  margin: -12px -12px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Override Tailwind utilities */
+.theme-myspace .pixel-border,
+.theme-myspace .mgs-panel,
+.theme-myspace .me-panel,
+.theme-myspace .hero-panel,
+.theme-myspace .ai-bubble {
+  background: #001e3a !important;
+  border: 2px solid #00cccc !important;
+  color: #aaddee !important;
+  box-shadow: 0 0 12px rgba(0, 204, 204, 0.3) !important;
+}
+.theme-myspace .pixel-button,
+.theme-myspace .mgs-button,
+.theme-myspace .me-button,
+.theme-myspace .hero-button {
+  background: linear-gradient(to bottom, #00cccc 0%, #007799 100%) !important;
+  border: 2px solid #00cccc !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  font-weight: bold !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 8px rgba(0,204,204,0.5) !important;
+}
+.theme-myspace [class*="bg-"] { background-color: #001a2a !important; background-image: none !important; }
+.theme-myspace [class*="text-"]:not(a) { color: #aaddee !important; }
+.theme-myspace [class*="border-"] { border-color: #00cccc !important; }
+.theme-myspace [class*="shadow"] { box-shadow: 0 0 12px rgba(0,204,204,0.3) !important; }
+.theme-myspace [class*="skew"], .theme-myspace [class*="rotate"] { transform: none !important; }
+
+/* MySpace glitter blink */
+.theme-myspace .myspace-blink { animation: myspaceBlink 0.9s steps(2, start) infinite; }
+@keyframes myspaceBlink { to { visibility: hidden; } }
+
+/* Splash preview */
+.myspace-preview {
+  background-color: #001a2a;
+  background-image:
+    radial-gradient(circle, rgba(0,204,204,0.3) 1px, transparent 2px);
+  background-size: 20px 20px;
+  border: 2px solid #00cccc;
+  box-shadow: 0 0 10px rgba(0,204,204,0.4);
+  padding: 8px;
+  font-size: 10px;
+  color: #aaddee;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* =====================================================================
+   TYPEWRITER — 1920s pre-digital academic correspondence
+   Aged paper bg, Courier/monospace, uneven ink, decorative rules,
+   no colour, letterhead feel.
+   ===================================================================== */
+.theme-typewriter {
+  font-family: "Courier New", Courier, "Lucida Console", monospace !important;
+  background-color: #f0e6d0 !important;
+  color: #2a1a0a !important;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(42, 26, 10, 0.06) 27px,
+      rgba(42, 26, 10, 0.06) 28px
+    );
+  background-attachment: fixed;
+}
+.theme-typewriter * {
+  font-family: "Courier New", Courier, "Lucida Console", monospace !important;
+  letter-spacing: 0.03em !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  text-transform: none !important;
+  font-style: normal !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.theme-typewriter h1, .theme-typewriter h2, .theme-typewriter h3 {
+  font-weight: bold !important;
+  color: #1a0f00 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  border-bottom: 2px solid #2a1a0a !important;
+  padding-bottom: 0.25em !important;
+  margin: 1em 0 0.5em !important;
+}
+.theme-typewriter h1 { font-size: 1.6em !important; }
+.theme-typewriter h2 { font-size: 1.3em !important; }
+.theme-typewriter h3 { font-size: 1.1em !important; }
+.theme-typewriter p { color: #2a1a0a !important; line-height: 1.8 !important; margin: 0.75em 0 !important; }
+.theme-typewriter a, .theme-typewriter a:link {
+  color: #2a1a0a !important;
+  text-decoration: underline !important;
+}
+.theme-typewriter a:hover { color: #7a5c3a !important; }
+.theme-typewriter ul { list-style: none !important; padding-left: 0 !important; }
+.theme-typewriter ul li { padding: 3px 0; }
+.theme-typewriter ul li::before { content: "- "; }
+.theme-typewriter hr {
+  border: 0 !important;
+  border-top: 2px solid #2a1a0a !important;
+  margin: 1.5em 0 !important;
+}
+.theme-typewriter strong, .theme-typewriter b {
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  color: #1a0f00 !important;
+}
+
+/* Typewriter panel — like a letterhead section box */
+.tw-panel {
+  background: #ede0c4;
+  border: 1px solid #2a1a0a;
+  padding: 16px;
+  margin: 1em 0;
+  color: #2a1a0a;
+  position: relative;
+}
+.tw-panel::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px solid rgba(42, 26, 10, 0.3);
+  pointer-events: none;
+}
+.tw-heading {
+  font-family: "Courier New", Courier, monospace !important;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border-bottom: 2px solid #2a1a0a;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+/* Override Tailwind utilities */
+.theme-typewriter .pixel-border,
+.theme-typewriter .mgs-panel,
+.theme-typewriter .me-panel,
+.theme-typewriter .hero-panel,
+.theme-typewriter .ai-bubble {
+  background: #ede0c4 !important;
+  border: 1px solid #2a1a0a !important;
+  color: #2a1a0a !important;
+}
+.theme-typewriter .pixel-button,
+.theme-typewriter .mgs-button,
+.theme-typewriter .me-button,
+.theme-typewriter .hero-button {
+  background: #e0cfa8 !important;
+  border: 2px solid #2a1a0a !important;
+  color: #2a1a0a !important;
+  padding: 4px 12px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+.theme-typewriter [class*="bg-"] { background-color: #ede0c4 !important; background-image: none !important; }
+.theme-typewriter [class*="text-"]:not(a) { color: #2a1a0a !important; }
+.theme-typewriter [class*="border-"] { border-color: #2a1a0a !important; }
+.theme-typewriter [class*="shadow"] { box-shadow: none !important; }
+.theme-typewriter [class*="skew"], .theme-typewriter [class*="rotate"] { transform: none !important; }
+
+/* Typewriter cursor blink */
+.tw-cursor::after { content: "_"; animation: twCursor 1s steps(2, start) infinite; }
+@keyframes twCursor { to { visibility: hidden; } }
+
+/* Splash preview */
+.typewriter-preview {
+  background-color: #f0e6d0;
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 13px, rgba(42,26,10,0.08) 13px, rgba(42,26,10,0.08) 14px
+  );
+  border: 1px solid #2a1a0a;
+  padding: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  color: #2a1a0a;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* =====================================================================
+   BIOS — 1981 IBM PC amber phosphor boot screen
+   Pure black bg, amber text, monospace, POST-style output,
+   no graphics, block cursor, uppercase everything.
+   ===================================================================== */
+.theme-bios {
+  font-family: "Courier New", Courier, "Lucida Console", monospace !important;
+  background-color: #000000 !important;
+  color: #ffb000 !important;
+  image-rendering: pixelated;
+}
+.theme-bios * {
+  font-family: "Courier New", Courier, "Lucida Console", monospace !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  font-style: normal !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+.theme-bios h1, .theme-bios h2, .theme-bios h3 {
+  font-weight: bold !important;
+  color: #ffd060 !important;
+  border-bottom: 1px solid #ffb000 !important;
+  padding-bottom: 0.2em !important;
+  margin: 1em 0 0.5em !important;
+}
+.theme-bios h1 { font-size: 1.4em !important; }
+.theme-bios h2 { font-size: 1.2em !important; }
+.theme-bios h3 { font-size: 1em !important; }
+.theme-bios p { color: #ffb000 !important; line-height: 1.6 !important; margin: 0.5em 0 !important; }
+.theme-bios a, .theme-bios a:link {
+  color: #ffd060 !important;
+  text-decoration: underline !important;
+}
+.theme-bios a:hover { color: #ffffff !important; }
+.theme-bios ul { list-style: none !important; padding-left: 0 !important; }
+.theme-bios ul li { padding: 2px 0; }
+.theme-bios ul li::before { content: "> "; color: #ffd060; }
+.theme-bios hr {
+  border: 0 !important;
+  border-top: 1px solid #ffb000 !important;
+  margin: 1em 0 !important;
+}
+.theme-bios strong, .theme-bios b { color: #ffd060 !important; font-weight: bold !important; }
+
+/* BIOS amber phosphor scanline overlay */
+.theme-bios::after {
+  content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(255, 176, 0, 0.03) 50%, transparent 50%);
+  background-size: 100% 2px;
+  z-index: 9997; pointer-events: none;
+}
+
+/* BIOS panel — horizontal rule + label header style */
+.bios-panel {
+  background: #000;
+  border: 1px solid #ffb000;
+  padding: 12px;
+  margin: 1em 0;
+  color: #ffb000;
+  position: relative;
+}
+.bios-panel-header {
+  color: #000;
+  background: #ffb000;
+  font-weight: bold;
+  padding: 2px 8px;
+  margin: -12px -12px 10px;
+  font-size: 0.85em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Override Tailwind utilities */
+.theme-bios .pixel-border,
+.theme-bios .mgs-panel,
+.theme-bios .me-panel,
+.theme-bios .hero-panel,
+.theme-bios .ai-bubble {
+  background: #000 !important;
+  border: 1px solid #ffb000 !important;
+  color: #ffb000 !important;
+}
+.theme-bios .pixel-button,
+.theme-bios .mgs-button,
+.theme-bios .me-button,
+.theme-bios .hero-button {
+  background: #ffb000 !important;
+  border: 1px solid #ffd060 !important;
+  color: #000000 !important;
+  padding: 4px 12px !important;
+  font-weight: bold !important;
+}
+.theme-bios [class*="bg-"] { background-color: #000000 !important; }
+.theme-bios [class*="text-"]:not(a) { color: #ffb000 !important; }
+.theme-bios [class*="border-"] { border-color: #ffb000 !important; }
+.theme-bios [class*="shadow"] { box-shadow: none !important; }
+.theme-bios [class*="skew"], .theme-bios [class*="rotate"] { transform: none !important; }
+
+/* BIOS block cursor */
+.bios-cursor::after { content: "█"; animation: biosCursor 1s steps(2, start) infinite; }
+@keyframes biosCursor { to { visibility: hidden; } }
+
+/* =====================================================================
+   MAC OS CLASSIC — 1984 System 1–7 platinum desktop
+   Medium grey desktop, white windows with black pixel borders,
+   black-and-white title bars with drag stripes, Chicago-style font.
+   ===================================================================== */
+.theme-macos {
+  font-family: "Geneva", "Helvetica", "Arial", sans-serif !important;
+  background-color: #c0c0c0 !important;
+  color: #000000 !important;
+  /* Classic Mac OS pixel-pattern desktop texture */
+  background-image: repeating-linear-gradient(
+    0deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 2px
+  ),
+  repeating-linear-gradient(
+    90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 2px
+  );
+  background-size: 2px 2px;
+  background-attachment: fixed;
+}
+.theme-macos * {
+  font-family: "Geneva", "Helvetica", "Arial", sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-style: normal !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+.theme-macos h1, .theme-macos h2, .theme-macos h3 {
+  font-weight: bold !important;
+  color: #000000 !important;
+  text-align: left !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0.75em 0 0.4em !important;
+}
+.theme-macos h1 { font-size: 1.5em !important; }
+.theme-macos h2 { font-size: 1.2em !important; }
+.theme-macos h3 { font-size: 1em !important; }
+.theme-macos p { color: #000000 !important; line-height: 1.5 !important; }
+.theme-macos a, .theme-macos a:link {
+  color: #000080 !important;
+  text-decoration: underline !important;
+}
+.theme-macos a:hover { color: #0000cc !important; }
+.theme-macos ul { list-style: disc !important; padding-left: 20px !important; }
+.theme-macos ul li { padding: 2px 0; }
+.theme-macos hr {
+  border: 0 !important;
+  border-top: 1px solid #808080 !important;
+  margin: 1em 0 !important;
+}
+.theme-macos strong, .theme-macos b { font-weight: bold !important; }
+
+/* Mac window widget — the core UI primitive */
+.mac-window {
+  background: #ffffff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #808080;
+  margin: 0.75em 0;
+}
+.mac-titlebar {
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0px, #000 1px, #ffffff 1px, #ffffff 3px
+  );
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+  position: relative;
+  padding: 0 24px;
+}
+.mac-titlebar-label {
+  background: #ffffff;
+  padding: 0 6px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+.mac-close-box {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  line-height: 1;
+}
+.mac-window-body { padding: 12px; font-size: 13px; color: #000; }
+
+/* Mac menu bar */
+.mac-menubar {
+  background: #ffffff;
+  border-bottom: 1px solid #000;
+  padding: 2px 8px;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+  align-items: center;
+}
+.mac-menubar-item { cursor: default; padding: 0 4px; }
+.mac-menubar-item:hover { background: #000; color: #fff; }
+
+/* Mac button */
+.mac-button {
+  background: #ffffff;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  padding: 4px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+.mac-button:active { box-shadow: none; transform: translate(2px, 2px); }
+
+/* Override Tailwind utilities */
+.theme-macos .pixel-border,
+.theme-macos .mgs-panel,
+.theme-macos .me-panel,
+.theme-macos .hero-panel,
+.theme-macos .ai-bubble {
+  background: #ffffff !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+  box-shadow: 2px 2px 0 #808080 !important;
+}
+.theme-macos .pixel-button,
+.theme-macos .mgs-button,
+.theme-macos .me-button,
+.theme-macos .hero-button {
+  background: #ffffff !important;
+  border: 1px solid #000 !important;
+  box-shadow: 2px 2px 0 #000 !important;
+  color: #000 !important;
+  padding: 4px 16px !important;
+  font-weight: bold !important;
+  border-radius: 0 !important;
+}
+.theme-macos [class*="bg-"] { background-color: #c0c0c0 !important; background-image: none !important; }
+.theme-macos [class*="text-"]:not(a) { color: #000000 !important; }
+.theme-macos [class*="border-"] { border-color: #000000 !important; }
+.theme-macos [class*="shadow"] { box-shadow: 2px 2px 0 #808080 !important; }
+.theme-macos [class*="skew"], .theme-macos [class*="rotate"] { transform: none !important; }
+
+/* =====================================================================
+   ZELDA — 1986 NES Legend of Zelda
+   Dark forest-green bg, golden text, pixel font, heart containers,
+   parchment panels, dungeon map aesthetic.
+   ===================================================================== */
+.theme-zelda {
+  font-family: var(--font-press-start), 'Courier New', monospace !important;
+  background-color: transparent !important;
+  color: #a8d840 !important;
+  image-rendering: pixelated;
+}
+.theme-zelda * {
+  font-family: var(--font-press-start), 'Courier New', monospace !important;
+  image-rendering: pixelated;
+  letter-spacing: 0.05em !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  font-style: normal !important;
+  border-radius: 0 !important;
+}
+.theme-zelda h1, .theme-zelda h2, .theme-zelda h3 {
+  color: #f0c040 !important;
+  text-shadow: 0 0 8px rgba(240,192,64,0.5) !important;
+  text-align: center !important;
+  margin: 0.75em 0 0.4em !important;
+}
+.theme-zelda h1 { font-size: 1.1em !important; }
+.theme-zelda h2 { font-size: 0.9em !important; }
+.theme-zelda h3 { font-size: 0.75em !important; }
+.theme-zelda p { color: #a8d840 !important; line-height: 2 !important; font-size: 0.7em !important; }
+.theme-zelda a, .theme-zelda a:link {
+  color: #f0c040 !important;
+  text-decoration: none !important;
+  text-shadow: 0 0 4px rgba(240,192,64,0.4) !important;
+}
+.theme-zelda a:hover { color: #ffffff !important; text-shadow: 0 0 8px #fff !important; }
+.theme-zelda ul { list-style: none !important; padding-left: 0 !important; }
+.theme-zelda ul li { padding: 4px 0; font-size: 0.7em !important; }
+.theme-zelda ul li::before { content: "\25B6 "; color: #f0c040; }
+.theme-zelda hr {
+  border: 0 !important;
+  border-top: 2px solid #f0c040 !important;
+  margin: 1em 0 !important;
+  box-shadow: 0 0 6px rgba(240,192,64,0.4) !important;
+}
+.theme-zelda strong, .theme-zelda b { color: #f0c040 !important; }
+
+/* Zelda panel — parchment scroll style */
+.zelda-panel {
+  background: #1a2c0a;
+  border: 2px solid #f0c040;
+  box-shadow: 0 0 12px rgba(240,192,64,0.2), inset 0 0 20px rgba(0,0,0,0.4);
+  padding: 16px;
+  margin: 1em 0;
+  color: #a8d840;
+  position: relative;
+}
+.zelda-panel::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 1px solid rgba(240,192,64,0.3);
+  pointer-events: none;
+}
+.zelda-panel-header {
+  color: #f0c040;
+  font-size: 0.75em;
+  text-align: center;
+  border-bottom: 1px solid #f0c040;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(240,192,64,0.5);
+  letter-spacing: 0.1em;
+}
+
+/* Override Tailwind utilities */
+.theme-zelda .pixel-border,
+.theme-zelda .mgs-panel,
+.theme-zelda .me-panel,
+.theme-zelda .hero-panel,
+.theme-zelda .ai-bubble {
+  background: #1a2c0a !important;
+  border: 2px solid #f0c040 !important;
+  color: #a8d840 !important;
+  box-shadow: 0 0 10px rgba(240,192,64,0.2) !important;
+}
+.theme-zelda .pixel-button,
+.theme-zelda .mgs-button,
+.theme-zelda .me-button,
+.theme-zelda .hero-button {
+  background: #1a2c0a !important;
+  border: 2px solid #f0c040 !important;
+  color: #f0c040 !important;
+  padding: 6px 14px !important;
+  font-size: 0.65em !important;
+  text-shadow: 0 0 4px rgba(240,192,64,0.4) !important;
+  box-shadow: 0 0 8px rgba(240,192,64,0.3) !important;
+}
+.theme-zelda [class*="bg-"] { background-color: #0a1a04 !important; background-image: none !important; }
+.theme-zelda [class*="text-"]:not(a) { color: #a8d840 !important; }
+.theme-zelda [class*="border-"] { border-color: #f0c040 !important; }
+.theme-zelda [class*="shadow"] { box-shadow: 0 0 10px rgba(240,192,64,0.2) !important; }
+.theme-zelda [class*="skew"], .theme-zelda [class*="rotate"] { transform: none !important; }
+
+/* Zelda heart / triforce decoration */
+.zelda-hearts { color: #e83030; font-size: 0.7em; letter-spacing: 2px; }
+.zelda-triforce { color: #f0c040; font-size: 0.8em; }
+
+/* Splash preview */
+.zelda-preview {
+  background: #0a1a04;
+  border: 2px solid #f0c040;
+  box-shadow: 0 0 10px rgba(240,192,64,0.3);
+  padding: 8px;
+  font-family: var(--font-press-start), monospace;
+  font-size: 8px;
+  color: #a8d840;
+  text-align: center;
+  image-rendering: pixelated;
+}
+
+/* =====================================================================
+   MARIO — 1985 NES Super Mario Bros
+   Sky-blue bg, pixel font, coin-gold accents, brick blocks,
+   classic HUD layout (MARIO / COINS / WORLD / TIME).
+   ===================================================================== */
+.theme-mario {
+  font-family: var(--font-press-start), 'Courier New', monospace !important;
+  background-color: #5c94fc !important;
+  color: #ffffff !important;
+  image-rendering: pixelated;
+}
+.theme-mario * {
+  font-family: var(--font-press-start), 'Courier New', monospace !important;
+  image-rendering: pixelated;
+  letter-spacing: 0.05em !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  font-style: normal !important;
+  border-radius: 0 !important;
+}
+.theme-mario h1, .theme-mario h2, .theme-mario h3 {
+  color: #fcbc3c !important;
+  text-shadow: 2px 2px 0 #000 !important;
+  text-align: center !important;
+  margin: 0.75em 0 0.4em !important;
+}
+.theme-mario h1 { font-size: 1em !important; }
+.theme-mario h2 { font-size: 0.85em !important; }
+.theme-mario h3 { font-size: 0.7em !important; }
+.theme-mario p { color: #ffffff !important; line-height: 2 !important; font-size: 0.65em !important; text-shadow: 1px 1px 0 #000 !important; }
+.theme-mario a, .theme-mario a:link {
+  color: #fcbc3c !important;
+  text-decoration: none !important;
+  text-shadow: 1px 1px 0 #000 !important;
+}
+.theme-mario a:hover { color: #ffffff !important; }
+.theme-mario ul { list-style: none !important; padding-left: 0 !important; }
+.theme-mario ul li { padding: 4px 0; font-size: 0.65em !important; text-shadow: 1px 1px 0 #000 !important; }
+.theme-mario ul li::before { content: "\25BA "; color: #fcbc3c; }
+.theme-mario hr {
+  border: 0 !important;
+  border-top: 4px solid #c07028 !important;
+  border-bottom: 4px solid #000 !important;
+  margin: 1em 0 !important;
+}
+.theme-mario strong, .theme-mario b { color: #fcbc3c !important; text-shadow: 1px 1px 0 #000 !important; }
+
+/* Mario brick/coin block panel */
+.mario-panel {
+  background: #c07028;
+  border: 4px solid #000;
+  box-shadow: inset -4px -4px 0 #8c4a14, inset 4px 4px 0 #e8883c;
+  padding: 12px;
+  margin: 1em 0;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000;
+}
+.mario-panel-header {
+  background: #000;
+  color: #fcbc3c;
+  font-size: 0.65em;
+  padding: 4px 8px;
+  margin: -12px -12px 10px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* Mario question block */
+.mario-qblock {
+  display: inline-block;
+  background: #fcbc3c;
+  border: 3px solid #000;
+  box-shadow: inset -3px -3px 0 #c07028, inset 3px 3px 0 #ffe868;
+  width: 28px; height: 28px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #000;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* Mario HUD bar */
+.mario-hud {
+  background: #000;
+  color: #ffffff;
+  font-size: 0.6em;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid #5c94fc;
+}
+.mario-hud-coin { color: #fcbc3c; }
+
+/* Override Tailwind utilities */
+.theme-mario .pixel-border,
+.theme-mario .mgs-panel,
+.theme-mario .me-panel,
+.theme-mario .hero-panel,
+.theme-mario .ai-bubble {
+  background: #c07028 !important;
+  border: 4px solid #000 !important;
+  color: #ffffff !important;
+  box-shadow: inset -4px -4px 0 #8c4a14, inset 4px 4px 0 #e8883c !important;
+  text-shadow: 1px 1px 0 #000 !important;
+}
+.theme-mario .pixel-button,
+.theme-mario .mgs-button,
+.theme-mario .me-button,
+.theme-mario .hero-button {
+  background: #fcbc3c !important;
+  border: 3px solid #000 !important;
+  box-shadow: inset -3px -3px 0 #c07028, inset 3px 3px 0 #ffe868 !important;
+  color: #000 !important;
+  padding: 6px 14px !important;
+  font-size: 0.65em !important;
+}
+.theme-mario [class*="bg-"] { background-color: #5c94fc !important; background-image: none !important; }
+.theme-mario [class*="text-"]:not(a) { color: #ffffff !important; }
+.theme-mario [class*="border-"] { border-color: #000000 !important; }
+.theme-mario [class*="shadow"] { box-shadow: inset -4px -4px 0 #000 !important; }
+.theme-mario [class*="skew"], .theme-mario [class*="rotate"] { transform: none !important; }
+
+/* Splash preview */
+.mario-preview {
+  background: #5c94fc;
+  border: 4px solid #000;
+  padding: 8px;
+  font-family: var(--font-press-start), monospace;
+  font-size: 8px;
+  color: #ffffff;
+  text-align: center;
+  image-rendering: pixelated;
+}
+
+/* Splash preview */
+.macos-preview {
+  background: #c0c0c0;
+  border: 1px solid #000;
+  font-family: "Geneva", "Helvetica", "Arial", sans-serif;
+  font-size: 10px;
+  color: #000;
+  overflow: hidden;
+}

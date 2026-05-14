@@ -5,14 +5,20 @@ import { useState } from 'react';
 
 function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   const eras = [
+    { id: 'typewriter', label: '1920 Broadsheet' },
+    { id: 'bios', label: '1981 BIOS' },
+    { id: 'macos', label: '1984 Mac OS' },
+    { id: '80s', label: '1985 Terminal' },
+    { id: 'mario', label: '1985 Plumber' },
+    { id: 'zelda', label: '1986 Adventure' },
     { id: 'profdr', label: '1993 Prof. Dr.' },
     { id: 'geocities', label: '1996 Geocities' },
-    { id: '80s', label: '1985 Terminal' },
     { id: '90s', label: '1998 Tactical' },
     { id: 'y2k', label: '2003 Web 2.0' },
+    { id: 'myspace', label: '2005 MySpace' },
     { id: '2000s', label: '2007 Omni-tool' },
     { id: '2010s', label: '2012 Vault Hunter' },
-    { id: '2020s', label: '2024 AI Assistant' }
+    { id: '2020s', label: '2024 AI Assistant' },
   ];
 
   return (
@@ -27,6 +33,12 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
           theme === '90s' ? 'text-mgs-green hover:text-white' :
           theme === '2000s' ? 'text-me-orange hover:text-white' :
           theme === '2010s' ? 'text-hero-dark hover:text-hero-yellow' :
+          theme === 'myspace' ? 'text-[#ff6699] hover:text-[#cc99ff]' :
+          theme === 'typewriter' ? 'text-[#2a1a0a] hover:text-[#7a5c3a]' :
+          theme === 'bios' ? 'text-[#ffb000] hover:text-[#ffd060]' :
+          theme === 'macos' ? 'text-black hover:text-[#000080]' :
+          theme === 'zelda' ? 'text-[#f0c040] hover:text-white' :
+          theme === 'mario' ? 'text-[#fcbc3c] hover:text-white' :
           'text-ai-accent hover:opacity-80'
         }`}
         title="Change Era"
@@ -45,6 +57,12 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
           theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' :
           theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
           theme === '2010s' ? 'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]' :
+          theme === 'myspace' ? 'bg-[#1e0040] border-2 border-[#ff6699] text-[#eebbdd]' :
+          theme === 'typewriter' ? 'bg-[#ede0c4] border border-[#2a1a0a] text-[#2a1a0a]' :
+          theme === 'bios' ? 'bg-black border border-[#ffb000] text-[#ffb000]' :
+          theme === 'macos' ? 'bg-white border border-black text-black' :
+          theme === 'zelda' ? 'bg-[#1a2c0a] border-2 border-[#f0c040] text-[#f0c040]' :
+          theme === 'mario' ? 'bg-[#3050c0] border-4 border-[#fcbc3c] text-white' :
           'bg-ai-sidebar border border-white/10 rounded-xl text-white backdrop-blur-xl'
         }`}>
           {eras.map(era => (
@@ -155,6 +173,154 @@ export default function Navbar() {
           ))}
         </div>
         <hr style={{border: 0, borderTop: '1px solid #808080', margin: '0.5em 0 0'}} />
+      </nav>
+    );
+  }
+
+  if (theme === 'myspace') {
+    return (
+      <nav style={{background: 'linear-gradient(to bottom, #2a0050, #14002a)', borderBottom: '2px solid #ff6699', padding: '8px', textAlign: 'center', boxShadow: '0 2px 12px rgba(255,102,153,0.3)'}}>
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{fontFamily: '"Impact", "Arial Black", sans-serif', color: '#ff6699', fontWeight: 'bold', fontSize: '22px', textDecoration: 'none', textShadow: '0 0 10px #ff6699'}}>
+              ★ ACME Lab ★
+            </Link>
+            <span style={{color: '#cc99ff', fontSize: '11px', fontFamily: '"Trebuchet MS", sans-serif'}}>Mood: <i style={{color: '#66ccff'}}>doing science</i></span>
+          </div>
+          <div className="flex gap-4 flex-wrap justify-center" style={{fontFamily: '"Trebuchet MS", sans-serif', fontSize: '13px'}}>
+            {navItems.map((item, i) => (
+              <span key={item.label}>
+                <Link href={item.href} style={{color: '#66ccff', textDecoration: 'underline'}}>
+                  {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+                </Link>
+                {i < navItems.length - 1 && <span style={{color: '#ff6699', marginLeft: '1rem'}}>♥</span>}
+              </span>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'typewriter') {
+    const sectionLabels = { PROJECTS: 'Instruments', TEAM: 'Staff', ALUMNI: 'Archives', PAPERS: 'Dispatches' };
+    return (
+      <nav style={{background: '#ede0c4', borderBottom: '3px double #2a1a0a', fontFamily: '"Courier New", Courier, monospace'}}>
+        <div className="container mx-auto px-4 py-2">
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #9a7a5a', paddingBottom: '6px', marginBottom: '6px'}}>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#2a1a0a', fontWeight: 'bold', fontSize: '22px', textDecoration: 'none', letterSpacing: '0.12em', fontFamily: '"Times New Roman", serif'}}>
+              The ACME Gazette
+            </Link>
+            <span style={{fontSize: '9px', color: '#7a5c3a', letterSpacing: '0.2em', textTransform: 'uppercase'}}>Morning Edition</span>
+          </div>
+          <div style={{display: 'flex', justifyContent: 'center', gap: '0', borderTop: '1px solid #9a7a5a', paddingTop: '4px'}}>
+            {navItems.map((item, i) => (
+              <span key={item.label} style={{display: 'flex', alignItems: 'center'}}>
+                <Link href={item.href} style={{color: '#2a1a0a', textDecoration: 'none', fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0 12px'}}>
+                  {sectionLabels[item.label] || item.label}
+                </Link>
+                {i < navItems.length - 1 && <span style={{color: '#9a7a5a'}}>|</span>}
+              </span>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'bios') {
+    return (
+      <nav style={{background: '#000', borderBottom: '1px solid #ffb000', padding: '8px 16px', fontFamily: '"Courier New", Courier, monospace'}}>
+        <div className="container mx-auto flex justify-between items-center flex-wrap gap-2">
+          <div className="flex items-center gap-4">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#ffd060', fontWeight: 'bold', fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none'}}>ACME BIOS v2.07</Link>
+          </div>
+          <div className="flex gap-6" style={{fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em'}}>
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{color: '#ffb000', textDecoration: 'none'}} className="hover:text-white transition-colors">
+                {'> '}{item.label}
+              </Link>
+            ))}
+          </div>
+          <span style={{color: '#a07000', fontSize: '11px', letterSpacing: '0.1em'}}>F1=HELP  ESC=EXIT</span>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'macos') {
+    return (
+      <nav style={{background: '#ffffff', borderBottom: '1px solid #000', fontFamily: '"Geneva", "Helvetica", Arial, sans-serif'}}>
+        <div style={{background: 'repeating-linear-gradient(90deg, #000 0px, #000 1px, #ffffff 1px, #ffffff 3px)', height: '4px'}} />
+        <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap" style={{padding: '4px 16px'}}>
+          <div className="flex items-center gap-6">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{fontWeight: 'bold', fontSize: '14px', color: '#000', textDecoration: 'none'}}>&#8984; ACME Lab</Link>
+          </div>
+          <div className="flex gap-0">
+            {navItems.map(item => (
+              <Link
+                key={item.label}
+                href={item.href}
+                style={{color: '#000', textDecoration: 'none', padding: '3px 12px', fontSize: '13px', fontWeight: 'bold', display: 'inline-block'}}
+                className="hover:bg-black hover:text-white transition-colors"
+              >
+                {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+              </Link>
+            ))}
+          </div>
+          <span style={{fontSize: '11px', color: '#808080'}}>System 7.5.5</span>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'zelda') {
+    return (
+      <nav style={{background: 'linear-gradient(to bottom, #1a2c0a, #2a4010)', borderBottom: '3px solid #f0c040', padding: '10px 0', fontFamily: '"Press Start 2P", monospace', imageRendering: 'pixelated'}}>
+        <div className="container mx-auto px-4 flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-4">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#f0c040', fontSize: '12px', textDecoration: 'none', textShadow: '0 0 8px rgba(240,192,64,0.6)', letterSpacing: '1px'}}>
+              &#9670; ACME LAB &#9670;
+            </Link>
+          </div>
+          <div className="flex gap-4 flex-wrap">
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{color: '#a8d840', fontSize: '9px', textDecoration: 'none', letterSpacing: '1px'}} className="hover:text-[#f0c040] transition-colors">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div style={{color: '#f0c040', fontSize: '8px', opacity: 0.6}}>&#9829;&#9829;&#9829;</div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'mario') {
+    return (
+      <nav style={{background: '#5c94fc', borderBottom: '4px solid #000', padding: '8px 0', fontFamily: '"Press Start 2P", monospace', imageRendering: 'pixelated'}}>
+        <div className="container mx-auto px-4 flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-4">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#ffffff', fontSize: '11px', textDecoration: 'none', textShadow: '2px 2px 0 #000', letterSpacing: '1px'}}>
+              ACME LAB
+            </Link>
+            <span style={{color: '#fcbc3c', fontSize: '9px', textShadow: '1px 1px 0 #000'}}>&#9733; x3</span>
+          </div>
+          <div className="flex gap-4 flex-wrap">
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{color: '#ffffff', fontSize: '8px', textDecoration: 'none', textShadow: '1px 1px 0 #000'}} className="hover:text-[#fcbc3c] transition-colors">
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div style={{color: '#ffffff', fontSize: '8px', textShadow: '1px 1px 0 #000', opacity: 0.8}}>WORLD 1-1</div>
+        </div>
       </nav>
     );
   }

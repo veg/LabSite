@@ -6,6 +6,42 @@ export default function EraSelectionSplash() {
 
   const eras = [
     {
+      id: 'typewriter',
+      label: '1920 Broadsheet',
+      desc: 'Extra! Extra! The morning edition. Broadsheet columns, ink-pressed type, wire dispatches, and editorial gravitas.',
+      previewClass: 'typewriter-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: 'bios',
+      label: '1981 BIOS',
+      desc: 'The primordial boot screen. IBM PC POST sequences, keyboard interrupt codes, AMI BIOS amber glow.',
+      previewClass: 'bg-black border-2 border-[#ffb000] text-[#ffb000] font-mono text-[8px] flex flex-col items-start justify-start p-3'
+    },
+    {
+      id: 'macos',
+      label: '1984 Mac OS',
+      desc: 'The System 1 genesis. Bitmap Chicago font, platinum windows, pull-down menus, and the Happy Mac.',
+      previewClass: 'macos-preview flex flex-col items-stretch justify-start'
+    },
+    {
+      id: '80s',
+      label: '1985 Terminal',
+      desc: 'The Archean Era of computing. Muted 8-bit terminal for early molecular modeling.',
+      previewClass: 'bg-black border-2 border-retro-green text-retro-green font-heading text-[8px] flex items-center justify-center p-4 text-center'
+    },
+    {
+      id: 'mario',
+      label: '1985 Plumber',
+      desc: 'Coins. Blocks. Pipes. A kingdom in peril and a hero in overalls. Our princess is in another castle.',
+      previewClass: 'mario-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: 'zelda',
+      label: '1986 Adventure',
+      desc: 'It\'s dangerous to go alone. A golden kingdom, dungeon maps, heart containers, and a sword of legend.',
+      previewClass: 'zelda-preview flex flex-col items-center justify-center'
+    },
+    {
       id: 'profdr',
       label: '1993 Prof. Dr.',
       desc: 'The Hadean dawn of the WWW. Browser defaults — serif text, blue underlined links, the user defines the look.',
@@ -16,12 +52,6 @@ export default function EraSelectionSplash() {
       label: '1996 Geocities',
       desc: 'The Cambrian-pre-explosion of amateur web life. Comic Sans, rainbow text, blinking marquees, under-construction GIFs.',
       previewClass: 'geo-preview flex flex-col items-center justify-center'
-    },
-    {
-      id: '80s',
-      label: '1985 Terminal',
-      desc: 'The Archean Era of computing. Muted 8-bit terminal for early molecular modeling.',
-      previewClass: 'bg-black border-2 border-retro-green text-retro-green font-heading text-[8px] flex items-center justify-center p-4 text-center'
     },
     { 
       id: '90s', 
@@ -34,6 +64,12 @@ export default function EraSelectionSplash() {
       label: '2003 Web 2.0',
       desc: 'The Silurian gel-button bloom. Sky-blue gradients, glossy buttons, rounded boxes, BETA badges, Verdana.',
       previewClass: 'y2k-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: 'myspace',
+      label: '2005 MySpace',
+      desc: 'Top 8. Glitter GIFs. Autoplay MIDI. Your profile song. Blog posts at 2am. This is your digital bedroom wall.',
+      previewClass: 'myspace-preview flex flex-col items-center justify-center'
     },
     {
       id: '2000s',
@@ -52,7 +88,7 @@ export default function EraSelectionSplash() {
       label: '2024 AI Assistant', 
       desc: 'The Anthropocene of Artificial Intelligence. Modern conversational research environments.',
       previewClass: 'bg-[#0f111a] border border-white/10 text-white font-sans text-xs flex items-center justify-start p-4 rounded-xl shadow-xl'
-    }
+    },
   ];
 
   return (
@@ -77,7 +113,7 @@ export default function EraSelectionSplash() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-4 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-w-7xl w-full">
         {eras.map((era) => (
           <button
             key={era.id}
@@ -121,6 +157,52 @@ export default function EraSelectionSplash() {
                  <div className="flex items-center gap-2">
                    <div className="w-4 h-4 rounded bg-gradient-to-br from-blue-400 to-purple-500"></div>
                    <span>How can I help?</span>
+                 </div>
+               )}
+               {era.id === 'myspace' && (
+                 <div style={{textAlign: 'center'}}>
+                   <div style={{fontSize: '13px', fontWeight: 'bold', color: '#ff6699', textShadow: '0 0 6px #ff6699'}}>★ ACME Lab ★</div>
+                   <div style={{fontSize: '9px', color: '#cc99ff', marginTop: '3px'}}>Mood: excited!</div>
+                   <div style={{fontSize: '8px', color: '#66ccff', marginTop: '2px'}}>Top 8 ♥ Updated</div>
+                 </div>
+               )}
+               {era.id === 'typewriter' && (
+                 <div style={{fontFamily: '"Courier New", Courier, monospace', textAlign: 'center', color: '#2a1a0a'}}>
+                   <div style={{fontSize: '11px', fontWeight: 'bold', borderBottom: '1px solid #2a1a0a', paddingBottom: '2px', marginBottom: '4px'}}>ACME Laboratory</div>
+                   <div style={{fontSize: '9px', lineHeight: 1.4}}>Institute for Genomics<br/>and Evolutionary Medicine</div>
+                 </div>
+               )}
+               {era.id === 'bios' && (
+                 <>
+                   <span>ACME BIOS v2.07</span>
+                   <span className="opacity-60">64K CONVENTIONAL MEMORY OK</span>
+                   <span className="opacity-40">DETECTING HDD...</span>
+                 </>
+               )}
+               {era.id === 'macos' && (
+                 <>
+                   <div className="macos-menubar-preview" style={{background: 'white', borderBottom: '1px solid #000', padding: '1px 4px', fontSize: '9px', fontWeight: 'bold', display: 'flex', gap: '8px'}}>&#8984; File Edit View</div>
+                   <div style={{padding: '6px', fontSize: '9px', fontFamily: '"Chicago", "Geneva", system-ui', color: '#000', background: '#fff', flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                     <div style={{border: '1px solid #000', padding: '4px 8px', boxShadow: '2px 2px 0 #000', background: '#fff', fontSize: '9px', textAlign: 'center'}}>
+                       <div style={{marginBottom: '2px'}}>&#128512;</div>
+                       <div>Welcome!</div>
+                     </div>
+                   </div>
+                 </>
+               )}
+               {era.id === 'zelda' && (
+                 <div style={{textAlign: 'center', fontFamily: '"Press Start 2P", monospace', fontSize: '8px'}}>
+                   <div style={{color: '#f0c040', marginBottom: '4px', fontSize: '10px'}}>&#9670; ZELDA &#9670;</div>
+                   <div style={{color: '#a8d840', fontSize: '8px', lineHeight: 1.6}}>IT&apos;S DANGEROUS<br/>TO GO ALONE!</div>
+                   <div style={{color: '#f0c040', marginTop: '4px'}}>&#9829;&#9829;&#9829;</div>
+                 </div>
+               )}
+               {era.id === 'mario' && (
+                 <div style={{textAlign: 'center', fontFamily: '"Press Start 2P", monospace', fontSize: '8px'}}>
+                   <div style={{color: '#f8f8f8', marginBottom: '4px'}}>WORLD 1-1</div>
+                   <div style={{color: '#fcbc3c', fontSize: '10px', marginBottom: '4px'}}>[ ? ]</div>
+                   <div style={{color: '#f8f8f8', fontSize: '8px'}}>COINS: 000</div>
+                   <div style={{color: '#f84848', marginTop: '4px'}}>&#9650; MARIO</div>
                  </div>
                )}
                

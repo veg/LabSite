@@ -29,15 +29,16 @@
     "id": "danielle",
     "name": "Danielle Callan",
     "title": "Developer",
-    "image": null,
+    "image": "/LabSite/images/members/Danielle.jpeg",
     "bio": "Bioinformatics software developer focusing on lab tools and infrastructure.",
     "links": {
-      "github": "https://github.com/d-callan"
+      "github": "https://github.com/d-callan",
+      "linkedin": "https://www.linkedin.com/in/d-callan/"
     }
   },
   {
     "id": "hanna-v",
-    "name": "Hanna Verdonk",
+    "name": "Hannah Verdonk",
     "title": "Postdoctoral Researcher",
     "image": "/LabSite/images/members/HV.jpg",
     "bio": "Specializing in molecular evolution and codon substitution models.",
