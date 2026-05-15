@@ -38,12 +38,18 @@ export default function PageContainer({ children, title, titleColorClass = "text
       theme === '2010s' ? 'bg-hero-bg text-hero-dark' :
       theme === '2020s' ? 'bg-ai-bg text-slate-200' : 
       theme === 'enterprise' ? 'bg-white text-[#212529]' :
-      theme === 'vax' ? 'bg-black text-[#33ff33]' : ''
+      theme === 'vax' ? 'bg-black text-[#33ff33]' : 
+      theme === 'myspace' ? 'bg-[#14002a] text-white' :
+      theme === 'typewriter' ? 'bg-[#f0e6d0] text-[#2a1a0a]' :
+      theme === 'bios' ? 'bg-black text-[#ffb000]' :
+      theme === 'macos' ? 'bg-[#c0c0c0] text-black' :
+      theme === 'zelda' ? 'bg-[#0a1a04] text-[#a8d840]' :
+      theme === 'mario' ? 'bg-[#5c94fc] text-white' : ''
     }`}>
       <Navbar />
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
         {title && (
-          <div className={(theme !== '80s' && theme !== 'profdr' && theme !== 'enterprise' && theme !== 'vax') ? 'mb-12 text-center' : ''}>
+          <div className={(theme !== '80s' && theme !== 'profdr' && theme !== 'enterprise' && theme !== 'vax' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario') ? 'mb-12 text-center' : ''}>
             {theme === 'vax' && (
               <div className="mb-8 font-mono">
                 <div className="text-[10px] opacity-50 mb-1">SET TERMINAL/INQUIRE</div>
@@ -63,7 +69,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             {theme === 'profdr' && (
-              <div className="flex flex-col items-center mb-8 font-serif">
+              <div className="flex flex-col items-center mb-8 font-serif text-left">
                 <Link href="/" className="text-4xl font-black tracking-tighter mb-2 hover:opacity-80 transition-opacity" style={{color: '#ff0000', fontFamily: 'serif', textDecoration: 'none'}}>
                   Yahoo<span style={{color: '#800080'}}>!</span>
                 </Link>
@@ -98,7 +104,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             
-            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'enterprise' && (
+            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'enterprise' && theme !== 'vax' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario' && (
               <h1 className={`text-4xl mb-12 text-center ${
                 theme === '80s' ? titleColorClass :
                 theme === '90s' ? 'text-mgs-green font-bold tracking-tighter border-b border-mgs-green/20 pb-4' :
@@ -122,6 +128,18 @@ export default function PageContainer({ children, title, titleColorClass = "text
                 {children}
              </div>
           </div>
+        ) : theme === 'zelda' ? (
+          <div className="zelda-panel"><div className="zelda-panel-header">&#9670; {title || 'QUEST LOG'} &#9670;</div>{children}</div>
+        ) : theme === 'mario' ? (
+          <div className="mario-panel"><div className="mario-panel-header">[ {title || 'ACME LAB'} ]</div>{children}</div>
+        ) : theme === 'myspace' ? (
+          <div className="myspace-panel"><div className="myspace-panel-header">{title || 'Content'}</div>{children}</div>
+        ) : theme === 'typewriter' ? (
+          <div className="tw-panel">{children}</div>
+        ) : theme === 'bios' ? (
+          <div className="bios-panel">{children}</div>
+        ) : theme === 'macos' ? (
+          <div className="mac-window"><div className="mac-titlebar"><div className="mac-titlebar-label">{title || 'ACME Lab'}</div></div><div className="mac-window-body">{children}</div></div>
         ) : children}
       </div>
       
@@ -162,12 +180,20 @@ export default function PageContainer({ children, title, titleColorClass = "text
            <p>SYSTEM: VAX-11/780 // OS: VMS V1.0 // UPTIME: 32768 SECONDS</p>
            <p className="opacity-60 mt-1">© 1978 ACME LABORATORY // ALL RIGHTS RESERVED</p>
         </footer>
-      ) : theme === 'profdr' ? (        <footer className="mt-auto p-4 text-center font-serif text-sm">
+      ) : theme === 'profdr' ? (
+        <footer className="mt-auto p-4 text-left font-serif text-sm">
           <hr className="my-4 border-gray-300" />
           <p className="mb-2">
             [ <Link href="/" className="text-blue-700 underline">Home</Link> | <Link href="/projects" className="text-blue-700 underline">Projects</Link> | <Link href="/members" className="text-blue-700 underline">Team</Link> | <Link href="/papers" className="text-blue-700 underline">Papers</Link> ]
           </p>
-          <p className="text-gray-600">
+          <address style={{fontStyle: 'italic', marginTop: '1rem', display: 'block'}}>
+            ACME Laboratory<br />
+            Institute for Genomics and Evolutionary Medicine<br />
+            Temple University<br />
+            E-mail: <a href="mailto:webmaster@acme.example" style={{color: '#0000ee', textDecoration: 'underline'}}>webmaster@acme.example</a>
+          </address>
+          <p style={{marginTop: '0.5rem'}}>Last modified: 14 March 1995. <span className="profdr-blink">[NEW!]</span></p>
+          <p className="text-gray-600 mt-4">
             Copyright © 1994 ACME Laboratory. All rights reserved.
           </p>
         </footer>
@@ -193,6 +219,42 @@ export default function PageContainer({ children, title, titleColorClass = "text
               © 2003 ACME Laboratory · Powered by <a href="#">Web 2.0</a> · <span className="y2k-beta" style={{fontSize: '9px', marginLeft: 0}}>BETA</span>
             </p>
           </div>
+        </footer>
+      ) : theme === 'zelda' ? (
+        <footer className="mt-auto p-4" style={{background: '#0a1a04', borderTop: '3px solid #f0c040', fontFamily: 'var(--font-press-start), monospace', textAlign: 'center', imageRendering: 'pixelated'}}>
+          <p style={{color: '#f0c040', fontSize: '8px', letterSpacing: '0.1em'}}>&#9830; ACME LABORATORY &#9830;</p>
+          <p style={{color: '#a8d840', fontSize: '7px', marginTop: '6px', lineHeight: 2}}>TEMPLE UNIVERSITY &mdash; INSTITUTE FOR GENOMICS</p>
+          <div style={{color: '#e83030', fontSize: '0.7em', marginTop: '4px'}}>&#9829;&#9829;&#9829;</div>
+        </footer>
+      ) : theme === 'mario' ? (
+        <footer className="mt-auto" style={{background: '#c07028', borderTop: '4px solid #000', fontFamily: 'var(--font-press-start), monospace', imageRendering: 'pixelated'}}>
+          <div style={{background: '#000', padding: '6px 12px', display: 'flex', justifyContent: 'space-between', fontSize: '7px', color: '#fff', textShadow: '1px 1px 0 #000'}}>
+            <span style={{color: '#fcbc3c'}}>GAME OVER</span>
+            <span>ACME LAB &copy; 2026</span>
+            <span style={{color: '#fcbc3c'}}>HIGH SCORE: 999999</span>
+          </div>
+        </footer>
+      ) : theme === 'myspace' ? (
+        <footer className="mt-auto p-4 text-center" style={{background: 'linear-gradient(to bottom, #1e0040, #14002a)', borderTop: '2px solid #ff6699', fontFamily: '"Trebuchet MS", sans-serif'}}>
+          <p style={{color: '#ff6699', fontWeight: 'bold'}}>★ ACME Laboratory ★</p>
+          <p style={{color: '#cc99ff', fontSize: '12px'}}>© 2005 ACME Lab ~ Temple University ~ All Rights Reserved ~</p>
+          <p className="myspace-blink" style={{color: '#66ccff', fontSize: '11px'}}>★ Add me to your Top 8! ★</p>
+        </footer>
+      ) : theme === 'typewriter' ? (
+        <footer className="mt-auto p-6" style={{background: '#e0cfa8', borderTop: '2px solid #2a1a0a', fontFamily: '"Courier New", Courier, monospace', textAlign: 'center'}}>
+          <p style={{fontSize: '11px', color: '#7a5c3a', letterSpacing: '0.1em'}}>ACME LABORATORY — TEMPLE UNIVERSITY — PHILADELPHIA, PA</p>
+          <p style={{fontSize: '10px', color: '#9a7a5a', marginTop: '4px'}}>Correspondence: acme@temple.edu | Beury Hall, Room 328</p>
+        </footer>
+      ) : theme === 'bios' ? (
+        <footer className="mt-auto p-4" style={{background: '#000', borderTop: '1px solid #ffb000', fontFamily: '"Courier New", Courier, monospace'}}>
+          <p style={{color: '#a07000', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em'}}>COPYRIGHT (C) 2026 ACME LABORATORY. ALL RIGHTS RESERVED.</p>
+          <p style={{color: '#a07000', fontSize: '11px', textTransform: 'uppercase'}}>INSTITUTE FOR GENOMICS AND EVOLUTIONARY MEDICINE — TEMPLE UNIVERSITY</p>
+        </footer>
+      ) : theme === 'macos' ? (
+        <footer className="mt-auto" style={{background: '#ffffff', borderTop: '1px solid #000', fontFamily: '"Geneva", Helvetica, Arial, sans-serif', padding: '8px 16px'}}>
+          <div style={{background: 'repeating-linear-gradient(90deg, #000 0px, #000 1px, #ffffff 1px, #ffffff 3px)', height: '4px', marginBottom: '8px'}} />
+          <p style={{fontSize: '12px', color: '#000', textAlign: 'center'}}>ACME Laboratory © 2026 — Temple University</p>
+          <p style={{fontSize: '11px', color: '#808080', textAlign: 'center'}}>Trash: 0 items, 0K</p>
         </footer>
       ) : (
         <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${

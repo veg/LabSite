@@ -24,7 +24,7 @@ export default function Card({ title, children, className = "" }) {
       <div className={`enterprise-card mb-6 flex flex-col h-full ${className}`}>
         {title && (
           <div className="border-b border-[#dee2e6] bg-[#f8f9fa] px-4 py-3">
-            <h3 className="text-base font-medium text-[#212529]">
+            <h3 className="text-base font-medium text-[#212529] border-none mb-0">
               {title}
             </h3>
           </div>
@@ -82,8 +82,8 @@ export default function Card({ title, children, className = "" }) {
       <div className={`geo-panel mb-6 ${className}`}>
         {title && (
           <>
-            <h3>~* {title.replace(/_/g, ' ')} *~</h3>
-            <hr />
+            <h3 className="border-none mb-2">~* {title.replace(/_/g, ' ')} *~</h3>
+            <hr className="my-2" />
           </>
         )}
         <div>{children}</div>
@@ -100,6 +100,85 @@ export default function Card({ title, children, className = "" }) {
           </div>
         )}
         <div className="y2k-panel-body">{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'myspace') {
+    return (
+      <div className={`myspace-panel mb-6 ${className}`}>
+        {title && (
+          <div className="myspace-panel-header">
+            {title}
+          </div>
+        )}
+        <div>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'zelda') {
+    return (
+      <div className={`zelda-panel mb-6 ${className}`}>
+        {title && (
+          <div className="zelda-panel-header text-left">
+            &#9670; {title} &#9670;
+          </div>
+        )}
+        <div>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'mario') {
+    return (
+      <div className={`mario-panel mb-6 ${className}`}>
+        {title && (
+          <div className="mario-panel-header text-left">
+            [ {title} ]
+          </div>
+        )}
+        <div>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'bios') {
+    return (
+      <div className={`bios-panel mb-6 ${className}`}>
+        {title && (
+          <div className="bios-panel-header">
+            {title}
+          </div>
+        )}
+        <div className="font-mono">{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'macos') {
+    return (
+      <div className={`mac-window mb-6 ${className}`}>
+        <div className="mac-titlebar">
+          <div className="mac-close-box"></div>
+          <div className="mac-titlebar-label">{title || 'ACME Lab'}</div>
+        </div>
+        <div className="mac-window-body">
+          {children}
+        </div>
+      </div>
+    );
+  }
+
+  if (theme === 'typewriter') {
+    return (
+      <div className={`tw-panel mb-6 ${className}`}>
+        {title && (
+          <div className="tw-heading">
+            {title}
+          </div>
+        )}
+        <div>{children}</div>
       </div>
     );
   }
@@ -126,7 +205,7 @@ export default function Card({ title, children, className = "" }) {
       <div className={`me-panel mb-6 ${className}`}>
         {title && (
           <div className="border-b border-me-orange/30 p-3 bg-me-orange/10 flex justify-between items-center">
-            <h3 className="text-sm font-bold text-me-orange tracking-widest italic uppercase">
+            <h3 className="text-sm font-bold text-me-orange tracking-widest italic uppercase border-none mb-0">
               {title}
             </h3>
             <div className="w-12 h-[1px] bg-me-orange/50"></div>
@@ -146,7 +225,7 @@ export default function Card({ title, children, className = "" }) {
       <div className={`mgs-panel mb-6 ${className}`}>
         {title && (
           <div className="border-b border-mgs-border p-2 flex justify-between items-center bg-mgs-green/10">
-            <h3 className="font-heading text-xs text-mgs-green font-bold tracking-widest">
+            <h3 className="font-heading text-xs text-mgs-green font-bold tracking-widest border-none mb-0">
               {title}
             </h3>
             <div className="flex gap-1">
@@ -166,7 +245,7 @@ export default function Card({ title, children, className = "" }) {
   return (
     <div className={`pixel-border bg-black p-4 md:p-6 mb-6 ${className}`}>
       {title && (
-        <h3 className="font-heading text-sm md:text-lg mb-4 text-retro-amber border-b-2 border-retro-amber pb-2">
+        <h3 className="font-heading text-sm md:text-lg mb-4 text-retro-amber border-b-2 border-retro-amber pb-2 border-t-0 border-l-0 border-r-0">
           {title}
         </h3>
       )}

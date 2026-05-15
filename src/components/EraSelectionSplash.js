@@ -10,27 +10,57 @@ export default function EraSelectionSplash() {
 
   const eras = useMemo(() => [
     {
+      id: 'typewriter',
+      label: '1920 Broadsheet',
+      desc: 'Extra! Extra! The morning edition. Broadsheet columns, ink-pressed type, wire dispatches, and editorial gravitas.',
+      previewClass: 'typewriter-preview flex flex-col items-center justify-center'
+    },
+    {
       id: 'vax',
       label: '1978 VAX/VMS',
       desc: 'The Pre-Cambrian mainframe. Monochrome green phosphor and ASCII art.',
       previewClass: 'bg-black border border-[#33ff33] text-[#33ff33] font-mono text-[8px] flex flex-col items-center justify-center p-4'
     },
     {
+      id: 'bios',
+      label: '1981 BIOS',
+      desc: 'The primordial boot screen. IBM PC POST sequences, keyboard interrupt codes, AMI BIOS amber glow.',
+      previewClass: 'bg-black border-2 border-[#ffb000] text-[#ffb000] font-mono text-[8px] flex flex-col items-start justify-start p-3'
+    },
+    {
+      id: 'macos',
+      label: '1984 Mac OS',
+      desc: 'The System 1 genesis. Bitmap Chicago font, platinum windows, pull-down menus, and the Happy Mac.',
+      previewClass: 'macos-preview flex flex-col items-stretch justify-start'
+    },
+    {
       id: '80s',
       label: '1985 Terminal',
-      desc: 'The Archean Era of computing. Muted 8-bit terminal aesthetic.',
+      desc: 'The Archean Era of computing. Muted 8-bit terminal for early molecular modeling.',
       previewClass: 'bg-black border-2 border-retro-green text-retro-green font-heading text-[8px] flex items-center justify-center p-4 text-center'
     },
     {
+      id: 'mario',
+      label: '1985 Plumber',
+      desc: 'Coins. Blocks. Pipes. A kingdom in peril and a hero in overalls. Our princess is in another castle.',
+      previewClass: 'mario-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: 'zelda',
+      label: '1986 Adventure',
+      desc: "It's dangerous to go alone. A golden kingdom, dungeon maps, heart containers, and a sword of legend.",
+      previewClass: 'zelda-preview flex flex-col items-center justify-center'
+    },
+    {
       id: 'profdr',
-      label: '1994 Yahoo',
-      desc: 'The Dawn of Web Directories. Hierarchical links and red serif logos.',
-      previewClass: 'profdr-preview flex flex-col items-center justify-center p-4'
+      label: '1993 Prof. Dr.',
+      desc: 'The Hadean dawn of the WWW. Browser defaults — serif text, blue underlined links, the user defines the look.',
+      previewClass: 'profdr-preview'
     },
     {
       id: 'geocities',
       label: '1996 Geocities',
-      desc: 'Amateur Web Maximalism. Rainbows and blinking marquees.',
+      desc: 'The Cambrian-pre-explosion of amateur web life. Comic Sans, rainbow text, blinking marquees, under-construction GIFs.',
       previewClass: 'geo-preview flex flex-col items-center justify-center'
     },
     { 
@@ -44,6 +74,12 @@ export default function EraSelectionSplash() {
       label: '2003 Web 2.0',
       desc: 'The Glossy Gel Era. Sky-blue gradients and rounded boxes.',
       previewClass: 'y2k-preview flex flex-col items-center justify-center'
+    },
+    {
+      id: 'myspace',
+      label: '2005 MySpace',
+      desc: 'Top 8. Glitter GIFs. Autoplay MIDI. Your profile song. Blog posts at 2am. This is your digital bedroom wall.',
+      previewClass: 'myspace-preview flex flex-col items-center justify-center'
     },
     {
       id: '2000s',
@@ -81,29 +117,29 @@ export default function EraSelectionSplash() {
     {
       text: "How do you prefer to receive your research updates?",
       options: [
-        { text: "Printed on continuous-form paper.", themes: ['vax', '80s'] },
-        { text: "A simple TeX-rendered preprint.", themes: ['knuth', 'vax'] },
-        { text: "A personalized email from a web directory.", themes: ['profdr', 'geocities'] },
+        { text: "Printed on continuous-form paper.", themes: ['vax', '80s', 'bios'] },
+        { text: "A simple TeX-rendered preprint.", themes: ['knuth', 'vax', 'typewriter'] },
+        { text: "A personalized email from a web directory.", themes: ['profdr', 'geocities', 'y2k'] },
         { text: "An encrypted transmission directly to my HUD.", themes: ['90s', '2000s', '2010s'] },
-        { text: "An AI-generated summary delivered via a minimalist dashboard.", themes: ['enterprise', '2020s', 'y2k'] }
+        { text: "An AI-generated summary delivered via a minimalist dashboard.", themes: ['enterprise', '2020s', 'macos'] }
       ]
     },
     {
       text: "The 'correct' amount of visual clutter is...",
       options: [
-        { text: "None. Just text.", themes: ['vax', '80s', '90s', 'knuth'] },
-        { text: "Blinking 'NEW' tags and rotating 3D GIFs.", themes: ['geocities', 'profdr'] },
+        { text: "None. Just text.", themes: ['vax', '80s', '90s', 'knuth', 'bios', 'typewriter'] },
+        { text: "Blinking 'NEW' tags and rotating 3D GIFs.", themes: ['geocities', 'profdr', 'myspace', 'mario', 'zelda'] },
         { text: "Holographic panels for a starship pilot feel.", themes: ['2000s', '2010s', 'y2k'] },
-        { text: "Clean and slightly corporate.", themes: ['enterprise', '2020s'] }
+        { text: "Clean and slightly corporate.", themes: ['enterprise', '2020s', 'macos'] }
       ]
     },
     {
       text: "Your favorite lab tool is...",
       options: [
-        { text: "Punch cards.", themes: ['vax'] },
-        { text: "A pencil and a yellow legal pad.", themes: ['knuth', 'vax'] },
-        { text: "Netscape Navigator.", themes: ['profdr', 'geocities', '80s'] },
-        { text: "A neural-linked sequencer.", themes: ['2000s', '2010s', '90s'] },
+        { text: "Punch cards.", themes: ['vax', 'bios'] },
+        { text: "A pencil and a yellow legal pad.", themes: ['knuth', 'vax', 'typewriter'] },
+        { text: "Netscape Navigator.", themes: ['profdr', 'geocities', '80s', 'macos'] },
+        { text: "A neural-linked sequencer.", themes: ['2000s', '2010s', '90s', 'zelda', 'mario'] },
         { text: "An LLM assistant.", themes: ['2020s', 'enterprise', 'y2k'] }
       ]
     }
@@ -233,23 +269,116 @@ export default function EraSelectionSplash() {
       )}
 
       {view === 'manual' && (
-        <div className="animate-in fade-in duration-700 w-full max-w-4xl">
-          <div className="text-zinc-500 text-[10px] tracking-[0.5em] uppercase mb-16 text-center">Temporal Index</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-8">
+        <div className="animate-in fade-in duration-700 w-full max-w-7xl">
+          <div className="text-zinc-500 text-[10px] tracking-[0.5em] uppercase mb-12 text-center">Temporal Index</div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 w-full">
             {eras.map((era) => (
               <button
                 key={era.id}
                 onClick={() => toggleTheme(era.id)}
-                className="group flex flex-col items-start gap-2 text-left"
+                className="group flex flex-col gap-4 text-left transition-all hover:scale-105"
               >
-                <span className="text-zinc-500 group-hover:text-white transition-colors text-[10px] tracking-[0.2em] uppercase">{era.id}</span>
-                <span className="text-white group-hover:text-retro-green transition-colors text-lg tracking-widest uppercase">{era.label}</span>
-                <span className="text-zinc-700 text-[10px] tracking-widest uppercase leading-tight">{era.desc}</span>
+                <div className={`h-40 w-full transition-all group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] relative overflow-hidden ${era.previewClass}`}>
+                   {era.id === 'profdr' && (
+                     <div className="text-[10px]">
+                       <h3 style={{fontSize: '11px', fontWeight: 'bold', margin: '0 0 2px', border: 'none'}}>Welcome!</h3>
+                       <hr style={{border: 0, borderTop: '1px solid #808080', margin: '2px 0'}} />
+                       <p style={{margin: '1px 0'}}>Click <a>here</a>.</p>
+                     </div>
+                   )}
+                   {era.id === 'geocities' && (
+                     <div className="text-[10px]">
+                       <div className="geo-rainbow" style={{fontWeight: 'bold', fontSize: '11px'}}>My Home</div>
+                       <div style={{height: '2px', background: 'linear-gradient(to right,red,orange,yellow,green,cyan,blue,magenta)', margin: '2px 0'}} />
+                       <div className="geo-blink" style={{color: '#ff00ff'}}>NEW!</div>
+                     </div>
+                   )}
+                   {era.id === 'y2k' && (
+                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px'}}>
+                       <div className="y2k-logo" style={{fontSize: '14px'}}>acme<span style={{color: '#ff6600', WebkitTextFillColor: '#ff6600'}}>.</span>lab</div>
+                       <span className="y2k-beta" style={{fontSize: '7px', padding: '1px 4px', marginLeft: 0}}>BETA</span>
+                     </div>
+                   )}
+                   {era.id === '80s' && "> READY"}
+                   {era.id === '90s' && <span className="animate-pulse">● RADAR</span>}
+                   {era.id === '2020s' && (
+                     <div className="flex items-center gap-2">
+                       <div className="w-3 h-3 rounded bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                       <span>AI</span>
+                     </div>
+                   )}
+                   {era.id === 'myspace' && (
+                     <div style={{textAlign: 'center'}}>
+                       <div style={{fontSize: '11px', fontWeight: 'bold', color: '#ff6699', textShadow: '0 0 4px #ff6699'}}>★ ACME ★</div>
+                       <div style={{fontSize: '7px', color: '#cc99ff'}}>Mood: excited!</div>
+                     </div>
+                   )}
+                   {era.id === 'typewriter' && (
+                     <div style={{fontFamily: '"Courier New", Courier, monospace', textAlign: 'center', color: '#2a1a0a'}}>
+                       <div style={{fontSize: '10px', fontWeight: 'bold', borderBottom: '1px solid #2a1a0a', paddingBottom: '1px', marginBottom: '2px'}}>Gazette</div>
+                       <div style={{fontSize: '7px', lineHeight: 1.2}}>ACME Lab</div>
+                     </div>
+                   )}
+                   {era.id === 'bios' && (
+                     <div className="flex flex-col gap-1">
+                       <span>BIOS v2.07</span>
+                       <span className="opacity-60">64K OK</span>
+                     </div>
+                   )}
+                   {era.id === 'macos' && (
+                     <>
+                       <div style={{background: 'white', borderBottom: '1px solid #000', padding: '1px 2px', fontSize: '8px', fontWeight: 'bold', width: '100%'}}>&#8984; File</div>
+                       <div style={{padding: '4px', fontSize: '8px', color: '#000', background: '#fff', flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                         <div style={{border: '1px solid #000', padding: '2px 4px', boxShadow: '1px 1px 0 #000', background: '#fff'}}>Welcome</div>
+                       </div>
+                     </>
+                   )}
+                   {era.id === 'zelda' && (
+                     <div style={{textAlign: 'center', fontFamily: '"Press Start 2P", monospace', fontSize: '7px'}}>
+                       <div style={{color: '#f0c040', marginBottom: '2px'}}>&#9670; ZELDA</div>
+                       <div style={{color: '#f0c040', marginTop: '2px'}}>&#9829;&#9829;&#9829;</div>
+                     </div>
+                   )}
+                   {era.id === 'mario' && (
+                     <div style={{textAlign: 'center', fontFamily: '"Press Start 2P", monospace', fontSize: '7px'}}>
+                       <div style={{color: '#f8f8f8', marginBottom: '2px'}}>1-1</div>
+                       <div style={{color: '#fcbc3c', fontSize: '8px'}}>[ ? ]</div>
+                     </div>
+                   )}
+                   {era.id === 'vax' && (
+                     <div className="flex flex-col gap-1">
+                       <span>[ ACME ]</span>
+                       <span className="opacity-60">ONLINE</span>
+                     </div>
+                   )}
+                   {era.id === 'knuth' && (
+                     <div className="text-[9px] text-left">
+                       <h3 style={{borderBottom: '1px solid #000', fontSize: '10px', marginBottom: '2px', borderTop: 'none', borderLeft: 'none', borderRight: 'none'}}>Knuth</h3>
+                       <p>Minimalism.</p>
+                     </div>
+                   )}
+                   
+                   <div className="absolute bottom-1 right-1 text-[5px] opacity-20 font-mono uppercase">
+                     {era.id}
+                   </div>
+                </div>
+                
+                <div className="px-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className="text-white font-bold text-sm group-hover:text-yellow-400 transition-colors uppercase tracking-tight border-none">
+                      {era.label}
+                    </h3>
+                  </div>
+                  <p className="text-zinc-600 text-[9px] leading-tight font-mono italic line-clamp-2">
+                    {era.desc}
+                  </p>
+                </div>
               </button>
             ))}
           </div>
           
-          <div className="mt-24 text-center">
+          <div className="mt-16 text-center">
             <button 
                onClick={() => setView('landing')}
                className="text-zinc-500 hover:text-white transition-colors text-[10px] tracking-[0.4em] uppercase"
