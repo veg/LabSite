@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   const eras = [
-    { id: 'vax', label: '1978 VAX/VMS' },
     { id: 'typewriter', label: '1920 Broadsheet' },
+    { id: 'vax', label: '1978 VAX/VMS' },
     { id: 'bios', label: '1981 BIOS' },
     { id: 'macos', label: '1984 Mac OS' },
     { id: '80s', label: '1985 Terminal' },

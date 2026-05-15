@@ -172,7 +172,7 @@
 [data-theme='typewriter'] { --background: #f0e6d0; --foreground: #2a1a0a; }
 [data-theme='bios'] { --background: #000000; --foreground: #ffb000; }
 [data-theme='macos'] { --background: #c0c0c0; --foreground: #000000; }
-[data-theme='zelda'] { --background: #8b8000; --foreground: #f0c040; }
+[data-theme='zelda'] { --background: #0a1a04; --foreground: #f0c040; }
 [data-theme='mario'] { --background: #5c94fc; --foreground: #ffffff; }
 
 body {
