@@ -391,7 +391,7 @@ export default function Home() {
                 </div>
               </div>
               <div style={{borderTop: '2px double #2a1a0a', marginTop: '16px', paddingTop: '6px', textAlign: 'center', fontSize: '10px', color: '#7a5c3a', letterSpacing: '0.1em'}}>
-                Correspondence: acme@temple.edu &mdash; Beury Hall, Room 328, Philadelphia &mdash; All dispatches welcome
+                Correspondence: acme@temple.edu &mdash; SERC, Philadelphia &mdash; All dispatches welcome
               </div>
             </div>
           ) : theme === 'bios' ? (
@@ -704,7 +704,7 @@ export default function Home() {
       ) : theme === 'typewriter' ? (
         <footer className="mt-auto p-6" style={{background: '#e0cfa8', borderTop: '2px solid #2a1a0a', fontFamily: '"Courier New", Courier, monospace', textAlign: 'center'}}>
           <p style={{fontSize: '11px', color: '#7a5c3a', letterSpacing: '0.1em'}}>ACME LABORATORY — TEMPLE UNIVERSITY — PHILADELPHIA, PA</p>
-          <p style={{fontSize: '10px', color: '#9a7a5a', marginTop: '4px'}}>Correspondence: acme@temple.edu &nbsp;|&nbsp; Beury Hall, Room 328</p>
+          <p style={{fontSize: '10px', color: '#9a7a5a', marginTop: '4px'}}>Correspondence: acme@temple.edu &nbsp;|&nbsp; SERC</p>
         </footer>
       ) : theme === 'bios' ? (
         <footer className="mt-auto p-4" style={{background: '#000', borderTop: '1px solid #ffb000', fontFamily: '"Courier New", Courier, monospace'}}>
