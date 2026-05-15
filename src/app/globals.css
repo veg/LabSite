@@ -27,7 +27,7 @@
   --color-geo-accent-1: #ff00ff;
   --color-geo-accent-2: #00ff00;
 
-  /* Prof. Dr. Palette (1993/1994 academic web) */
+  /* 1994 Yahoo! Palette (The Dawn of Web Directories) */
   --color-profdr-bg: #ffffff;
   --color-profdr-fg: #000000;
   --color-profdr-link: #0000ee;
@@ -391,7 +391,7 @@ body {
 .pixel-border { border: 4px solid var(--foreground); }
 .pixel-button { background-color: #458588; border: 4px solid #1d2021; box-shadow: 4px 4px 0px 0px #ebdbb2; }
 
-/* Prof. Dr. Specifics — 1993/1994 academic web style.
+/* 1994 Yahoo! Specifics — The Dawn of Web Directories.
    Override Tailwind utility classes used elsewhere so the page renders
    with browser-default-like appearance: serif, white bg, blue underline links. */
 .theme-profdr {

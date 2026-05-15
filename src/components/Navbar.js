@@ -12,7 +12,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
     { id: '80s', label: '1985 Terminal' },
     { id: 'mario', label: '1985 Plumber' },
     { id: 'zelda', label: '1986 Adventure' },
-    { id: 'profdr', label: '1993 Prof. Dr.' },
+    { id: 'profdr', label: '1994 Yahoo!' },
     { id: 'geocities', label: '1996 Geocities' },
     { id: '90s', label: '1998 Tactical' },
     { id: 'y2k', label: '2003 Web 2.0' },

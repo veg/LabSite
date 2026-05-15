@@ -53,8 +53,8 @@ export default function EraSelectionSplash() {
     },
     {
       id: 'profdr',
-      label: '1993 Prof. Dr.',
-      desc: 'The Hadean dawn of the WWW. Browser defaults — serif text, blue underlined links, the user defines the look.',
+      label: '1994 Yahoo!',
+      desc: 'The Dawn of Web Directories. Hierarchical links, red serif logos, and the iconic search bar.',
       previewClass: 'profdr-preview'
     },
     {
