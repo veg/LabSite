@@ -24,6 +24,9 @@ export default function MembersPage() {
       case 'macos': return 'text-black';
       case 'zelda': return 'text-[#f0c040]';
       case 'mario': return 'text-[#fcbc3c]';
+      case 'win95': return 'text-[#000080]';
+      case 'notebook': return 'text-[#0e1a3a]';
+      case 'manuscript': return 'text-[#003366]';
       default: return 'text-retro-amber';
     }
   };

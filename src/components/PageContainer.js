@@ -44,7 +44,10 @@ export default function PageContainer({ children, title, titleColorClass = "text
       theme === 'bios' ? 'bg-black text-[#ffb000]' :
       theme === 'macos' ? 'bg-[#c0c0c0] text-black' :
       theme === 'zelda' ? 'bg-[#0a1a04] text-[#a8d840]' :
-      theme === 'mario' ? 'bg-[#5c94fc] text-white' : ''
+      theme === 'mario' ? 'bg-[#5c94fc] text-white' :
+      theme === 'win95' ? 'bg-[#008080] text-black' :
+      theme === 'notebook' ? 'text-[#1a2540]' :
+      theme === 'manuscript' ? 'text-[#1a1a1a]' : ''
     }`}>
       <Navbar />
       <div className="container mx-auto px-4 py-12 relative z-10 flex-grow">
@@ -92,6 +95,22 @@ export default function PageContainer({ children, title, titleColorClass = "text
                 <hr />
               </div>
             )}
+            {theme === 'win95' && (
+              <div style={{background: 'linear-gradient(to right, #000080, #1084d0)', padding: '3px 8px', marginBottom: '8px', display: 'inline-flex', alignItems: 'center', gap: '6px'}}>
+                <span style={{color: '#fff', fontWeight: 'bold', fontSize: '13px', fontFamily: '"Tahoma", sans-serif'}}>{title.replace(/_/g, ' ')}</span>
+              </div>
+            )}
+            {theme === 'notebook' && (
+              <h1 style={{fontFamily: '"Comic Sans MS", cursive', color: '#0e1a3a', fontSize: '24px', borderBottom: '2px dashed #c93030', paddingBottom: '6px', marginBottom: '16px'}}>
+                {title.replace(/_/g, ' ')}
+              </h1>
+            )}
+            {theme === 'manuscript' && (
+              <div style={{marginBottom: '16px', borderBottom: '2px solid #003366', paddingBottom: '8px'}}>
+                <h1 style={{fontFamily: '"Times New Roman", serif', color: '#1a1a1a', fontSize: '22px', fontWeight: 'bold', marginBottom: '2px'}}>{title.replace(/_/g, ' ')}</h1>
+                <p style={{fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '9px', color: '#555', letterSpacing: '0.12em', textTransform: 'uppercase'}}>MOL. BIOL. EVOL. · ACME LABORATORY</p>
+              </div>
+            )}
             {theme === '90s' && <div className="text-[10px] text-mgs-green/40 font-mono tracking-widest mb-1 uppercase">FILE_TYPE: RESEARCH_LOG</div>}
             {theme === '2000s' && <div className="text-[10px] text-me-blue font-bold tracking-[0.3em] mb-1 uppercase opacity-60">CODEX_ENTRY // {title}</div>}
             {theme === '2010s' && <div className="hero-tag mb-4">ACTIVE_QUEST: {title}</div>}
@@ -104,7 +123,7 @@ export default function PageContainer({ children, title, titleColorClass = "text
               </div>
             )}
             
-            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'enterprise' && theme !== 'vax' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario' && (
+            {theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'enterprise' && theme !== 'vax' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario' && theme !== 'win95' && theme !== 'notebook' && theme !== 'manuscript' && (
               <h1 className={`text-4xl mb-12 text-center ${
                 theme === '80s' ? titleColorClass :
                 theme === '90s' ? 'text-mgs-green font-bold tracking-tighter border-b border-mgs-green/20 pb-4' :
@@ -134,6 +153,12 @@ export default function PageContainer({ children, title, titleColorClass = "text
           <div className="mario-panel"><div className="mario-panel-header">[ {title || 'ACME LAB'} ]</div>{children}</div>
         ) : theme === 'myspace' ? (
           <div className="myspace-panel"><div className="myspace-panel-header">{title || 'Content'}</div>{children}</div>
+        ) : theme === 'win95' ? (
+          <div style={{background: '#c0c0c0', border: '2px solid', borderColor: '#fff #808080 #808080 #fff', boxShadow: 'inset 1px 1px 0 #dfdfdf', padding: '8px', fontFamily: '"Tahoma", sans-serif', fontSize: '12px', color: '#000'}}>{children}</div>
+        ) : theme === 'notebook' ? (
+          <div style={{fontFamily: '"Comic Sans MS", cursive', color: '#1a2540'}}>{children}</div>
+        ) : theme === 'manuscript' ? (
+          <div style={{fontFamily: '"Times New Roman", serif', color: '#1a1a1a'}}>{children}</div>
         ) : theme === 'typewriter' ? (
           <div className="tw-panel">{children}</div>
         ) : theme === 'bios' ? (
@@ -255,6 +280,21 @@ export default function PageContainer({ children, title, titleColorClass = "text
           <div style={{background: 'repeating-linear-gradient(90deg, #000 0px, #000 1px, #ffffff 1px, #ffffff 3px)', height: '4px', marginBottom: '8px'}} />
           <p style={{fontSize: '12px', color: '#000', textAlign: 'center'}}>ACME Laboratory © 2026 — Temple University</p>
           <p style={{fontSize: '11px', color: '#808080', textAlign: 'center'}}>Trash: 0 items, 0K</p>
+        </footer>
+      ) : theme === 'win95' ? (
+        <footer className="mt-auto" style={{background: '#c0c0c0', borderTop: '2px solid', borderTopColor: '#808080', padding: '4px 8px', fontFamily: '"Tahoma", sans-serif', fontSize: '11px', color: '#000', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <span>ACME Laboratory — Temple University</span>
+          <span style={{background: '#c0c0c0', border: '1px solid', borderColor: '#808080 #fff #fff #808080', padding: '1px 6px'}}>© 2026</span>
+        </footer>
+      ) : theme === 'notebook' ? (
+        <footer className="mt-auto" style={{background: 'transparent', borderTop: '2px dashed #c93030', padding: '12px 16px', fontFamily: '"Comic Sans MS", cursive', fontSize: '11px', color: '#7a5c3a', textAlign: 'center'}}>
+          <p>ACME Lab Notebook — Temple University</p>
+          <p style={{color: '#c93030', marginTop: '4px'}}>* Remember to sign your entries! *</p>
+        </footer>
+      ) : theme === 'manuscript' ? (
+        <footer className="mt-auto" style={{borderTop: '2px solid #003366', padding: '12px 16px', fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '9px', color: '#555', letterSpacing: '0.08em', textAlign: 'center'}}>
+          <p style={{textTransform: 'uppercase'}}>ACME Laboratory · Institute for Genomics and Evolutionary Medicine · Temple University</p>
+          <p style={{marginTop: '4px'}}>© 2026 · Received: Jan 2026 · Accepted: Mar 2026 · Published: Apr 2026</p>
         </footer>
       ) : (
         <footer className={`mt-auto p-8 border-t-4 text-center font-body text-xl ${

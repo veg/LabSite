@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTheme } from './ThemeContext';
 import { useState } from 'react';
 
-function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
+function ThemeToggle({ theme, toggleTheme, resetTheme, showDropdown, setShowDropdown }) {
   const eras = [
     { id: 'typewriter', label: '1920 Broadsheet' },
     { id: 'vax', label: '1978 VAX/VMS' },
@@ -12,6 +12,9 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
     { id: '80s', label: '1985 Terminal' },
     { id: 'mario', label: '1985 Plumber' },
     { id: 'zelda', label: '1986 Adventure' },
+    { id: 'notebook', label: '1991 Lab Notebook' },
+    { id: 'manuscript', label: '1993 MBE Manuscript' },
+    { id: 'win95', label: '1995 Windows 95' },
     { id: 'profdr', label: '1994 Yahoo!' },
     { id: 'geocities', label: '1996 Geocities' },
     { id: '90s', label: '1998 Tactical' },
@@ -25,7 +28,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative" style={{zIndex: 200}}>
       <button 
         onClick={() => setShowDropdown(!showDropdown)}
         className={`p-1 transition-all ${
@@ -43,6 +46,9 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
           theme === 'macos' ? 'text-black hover:text-[#000080]' :
           theme === 'zelda' ? 'text-[#f0c040] hover:text-white' :
           theme === 'mario' ? 'text-[#fcbc3c] hover:text-white' :
+          theme === 'win95' ? 'text-black hover:text-[#000080]' :
+          theme === 'notebook' ? 'text-[#1a2540] hover:text-[#c93030]' :
+          theme === 'manuscript' ? 'text-[#003366] hover:text-black' :
           theme === 'enterprise' ? 'text-[#6c757d] hover:text-[#007bff]' :
           theme === 'knuth' ? 'text-black hover:text-blue-700' :
           'text-ai-accent hover:opacity-80'
@@ -55,24 +61,57 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
         </svg>
       </button>
       {showDropdown && (
-        <div className={`absolute left-0 mt-2 p-2 min-w-[180px] shadow-lg z-[100] ${
-          theme === 'profdr' ? 'bg-white border border-gray-500 text-black' :
-          theme === 'geocities' ? 'bg-[#000080] border-4 border-[#ff00ff] text-[#ffff00]' :
-          theme === 'vax' ? 'bg-black border border-[#33ff33] text-[#33ff33]' :
-          theme === 'y2k' ? 'bg-white border border-[#b3d4ff] text-[#0066cc] rounded-lg' :
-          theme === '80s' ? 'bg-black border-2 border-retro-green text-retro-green' :
-          theme === '90s' ? 'bg-mgs-bg border-2 border-mgs-border text-mgs-green' :
-          theme === '2000s' ? 'bg-me-bg border-2 border-me-orange text-me-orange animate-hologram-flicker' :
-          theme === '2010s' ? 'bg-hero-dark border-4 border-black text-hero-yellow skew-x-[-2deg]' :
-          theme === 'myspace' ? 'bg-[#1e0040] border-2 border-[#ff6699] text-[#eebbdd]' :
-          theme === 'typewriter' ? 'bg-[#ede0c4] border border-[#2a1a0a] text-[#2a1a0a]' :
-          theme === 'bios' ? 'bg-black border border-[#ffb000] text-[#ffb000]' :
-          theme === 'macos' ? 'bg-white border border-black text-black' :
-          theme === 'zelda' ? 'bg-[#1a2c0a] border-2 border-[#f0c040] text-[#f0c040]' :
-          theme === 'mario' ? 'bg-[#3050c0] border-4 border-[#fcbc3c] text-white' :
-          theme === 'enterprise' ? 'bg-white border border-[#dee2e6] text-[#212529] rounded shadow-lg' :
-          theme === 'knuth' ? 'bg-white border border-black text-black' :
-          'bg-ai-sidebar border border-white/10 rounded-xl text-white backdrop-blur-xl'
+        <div
+          data-theme-dropdown="true"
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: '100%',
+            marginTop: '8px',
+            zIndex: 9999,
+            background:
+              theme === 'profdr' ? '#fff' :
+              theme === 'geocities' ? '#000080' :
+              theme === 'vax' ? '#000' :
+              theme === 'y2k' ? '#fff' :
+              theme === '80s' ? '#000' :
+              theme === '90s' ? '#0a0e0a' :
+              theme === '2000s' ? '#0c1c2e' :
+              theme === '2010s' ? '#1f1f1f' :
+              theme === 'myspace' ? '#001e3a' :
+              theme === 'typewriter' ? '#ede0c4' :
+              theme === 'bios' ? '#000' :
+              theme === 'macos' ? '#fff' :
+              theme === 'zelda' ? '#1a2c0a' :
+              theme === 'mario' ? '#3050c0' :
+              theme === 'win95' ? '#c0c0c0' :
+              theme === 'notebook' ? '#f8f1d8' :
+              theme === 'manuscript' ? '#ffffff' :
+              theme === 'enterprise' ? '#fff' :
+              theme === 'knuth' ? '#fff' :
+              '#0f172a',
+          }}
+          className={`p-2 min-w-[180px] shadow-lg ${
+          theme === 'profdr' ? 'border border-gray-500 text-black' :
+          theme === 'geocities' ? 'border-4 border-[#ff00ff] text-[#ffff00]' :
+          theme === 'vax' ? 'border border-[#33ff33] text-[#33ff33]' :
+          theme === 'y2k' ? 'border border-[#b3d4ff] text-[#0066cc] rounded-lg' :
+          theme === '80s' ? 'border-2 border-retro-green text-retro-green' :
+          theme === '90s' ? 'border-2 border-mgs-border text-mgs-green' :
+          theme === '2000s' ? 'border-2 border-me-orange text-me-orange animate-hologram-flicker' :
+          theme === '2010s' ? 'border-4 border-black text-hero-yellow skew-x-[-2deg]' :
+          theme === 'myspace' ? 'border-2 border-[#ff6699] text-[#eebbdd]' :
+          theme === 'typewriter' ? 'border border-[#2a1a0a] text-[#2a1a0a]' :
+          theme === 'bios' ? 'border border-[#ffb000] text-[#ffb000]' :
+          theme === 'macos' ? 'border border-black text-black' :
+          theme === 'zelda' ? 'border-2 border-[#f0c040] text-[#f0c040]' :
+          theme === 'mario' ? 'border-4 border-[#fcbc3c] text-white' :
+          theme === 'win95' ? 'border-2 border-[#fff] text-black shadow-[inset_-1px_-1px_0_#808080,inset_1px_1px_0_#dfdfdf]' :
+          theme === 'notebook' ? 'border border-[#1a2540] text-[#1a2540]' :
+          theme === 'manuscript' ? 'border border-[#003366] text-[#1a1a1a]' :
+          theme === 'enterprise' ? 'border border-[#dee2e6] text-[#212529] rounded shadow-lg' :
+          theme === 'knuth' ? 'border border-black text-black' :
+          'border border-white/10 rounded-xl text-white backdrop-blur-xl'
         }`}>
           {eras.map(era => (
             <button 
@@ -83,6 +122,14 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
               {era.label.toUpperCase()}
             </button>
           ))}
+          <div style={{borderTop: '1px solid currentColor', opacity: 0.3, margin: '6px 0'}} />
+          <button
+            onClick={() => { resetTheme(); setShowDropdown(false); }}
+            className="w-full text-left px-2 py-1.5 hover:bg-white/10 text-[10px] font-heading transition-colors rounded-md opacity-80"
+            title="Reset selection and retake the era questionnaire"
+          >
+            ↻ REDO QUESTIONNAIRE
+          </button>
         </div>
       )}
     </div>
@@ -90,7 +137,7 @@ function ThemeToggle({ theme, toggleTheme, showDropdown, setShowDropdown }) {
 }
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, resetTheme } = useTheme();
   const [showDropdown, setShowDropdown] = useState(false);
 
   const navItems = [
@@ -105,7 +152,7 @@ export default function Navbar() {
       <nav className="theme-knuth sticky top-0 z-50 bg-white" style={{maxWidth: '800px', margin: '0 auto', borderBottom: '1px solid #000', paddingBottom: '10px', marginBottom: '20px'}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{fontWeight: 'bold', fontSize: '18pt', textDecoration: 'none'}}>ACME Laboratory</Link>
           </div>
           <div className="flex gap-4" style={{fontSize: '12pt'}}>
@@ -125,7 +172,7 @@ export default function Navbar() {
       <nav className="bg-black border-b border-[#33ff33] py-2 font-mono sticky top-0 z-50">
         <div className="container mx-auto px-4 flex justify-between items-center">
            <div className="flex items-center gap-6">
-              <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
               <Link href="/" className="text-xl font-bold hover:bg-[#33ff33] hover:text-black">
                  [ ACME_LAB ]
               </Link>
@@ -166,7 +213,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-             <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+             <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
              <button className="hidden lg:block btn-primary enterprise-button text-sm">Contact Us</button>
           </div>
         </div>
@@ -184,7 +231,7 @@ export default function Navbar() {
       }}>
         <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{color: '#ffffff', fontWeight: 'bold', fontSize: '20px', textDecoration: 'none', textShadow: '0 -1px 0 rgba(0,0,0,0.3)', letterSpacing: '-0.5px'}}>
               acme<span style={{color: '#ffcc66'}}>.</span>lab
             </Link>
@@ -220,7 +267,7 @@ export default function Navbar() {
       <nav style={{background: '#000080', borderBottom: '4px ridge #ff00ff', padding: '8px', textAlign: 'center', fontFamily: '"Comic Sans MS", cursive'}}>
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="geo-rainbow" style={{fontWeight: 'bold', fontSize: '20px', textDecoration: 'none'}}>~* ACME Lab *~</Link>
           </div>
           <div className="flex gap-3 flex-wrap justify-center" style={{fontWeight: 'bold'}}>
@@ -245,7 +292,7 @@ export default function Navbar() {
     return (
       <nav className="bg-white text-black p-2 border-b border-gray-500" style={{fontFamily: '"Times New Roman", Times, serif'}}>
         <div className="container mx-auto px-4 flex items-center gap-4 flex-wrap">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
           <Link href="/" style={{color: '#0000ee', textDecoration: 'underline'}}>ACME Lab Home</Link>
           <span>|</span>
           {navItems.map((item, i) => (
@@ -265,7 +312,7 @@ export default function Navbar() {
       <nav style={{background: 'linear-gradient(to bottom, #2a0050, #14002a)', borderBottom: '2px solid #ff6699', padding: '8px', textAlign: 'center', boxShadow: '0 2px 12px rgba(255,102,153,0.3)'}}>
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{fontFamily: '"Impact", "Arial Black", sans-serif', color: '#ff6699', fontWeight: 'bold', fontSize: '22px', textDecoration: 'none', textShadow: '0 0 10px #ff6699'}}>
               ★ ACME Lab ★
             </Link>
@@ -292,7 +339,7 @@ export default function Navbar() {
       <nav style={{background: '#ede0c4', borderBottom: '3px double #2a1a0a', fontFamily: '"Courier New", Courier, monospace'}}>
         <div className="container mx-auto px-4 py-2">
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #9a7a5a', paddingBottom: '6px', marginBottom: '6px'}}>
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{color: '#2a1a0a', fontWeight: 'bold', fontSize: '22px', textDecoration: 'none', letterSpacing: '0.12em', fontFamily: '"Times New Roman", serif'}}>
               The ACME Gazette
             </Link>
@@ -318,7 +365,7 @@ export default function Navbar() {
       <nav style={{background: '#000', borderBottom: '1px solid #ffb000', padding: '8px 16px', fontFamily: '"Courier New", Courier, monospace'}}>
         <div className="container mx-auto flex justify-between items-center flex-wrap gap-2">
           <div className="flex items-center gap-4">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{color: '#ffd060', fontWeight: 'bold', fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none'}}>ACME BIOS v2.07</Link>
           </div>
           <div className="flex gap-6" style={{fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em'}}>
@@ -340,7 +387,7 @@ export default function Navbar() {
         <div style={{background: 'repeating-linear-gradient(90deg, #000 0px, #000 1px, #ffffff 1px, #ffffff 3px)', height: '4px'}} />
         <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap" style={{padding: '4px 16px'}}>
           <div className="flex items-center gap-6">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{fontWeight: 'bold', fontSize: '14px', color: '#000', textDecoration: 'none'}}>&#8984; ACME Lab</Link>
           </div>
           <div className="flex gap-0">
@@ -361,12 +408,84 @@ export default function Navbar() {
     );
   }
 
+  if (theme === 'win95') {
+    return (
+      <nav style={{background: '#c0c0c0', borderBottom: '2px solid', borderBottomColor: '#404040', boxShadow: 'inset 0 1px 0 #fff, inset 0 -1px 0 #808080', fontFamily: '"Tahoma", sans-serif', position: 'sticky', top: 0, zIndex: 50}}>
+        <div className="container mx-auto flex items-center gap-1 flex-wrap" style={{padding: '4px 8px'}}>
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+          <Link href="/" className="win95-button" style={{display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 'bold'}}>
+            <span style={{display: 'inline-block', width: '14px', height: '14px', background: 'linear-gradient(45deg,#ff0000 25%,#00ff00 25% 50%,#0000ff 50% 75%,#ffff00 75%)'}} />
+            Start
+          </Link>
+          <span style={{width: '1px', height: '20px', background: '#808080', boxShadow: '1px 0 0 #fff', margin: '0 6px'}} />
+          {navItems.map(item => (
+            <Link key={item.label} href={item.href} className="win95-button" style={{fontSize: '11px'}}>
+              {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+            </Link>
+          ))}
+          <div style={{marginLeft: 'auto', background: '#c0c0c0', border: '1px solid', borderColor: '#808080 #fff #fff #808080', padding: '2px 6px', fontSize: '11px'}}>
+            ACME.exe
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'notebook') {
+    return (
+      <nav style={{background: '#f8f1d8', borderBottom: '2px dashed #c93030', fontFamily: '"Comic Sans MS", cursive', position: 'sticky', top: 0, zIndex: 50}}>
+        <div className="container mx-auto flex items-center justify-between gap-4 flex-wrap" style={{padding: '10px 16px'}}>
+          <div className="flex items-center gap-3">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <Link href="/" style={{color: '#0e1a3a', fontWeight: 'bold', fontSize: '20px', textDecoration: 'none'}}>
+              ACME Lab Notebook
+            </Link>
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{color: '#1a2540', textDecoration: 'none', fontSize: '14px', padding: '4px 10px', background: '#fff8a8', border: '1px solid #c8b94a', borderRadius: '2px 2px 0 0', display: 'inline-block', boxShadow: '1px 1px 2px rgba(0,0,0,0.1)'}}>
+                {item.label.charAt(0) + item.label.slice(1).toLowerCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
+  if (theme === 'manuscript') {
+    const sectionLabels = { PROJECTS: 'Software', TEAM: 'Authors', ALUMNI: 'Acknowledgments', PAPERS: 'References' };
+    return (
+      <nav style={{background: '#f5f1e8', borderBottom: '2px solid #003366', fontFamily: '"Times New Roman", serif', position: 'sticky', top: 0, zIndex: 50}}>
+        <div className="container mx-auto" style={{padding: '8px 16px'}}>
+          <div className="flex items-center justify-between gap-4 flex-wrap" style={{borderBottom: '1px solid #003366', paddingBottom: '6px'}}>
+            <div className="flex items-center gap-3">
+              <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+              <span style={{fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '10px', fontWeight: 'bold', color: '#003366', letterSpacing: '0.15em'}}>MOL. BIOL. EVOL.</span>
+            </div>
+            <Link href="/" style={{color: '#1a1a1a', fontWeight: 'bold', fontSize: '18px', textDecoration: 'none', fontStyle: 'italic'}}>
+              ACME Laboratory
+            </Link>
+            <span style={{fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '9px', color: '#555', letterSpacing: '0.1em'}}>VOL. 41 · NO. 4</span>
+          </div>
+          <div className="flex justify-center gap-6 flex-wrap" style={{paddingTop: '4px', fontFamily: 'Helvetica, Arial, sans-serif'}}>
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} style={{color: '#003366', textDecoration: 'none', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 'bold'}}>
+                {sectionLabels[item.label] || item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   if (theme === 'zelda') {
     return (
       <nav style={{background: 'linear-gradient(to bottom, #1a2c0a, #2a4010)', borderBottom: '3px solid #f0c040', padding: '10px 0', fontFamily: '"Press Start 2P", monospace', imageRendering: 'pixelated'}}>
         <div className="container mx-auto px-4 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-4">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{color: '#f0c040', fontSize: '12px', textDecoration: 'none', textShadow: '0 0 8px rgba(240,192,64,0.6)', letterSpacing: '1px'}}>
               &#9670; ACME LAB &#9670;
             </Link>
@@ -389,7 +508,7 @@ export default function Navbar() {
       <nav style={{background: '#5c94fc', borderBottom: '4px solid #000', padding: '8px 0', fontFamily: '"Press Start 2P", monospace', imageRendering: 'pixelated'}}>
         <div className="container mx-auto px-4 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-4">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" style={{color: '#ffffff', fontSize: '11px', textDecoration: 'none', textShadow: '2px 2px 0 #000', letterSpacing: '1px'}}>
               ACME LAB
             </Link>
@@ -413,7 +532,7 @@ export default function Navbar() {
       <nav className="bg-ai-bg/95 border-b border-white/5 p-3 sticky top-0 z-50 flex items-center h-14 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-white flex items-center gap-2 hover:opacity-80 transition-opacity">
               <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-ai-accent to-purple-500 flex items-center justify-center text-white text-xs">AC</span>
               <span className="text-sm tracking-tight">ACME_LAB</span>
@@ -445,7 +564,7 @@ export default function Navbar() {
       <nav className="bg-hero-yellow border-b-4 border-black p-2 sticky top-0 z-50 flex items-center h-14 shadow-hero">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-black text-black italic text-xl tracking-tighter hover:skew-x-[-10deg] transition-transform">
               ACME_LAB
             </Link>
@@ -471,7 +590,7 @@ export default function Navbar() {
       <nav className="bg-me-bg/80 border-b border-me-orange/30 p-4 sticky top-0 z-50 flex items-center h-16 backdrop-blur-md shadow-me">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-6 items-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-me-orange tracking-widest flex flex-col leading-none hover:text-white transition-all group">
               <span className="text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">N7_COMMAND_DECK</span>
               <span className="text-xl italic">ACME_LAB</span>
@@ -502,7 +621,7 @@ export default function Navbar() {
       <nav className="bg-mgs-bg border-b-2 border-mgs-border p-3 sticky top-0 z-50 flex items-center h-14 font-mono shadow-mgs">
         <div className="container mx-auto flex justify-between items-center px-4">
           <div className="flex gap-4 items-center">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             <Link href="/" className="font-bold text-mgs-green tracking-tighter flex flex-col leading-none hover:text-white transition-colors text-mgs-green">
               <span className="text-xs opacity-60">TACTICAL_INFO</span>
               <span className="text-lg">ACME_LAB</span>
@@ -554,7 +673,7 @@ export default function Navbar() {
 
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 relative z-10 h-full">
         <div className="flex gap-4 items-center">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} resetTheme={resetTheme} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
           <Link href="/" className="font-heading text-lg md:text-2xl text-retro-green hover:text-white transition-colors text-retro-green">
             ACME_LAB
           </Link>
