@@ -174,6 +174,9 @@
 [data-theme='macos'] { --background: #c0c0c0; --foreground: #000000; }
 [data-theme='zelda'] { --background: #0a1a04; --foreground: #f0c040; }
 [data-theme='mario'] { --background: #5c94fc; --foreground: #ffffff; }
+[data-theme='win95'] { --background: #008080; --foreground: #000000; }
+[data-theme='notebook'] { --background: #f8f1d8; --foreground: #1a2540; }
+[data-theme='manuscript'] { --background: #f5f1e8; --foreground: #1a1a1a; }
 
 body {
   background-color: var(--background);
@@ -524,7 +527,7 @@ body {
   line-height: 1.4 !important;
 }
 
-.theme-knuth * {
+.theme-knuth *:not([data-theme-dropdown]):not([data-theme-dropdown] *) {
   font-family: "Times New Roman", Times, serif !important;
   background-color: transparent !important;
   color: #000000 !important;
@@ -1629,3 +1632,139 @@ body {
 .theme-mario [class*="border-"] { border-color: #000000 !important; }
 .theme-mario [class*="shadow"] { box-shadow: inset -4px -4px 0 #000 !important; }
 .theme-mario [class*="skew"], .theme-mario [class*="rotate"] { transform: none !important; }
+
+/* =====================================================================
+   WIN95 — Windows 95 desktop. Teal background, beveled gray windows,
+   MS Sans Serif / Tahoma typeface, classic 3D borders.
+   ===================================================================== */
+.theme-win95 {
+  font-family: "Tahoma", "MS Sans Serif", "Geneva", sans-serif !important;
+  background-color: transparent !important;
+  color: #000 !important;
+}
+.theme-win95 * {
+  font-family: "Tahoma", "MS Sans Serif", "Geneva", sans-serif !important;
+  letter-spacing: 0 !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+}
+.theme-win95 h1, .theme-win95 h2, .theme-win95 h3 {
+  font-family: "Tahoma", sans-serif !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  border: none !important;
+  text-shadow: none !important;
+  letter-spacing: 0 !important;
+  margin: 0 0 0.5em !important;
+}
+.theme-win95 h1 { font-size: 18px !important; }
+.theme-win95 h2 { font-size: 14px !important; }
+.theme-win95 h3 { font-size: 12px !important; }
+.theme-win95 p { color: #000 !important; font-size: 11px !important; line-height: 1.5 !important; margin: 0 0 8px !important; }
+.theme-win95 a, .theme-win95 a:link { color: #0000a8 !important; text-decoration: underline !important; }
+.theme-win95 a:visited { color: #5c2d91 !important; }
+.theme-win95 a:hover { background: #000080 !important; color: #fff !important; }
+.theme-win95 ul { padding-left: 24px !important; list-style: square !important; }
+/* 3D bevel utility */
+.win95-window { background: #c0c0c0; border: 2px solid; border-color: #ffffff #404040 #404040 #ffffff; box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080; padding: 2px; color: #000; }
+.win95-titlebar { background: linear-gradient(to right, #000080, #1084d0); color: #fff; font-weight: bold; padding: 2px 4px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+.win95-titlebar-controls { display: flex; gap: 2px; }
+.win95-titlebar-controls span { width: 16px; height: 14px; background: #c0c0c0; border: 1px solid; border-color: #ffffff #404040 #404040 #ffffff; color: #000; font-size: 9px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.win95-body { padding: 8px; background: #c0c0c0; }
+.win95-button { display: inline-block; background: #c0c0c0 !important; color: #000 !important; border: 2px solid !important; border-color: #ffffff #404040 #404040 #ffffff !important; box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080 !important; padding: 4px 12px !important; font-size: 11px !important; font-weight: normal !important; text-decoration: none !important; cursor: pointer; }
+.win95-button:active, .win95-button:hover { border-color: #404040 #ffffff #ffffff #404040 !important; box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #dfdfdf !important; }
+.win95-fieldset { border: 1px solid #808080; box-shadow: inset 1px 1px 0 #ffffff; padding: 8px; margin: 8px 0; }
+.win95-fieldset legend { font-size: 11px; padding: 0 4px; background: #c0c0c0; }
+.theme-win95 [class*="bg-"] { background-color: transparent !important; background-image: none !important; }
+.theme-win95 [class*="text-"]:not(a) { color: #000 !important; }
+.theme-win95 [class*="border-"] { border-color: #808080 !important; }
+.theme-win95 [class*="shadow"] { box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080 !important; }
+.theme-win95 [class*="skew"], .theme-win95 [class*="rotate"] { transform: none !important; }
+
+/* =====================================================================
+   NOTEBOOK — Lab notebook on lined paper with red margin and
+   coffee ring stains. Cream paper, navy ink, slightly handwritten feel.
+   ===================================================================== */
+.theme-notebook {
+  font-family: "Bradley Hand", "Comic Sans MS", "Segoe Print", "Georgia", serif !important;
+  background-color: transparent !important;
+  color: #1a2540 !important;
+}
+.theme-notebook * {
+  font-family: "Bradley Hand", "Comic Sans MS", "Segoe Print", "Georgia", serif !important;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  letter-spacing: 0 !important;
+}
+.theme-notebook h1, .theme-notebook h2, .theme-notebook h3 {
+  font-weight: bold !important;
+  color: #0e1a3a !important;
+  border: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+}
+.theme-notebook h1 { font-size: 1.8em !important; margin-bottom: 0.4em !important; }
+.theme-notebook h2 { font-size: 1.3em !important; margin: 0.8em 0 0.3em !important; text-decoration: underline; text-decoration-color: #c93030; }
+.theme-notebook h3 { font-size: 1.1em !important; margin: 0.6em 0 0.2em !important; }
+.theme-notebook p { color: #1a2540 !important; line-height: 28px !important; margin: 0 !important; }
+.theme-notebook a, .theme-notebook a:link { color: #c93030 !important; text-decoration: underline !important; }
+.theme-notebook a:hover { background: #ffe066 !important; }
+.theme-notebook ul { list-style: none !important; padding-left: 0 !important; }
+.theme-notebook ul li { padding-left: 1.5em; position: relative; line-height: 28px; }
+.theme-notebook ul li::before { content: "→"; position: absolute; left: 0; color: #c93030; font-weight: bold; }
+.theme-notebook hr { border: 0 !important; border-top: 2px dashed #c93030 !important; margin: 1em 0 !important; }
+.notebook-sticky { background: #fff8a8; padding: 12px 16px; box-shadow: 2px 4px 8px rgba(0,0,0,0.15); transform: rotate(-1.5deg); display: inline-block; margin: 8px; }
+.notebook-stamp { display: inline-block; border: 3px double #c93030; color: #c93030; padding: 4px 12px; font-weight: bold; text-transform: uppercase; transform: rotate(-4deg); letter-spacing: 0.1em; }
+.theme-notebook [class*="bg-"] { background-color: transparent !important; background-image: none !important; }
+.theme-notebook [class*="text-"]:not(a) { color: #1a2540 !important; }
+.theme-notebook [class*="border-"] { border-color: #1a2540 !important; }
+.theme-notebook [class*="shadow"] { box-shadow: 1px 2px 4px rgba(0,0,0,0.1) !important; }
+.theme-notebook [class*="skew"], .theme-notebook [class*="rotate"] { transform: none !important; }
+
+/* =====================================================================
+   MANUSCRIPT — Two-column scientific journal (MBE / Bioinformatics
+   style). Serif body, sans-serif headings, citation badges,
+   small-caps section labels.
+   ===================================================================== */
+.theme-manuscript {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+}
+.theme-manuscript * {
+  font-family: inherit;
+  transform: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+}
+.theme-manuscript h1, .theme-manuscript h2, .theme-manuscript h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #1a1a1a !important;
+  border: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  letter-spacing: 0 !important;
+}
+.theme-manuscript h1 { font-size: 22pt !important; font-weight: bold !important; line-height: 1.2 !important; margin: 0 0 0.3em !important; }
+.theme-manuscript h2 { font-size: 11pt !important; font-weight: bold !important; text-transform: uppercase; letter-spacing: 0.05em !important; margin: 1.2em 0 0.4em !important; color: #003366 !important; }
+.theme-manuscript h3 { font-size: 10.5pt !important; font-weight: bold !important; font-style: italic; margin: 0.8em 0 0.3em !important; color: #003366 !important; }
+.theme-manuscript p { font-size: 10pt !important; line-height: 1.45 !important; text-align: justify !important; margin: 0 0 0.6em !important; color: #1a1a1a !important; }
+.theme-manuscript a, .theme-manuscript a:link { color: #003366 !important; text-decoration: none !important; border-bottom: 1px dotted #003366 !important; }
+.theme-manuscript a:hover { background: #e8eef5 !important; }
+.theme-manuscript ul { list-style: none !important; padding-left: 0 !important; }
+.theme-manuscript ul li { font-size: 10pt; line-height: 1.5; padding-left: 1.2em; position: relative; }
+.theme-manuscript ul li::before { content: "•"; position: absolute; left: 0; color: #003366; }
+.manuscript-abstract { border-top: 1px solid #003366; border-bottom: 1px solid #003366; padding: 8px 0; margin: 12px 0; font-size: 9.5pt !important; line-height: 1.5; }
+.manuscript-abstract::before { content: "ABSTRACT"; display: block; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 9pt; font-weight: bold; letter-spacing: 0.1em; color: #003366; margin-bottom: 4px; }
+.manuscript-cite { display: inline-block; vertical-align: super; font-size: 7.5pt; color: #003366; text-decoration: none; }
+.manuscript-affil { font-size: 8.5pt !important; line-height: 1.3 !important; color: #555 !important; font-style: italic !important; }
+.manuscript-doi { font-family: "Courier New", monospace; font-size: 8.5pt; color: #555; letter-spacing: 0.02em; }
+.manuscript-section-num { color: #003366; font-weight: bold; margin-right: 0.4em; }
+.theme-manuscript [class*="bg-"] { background-color: transparent !important; background-image: none !important; }
+.theme-manuscript [class*="text-"]:not(a) { color: #1a1a1a !important; }
+.theme-manuscript [class*="border-"] { border-color: #003366 !important; }
+.theme-manuscript [class*="shadow"] { box-shadow: none !important; }
+.theme-manuscript [class*="skew"], .theme-manuscript [class*="rotate"] { transform: none !important; }
