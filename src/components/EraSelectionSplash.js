@@ -52,6 +52,24 @@ export default function EraSelectionSplash() {
       previewClass: 'zelda-preview flex flex-col items-center justify-center'
     },
     {
+      id: 'notebook',
+      label: '1991 Lab Notebook',
+      desc: 'Cream paper, blue rule, red margin. Pencil entries, taped figures, and the occasional coffee ring of regret.',
+      previewClass: 'notebook-preview flex flex-col items-stretch justify-start'
+    },
+    {
+      id: 'manuscript',
+      label: '1993 MBE Manuscript',
+      desc: 'Two-column serif. Authors with affiliations. ABSTRACT in small caps. The way papers are supposed to look.',
+      previewClass: 'manuscript-preview flex flex-col items-stretch justify-start'
+    },
+    {
+      id: 'win95',
+      label: '1995 Windows 95',
+      desc: 'Beveled gray windows on a teal desktop. Tahoma, Start menu, and the cathartic click of a 3D button.',
+      previewClass: 'win95-preview flex flex-col items-stretch justify-start'
+    },
+    {
       id: 'profdr',
       label: '1994 Yahoo!',
       desc: 'The Dawn of Web Directories. Hierarchical links, red serif logos, and the iconic search bar.',
@@ -118,8 +136,8 @@ export default function EraSelectionSplash() {
       text: "How do you prefer to receive your research updates?",
       options: [
         { text: "Printed on continuous-form paper.", themes: ['vax', '80s', 'bios'] },
-        { text: "A simple TeX-rendered preprint.", themes: ['knuth', 'vax', 'typewriter'] },
-        { text: "A personalized email from a web directory.", themes: ['profdr', 'geocities', 'y2k'] },
+        { text: "A simple TeX-rendered preprint.", themes: ['knuth', 'vax', 'typewriter', 'manuscript'] },
+        { text: "A personalized email from a web directory.", themes: ['profdr', 'geocities', 'y2k', 'win95'] },
         { text: "An encrypted transmission directly to my HUD.", themes: ['90s', '2000s', '2010s'] },
         { text: "An AI-generated summary delivered via a minimalist dashboard.", themes: ['enterprise', '2020s', 'macos'] }
       ]
@@ -127,18 +145,19 @@ export default function EraSelectionSplash() {
     {
       text: "The 'correct' amount of visual clutter is...",
       options: [
-        { text: "None. Just text.", themes: ['vax', '80s', '90s', 'knuth', 'bios', 'typewriter'] },
+        { text: "None. Just text.", themes: ['vax', '80s', '90s', 'knuth', 'bios', 'typewriter', 'manuscript'] },
         { text: "Blinking 'NEW' tags and rotating 3D GIFs.", themes: ['geocities', 'profdr', 'myspace', 'mario', 'zelda'] },
         { text: "Holographic panels for a starship pilot feel.", themes: ['2000s', '2010s', 'y2k'] },
-        { text: "Clean and slightly corporate.", themes: ['enterprise', '2020s', 'macos'] }
+        { text: "Clean and slightly corporate.", themes: ['enterprise', '2020s', 'macos', 'win95'] },
+        { text: "Hand-drawn diagrams in the margins.", themes: ['notebook', 'typewriter', 'knuth'] }
       ]
     },
     {
       text: "Your favorite lab tool is...",
       options: [
         { text: "Punch cards.", themes: ['vax', 'bios'] },
-        { text: "A pencil and a yellow legal pad.", themes: ['knuth', 'vax', 'typewriter'] },
-        { text: "Netscape Navigator.", themes: ['profdr', 'geocities', '80s', 'macos'] },
+        { text: "A pencil and a yellow legal pad.", themes: ['knuth', 'vax', 'typewriter', 'notebook', 'manuscript'] },
+        { text: "Netscape Navigator.", themes: ['profdr', 'geocities', '80s', 'macos', 'win95'] },
         { text: "A neural-linked sequencer.", themes: ['2000s', '2010s', '90s', 'zelda', 'mario'] },
         { text: "An LLM assistant.", themes: ['2020s', 'enterprise', 'y2k'] }
       ]
@@ -350,6 +369,29 @@ export default function EraSelectionSplash() {
                      <div className="flex flex-col gap-1">
                        <span>[ ACME ]</span>
                        <span className="opacity-60">ONLINE</span>
+                     </div>
+                   )}
+                   {era.id === 'win95' && (
+                     <div style={{background: '#008080', padding: '4px', height: '100%', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                       <div style={{background: '#c0c0c0', border: '2px solid', borderColor: '#fff #404040 #404040 #fff', boxShadow: 'inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080', width: '100%', fontFamily: '"Tahoma",sans-serif'}}>
+                         <div style={{background: 'linear-gradient(to right,#000080,#1084d0)', color: '#fff', fontSize: '8px', fontWeight: 'bold', padding: '1px 3px', display: 'flex', justifyContent: 'space-between'}}><span>ACME.exe</span><span>_□×</span></div>
+                         <div style={{padding: '4px', fontSize: '8px', color: '#000'}}>Welcome to ACME Lab</div>
+                       </div>
+                     </div>
+                   )}
+                   {era.id === 'notebook' && (
+                     <div style={{background: '#f8f1d8', backgroundImage: 'repeating-linear-gradient(0deg, transparent 0px, transparent 11px, #aac4e8 11px, #aac4e8 12px)', padding: '4px 4px 4px 14px', borderLeft: '2px solid #c93030', height: '100%', width: '100%', fontFamily: '"Comic Sans MS",cursive', color: '#1a2540'}}>
+                       <div style={{fontSize: '8px', fontWeight: 'bold', textDecoration: 'underline', textDecorationColor: '#c93030'}}>Mar 14 — Day 42</div>
+                       <div style={{fontSize: '7px', marginTop: '4px'}}>→ ran HyPhy</div>
+                       <div style={{fontSize: '7px'}}>→ p &lt; 0.01 ✓</div>
+                     </div>
+                   )}
+                   {era.id === 'manuscript' && (
+                     <div style={{background: '#f5f1e8', padding: '6px', height: '100%', width: '100%', fontFamily: '"Times New Roman",serif', color: '#1a1a1a', display: 'flex', flexDirection: 'column'}}>
+                       <div style={{fontSize: '7px', fontFamily: 'Helvetica,sans-serif', color: '#003366', letterSpacing: '0.1em', fontWeight: 'bold'}}>MOL. BIOL. EVOL.</div>
+                       <div style={{fontSize: '8px', fontWeight: 'bold', marginTop: '2px', lineHeight: 1.1}}>Detecting selection in viral genomes</div>
+                       <div style={{fontSize: '6px', fontStyle: 'italic', color: '#555', marginTop: '2px'}}>Lab, A.<sup>1</sup> et al.</div>
+                       <div style={{borderTop: '1px solid #003366', borderBottom: '1px solid #003366', marginTop: '4px', padding: '2px 0', fontSize: '6px', columnCount: 2, columnGap: '4px'}}>Lorem ipsum dolor sit amet consectetur.</div>
                      </div>
                    )}
                    {era.id === 'knuth' && (
