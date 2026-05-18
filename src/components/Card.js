@@ -170,6 +170,46 @@ export default function Card({ title, children, className = "" }) {
     );
   }
 
+  if (theme === 'win95') {
+    return (
+      <div className={`mb-4 ${className}`} style={{background: '#c0c0c0', border: '2px solid', borderColor: '#fff #808080 #808080 #fff', boxShadow: 'inset 1px 1px 0 #dfdfdf', fontFamily: '"Tahoma", sans-serif'}}>
+        {title && (
+          <div style={{background: 'linear-gradient(to right, #000080, #1084d0)', padding: '3px 6px', marginBottom: '6px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <span style={{color: '#fff', fontWeight: 'bold', fontSize: '11px'}}>{title.replace(/_/g, ' ')}</span>
+            <span style={{color: '#fff', fontSize: '10px', opacity: 0.7}}>&#x2501;&#x25A1;&#x2715;</span>
+          </div>
+        )}
+        <div style={{padding: '8px', fontSize: '12px', color: '#000'}}>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'notebook') {
+    return (
+      <div className={`mb-6 ${className}`} style={{background: 'rgba(255,255,255,0.6)', border: '1px solid #aac4e8', borderLeft: '4px solid #c93030', fontFamily: '"Comic Sans MS", cursive', padding: '12px 16px'}}>
+        {title && (
+          <h3 style={{color: '#0e1a3a', fontWeight: 'bold', fontSize: '14px', borderBottom: '1px dashed #c93030', paddingBottom: '4px', marginBottom: '10px'}}>
+            {title.replace(/_/g, ' ')}
+          </h3>
+        )}
+        <div style={{color: '#1a2540'}}>{children}</div>
+      </div>
+    );
+  }
+
+  if (theme === 'manuscript') {
+    return (
+      <div className={`mb-8 ${className}`} style={{fontFamily: '"Times New Roman", serif', borderTop: '1px solid #003366', paddingTop: '12px'}}>
+        {title && (
+          <h3 style={{fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '10px', fontWeight: 'bold', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#003366', borderBottom: '1px solid #003366', paddingBottom: '4px', marginBottom: '10px'}}>
+            {title.replace(/_/g, ' ')}
+          </h3>
+        )}
+        <div style={{color: '#1a1a1a', fontSize: '14px', lineHeight: '1.6'}}>{children}</div>
+      </div>
+    );
+  }
+
   if (theme === 'typewriter') {
     return (
       <div className={`tw-panel mb-6 ${className}`}>
