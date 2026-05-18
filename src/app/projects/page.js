@@ -25,6 +25,9 @@ export default function ProjectsPage() {
       case 'macos': return 'text-black';
       case 'zelda': return 'text-[#f0c040]';
       case 'mario': return 'text-[#fcbc3c]';
+      case 'win95': return 'text-[#000080]';
+      case 'notebook': return 'text-[#0e1a3a]';
+      case 'manuscript': return 'text-[#003366]';
       default: return 'text-retro-blue';
     }
   };
@@ -50,6 +53,9 @@ export default function ProjectsPage() {
                 theme === 'macos' ? 'mac-window !m-0 overflow-hidden' :
                 theme === 'zelda' ? 'zelda-panel !m-0 !p-0 border-2 border-[#f0c040] overflow-hidden' :
                 theme === 'mario' ? 'mario-panel !m-0 !p-0 border-4 border-black overflow-hidden' :
+                theme === 'win95' ? '!m-0 !p-0 overflow-hidden' :
+                theme === 'notebook' ? '!m-0 !p-0 border border-[#aac4e8] overflow-hidden' :
+                theme === 'manuscript' ? '!m-0 !p-0 border border-[#003366] overflow-hidden' :
                 'pixel-border border-4 rounded-2xl'
               }`}>
                 {project.image && theme !== 'vax' && theme !== 'bios' ? (
@@ -119,6 +125,9 @@ export default function ProjectsPage() {
                 theme === 'macos' ? 'bg-white border-black shadow-[2px_2px_0_#808080]' :
                 theme === 'zelda' ? 'bg-[#1a2c0a] border-[#f0c040]' :
                 theme === 'mario' ? 'bg-[#c07028] border-black shadow-[inset_-2px_-2px_0_#8c4a14]' :
+                theme === 'win95' ? 'bg-[#c0c0c0] border-[#808080]' :
+                theme === 'notebook' ? 'bg-white/60 border-[#aac4e8]' :
+                theme === 'manuscript' ? 'bg-transparent border-[#003366]/20' :
                 'bg-black border-retro-green/30 rounded-xl'
               }`}>
                 {(theme === 'profdr' || theme === 'enterprise' || theme === 'vax' || theme === 'knuth' || theme === 'bios' || theme === 'macos') && <div className={`text-[10px] font-bold border-b mb-2 pb-1 ${

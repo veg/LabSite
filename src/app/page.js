@@ -58,12 +58,15 @@ export default function Home() {
       theme === 'bios' ? 'bg-black' :
       theme === 'macos' ? 'bg-[#c0c0c0]' :
       theme === 'zelda' ? '' :
-      theme === 'mario' ? '' : ''
+      theme === 'mario' ? '' :
+      theme === 'win95' ? '' :
+      theme === 'notebook' ? '' :
+      theme === 'manuscript' ? '' : ''
     }`}>
       <Navbar />
       
       <div className={`container mx-auto px-4 py-12 relative z-10 flex-grow ${theme === 'knuth' ? 'max-w-[800px]' : ''}`}>
-        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k' || theme === 'vax' || theme === 'knuth' || theme === 'myspace' || theme === 'typewriter' || theme === 'bios' || theme === 'macos' || theme === 'zelda' || theme === 'mario') ? 'mb-8' : 'mb-16 text-center'}>
+        <section className={(theme === 'profdr' || theme === 'geocities' || theme === 'y2k' || theme === 'vax' || theme === 'knuth' || theme === 'myspace' || theme === 'typewriter' || theme === 'bios' || theme === 'macos' || theme === 'zelda' || theme === 'mario' || theme === 'win95' || theme === 'notebook' || theme === 'manuscript') ? 'mb-8' : 'mb-16 text-center'}>
           {theme === 'knuth' ? (
             <div className="font-serif text-left">
               <h1 style={{fontSize: '28pt', fontWeight: 'bold', marginBottom: '10pt'}}>ACME Laboratory</h1>
@@ -491,6 +494,185 @@ export default function Home() {
                 Correspondence: acme@temple.edu &mdash; SERC, Philadelphia &mdash; All dispatches welcome
               </div>
             </div>
+          ) : theme === 'win95' ? (
+            <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'left', fontFamily: '"Tahoma", sans-serif'}}>
+              {/* Main "My Computer" window */}
+              <div className="win95-window" style={{marginBottom: '12px'}}>
+                <div className="win95-titlebar">
+                  <span>ACME Lab — My Computer</span>
+                  <div className="win95-titlebar-controls">
+                    <span>_</span><span>□</span><span>×</span>
+                  </div>
+                </div>
+                {/* Menu strip */}
+                <div style={{padding: '2px 4px', fontSize: '11px', borderBottom: '1px solid #808080', boxShadow: 'inset 0 -1px 0 #fff', display: 'flex', gap: '12px'}}>
+                  <span><u>F</u>ile</span>
+                  <span><u>E</u>dit</span>
+                  <span><u>V</u>iew</span>
+                  <span><u>H</u>elp</span>
+                </div>
+                <div className="win95-body" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px'}}>
+                  {/* Left column */}
+                  <fieldset className="win95-fieldset">
+                    <legend>About this Lab</legend>
+                    <p style={{fontSize: '11px', margin: 0, lineHeight: 1.5}}>
+                      The <b>ACME Laboratory</b> develops high-performance computational tools for the
+                      comparative analysis of sequence data. Methods apply universally; pathogens are our
+                      primary case study.
+                    </p>
+                  </fieldset>
+                  {/* Right column — drives */}
+                  <fieldset className="win95-fieldset">
+                    <legend>Network</legend>
+                    <div style={{display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '11px'}}>
+                      <Link href="/projects" style={{display: 'flex', alignItems: 'center', gap: '6px', color: '#000', textDecoration: 'none'}}>
+                        <span style={{display: 'inline-block', width: '16px', height: '14px', background: '#c0c0c0', border: '1px solid', borderColor: '#fff #404040 #404040 #fff'}} />
+                        Projects (C:)
+                      </Link>
+                      <Link href="/members" style={{display: 'flex', alignItems: 'center', gap: '6px', color: '#000', textDecoration: 'none'}}>
+                        <span style={{display: 'inline-block', width: '16px', height: '14px', background: '#c0c0c0', border: '1px solid', borderColor: '#fff #404040 #404040 #fff'}} />
+                        Team (D:)
+                      </Link>
+                      <Link href="/papers" style={{display: 'flex', alignItems: 'center', gap: '6px', color: '#000', textDecoration: 'none'}}>
+                        <span style={{display: 'inline-block', width: '16px', height: '14px', background: '#c0c0c0', border: '1px solid', borderColor: '#fff #404040 #404040 #fff'}} />
+                        Papers (E:)
+                      </Link>
+                      <Link href="/former" style={{display: 'flex', alignItems: 'center', gap: '6px', color: '#000', textDecoration: 'none'}}>
+                        <span style={{display: 'inline-block', width: '16px', height: '14px', background: '#c0c0c0', border: '1px solid', borderColor: '#fff #404040 #404040 #fff'}} />
+                        Alumni (F:)
+                      </Link>
+                    </div>
+                  </fieldset>
+                </div>
+                {/* Status bar */}
+                <div style={{padding: '2px 6px', borderTop: '1px solid #fff', boxShadow: 'inset 0 1px 0 #808080', fontSize: '11px', display: 'flex', justifyContent: 'space-between'}}>
+                  <span>4 object(s)</span>
+                  <span>0 bytes free</span>
+                </div>
+              </div>
+
+              {/* Tools "shortcut" window */}
+              <div className="win95-window">
+                <div className="win95-titlebar">
+                  <span>Installed Software</span>
+                  <div className="win95-titlebar-controls"><span>_</span><span>□</span><span>×</span></div>
+                </div>
+                <div className="win95-body" style={{display: 'flex', gap: '12px', flexWrap: 'wrap'}}>
+                  {['HyPhy', 'Datamonkey', 'HIV-TRACE'].map(tool => (
+                    <Link key={tool} href="/projects" className="win95-button" style={{display: 'inline-flex', alignItems: 'center', gap: '6px', textDecoration: 'none'}}>
+                      <span style={{display: 'inline-block', width: '14px', height: '14px', background: '#000080'}} />
+                      {tool}.exe
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : theme === 'notebook' ? (
+            <div style={{maxWidth: '780px', margin: '0 auto', paddingLeft: '64px', textAlign: 'left'}}>
+              {/* Date / page header */}
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '8px'}}>
+                <h1 style={{margin: 0}}>14 March — Day 42</h1>
+                <span style={{fontSize: '12px', color: '#c93030'}}>p. 84</span>
+              </div>
+
+              <p>Today: keep grinding on selection-detection methods for viral genomes.</p>
+              <p>The whole ACME Lab is a computational molecular evolution group at <b>Temple University</b>. Methods are universal — but pathogens are where it gets fun.</p>
+
+              <h2>Aims</h2>
+              <ul>
+                <li>Find sites of <b>positive selection</b> across measurably evolving pathogens.</li>
+                <li>Push <Link href="/projects">HyPhy</Link> and <Link href="/projects">Datamonkey</Link> further.</li>
+                <li>Map transmission with <Link href="/projects">HIV-TRACE</Link>.</li>
+              </ul>
+
+              <h2>Notes</h2>
+              <p>Stuck on convergence again. Coffee helped. ←</p>
+              <p>Idea: re-run with relaxed clock + see <Link href="/papers">last week&apos;s paper</Link>.</p>
+
+              <h2>Where things live</h2>
+              <ul>
+                <li><Link href="/members">Lab members</Link> — current personnel</li>
+                <li><Link href="/papers">Publications</Link> — full bibliography</li>
+                <li><Link href="/former">Alumni</Link> — where everyone is now</li>
+              </ul>
+
+              <hr />
+              <div style={{display: 'flex', gap: '20px', alignItems: 'center', marginTop: '8px'}}>
+                <span className="notebook-stamp">Reviewed</span>
+                <span style={{fontSize: '12px', color: '#1a2540', fontStyle: 'italic'}}>— D.C., 14/3</span>
+              </div>
+            </div>
+          ) : theme === 'manuscript' ? (
+            <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'left'}}>
+              {/* Header strip */}
+              <div style={{borderBottom: '1px solid #003366', paddingBottom: '4px', marginBottom: '14px', display: 'flex', justifyContent: 'space-between', fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '9pt', color: '#003366', letterSpacing: '0.05em'}}>
+                <span><b>Mol. Biol. Evol.</b> 41(4):1–24</span>
+                <span className="manuscript-doi">doi:10.1093/molbev/acme.2026</span>
+              </div>
+
+              {/* Article type */}
+              <div style={{fontFamily: 'Helvetica, Arial, sans-serif', fontSize: '9pt', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#003366', fontWeight: 'bold', marginBottom: '8px'}}>
+                Methods
+              </div>
+
+              {/* Title */}
+              <h1>Statistical models and software tools for the comparative analysis of sequence data</h1>
+
+              {/* Authors */}
+              <p style={{fontSize: '11pt', margin: '8px 0 4px', textAlign: 'left'}}>
+                ACME Lab Authors<sup className="manuscript-cite">1,*</sup>
+              </p>
+              <p className="manuscript-affil">
+                <sup>1</sup>Institute for Genomics and Evolutionary Medicine, Temple University, Philadelphia, PA, USA<br />
+                <sup>*</sup>Correspondence: <a href="mailto:acme@temple.edu">acme@temple.edu</a>
+              </p>
+
+              {/* Abstract */}
+              <div className="manuscript-abstract">
+                We present a suite of statistical models and open-source software for the comparative
+                analysis of biological sequence data. Methods are universally applicable across all domains
+                of life, with measurably evolving pathogens as the primary case study. The
+                <Link href="/projects"> HyPhy</Link> package, the <Link href="/projects">Datamonkey</Link> web server,
+                and <Link href="/projects">HIV-TRACE</Link> together support hypothesis testing on phylogenies,
+                browser-based selection analysis, and molecular transmission cluster inference.
+              </div>
+
+              {/* Two-column body */}
+              <div style={{columnCount: 2, columnGap: '24px', columnRule: '1px solid #e0d8c5'}}>
+                <h2><span className="manuscript-section-num">1</span>Introduction</h2>
+                <p>
+                  The comparative analysis of sequence data underpins much of modern evolutionary biology.
+                  Yet quantitative inference of selection — and of the parameters that govern it — remains
+                  challenging. Here we describe the toolkit developed and maintained by the ACME Laboratory,
+                  spanning method development, web infrastructure, and applied epidemiology.
+                </p>
+
+                <h2><span className="manuscript-section-num">2</span>Software</h2>
+                <p>
+                  <b>HyPhy</b> implements maximum-likelihood and Bayesian methods for hypothesis testing on
+                  phylogenies. <b>Datamonkey</b> wraps the most-used HyPhy methods in an accessible web
+                  interface. <b>HIV-TRACE</b> reconstructs molecular transmission clusters from pairwise
+                  genetic distances.
+                </p>
+                <p>
+                  Full documentation, source, and installation notes are available in the
+                  <Link href="/projects"> Software</Link> section.
+                </p>
+
+                <h2><span className="manuscript-section-num">3</span>Authors</h2>
+                <p>
+                  The list of present and past contributors is maintained at
+                  <Link href="/members"> /members</Link>. A complete record of laboratory alumni and their
+                  current affiliations is at <Link href="/former">/former</Link>.
+                </p>
+
+                <h2><span className="manuscript-section-num">4</span>Availability</h2>
+                <p>
+                  All ACME Laboratory tools are open source and freely available. A complete list of
+                  publications, including software citations, is at <Link href="/papers">/papers</Link>.
+                </p>
+              </div>
+            </div>
           ) : theme === 'bios' ? (
             <div className="text-left font-mono">
               <p>ACME LABORATORY BIOS v2.07</p>
@@ -808,7 +990,7 @@ export default function Home() {
           )}
         </section>
 
-        {(theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'vax' && theme !== 'knuth' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario') && (
+        {(theme !== '2020s' && theme !== 'profdr' && theme !== 'geocities' && theme !== 'y2k' && theme !== 'vax' && theme !== 'knuth' && theme !== 'myspace' && theme !== 'typewriter' && theme !== 'bios' && theme !== 'macos' && theme !== 'zelda' && theme !== 'mario' && theme !== 'win95' && theme !== 'notebook' && theme !== 'manuscript') && (
           <>
             <section className="grid md:grid-cols-2 gap-8 mb-16">
               <Card title={theme === '80s' ? 'SUPPLY_INVENTORY' : 'CORE_COMPETENCIES'}>
@@ -986,6 +1168,37 @@ export default function Home() {
         <footer className="mt-auto p-6" style={{background: '#e0cfa8', borderTop: '2px solid #2a1a0a', fontFamily: '"Courier New", Courier, monospace', textAlign: 'center'}}>
           <p style={{fontSize: '11px', color: '#7a5c3a', letterSpacing: '0.1em'}}>ACME LABORATORY — TEMPLE UNIVERSITY — PHILADELPHIA, PA</p>
           <p style={{fontSize: '10px', color: '#9a7a5a', marginTop: '4px'}}>Correspondence: acme@temple.edu &nbsp;|&nbsp; SERC</p>
+        </footer>
+      ) : theme === 'win95' ? (
+        <footer className="mt-auto" style={{background: '#c0c0c0', borderTop: '2px solid', borderTopColor: '#fff', boxShadow: 'inset 0 -1px 0 #808080', fontFamily: '"Tahoma", sans-serif'}}>
+          <div className="container mx-auto flex items-center justify-between flex-wrap gap-2" style={{padding: '4px 8px'}}>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="win95-button" style={{display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 'bold'}}>
+                <span style={{display: 'inline-block', width: '14px', height: '14px', background: 'linear-gradient(45deg,#ff0000 25%,#00ff00 25% 50%,#0000ff 50% 75%,#ffff00 75%)'}} />
+                Start
+              </span>
+              <span style={{background: '#c0c0c0', border: '1px solid', borderColor: '#808080 #fff #fff #808080', padding: '2px 8px', fontSize: '11px'}}>ACME.exe</span>
+            </div>
+            <span style={{background: '#c0c0c0', border: '1px solid', borderColor: '#808080 #fff #fff #808080', padding: '2px 8px', fontSize: '11px', fontFamily: '"Courier New", monospace'}}>3:14 PM</span>
+          </div>
+        </footer>
+      ) : theme === 'notebook' ? (
+        <footer className="mt-auto" style={{background: 'transparent', borderTop: '2px dashed #c93030', fontFamily: '"Comic Sans MS", cursive'}}>
+          <div className="container mx-auto" style={{padding: '12px 16px', paddingLeft: '80px', fontSize: '12px', color: '#1a2540'}}>
+            <p style={{margin: 0}}>ACME Lab — Temple University — SERC, Philadelphia.</p>
+            <p style={{margin: '2px 0 0', color: '#c93030', fontStyle: 'italic'}}>p. 84 of ∞ &nbsp;·&nbsp; sign &amp; date all entries</p>
+          </div>
+        </footer>
+      ) : theme === 'manuscript' ? (
+        <footer className="mt-auto" style={{background: 'transparent', borderTop: '1px solid #003366', fontFamily: '"Times New Roman", serif'}}>
+          <div className="container mx-auto" style={{padding: '12px 16px', textAlign: 'center', fontSize: '9pt', color: '#555'}}>
+            <p style={{margin: 0, fontFamily: 'Helvetica, Arial, sans-serif', letterSpacing: '0.05em'}}>
+              © 2026 The Authors. Published by Oxford University Press on behalf of the Society for Molecular Biology and Evolution.
+            </p>
+            <p className="manuscript-doi" style={{margin: '4px 0 0'}}>
+              ACME Laboratory · Institute for Genomics and Evolutionary Medicine · Temple University · SERC, Philadelphia, PA
+            </p>
+          </div>
         </footer>
       ) : theme === 'bios' ? (
         <footer className="mt-auto p-4" style={{background: '#000', borderTop: '1px solid #ffb000', fontFamily: '"Courier New", Courier, monospace', textAlign: 'left'}}>
