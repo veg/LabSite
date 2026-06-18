@@ -1,0 +1,70 @@
+[
+  {
+    "id": "ntt-assistant-professor-genomics-2026",
+    "title": "Non-Tenure Track Assistant Professor of Research – Genomics",
+    "tagline": "Molecular Phylogenetics & Phylogenomics — large-scale analytics and computational science.",
+    "status": "Open",
+    "meta": {
+      "Type": "Assistant Professor (Research, Non-Tenure Track)",
+      "Institute": "iGEM — Institute for Genomics and Evolutionary Medicine",
+      "Institution": "Temple University, Philadelphia, PA",
+      "Start Date": "September 1, 2026",
+      "Posted": "June 18, 2026"
+    },
+    "applyEmail": "spond@temple.edu",
+    "applyNote": "Submit a single PDF containing a cover letter, a detailed curriculum vitae, and a summary of current and future research interests. Please include a link to a Google Scholar profile in the cover letter.",
+    "sections": [
+      {
+        "heading": "Position Summary",
+        "body": [
+          "iGEM@Temple invites applications for assistant professor (research; non-tenure-track) faculty positions in the field of Molecular Phylogenetics and Phylogenomics. Successful candidates will have a primary focus on large scale analytics and computational science. They will be core faculty of the Institute for Genomics and Evolutionary Medicine (iGEM) at Temple University.",
+          "We are seeking candidates who can work closely with and benefit from expertise in molecular evolution, phylogenomics, and computational biology."
+        ]
+      },
+      {
+        "heading": "About the Department",
+        "body": [
+          "The Institute for Genomics and Evolutionary Medicine (iGEM) was established at Temple University in 2014, anchored in CST, and associated with the Department of Biology. iGEM's mission is to harness molecular evolutionary knowledge and tools to advance research and for product development in biomedicine to biodiversity.",
+          "Currently, iGEM has over 14 full-time faculty supporting millions of dollars in externally funded research per year. We intend to find a colleague who will expand this research diversity and work closely and collaboratively to build on the division's success. Since its founding, Temple University has been committed to challenging the status quo. Today, we are an international powerhouse and a top-tier research institution with nearly 40,000 undergraduate, graduate, and professional students and more than 340,000 alumni worldwide."
+        ]
+      },
+      {
+        "heading": "Responsibilities",
+        "body": [
+          "The successful applicant will develop and apply bioinformatics and comparative genomic analysis platforms to address key research questions in genomics and evolutionary biology. This position will focus on advancing computational methods for large-scale data analysis, with opportunities to drive methodological innovation and interdisciplinary collaboration.",
+          "The ideal candidate will have a demonstrated record of independent research, with expertise in designing and implementing computational frameworks to analyze complex genomic datasets. The role will involve leading projects that integrate diverse analytical tools and workflows, fostering collaborations across research teams, and contributing to the development of novel approaches that enhance the scalability and impact of comparative genomic analyses.",
+          "In addition to developing a strong extramurally funded research program, successful candidates will be expected to contribute to the scientific mission of the department through research publications, grant applications, and participation in mentoring and training activities. Strong communication skills and a collaborative mindset are essential."
+        ]
+      },
+      {
+        "heading": "Qualifications",
+        "subsections": [
+          {
+            "label": "Required",
+            "body": [
+              "A Ph.D. in a relevant field such as bioinformatics, computational biology, molecular epidemiology, or a related discipline, with experience analyzing complex genomic datasets. Candidates must demonstrate a strong record of research productivity, including publications in comparative genomics, molecular evolution, or phylogenetics. The ability to contribute to teaching activities, particularly in areas such as disease modeling, evolutionary biology, or computational methods, is essential, along with excellent communication and collaboration skills."
+            ]
+          },
+          {
+            "label": "Preferred",
+            "body": [
+              "Postdoctoral experience, experience in teaching or mentoring students, and a demonstrated ability to develop or apply computational tools to study pathogen evolution, selection pressures, and genome dynamics."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Application Instructions",
+        "body": [
+          "Applicants should submit a single PDF containing a cover letter, a detailed curriculum vitae, and a summary of current and future research interests to spond@temple.edu. Please include in the cover letter a link to a Google Scholar profile. Through their research statements applicants should inform the search committee about the transformative and cross-disciplinary aspects of their work."
+        ]
+      },
+      {
+        "heading": "Equal Employment Opportunity Statement",
+        "body": [
+          "Temple University values diversity and is committed to equal opportunity for all persons regardless of age, color, disability, ethnicity, marital status, national origin, race, religion, sex, sexual orientation, veteran status or any other status protected by law."
+        ]
+      }
+    ]
+  }
+]

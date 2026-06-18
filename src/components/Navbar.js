@@ -98,6 +98,7 @@ export default function Navbar() {
     { label: 'TEAM', href: '/members' },
     { label: 'ALUMNI', href: '/former' },
     { label: 'PAPERS', href: '/papers' },
+    { label: 'JOBS', href: '/jobs' },
   ];
 
   if (theme === 'knuth') {
@@ -287,7 +288,7 @@ export default function Navbar() {
   }
 
   if (theme === 'typewriter') {
-    const sectionLabels = { PROJECTS: 'Instruments', TEAM: 'Staff', ALUMNI: 'Archives', PAPERS: 'Dispatches' };
+    const sectionLabels = { PROJECTS: 'Instruments', TEAM: 'Staff', ALUMNI: 'Archives', PAPERS: 'Dispatches', JOBS: 'Positions' };
     return (
       <nav style={{background: '#ede0c4', borderBottom: '3px double #2a1a0a', fontFamily: '"Courier New", Courier, monospace'}}>
         <div className="container mx-auto px-4 py-2">
