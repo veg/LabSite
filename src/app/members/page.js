@@ -4,6 +4,7 @@ import PageContainer from '@/components/PageContainer';
 import Card from '@/components/Card';
 import Image from 'next/image';
 import { useTheme } from '@/components/ThemeContext';
+import { withBasePath } from '@/lib/basePath';
 
 export default function MembersPage() {
   const { theme } = useTheme();
@@ -48,7 +49,7 @@ export default function MembersPage() {
             }`}>
               {member.image && theme !== 'vax' && theme !== 'bios' ? (
                 <Image 
-                  src={member.image} 
+                  src={withBasePath(member.image)}
                   alt={member.name}
                   fill
                   className={`object-cover ${
