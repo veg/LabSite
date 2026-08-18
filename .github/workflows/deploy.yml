@@ -32,6 +32,8 @@ jobs:
 
       - name: Build with Next.js
         run: npx next build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /LabSite
 
       - name: Debug Output
         run: |

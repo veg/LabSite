@@ -5,6 +5,7 @@ import PageContainer from '@/components/PageContainer';
 import { useTheme } from '@/components/ThemeContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { withBasePath } from '@/lib/basePath';
 
 export default function ProjectsPage() {
   const { theme } = useTheme();
@@ -54,7 +55,7 @@ export default function ProjectsPage() {
               }`}>
                 {project.image && theme !== 'vax' && theme !== 'bios' ? (
                   <Image 
-                    src={project.image} 
+                    src={withBasePath(project.image)}
                     alt={project.name}
                     fill
                     className={`object-cover transition-all ${
