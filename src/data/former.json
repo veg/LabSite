@@ -1,5 +1,19 @@
 [
   {
+    "id": "hanna-k",
+    "name": "Hannah Kim",
+    "title": "PhD Student",
+    "years": "2020-2026",
+    "next": "TBD",
+    "links": {
+      "twitter": "https://twitter.com/hannahincompbio",
+      "github": "https://github.com/hannahkimincompbio",
+      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
+      "website": "https://hannahkimincompbio.github.io/",
+      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
+    }
+  },
+  {
     "id": "avery",
     "name": "Avery Selberg",
     "title": "PhD Student",
