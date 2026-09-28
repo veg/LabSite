@@ -50,20 +50,6 @@
     }
   },
   {
-    "id": "hanna-k",
-    "name": "Hannah Kim",
-    "title": "PhD Candidate",
-    "image": "/images/members/Hannah.jpeg",
-    "bio": "Working on viral evolution and bioinformatics methods at iGEM.",
-    "links": {
-      "twitter": "https://twitter.com/hannahincompbio",
-      "github": "https://github.com/hannahkimincompbio",
-      "linkedin": "https://www.linkedin.com/in/hannahkimincompbio/",
-      "website": "https://hannahkimincompbio.github.io/",
-      "googlescholar": "https://scholar.google.com/citations?user=JUPwQRYAAAAJ&hl=en"
-    }
-  },
-  {
     "id": "gigi",
     "name": "Gigi Brown",
     "title": "PhD Student",
