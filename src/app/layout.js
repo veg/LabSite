@@ -1,6 +1,7 @@
 import { Press_Start_2P, VT323, Share_Tech_Mono, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeContext";
+import ThemeBackdrop from "@/components/ThemeBackdrop";
 
 const pressStart2P = Press_Start_2P({
   variable: "--font-press-start",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="h-full">
       <body className={`${pressStart2P.variable} ${vt323.variable} ${shareTechMono.variable} ${pixelify.variable} min-h-full antialiased`}>
         <ThemeProvider>
+          <ThemeBackdrop />
           {children}
         </ThemeProvider>
       </body>
